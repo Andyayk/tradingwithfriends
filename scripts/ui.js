@@ -345,7 +345,7 @@ function sendChallenge() {
   else {
     FB.ui({method: 'apprequests',
       title: 'Play Friend Smash with me!',
-      message: 'Been having a smashing time playing Friend Smash, come check it out.',
+      message: 'Andyayk Rocks, come check that out.',
     }, fbCallback);
   }
 }
@@ -353,7 +353,7 @@ function sendChallenge() {
 function sendOG() {
   console.log("Sending custom OG story...");
 
-  FB.api('/me/friendsmashsample:smash?profile=' + gFriendID, 'post', {}, function(response) {
+  FB.api('/me/zombieesssssssss:smash?profile=' + gFriendID, 'post', {}, function(response) {
     console.log(response);
   });
 }
@@ -362,9 +362,9 @@ function sendBrag() {
   if (gScore) {
     FB.ui({ method: 'feed',
       caption: 'I just smashed ' + gScore + ' friends! Can you beat it?',
-      picture: 'http://www.friendsmash.com/images/logo_large.jpg',
+      picture: 'https://github.com/Astarcorp/Friendsmash2/tree/master/images/logo_large.jpg',
       name: 'Checkout my Friend Smash greatness!',
-      link: 'http://www.herokuapp.com?challenge_brag=' + gPlayerFBID
+      link: 'http://www.github.com?challenge_brag=' + gPlayerFBID
     }, fbCallback);
   }
 }
@@ -381,11 +381,11 @@ function sendScore() {
 function sendAchievement(kAchievement) {
 
   var achievementURLs = Array();
-  achievementURLs[0] = "http://www.friendsmash.com/achievement_50.html";
-  achievementURLs[1] = "http://www.friendsmash.com/achievement_100.html";
-  achievementURLs[2] = "http://www.friendsmash.com/achievement_150.html";
-  achievementURLs[3] = "http://www.friendsmash.com/achievement_200.html";
-  achievementURLs[4] = "http://www.friendsmash.com/achievement_x3.html";
+  achievementURLs[0] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_50.html";
+  achievementURLs[1] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_100.html";
+  achievementURLs[2] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_150.html";
+  achievementURLs[3] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_200.html";
+  achievementURLs[4] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_x3.html";
 
   FB.api('/me/scores/', 'post', { achievement: achievementURLs[kAchievement] }, function(response) {
     console.log("Achievement posted");

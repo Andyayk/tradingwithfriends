@@ -55,13 +55,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Friend Smash</title>
+    <title>Friend Smash!</title>
 
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta property="og:image" content="http://www.friendsmash.com/images/logo_large.jpg"/>
+      <meta property="og:image" content="https://github.com/Astarcorp/Friendsmash2/blob/master/images/logo_large.jpg"/>
 
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
       
