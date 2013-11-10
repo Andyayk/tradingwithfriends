@@ -364,7 +364,7 @@ function sendBrag() {
       caption: 'I just smashed ' + gScore + ' friends! Can you beat it?',
       picture: 'http://www.friendsmash.com/images/logo_large.jpg',
       name: 'Checkout my Friend Smash greatness!',
-      link: 'http://apps.facebook.com/friendsmashsample/?challenge_brag=' + gPlayerFBID
+      link: 'http://www.herokuapp.com?challenge_brag=' + gPlayerFBID
     }, fbCallback);
   }
 }
