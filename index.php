@@ -149,7 +149,58 @@
     <script>
     var d=new Date();
     document.write(d);
+    function digitized() {
+        var dt = new Date();    // DATE() CONSTRUCTOR FOR CURRENT SYSTEM DATE AND TIME.
+        var hrs = dt.getHours();
+        var min = dt.getMinutes();
+        var sec = dt.getSeconds();
+
+        min = Ticking(min);
+        sec = Ticking(sec);
+
+        document.getElementById('dc').innerHTML = hrs + ":" + min;
+        document.getElementById('dc_second').innerHTML = sec;
+        if (hrs > 12) { document.getElementById('dc_hour').innerHTML = 'PM'; }
+        else { document.getElementById('dc_hour').innerHTML = 'AM'; }
+
+        var time
+        
+        // THE ALL IMPORTANT PRE DEFINED JAVASCRIPT METHOD.
+        time = setTimeout('digitized()', 1000);      
+    }
+
+    function Ticking(ticVal) {
+        if (ticVal < 10) {
+            ticVal = "0" + ticVal;
+        }
+        return ticVal;
+    }
 	</script>
+	
+	<style type="text/css">
+            .clock
+            {
+                vertical-align:middle; font-family:Arial, Sans-Serif; font-size:40px; font-weight:normal;
+                color:#000; 
+            }
+            .clocklg 
+            {
+                vertical-align:middle; font-family:Arial, Sans-Serif; font-size:14px; font-weight:normal;
+                color: #555; 
+            }
+        </style>
+    </head>
+    <body onload="digitized();">      <!-- ON LOAD OF THE PAGE, THE CLOCK WILL START TICKING. -->
+        <table style="width:20%" align="center" cellspacing="0" cellpadding="0" border="0">
+            <tr><td class="clock" id="dc"></td>  <!-- THE DIGITAL CLOCK. -->
+                <td>
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tr><td class="clocklg" id="dc_hour"></td></tr>     <!-- HOUR IN 'AM' AND 'PM'. -->
+                        <tr><td class="clocklg" id="dc_second"></td></tr>   <!-- SHOWING SECONDS. -->
+                    </table>
+                </td>
+            </tr>
+        </table>
       
   </head>
 
