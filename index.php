@@ -68,44 +68,49 @@
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
+<script>
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
 
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
   </head>
 
   <body>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-<p>Click the button</p>
-<button onclick="myFunction()">Try</button>
-<script>
-function myFunction()
-{
-	alert("I am an alert box!");
-}
-</script>
+
+      <p>Click the button</p>
+      <button onclick="myFunction()">Try</button>
+      <script>
+      function myFunction()
+
+      {
+    		alert("I am an alert box!");
+      }
+      </script>
+      <body onload="startTime()">
+<div id="txt"></div>
       <div id="topbar">
       <script>
-      function startTime()
-      {
-          var today=new Date();
-          var h=today.getHours();
-          var m=today.getMinutes();
-          var s=today.getSeconds();
-          // add a zero in front of numbers<10
-          m=checkTime(m);
-          s=checkTime(s);
-      document.getElementbyId('txt').innerHTML=h+":"+m+":"+s;
-      t=setTimeout(function(){startTime()},500);
-      }
-
-      function checkTime(i)
-      {
-          if (i<10)
-          {
-
-            i="0" + i;
-          }
-          return i;
-      }
+      <img src="images/logo.jpg"/>
       </script>
       </div>
 
