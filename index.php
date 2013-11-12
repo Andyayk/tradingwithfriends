@@ -90,6 +90,30 @@
       <script src="scripts/ui.js"></script>
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
+      <script>
+      function startTime()
+      {
+          var today=new Date();
+          var h=today.getHours();
+          var m=today.getMinutes();
+          var s=today.getSeconds();
+          // add a zero in front of numbers<10
+          m=checkTime(m);
+          s=checkTime(s);
+      document.getElementbyId('txt').innerHTML=h+":"+m+":"+s;
+      t=setTimeout(function(){startTime()},500);
+      }
+
+      function checkTime(i)
+      {
+          if (i<10)
+          {
+
+            i="0" + i;
+          }
+          return i;
+      }
+      </script>
       
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
