@@ -76,9 +76,7 @@
       <script src="//connect.facebook.net/en_US/all.js"></script>
 
       <div id="topbar">
-        <img src="images/logo.jpg"/>
-      </div>
-<script>
+      <script>
       function startTime()
       {
           var today=new Date();
@@ -102,6 +100,8 @@
           return i;
       }
       </script>
+      </div>
+
       <div id="stage">
         <div id="gameboard">
             <canvas id="myCanvas"></canvas>
