@@ -69,35 +69,21 @@
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
 <script>
-function startTime()
-{
-var today=new Date();
-var h=today.getHours();
-var m=today.getMinutes();
-var s=today.getSeconds();
-// add a zero in front of numbers<10
-m=checkTime(m);
-s=checkTime(s);
-document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-t=setTimeout(function(){startTime()},500);
-}
-
-function checkTime(i)
-{
-if (i<10)
-  {
-  i="0" + i;
-  }
-return i;
-}
+var d=new Date();
+document.write(d);
 </script>
+
+
   </head>
 
   <body>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
 
-      <p>Click the button</p>
+      <p><script>
+var d=new Date();
+document.write(d);
+</script></p>
       <button onclick="myFunction()">Try</button>
       <script>
       function myFunction()
@@ -113,7 +99,10 @@ return i;
       <img src="images/logo.jpg"/>
 
       </div>
-
+<script>
+var d=new Date();
+document.write(d);
+</script>
       <div id="stage">
         <div id="gameboard">
             <canvas id="myCanvas"></canvas>
