@@ -109,9 +109,9 @@ return i;
       <body onload="startTime()">
 <div id="txt"></div>
       <div id="topbar">
-      <script>
+
       <img src="images/logo.jpg"/>
-      </script>
+
       </div>
 
       <div id="stage">
