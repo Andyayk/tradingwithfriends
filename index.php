@@ -68,64 +68,31 @@
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
-<script>
-var d=new Date();
-document.write(d);
-</script>
-<script>
-function startTime()
-{
-var today=new Date();
-var h=today.getHours();
-var m=today.getMinutes();
-var s=today.getSeconds();
-// add a zero in front of numbers<10
-m=checkTime(m);
-s=checkTime(s);
-document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-t=setTimeout(function(){startTime()},500);
-}
-
-function checkTime(i)
-{
-if (i<10)
-  {
-  i="0" + i;
-  }
-return i;
-}
-</script>
+	
+      <script>
+      var d=new Date();
+      document.write(d);
+      </script>
 
   </head>
 
-  <body onload="startTime()">
-<div id="txt"></div>
+  <body>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
 
-      <p><script>
-var d=new Date();
-document.write(d);
-</script></p>
+      <p>HELLO JW</p>
       <button onclick="myFunction()">Try</button>
       <script>
       function myFunction()
-
       {
     		alert("I am an alert box!");
       }
       </script>
-      <body onload="startTime()">
-<div id="txt"></div>
+      
       <div id="topbar">
-
       <img src="images/logo.jpg"/>
-
       </div>
-<script>
-var d=new Date();
-document.write(d);
-</script>
+
       <div id="stage">
         <div id="gameboard">
             <canvas id="myCanvas"></canvas>

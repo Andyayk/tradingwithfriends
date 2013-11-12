@@ -270,7 +270,7 @@ function welcomePlayer(uid) {
     
 
     var welcomeSubMsg = document.createElement('div');
-    welcomeSubMsg.innerHTML = 'Hurry and do trading together with your Friends!!';
+    welcomeSubMsg.innerHTML = 'Trade together with your friends now!!';
     welcomeSubMsg.id = 'welcome_submsg';
     welcomeMsgContainer.appendChild(welcomeSubMsg);
   }
