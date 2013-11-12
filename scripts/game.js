@@ -1,25 +1,3 @@
-/**
-* Copyright 2013 Facebook, Inc.
-*
-* You are hereby granted a non-exclusive, worldwide, royalty-free license to
-* use, copy, modify, and distribute this software in source code or binary
-* form for use in connection with the web services and APIs provided by
-* Facebook.
-*
-* As with any software that integrates with the Facebook platform, your use
-* of this software is subject to the Facebook Developer Principles and
-* Policies [http://developers.facebook.com/policy/]. This copyright notice
-* shall be included in all copies or substantial portions of the software.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-* DEALINGS IN THE SOFTWARE.
-*/
-
 var gContext;
 var gCanvasElement;
 var gSpawnTimer;
@@ -46,7 +24,7 @@ var TO_RADIANS = Math.PI/180;
 
 var gCoins; 
 
-// Array Remove - By John Resig (MIT Licensed)
+// Array Remove
 Array.prototype.remove = function(from, to) {
   var rest = this.slice((to || from) + 1 || this.length);
   this.length = from < 0 ? this.length + from : from;
@@ -391,7 +369,6 @@ function spawnEntity(forceFriendsOnly) {
 
 }
 
-
 function endGame() {
   clearInterval(gTickGameInterval);
   $(document).unbind("keypress");
@@ -414,7 +391,6 @@ function endGame() {
   results.innerHTML = "<img src='images/scores64.png'>You smashed "+gScore+" friends<br>";
   results.innerHTML += "<img src='images/coin_bundle64.png'>and grabbed "+gCoins+" coins!";
 }
-
 
 function getRandom(min, max) {
   var range = max-min;
@@ -476,7 +452,6 @@ function particle() {
   }
 
 }
-
 
 function entity() {
   
@@ -578,6 +553,3 @@ function entity() {
   }
 
 }
-
-
-  

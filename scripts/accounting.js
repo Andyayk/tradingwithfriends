@@ -1,14 +1,3 @@
-/*!
- * accounting.js v0.3.2
- * Copyright 2011, Joss Crowcroft
- *
- * Freely distributable under the MIT license.
- * Portions of accounting.js are inspired or borrowed from underscore.js
- *
- * Full details and documentation:
- * http://josscrowcroft.github.com/accounting.js/
- */
-
 (function(root, undefined) {
 
 	/* --- Setup --- */
