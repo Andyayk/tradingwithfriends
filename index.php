@@ -75,25 +75,44 @@
       </script>
 
       <script>
+      function startTime()
+      {
+      var today=new Date();
+      var h=today.getHours();
+      var m=today.getMinutes();
+      var s=today.getSeconds();
+      // add a zero in front of numbers<10
+      m=checkTime(m);
+      s=checkTime(s);
+      document.getElementById('date').innerHTML=h+":"+m+":"+s;
+      t=setTimeout(function(){startTime()},500);
+      }
 
-      var currentdate = new Date(); 
-      var datetime = "Last Sync: " + currentdate.getDate() + "/"
-                      + (currentdate.getMonth()+1)  + "/" 
-                      + currentdate.getFullYear() + " @ "  
-                      + currentdate.getHours() + ":"  
-                      + currentdate.getMinutes() + ":" 
-                      + currentdate.getSeconds();
-      var document.write(datetime);
-
+      function checkTime(i)
+      {
+      if (i<10)
+        {
+        i="0" + i;
+        }
+      return i;
+      }
       </script>
       
   </head>
+  
+<body2 onload="startTime()">
+<div id="date"></div>
+</body2>
+
+<body onload="startTime()">
+<div id="date"></div>
+</body>
 
   <body>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
-      <p>HELLO JW</p>
+      <p>HELLO JWJWJWJWJWJWJWJWJW</p>
       <button onclick="myFunction()">Try</button>
       <script>
       function myFunction()
