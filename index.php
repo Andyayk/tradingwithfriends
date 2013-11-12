@@ -147,43 +147,22 @@
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
       
     <script>
-	function startTime()
-	{
-	var today=new Date();
-	var h=today.getHours();
-	var m=today.getMinutes();
-	var s=today.getSeconds();
-	// add a zero in front of numbers<10
-	m=checkTime(m);
-	s=checkTime(s);
-	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-	t=setTimeout(function(){startTime()},500);
-	}
-		
-	function checkTime(i)
-	{
-	if (i<10)
-		{
-		i="0" + i;
-		 }
-	return i;
-	}
+    var d=new Date();
+    document.write(d);
 	</script>
       
   </head>
 
   <body>
-  	<body onload="startTime()">
-	<div id="txt"></div>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
-      <p>HELLO i going to die liao :(</p>
+      <p>A Star Crop</p>
       <button onclick="myFunction()">Try</button>
       <script>
       function myFunction()
       {
-    		alert("I am not an alert box, you dont say?");
+    		alert("Welcome");
       }
       </script>
       
