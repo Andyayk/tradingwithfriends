@@ -78,19 +78,7 @@
       <div id="topbar">
         <img src="images/logo.jpg"/>
       </div>
-
-      <div id="stage">
-        <div id="gameboard">
-            <canvas id="myCanvas"></canvas>
-        </div>
-      </div>
-
-      <script src="scripts/core.js"></script>
-      <script src="scripts/game.js"></script>
-      <script src="scripts/ui.js"></script>
-      <script src="scripts/accounting.js"></script>
-      <script src="scripts/payments.js"></script>
-      <script>
+<script>
       function startTime()
       {
           var today=new Date();
@@ -114,6 +102,18 @@
           return i;
       }
       </script>
+      <div id="stage">
+        <div id="gameboard">
+            <canvas id="myCanvas"></canvas>
+        </div>
+      </div>
+
+      <script src="scripts/core.js"></script>
+      <script src="scripts/game.js"></script>
+      <script src="scripts/ui.js"></script>
+      <script src="scripts/accounting.js"></script>
+      <script src="scripts/payments.js"></script>
+      
       
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
