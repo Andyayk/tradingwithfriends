@@ -68,109 +68,24 @@
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
-	
-
-      <script type="text/javascript" src="date_time.js"></script>	
       
       <script>
       var d=new Date();
       document.write(d);
       </script>
-
-      <script>
-      function startTime()
-      {
-      var today=new Date();
-      var h=today.getHours();
-      var m=today.getMinutes();
-      var s=today.getSeconds();
-      // add a zero in front of numbers<10
-      m=checkTime(m);
-      s=checkTime(s);
-      document.getElementById('date').innerHTML=h+":"+m+":"+s;
-      t=setTimeout(function(){startTime()},500);
-      }
-
-      function checkTime(i)
-      {
-      if (i<10)
-        {
-        i="0" + i;
-        }
-      return i;
-      }
-      </script>
       
   </head>
-  
-<body2 onload="startTime()">
-<div id="date"></div>
-</body2>
-
-<body onload="startTime()">
-<script>
-      function startTime()
-      {
-      var today=new Date();
-      var h=today.getHours();
-      var m=today.getMinutes();
-      var s=today.getSeconds();
-      // add a zero in front of numbers<10
-      m=checkTime(m);
-      s=checkTime(s);
-      document.getElementById('date').innerHTML=h+":"+m+":"+s;
-      t=setTimeout(function(){startTime()},500);
-      }
-
-      function checkTime(i)
-      {
-      if (i<10)
-        {
-        i="0" + i;
-        }
-      return i;
-      }
-      </script>
-<div id="date"></div>
-
-<span id="date_time"></span>
-            <script type="text/javascript">window.onload = date_time('date_time');</script>
-
-<script>
-      function startTime()
-      {
-      var today=new Date();
-      var h=today.getHours();
-      var m=today.getMinutes();
-      var s=today.getSeconds();
-      // add a zero in front of numbers<10
-      m=checkTime(m);
-      s=checkTime(s);
-      document.getElementById('date').innerHTML=h+":"+m+":"+s;
-      t=setTimeout(function(){startTime()},500);
-      }
-
-      function checkTime(i)
-      {
-      if (i<10)
-        {
-        i="0" + i;
-        }
-      return i;
-      }
-      </script>
-</body>
 
   <body>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
-      <p>HELLO peter</p>
+      <p>HELLO i going to die liao :(</p>
       <button onclick="myFunction()">Try</button>
       <script>
       function myFunction()
       {
-    		alert("I am an alert box!");
+    		alert("I am not an alert box, you dont say?");
       }
       </script>
       
@@ -184,12 +99,12 @@
         </div>
       </div>
 
+      <script src="scripts/date_time.js"></script>
       <script src="scripts/core.js"></script>
       <script src="scripts/game.js"></script>
       <script src="scripts/ui.js"></script>
       <script src="scripts/accounting.js"></script>
-      <script src="scripts/payments.js"></script>
-      
+      <script src="scripts/payments.js"></script>      
       
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
@@ -205,8 +120,6 @@
             uid = response.authResponse.userID ? response.authResponse.userID : null;
           });
       </script>
-
-      
 
   </body>
 </html>
