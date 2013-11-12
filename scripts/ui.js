@@ -345,7 +345,7 @@ function sendChallenge() {
   else {
     FB.ui({method: 'apprequests',
       title: 'Play Friend Smash with me!',
-      message: 'Andyayk Rocks, come check that out.',
+      message: 'Andyayk Rocks, come check that out!!!',
     }, fbCallback);
   }
 }
