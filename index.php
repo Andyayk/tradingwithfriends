@@ -151,8 +151,6 @@
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
       
     <script>
-    var d=new Date();
-    document.write(d);
 	</script>
       
   </head>
