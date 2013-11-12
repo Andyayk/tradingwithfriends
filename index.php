@@ -38,7 +38,7 @@
     
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Display Date and Time in Javascript</title>
-        <script type="text/javascript" src="date_time.js"></script>
+        <script type="text/javascript" src="scripts/date_time.js"></script>
 
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
