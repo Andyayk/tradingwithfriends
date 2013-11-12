@@ -50,7 +50,7 @@ window.onload = function () {
   // Set the dimensions to the match the client
   // This throws off game balance, but it's just a demo ;)
   stage.style.width = '940px';
-  stage.style.height = '570px';
+  stage.style.height = '2000px';
   
 }
 
