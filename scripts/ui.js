@@ -326,7 +326,7 @@ function sendChallenge() {
 function sendOG() {
   console.log("Sending custom OG story...");
 
-  FB.api('/me/zombieesssssssss:smash?profile=' + gFriendID, 'post', {}, function(response) {
+  FB.api('/me/tradingwithfriends:smash?profile=' + gFriendID, 'post', {}, function(response) {
     console.log(response);
   });
 }
