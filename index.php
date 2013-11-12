@@ -74,7 +74,14 @@
   <body>
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-
+<p>Click the button</p>
+<button onclick="myFunction()">Try</button>
+<script>
+function myFunction()
+{
+	alert("I am an alert box!");
+}
+</script>
       <div id="topbar">
       <script>
       function startTime()
