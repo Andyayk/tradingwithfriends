@@ -69,6 +69,9 @@
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
 	
+
+      <script type="text/javascript" src="date_time.js"></script>	
+      
       <script>
       var d=new Date();
       document.write(d);
@@ -129,6 +132,10 @@
       }
       </script>
 <div id="date"></div>
+
+<span id="date_time"></span>
+            <script type="text/javascript">window.onload = date_time('date_time');</script>
+
 <script>
       function startTime()
       {
