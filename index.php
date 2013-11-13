@@ -66,11 +66,21 @@
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
       <p>A Star Crop</p>
-      <button onclick="myFunction()">Try</button>
+      <button onclick="myFunction()">Click Here!</button>
+      <p id="demo"></p>
+      
       <script>
       function myFunction()
       {
-    		alert("Welcome!!!");
+      var x;
+
+      var person=prompt("Please enter your name","Harry Potter");
+
+      if (person!=null)
+        {
+        x="Hello " + person + "! Welcome to Trading With Friend";
+        document.getElementById("demo").innerHTML=x;
+        }
       }
       </script>
       
