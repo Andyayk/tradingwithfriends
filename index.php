@@ -37,7 +37,7 @@
     <title>Trading with Friends!</title>
     
    	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta http-equiv="refresh" content="5">
+      <meta http-equiv="refresh" content="15">
       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -75,7 +75,7 @@
 
   </head>
   <body>
-  	dynamic content
+  	
       
       <div id="topbar">
       <img src="images/logo.jpg"/>
