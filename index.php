@@ -212,10 +212,11 @@
 
       <script src="scripts/core.js"></script>
       <script src="scripts/game.js"></script>
+      <script src="scripts/userinterface.js"></script>
       <script src="scripts/ui.js"></script>
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
-      <script src="scripts/userinterface.js"></script>           
+                 
       
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
