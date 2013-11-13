@@ -199,7 +199,7 @@
   }  
   $stocks = new yahoo_stocks();
   
-  $stocks->get_stocks("http://download.finance.yahoo.com/d/quotes.csv?s=ASHOKLEY.BO+BERGEPAIN.NS+BPL.BO+CALSREF.BO+DLF.BO+FACORALL.BO+GMRINFRA.BO+HOTELEELA.BO+ICICIBANK.BO+IDBI.BO+IFCI.BO+INDRAMEDC.NS+INFY.BO+JAGRAN.BO+JAIPRA.BO+KSOIL.BO+LNT.BO+LUPIN.BO+MARUTI.BO+NTPC.BO+ONGC.BO+POWERGRID.BO+RELCAPITA.NS+RENUKA.BO+RIL.BO+SUZLON.BO+SATYAM.BO+TATAPOWER.BO+TATASTL.BO+TTML.BO+UCO.BO+UNITECH.BO&f=sl1ok2c6ghj5k4j6k5jk", "n");
+  $stocks->get_stocks("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+FB+MSFT&f=sl1ok2c6ghj5k4j6k5jk", "n");
   echo "</body></head></html>";    
 ?>  </div>
       
