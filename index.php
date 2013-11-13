@@ -46,7 +46,6 @@
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
-      <script src="scripts/equity.php"></script>
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
@@ -82,8 +81,8 @@
       }
       </script>
       
-      <button onclick="get_stocks($stock, $cache)">Trade Equities!</button>
-      <p id="get_stocks"></p>
+      <div id="flip">Click to slide the panel down or up</div>
+	  <div id="panel">Hello world!</div>
       
       <div id="stage">
         <div id="gameboard">
