@@ -27,7 +27,7 @@ window.onload = function () {
 
   // Set the dimensions to the match the client
   stage.style.width = '940px';
-  stage.style.height = '570px';
+  stage.style.height = '1000px';
   
 }
 
