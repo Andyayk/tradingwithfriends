@@ -29,7 +29,7 @@ function createMenu() {
   tradeButtonHover.style.top = "188px";
   tradeButtonHover.style.left = "0px";
   tradeButtonHover.style.backgroundImage = "url('images/button_play_hot.png')";
-  menuContainer.appendChild(playButtonHover);
+  menuContainer.appendChild(tradeButtonHover);
 
   $("#trade_button").hover (
     function() {
