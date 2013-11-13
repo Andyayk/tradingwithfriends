@@ -1,3 +1,12 @@
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+
+
 (function( window, undefined ) {
 var
 	// A central reference to the root jQuery(document)
