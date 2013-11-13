@@ -106,7 +106,7 @@
       </script>
       
       <div id="flip">Click to slide the panel down or up</div>
-	  <div id="panel">'<?php header('Location: homepage.php') ?></div>
+	  <div id="panel">'<?php echo"hello" ?></div>
       
       <div id="stage">
         <div id="gameboard">
