@@ -36,7 +36,7 @@
   <head>
     <title>Trading with Friends!</title>
     
-   	  <meta http-equiv="Content-Type" content="text/html; charset=utf-32" />
+   	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -46,18 +46,19 @@
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
-
+      <script src="scripts/equity.php"></script>
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
   </head>
   <body>
-	  <div id="fb-root"></div>
-      <script src="//connect.facebook.net/en_US/all.js"></script>
       
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
+      
+      <div id="fb-root"></div>
+      <script src="//connect.facebook.net/en_US/all.js"></script>
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
@@ -81,8 +82,8 @@
       }
       </script>
       
-      <p id="get_stocks"></p>
       <button onclick="get_stocks($stock, $cache)">Trade Equities!</button>
+      <p id="get_stocks"></p>
       
       <div id="stage">
         <div id="gameboard">
