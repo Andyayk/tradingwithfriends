@@ -46,7 +46,7 @@
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
-      <script src="scripts/equity.php"></script>
+
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
