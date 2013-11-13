@@ -49,6 +49,30 @@
       <script src="scripts/jquery-1.8.3.js"></script>
       <script src="scripts/jquery.jCounter-0.1.4.js"></script>
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
+      
+      <script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+ 
+<style type="text/css"> 
+#panel,#flip
+{
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#panel
+{
+padding:50px;
+display:none;
+}
+</style>
+
   </head>
   <body>
       
