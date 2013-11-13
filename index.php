@@ -51,27 +51,27 @@
       <!--[if IE]><script src="scripts/excanvas.js"></script><![endif]-->
       
       <script> 
-$(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").slideToggle("slow");
-  });
-});
-</script>
+	  $(document).ready(function(){
+  	  	$("#flip").click(function(){
+      		$("#panel").slideToggle("slow");
+      	});
+      });
+      </script>
  
-<style type="text/css"> 
-#panel,#flip
-{
-padding:5px;
-text-align:center;
-background-color:#e5eecc;
-border:solid 1px #c3c3c3;
-}
-#panel
-{
-padding:50px;
-display:none;
-}
-</style>
+	  <style type="text/css"> 
+	  #panel,#flip
+ 	  {
+		padding:5px;
+		text-align:center;
+		background-color:#e5eecc;
+		border:solid 1px #c3c3c3;
+	  }
+	  #panel
+	  {
+		padding:50px;
+		display:none;
+	  }
+	  </style>
 
   </head>
   <body>
@@ -93,20 +93,20 @@ display:none;
       <script>
       function welcome()
       {
-      var x;
+      	var x;
 
-      var person=prompt("Please enter your name","");
+     	var person=prompt("Please enter your name","");
 
       if (person!=null)
         {
-        x="Hello " + person + "! Welcome to Trading with Friends";
-        document.getElementById("welcome").innerHTML=x;
+        	x="Hello " + person + "! Welcome to Trading with Friends";
+        	document.getElementById("welcome").innerHTML=x;
         }
       }
       </script>
       
       <div id="flip">Click to slide the panel down or up</div>
-	  <div id="panel">Hello world!</div>
+	  <div id="panel">'<?php header('Location: homepage.php') ?></div>
       
       <div id="stage">
         <div id="gameboard">
