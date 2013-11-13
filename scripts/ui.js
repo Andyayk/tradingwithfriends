@@ -12,6 +12,7 @@ kAchievements = {
     kACHIEVEMENT_SCOREx3 : 4
 };
 
+//Create Menu
 function createMenu() {
   var menuShim = document.createElement('div');
   menuShim.id = 'menu_shim';
@@ -26,25 +27,26 @@ function createMenu() {
   menuContainer.style.width = stage.style.width;
   menuContainer.style.height = stage.style.height;
 
-  /* Play Button */
-  var playButton = document.createElement('div');
-  playButton.className = 'menu_item';
-  playButton.id = 'play_button';
-  playButton.style.top = "188px";
-  playButton.style.left = "0px";
-  playButton.style.zIndex = "10";
-  playButton.setAttribute('onclick', 'javascript:startGame(null, null)');
-  playButton.style.backgroundImage = "url('images/button_play.png')";
-  menuContainer.appendChild(playButton);
+  //Create Trade Button
+  var tradeButton = document.createElement('div');
+  tradeButton.className = 'menu_item';
+  tradeButton.id = 'trade_button';
+  tradeButton.style.top = "188px";
+  tradeButton.style.left = "0px";
+  tradeButton.style.zIndex = "10";
+  tradeButton.setAttribute('onclick', 'javascript:startGame(null, null)');
+  tradeButton.style.backgroundImage = "url('images/button_play.png')";
+  menuContainer.appendChild(tradeButton);
+  
+  //Highlight the Trade Button when Hovered
+  var tradeButtonHover = document.createElement('div');
+  tradeButtonHover.className = 'menu_item';
+  tradeButtonHover.style.top = "188px";
+  tradeButtonHover.style.left = "0px";
+  tradeButtonHover.style.backgroundImage = "url('images/button_play_hot.png')";
+  menuContainer.appendChild(tradeButtonHover);
 
-  var playButtonHover = document.createElement('div');
-  playButtonHover.className = 'menu_item';
-  playButtonHover.style.top = "188px";
-  playButtonHover.style.left = "0px";
-  playButtonHover.style.backgroundImage = "url('images/button_play_hot.png')";
-  menuContainer.appendChild(playButtonHover);
-
-  $("#play_button").hover (
+  $("#trade_button").hover (
     function() {
       $(this).stop().animate({"opacity": "0"}, "slow");
     },
@@ -54,7 +56,7 @@ function createMenu() {
   );
 
   if (g_useFacebook) {
-    /* Brag Button */
+    //Create Brag Button
     var bragButton = document.createElement('div');
     bragButton.className = 'menu_item';
     bragButton.id = 'brag_button';
@@ -65,6 +67,7 @@ function createMenu() {
     bragButton.style.backgroundImage = "url('images/button_brag.png')";
     menuContainer.appendChild(bragButton);
 
+    //Highlight the Brag Button when Hovered
     var bragButtonHover = document.createElement('div');
     bragButtonHover.className = 'menu_item';
     bragButtonHover.id = 'brag_button_hover';
@@ -82,7 +85,7 @@ function createMenu() {
       }
     );
 
-    /* Challenge Button */
+    //Create Challenge Button
     var challengeButton = document.createElement('div');
     challengeButton.className = 'menu_item';
     challengeButton.id = 'challenge_button';
@@ -93,6 +96,7 @@ function createMenu() {
     challengeButton.style.backgroundImage = "url('images/button_challenge.png')";
     menuContainer.appendChild(challengeButton);
 
+    //Highlight the Challenge Button when Hovered
     var challengeButtonHover = document.createElement('div');
     challengeButtonHover.className = 'menu_item';
     challengeButtonHover.id = 'challenge_button_hover';
@@ -110,7 +114,7 @@ function createMenu() {
       }
     );
     
-    /* Store Button */
+    //Create Store Button
     var storeButton = document.createElement('div');
     storeButton.className = 'menu_item';
     storeButton.id = 'store_button';
@@ -121,6 +125,7 @@ function createMenu() {
     storeButton.style.backgroundImage = "url('images/button_store.png')";
     menuContainer.appendChild(storeButton);
 
+    //Highlight the Store Button when Hovered
     var storeButtonHover = document.createElement('div');
     storeButtonHover.className = 'menu_item';
     storeButtonHover.id = 'store_button_hover';
@@ -137,7 +142,8 @@ function createMenu() {
         $(this).stop().animate({"opacity": "1"}, "slow");
       }
     );
-  
+
+    //Communicate with Facebook
     FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             gPlayerFBID = response.authResponse.userID;
@@ -158,12 +164,14 @@ function createMenu() {
   } 
 }
 
+//Welcome Player
 function welcomePlayer(uid) {
     console.log("Welcoming player");
     var welcomeMsgContainer = document.createElement('div');
     welcomeMsgContainer.id = 'welcome_msg_container';
     stage.appendChild(welcomeMsgContainer);
-
+    
+    //Getting Player's Information
     if (g_useFacebook) {
       FB.api('/me?fields=first_name', function(response) {
           var welcomeMsg = document.createElement('div');

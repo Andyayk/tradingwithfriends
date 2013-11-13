@@ -213,3 +213,7 @@ function startGame(fbid, name) {
     initGame(fbid, name, Math.min(3, gPlayerBombs));
     displayMenu(false, true);
 }
+
+function fbCallback(response) {
+	  console.log(response);
+	}
