@@ -41,7 +41,22 @@ function createMenu() {
   );
 
   if (g_useFacebook) {
-    
+	  
+	  FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            gPlayerFBID = response.authResponse.userID;
+            
+            // Register this user with the server
+            console.log("Registering player with server");
+            
+            if (!processIncomingURL()) {
+                  
+              welcomePlayer(gPlayerFBID);
+              showScores();
+            }
+          }
+    });
+	  
   } else {
     welcomePlayer(null);
   } 
