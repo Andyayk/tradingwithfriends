@@ -54,14 +54,7 @@ function createMenu() {
       $(this).stop().animate({"opacity": "1"}, "slow");
     }
   );
-  
-  $("#trade_button").ready(
-	function(){
-	  	$("#flip").click(function(){
-  		$("#panel").slideToggle("slow");
-  	});
-  });
-  
+
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
   portfolioButton.className = 'menu_item';
@@ -340,9 +333,26 @@ function processIncomingURL() {
 
 function showEquity() {
 	  
-	  var EquityContainer = document.createElement('div');
-	  EquityContainer.id = 'Equity_container';
-	  stage.appendChild(EquityContainer);
+	  $(document).ready(function(){
+  	  	$("#flip").click(function(){
+      		$("#panel").slideToggle("slow");
+      	});
+      });
+ 
+	  <style type="text/css"> 
+	  #panel,#flip
+ 	  {
+		padding:5px;
+		text-align:center;
+		background-color:#e5eecc;
+		border:solid 1px #c3c3c3;
+	  }
+	  #panel
+	  {
+		padding:50px;
+		display:none;
+	  }
+	  </style>
 }
 
 function showPortfolio() {
