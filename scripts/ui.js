@@ -34,7 +34,7 @@ function createMenu() {
   tradeButton.style.top = "188px";
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
-  tradeButton.setAttribute('onclick', 'javascript:startGame(null, null)');
+  tradeButton.setAttribute('onclick', 'javascript:showEquity()');
   tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
@@ -54,6 +54,13 @@ function createMenu() {
       $(this).stop().animate({"opacity": "1"}, "slow");
     }
   );
+  
+  $("#trade_button").ready(
+	function(){
+	  	$("#flip").click(function(){
+  		$("#panel").slideToggle("slow");
+  	});
+  });
   
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
@@ -331,12 +338,18 @@ function processIncomingURL() {
   return startedGame;
 }
 
+function showEquity() {
+	  
+	  var EquityContainer = document.createElement('div');
+	  EquityContainer.id = 'Equity_container';
+	  stage.appendChild(EquityContainer);
+}
+
 function showPortfolio() {
 	  
 	  var portfolioContainer = document.createElement('div');
 	  portfolioContainer.id = 'portfolio_container';
 	  stage.appendChild(portfolioContainer);
-
 }
 
 function showScores() {
@@ -468,11 +481,11 @@ function displayMenu(display) {
     }
   }
 }
-
-function startGame(fbid, name) {
-    initGame(fbid, name, Math.min(3, gPlayerBombs));
-    displayMenu(false, true);
-}
+//Start Game function. Should we use? 
+//function startGame(fbid, name) {
+//    initGame(fbid, name, Math.min(3, gPlayerBombs));
+//    displayMenu(false, true);
+//}
 
 function fbCallback(response) {
   console.log(response);
