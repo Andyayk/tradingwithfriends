@@ -34,6 +34,7 @@ function createMenu() {
   tradeButton.style.top = "188px";
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
+  tradeButton.setAttribute('onclick', 'javascript:startGame(fbid, name)');
   tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
@@ -53,11 +54,6 @@ function createMenu() {
       $(this).stop().animate({"opacity": "1"}, "slow");
     }
   );
-  
-  $("#trade_button").click(
-	function(){
-      $(this).hide();
-  });
 
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
@@ -335,7 +331,7 @@ function processIncomingURL() {
   return startedGame;
 }
 
-function showEquity(fbid, name) {	  
+function startGame(fbid, name) {	  
   initGame(fbid, name, Math.min(3, gPlayerBombs));
   displayMenu(false, true)	  
 }
