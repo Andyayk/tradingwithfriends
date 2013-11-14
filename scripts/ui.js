@@ -56,34 +56,6 @@ function createMenu() {
   );
   
 if (g_useFacebook) {  
- 
-	//Create Portfolio Button
-  	var tradeButton = document.createElement('div');
- 	portfolioButton.className = 'menu_item';
-  	portfolioButton.id = 'portfolio_button';
- 	portfolioButton.style.top = "285px";
- 	portfolioButton.style.left = "0px";
- 	portfolioButton.style.zIndex = "10";
-  	portfolioButton.setAttribute('onclick', 'javascript:showPortfolio()');
- 	portfolioButton.style.backgroundImage = "url('images/button_portfolio.png')";
- 	menuContainer.appendChild(portfolioButton);
-  
-	//Highlight the Portfolio Button when Hovered
- 	var portfolioButtonHover = document.createElement('div');
- 	portfolioButtonHover.className = 'menu_item';
-  	portfolioButtonHover.style.top = "285px";
-  	portfolioButtonHover.style.left = "0px";
- 	portfolioButtonHover.style.backgroundImage = "url('images/button_portfolio_hot.png')";
- 	menuContainer.appendChild(portfolioButtonHover);
-
-	$("#portfolio_button").hover (
-			function() {
-				$(this).stop().animate({"opacity": "0"}, "slow");
-			},  
-			function() {  
-				$(this).stop().animate({"opacity": "1"}, "slow");   
-			}
-	);
 
     //Create Brag Button
     var bragButton = document.createElement('div');
@@ -380,7 +352,7 @@ function sendBrag() {
   if (gScore) {
     FB.ui({ method: 'feed',
       caption: 'I just smashed ' + gScore + ' friends! Can you beat it?',
-      picture: 'https://github.com/Astarcorp/Friendsmash2/tree/master/images/logo_large.jpg',
+      picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logo_large.jpg',
       name: 'Checkout my Friend Smash greatness!',
       link: 'http://www.github.com?challenge_brag=' + gPlayerFBID
     }, fbCallback);
@@ -399,11 +371,11 @@ function sendScore() {
 function sendAchievement(kAchievement) {
 
   var achievementURLs = Array();
-  achievementURLs[0] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_50.html";
-  achievementURLs[1] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_100.html";
-  achievementURLs[2] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_150.html";
-  achievementURLs[3] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_200.html";
-  achievementURLs[4] = "https://github.com/Astarcorp/Friendsmash2/blob/master/opengraph/achievement_x3.html";
+  achievementURLs[0] = "https://github.com/Astarcorp/tradingwithfriends/blob/master/opengraph/achievement_50.html";
+  achievementURLs[1] = "https://github.com/Astarcorp/tradingwithfriends/blob/master/opengraph/achievement_100.html";
+  achievementURLs[2] = "https://github.com/Astarcorp/tradingwithfriends/blob/master/opengraph/achievement_150.html";
+  achievementURLs[3] = "https://github.com/Astarcorp/tradingwithfriends/blob/master/opengraph/achievement_200.html";
+  achievementURLs[4] = "https://github.com/Astarcorp/tradingwithfriends/blob/master/opengraph/achievement_x3.html";
 
   FB.api('/me/scores/', 'post', { achievement: achievementURLs[kAchievement] }, function(response) {
     console.log("Achievement posted");
