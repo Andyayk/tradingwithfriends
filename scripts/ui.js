@@ -331,23 +331,7 @@ function processIncomingURL() {
   return startedGame;
 }
 
-function showEquity() {
-	var challengeData = {"challenge_score" : gScore};
-
-	  if (gScore) {
-	    FB.ui({method: 'apprequests',
-	      title: 'Friend Smash Challenge!',
-	      message: 'I just smashed ' + gScore + ' friends! Can you beat it?',
-	      data: challengeData
-	    }, fbCallback);
-	  }
-	  else {
-	    FB.ui({method: 'apprequests',
-	      title: 'Play Friend Smash with me!',
-	      message: 'Andyayk Rocks, come check that out!!!',
-	    }, fbCallback);
-	  }
-	}	  
+function showEquity() {	  
 	  
 }
 
