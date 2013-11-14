@@ -55,14 +55,11 @@ function createMenu() {
     }
   );
   
-  $("#trade_button").toggle (
+  $("#trade_button").click (
 	function() {
-		$(this).stop().animate({"marginRight": "+400px"}, "slow");
-	},
-	function() {
-		$(this).stop().animate({"marginRight": "-=400px"}, "slow");
-	}
-  );
+		$(this).slideToggle({"slow", function(){
+	});
+  });
 
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
