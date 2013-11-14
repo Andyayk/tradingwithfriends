@@ -34,7 +34,6 @@ function createMenu() {
   tradeButton.style.top = "188px";
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
-  tradeButton.setAttribute('onclick', 'javascript:showEquity(fbid, name)');
   tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
@@ -55,8 +54,9 @@ function createMenu() {
     }
   );
   
-  $("#trade_button").click(function(){
-  $(this).hide();
+  $("#trade_button").click(
+	function(){
+      $(this).hide();
   });
 
   //Create Portfolio Button
