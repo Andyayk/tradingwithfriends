@@ -3,8 +3,6 @@ var gPlayerBombs = 0;
 var gPlayerLives = 0;
 var gPlayerCoins = 0;
 var gTournamentCountdown;
-var menu = $('.menu-item');
-var speed = 500; //set animation speed
 
 kAchievements = {
     kACHIEVEMENT_SCORE50 : 0,
@@ -59,14 +57,12 @@ function createMenu() {
   
   $("#trade_button").toggle (
 	function() {
-		menu.animate({
-			"marginRight": "+=400px"
-		}, speed);
+		$(this).stop().animate({"marginRight": "+400px"}, "slow");
+	},
 	function() {
-      menu.animate({
-    	  marginRight: "-=400px"
-    	}, speed);
-   });
+		$(this).stop().animate({"marginRight": "-=400px"}, "slow");
+	}
+  );
 
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
