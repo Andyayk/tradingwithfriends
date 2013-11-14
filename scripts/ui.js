@@ -59,7 +59,7 @@ function createMenu() {
   var tradeButton = document.createElement('div');
   portfolioButton.className = 'menu_item';
   portfolioButton.id = 'portfolio_button';
-  portfolioButton.style.top = "188px";
+  portfolioButton.style.top = "285px";
   portfolioButton.style.left = "0px";
   portfolioButton.style.zIndex = "10";
   portfolioButton.setAttribute('onclick', 'javascript:startGame(null, null)');
@@ -69,7 +69,7 @@ function createMenu() {
   //Highlight the Portfolio Button when Hovered
   var portfolioButtonHover = document.createElement('div');
   portfolioButtonHover.className = 'menu_item';
-  portfolioButtonHover.style.top = "188px";
+  portfolioButtonHover.style.top = "285px";
   portfolioButtonHover.style.left = "0px";
   portfolioButtonHover.style.backgroundImage = "url('images/button_portfolio_hot.png')";
   menuContainer.appendChild(portfolioButtonHover);
@@ -88,7 +88,7 @@ function createMenu() {
     var bragButton = document.createElement('div');
     bragButton.className = 'menu_item';
     bragButton.id = 'brag_button';
-    bragButton.style.top = "285px";
+    bragButton.style.top = "382px";
     bragButton.style.left = "0px";
     bragButton.style.zIndex = "10";
     bragButton.setAttribute('onclick', 'javascript:sendBrag()');
@@ -99,7 +99,7 @@ function createMenu() {
     var bragButtonHover = document.createElement('div');
     bragButtonHover.className = 'menu_item';
     bragButtonHover.id = 'brag_button_hover';
-    bragButtonHover.style.top = "285px";
+    bragButtonHover.style.top = "382px";
     bragButtonHover.style.left = "0px";
     bragButtonHover.style.backgroundImage = "url('images/button_brag_hot.png')";
     menuContainer.appendChild(bragButtonHover);
@@ -117,7 +117,7 @@ function createMenu() {
     var challengeButton = document.createElement('div');
     challengeButton.className = 'menu_item';
     challengeButton.id = 'challenge_button';
-    challengeButton.style.top = "382px";
+    challengeButton.style.top = "479px";
     challengeButton.style.left = "0px";
     challengeButton.style.zIndex = "10";
     challengeButton.setAttribute('onclick', 'javascript:sendChallenge()');
@@ -128,7 +128,7 @@ function createMenu() {
     var challengeButtonHover = document.createElement('div');
     challengeButtonHover.className = 'menu_item';
     challengeButtonHover.id = 'challenge_button_hover';
-    challengeButtonHover.style.top = "382px";
+    challengeButtonHover.style.top = "479px";
     challengeButtonHover.style.left = "0px";
     challengeButtonHover.style.backgroundImage = "url('images/button_challenge_hot.png')";
     menuContainer.appendChild(challengeButtonHover);
@@ -146,7 +146,7 @@ function createMenu() {
     var storeButton = document.createElement('div');
     storeButton.className = 'menu_item';
     storeButton.id = 'store_button';
-    storeButton.style.top = "479px";
+    storeButton.style.top = "576px";
     storeButton.style.left = "0px";
     storeButton.style.zIndex = "10";
     storeButton.setAttribute('onclick', 'javascript:showStore()');
@@ -157,7 +157,7 @@ function createMenu() {
     var storeButtonHover = document.createElement('div');
     storeButtonHover.className = 'menu_item';
     storeButtonHover.id = 'store_button_hover';
-    storeButtonHover.style.top = "479px";
+    storeButtonHover.style.top = "576px";
     storeButtonHover.style.left = "0px";
     storeButtonHover.style.backgroundImage = "url('images/button_store_hot.png')";
     menuContainer.appendChild(storeButtonHover);
