@@ -3,6 +3,8 @@ var gPlayerBombs = 0;
 var gPlayerLives = 0;
 var gPlayerCoins = 0;
 var gTournamentCountdown;
+var menu = $('.menu-item');
+var speed = 500; //set animation speed
 
 kAchievements = {
     kACHIEVEMENT_SCORE50 : 0,
@@ -54,9 +56,6 @@ function createMenu() {
       $(this).stop().animate({"opacity": "1"}, "slow");
     }
   );
-  
-  var menu = $('.menu-item');
-  var speed = 500; //set animation speed
   
   $("#trade_button").toggle (
 	function() {
