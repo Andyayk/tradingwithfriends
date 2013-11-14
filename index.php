@@ -108,7 +108,7 @@
       
       <div id="flip">Click to slide the panel down or up</div>
 	  <div id="panel">
-	  <a href="scripts/equities.php">Click here </a>
+	  <script src="scripts/equity.php"></a>
 
   
   </div>
