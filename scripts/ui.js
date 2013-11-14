@@ -55,35 +55,36 @@ function createMenu() {
     }
   );
   
-  //Create Portfolio Button
-  var tradeButton = document.createElement('div');
-  portfolioButton.className = 'menu_item';
-  portfolioButton.id = 'portfolio_button';
-  portfolioButton.style.top = "285px";
-  portfolioButton.style.left = "0px";
-  portfolioButton.style.zIndex = "10";
-  portfolioButton.setAttribute('onclick', 'javascript:startGame(null, null)');
-  portfolioButton.style.backgroundImage = "url('images/button_portfolio.png')";
-  menuContainer.appendChild(portfolioButton);
+if (g_useFacebook) {  
+ 
+	//Create Portfolio Button
+  	var tradeButton = document.createElement('div');
+ 	portfolioButton.className = 'menu_item';
+  	portfolioButton.id = 'portfolio_button';
+ 	portfolioButton.style.top = "285px";
+ 	portfolioButton.style.left = "0px";
+ 	portfolioButton.style.zIndex = "10";
+  	portfolioButton.setAttribute('onclick', 'javascript:showPortfolio()');
+ 	portfolioButton.style.backgroundImage = "url('images/button_portfolio.png')";
+ 	menuContainer.appendChild(portfolioButton);
   
-  //Highlight the Portfolio Button when Hovered
-  var portfolioButtonHover = document.createElement('div');
-  portfolioButtonHover.className = 'menu_item';
-  portfolioButtonHover.style.top = "285px";
-  portfolioButtonHover.style.left = "0px";
-  portfolioButtonHover.style.backgroundImage = "url('images/button_portfolio_hot.png')";
-  menuContainer.appendChild(portfolioButtonHover);
+	//Highlight the Portfolio Button when Hovered
+ 	var portfolioButtonHover = document.createElement('div');
+ 	portfolioButtonHover.className = 'menu_item';
+  	portfolioButtonHover.style.top = "285px";
+  	portfolioButtonHover.style.left = "0px";
+ 	portfolioButtonHover.style.backgroundImage = "url('images/button_portfolio_hot.png')";
+ 	menuContainer.appendChild(portfolioButtonHover);
 
-  $("#portfolio_button").hover (
-    function() {
-      $(this).stop().animate({"opacity": "0"}, "slow");
-    },
-    function() {
-      $(this).stop().animate({"opacity": "1"}, "slow");
-    }
-  );
+	$("#portfolio_button").hover (
+			function() {
+				$(this).stop().animate({"opacity": "0"}, "slow");
+			},  
+			function() {  
+				$(this).stop().animate({"opacity": "1"}, "slow");   
+			}
+	);
 
-  if (g_useFacebook) {
     //Create Brag Button
     var bragButton = document.createElement('div');
     bragButton.className = 'menu_item';
@@ -327,6 +328,14 @@ function processIncomingURL() {
   console.log("Parsed log with a result of: " + startedGame);
 
   return startedGame;
+}
+
+function showPortfolio() {
+	  
+	  var portfolioContainer = document.createElement('div');
+	  portfolioContainer.id = 'portfolio_container';
+	  stage.appendChild(portfolioContainer);
+
 }
 
 function showScores() {
