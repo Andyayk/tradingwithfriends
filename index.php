@@ -108,7 +108,7 @@
       
       <div id="flip">Click to slide the panel down or up</div>
 	  <div id="panel">
-	  <script src="scripts/equity.php"></a>
+	  <script type="scripts/equity.php"></a>
 
   
   </div>
