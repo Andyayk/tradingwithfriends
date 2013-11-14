@@ -34,7 +34,7 @@ function createMenu() {
   tradeButton.style.top = "188px";
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
-  tradeButton.setAttribute('onclick', 'javascript:startGame(fbid, name)');
+  tradeButton.setAttribute('onclick', 'javascript:startGame(null, null)');
   tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
