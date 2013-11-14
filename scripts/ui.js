@@ -35,7 +35,7 @@ function createMenu() {
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
   tradeButton.setAttribute('onclick', 'javascript:startGame(null, null)');
-  tradeButton.style.backgroundImage = "url('images/button_play.png')";
+  tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
   //Highlight the Trade Button when Hovered
@@ -43,10 +43,38 @@ function createMenu() {
   tradeButtonHover.className = 'menu_item';
   tradeButtonHover.style.top = "188px";
   tradeButtonHover.style.left = "0px";
-  tradeButtonHover.style.backgroundImage = "url('images/button_play_hot.png')";
+  tradeButtonHover.style.backgroundImage = "url('images/button_trade_hot.png')";
   menuContainer.appendChild(tradeButtonHover);
 
   $("#trade_button").hover (
+    function() {
+      $(this).stop().animate({"opacity": "0"}, "slow");
+    },
+    function() {
+      $(this).stop().animate({"opacity": "1"}, "slow");
+    }
+  );
+  
+  //Create Portfolio Button
+  var tradeButton = document.createElement('div');
+  portfolioButton.className = 'menu_item';
+  portfolioButton.id = 'portfolio_button';
+  portfolioButton.style.top = "188px";
+  portfolioButton.style.left = "0px";
+  portfolioButton.style.zIndex = "10";
+  portfolioButton.setAttribute('onclick', 'javascript:startGame(null, null)');
+  portfolioButton.style.backgroundImage = "url('images/button_portfolio.png')";
+  menuContainer.appendChild(portfolioButton);
+  
+  //Highlight the Portfolio Button when Hovered
+  var portfolioButtonHover = document.createElement('div');
+  portfolioButtonHover.className = 'menu_item';
+  portfolioButtonHover.style.top = "188px";
+  portfolioButtonHover.style.left = "0px";
+  portfolioButtonHover.style.backgroundImage = "url('images/button_portfolio_hot.png')";
+  menuContainer.appendChild(portfolioButtonHover);
+
+  $("#portfolio_button").hover (
     function() {
       $(this).stop().animate({"opacity": "0"}, "slow");
     },
@@ -373,6 +401,7 @@ function sendAchievement(kAchievement) {
   });
 }
 
+//Display Menu
 function displayMenu(display) {
   if (display == true) {
 
