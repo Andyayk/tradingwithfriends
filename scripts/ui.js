@@ -55,11 +55,9 @@ function createMenu() {
     }
   );
   
-  $(document).ready(function(){
 	  	$("#trade_button").click(function(){
     		$("#trade_button").slideToggle("slow");
     	});
-    });
 
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
