@@ -54,6 +54,10 @@ function createMenu() {
       $(this).stop().animate({"opacity": "1"}, "slow");
     }
   );
+  
+  $("#trade_button").click(function(){
+  $(this).hide();
+  });
 
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
