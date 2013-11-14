@@ -55,6 +55,35 @@ function createMenu() {
     }
   );
   
+  //Create Portfolio Button
+  var portfolioButton = document.createElement('div');
+  portfolioButton.className = 'menu_item';
+  portfolioButton.id = 'portfolio_button';
+  portfolioButton.style.top = "285px";
+  portfolioButton.style.left = "0px";
+  portfolioButton.style.zIndex = "10";
+  portfolioButton.setAttribute('onclick', 'javascript:sendPortfolio()');
+  portfolioButton.style.backgroundImage = "url('images/button_portfolio.png')";
+  menuContainer.appendChild(portfolioButton);
+
+  //Highlight the Portfolio Button when Hovered
+  var portfolioButtonHover = document.createElement('div');
+  portfolioButtonHover.className = 'menu_item';
+  portfolioButtonHover.id = 'portfolio_button_hover';
+  portfolioButtonHover.style.top = "285px";
+  portfolioButtonHover.style.left = "0px";
+  portfolioButtonHover.style.backgroundImage = "url('images/button_portfolio_hot.png')";
+  menuContainer.appendChild(portfolioButtonHover);
+
+  $("#portfolio_button").hover (
+    function() {
+      $(this).stop().animate({"opacity": "0"}, "slow");
+    },
+    function() {
+      $(this).stop().animate({"opacity": "1"}, "slow");
+    }
+  );
+  
 if (g_useFacebook) {  
 
     //Create Brag Button
