@@ -100,7 +100,7 @@
 
       if (person!=null)
         {
-        	x="Yo " + person + "! Welcome to Trading with Friends";
+        	x="Hi " + person + "! Welcome to Trading with Friends";
         	document.getElementById("welcome").innerHTML=x;
         }
       }
