@@ -54,6 +54,12 @@ function createMenu() {
       $(this).stop().animate({"opacity": "1"}, "slow");
     }
   );
+  
+  $(document).ready(function(){
+	  	$("#trade_button").click(function(){
+    		$("#trade_button").slideToggle("slow");
+    	});
+    });
 
   //Create Portfolio Button
   var portfolioButton = document.createElement('div');
@@ -332,12 +338,23 @@ function processIncomingURL() {
 }
 
 function showEquity() {
+	var challengeData = {"challenge_score" : gScore};
+
+	  if (gScore) {
+	    FB.ui({method: 'apprequests',
+	      title: 'Friend Smash Challenge!',
+	      message: 'I just smashed ' + gScore + ' friends! Can you beat it?',
+	      data: challengeData
+	    }, fbCallback);
+	  }
+	  else {
+	    FB.ui({method: 'apprequests',
+	      title: 'Play Friend Smash with me!',
+	      message: 'Andyayk Rocks, come check that out!!!',
+	    }, fbCallback);
+	  }
+	}	  
 	  
-	  $(document).ready(function(){
-  	  	$("#flip").click(function(){
-      		$("#panel").slideToggle("slow");
-      	});
-      });
 }
 
 function showPortfolio() {
