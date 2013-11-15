@@ -2,8 +2,6 @@
 
   // Server
   require 'server/fb-php-sdk/facebook.php';
-  require 'scripts/equity.php';
-  require 'scripts/portfolio.php';
   
   function get_stocks($stock, $cache)
   {
@@ -181,10 +179,6 @@ init();
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
-      <?php function get_stocks($stock, $cache)
-  {
-  	return $this->generate_stock_array($stock);   
-  } ?>
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
