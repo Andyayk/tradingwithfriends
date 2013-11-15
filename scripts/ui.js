@@ -88,9 +88,9 @@ function createMenu() {
   var portfolioButtonOpen = document.createElement('div');
   portfolioButtonOpen.className = 'menu_item';
   portfolioButtonOpen.id = 'portfolio_button_open';
-  portfolioButtonOpen.style.top = "385x";
+  portfolioButtonOpen.style.top = "385px";
   portfolioButtonOpen.style.left = "500px";
-  portfolioButtonOpen.style.backgroundImage = "url('images/button_portfolio_hot.png')";
+  portfolioButtonOpen.style.backgroundImage = "url('scripts/equity.php')";
   menuContainer.appendChild(portfolioButtonOpen);
   
   $("#portfolio_button").click(
@@ -351,10 +351,8 @@ function startGame(fbid, name) {
 }
 
 function showPortfolio() {
-	  
-	  var portfolioContainer = document.createElement('div');
-	  portfolioContainer.id = 'portfolio_container';
-	  stage.appendChild(portfolioContainer);
+	
+	
 }
 
 function showScores() {
