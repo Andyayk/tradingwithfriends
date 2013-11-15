@@ -172,7 +172,7 @@ if (g_useFacebook) {
         $(this).stop().animate({"opacity": "1"}, "slow");
       }
     );
-
+    
     //Communicate with Facebook
     FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
