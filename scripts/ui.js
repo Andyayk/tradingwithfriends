@@ -88,8 +88,8 @@ function createMenu() {
   var portfolioButtonOpen = document.createElement('div');
   portfolioButtonOpen.className = 'menu_item';
   portfolioButtonOpen.id = 'portfolio_button_open';
-  portfolioButtonOpen.style.top = "285x";
-  portfolioButtonOpen.style.right = "500px";
+  portfolioButtonOpen.style.top = "385x";
+  portfolioButtonOpen.style.left = "500px";
   portfolioButtonOpen.style.backgroundImage = "url('images/button_portfolio_hot.png')";
   menuContainer.appendChild(portfolioButtonOpen);
   
