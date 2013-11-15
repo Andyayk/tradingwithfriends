@@ -108,8 +108,9 @@
       </script>
       
       <div id="flip">Click to slide the panel down or up</div>
-	  <div id="panel"><a href="scripts/equity.php">
-	  <span id="date_time"></span>
+	  <div id="panel">
+	  <a href="scripts/equity.php">
+
 	  
 		
   </div>
