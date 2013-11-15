@@ -88,9 +88,9 @@ function createMenu() {
   var portfolioButtonOpen = document.createElement('div');
   portfolioButtonOpen.className = 'menu_item';
   portfolioButtonOpen.id = 'portfolio_button_open';
-  portfolioButtonOpen.style.top = "385px";
+  portfolioButtonOpen.style.top = "285px";
   portfolioButtonOpen.style.left = "500px";
-  portfolioButtonOpen.style.backgroundImage = "url('scripts/equity.php')";
+  portfolioButtonOpen.style.backgroundImage = "url('images/button_portfolio_hot.png')";
   menuContainer.appendChild(portfolioButtonOpen);
   
   $("#portfolio_button").click(
