@@ -81,8 +81,6 @@
       <img src="images/logo.jpg"/>
       </div>
       
-      <iframe id='dynamic-content' src='equity.php' />
-      
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
