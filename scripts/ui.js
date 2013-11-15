@@ -90,7 +90,6 @@ function createMenu() {
   portfolioButtonOpen.id = 'portfolio_button_open';
   portfolioButtonOpen.style.top = "285px";
   portfolioButtonOpen.style.left = "500px";
-  portfolioButtonOpen.style.padding-bottom = "50px";
   portfolioButtonOpen.style.backgroundImage = "url('images/button_portfolio_hot.png')";
   menuContainer.appendChild(portfolioButtonOpen);
   
