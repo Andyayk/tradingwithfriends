@@ -34,7 +34,7 @@ function createMenu() {
   tradeButton.style.top = "188px";
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
-  tradeButton.setAttribute('onclick', 'javascript:showTrade()');
+  tradeButton.setAttribute('onclick', 'javascript:startGame(null, null)');
   tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
@@ -90,6 +90,7 @@ function createMenu() {
   portfolioButtonOpen.id = 'portfolio_button_open';
   portfolioButtonOpen.style.top = "285px";
   portfolioButtonOpen.style.left = "500px";
+  portfolioButtonOpen.style.padding-bottom = "50px";
   portfolioButtonOpen.style.backgroundImage = "url('images/button_portfolio_hot.png')";
   menuContainer.appendChild(portfolioButtonOpen);
   
@@ -345,13 +346,13 @@ function processIncomingURL() {
   return startedGame;
 }
 
-function showTrade() {	  
-$("#trade_button").slideToggle("slow");	  
+function startGame(fbid, name) {	  
+  initGame(fbid, name, Math.min(3, gPlayerBombs));
+  displayMenu(false, true)	  
 }
 
 function showPortfolio() {
 
-	
 }
 
 function showScores() {
