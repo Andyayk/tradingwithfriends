@@ -95,7 +95,6 @@
       <p id="welcome"></p>
       
       <script>
-      
       function welcome()
       {
       	var x;
@@ -109,6 +108,18 @@
         }
       }
       </script>
+      <script>
+      function refresh_handler() {
+   			 function refresh() {
+       		$.get('index.php', null, function(data, textStatus) {
+           $("panel").html(data);
+        });
+    }
+    setInterval(refresh, 1*1000); //every 5 minutes
+}
+ 
+$(document).ready(refresh_handler);
+</script>
       
       <div id="flip">Click to slide the panel down or up</div>
 	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
