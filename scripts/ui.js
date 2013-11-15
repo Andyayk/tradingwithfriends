@@ -84,6 +84,20 @@ function createMenu() {
     }
   );
   
+  //Open portfolio
+  var portfolioButtonOpen = document.createElement('div');
+  portfolioButtonOpen.className = 'menu_item';
+  portfolioButtonOpen.id = 'portfolio_button_open';
+  portfolioButtonOpen.style.top = "285px";
+  portfolioButtonOpen.style.left = "0px";
+  portfolioButtonOpen.style.backgroundImage = "url('images/button_portfolio_hot.png')";
+  portfolioButtonOpen.appendChild(portfolioButtonHover);
+  
+  $("#portfolio_button").click(
+	function(){
+	  $("#portfolio_button_open").slideToggle("slow");
+  	});
+  
 if (g_useFacebook) {  
 
     //Create Brag Button
