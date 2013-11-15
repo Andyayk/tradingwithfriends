@@ -91,6 +91,6 @@
   }  
   $stocks = new yahoo_stocks();
   
-  $stocks->get_stocks("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+FB+MSFT&f=sl1ok2c6ghj5k4j6k5jk", "n");
+  $stocks->get_stocks("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+FB+D05.SI+O39.SI+TRI+MSFT&f=sl1ok2c6ghj5k4j6k5jk", "n");
   echo "</body></head></html>";    
 ?>  
