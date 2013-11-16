@@ -7,7 +7,7 @@
   	return $this->generate_stock_array($stock);   
   } 
      
-  function generate_stock_array($stock)
+  function generate_stock_array($stock) //Create array
   {
     echo "<style type=\"text/css\">";
 	echo "td.even {";
@@ -33,7 +33,7 @@
 	{
     	while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
     	{
-        	$num = count($data);
+        	$num = count($data); //Counting of data
 			echo "<tr>";
         	$row++;
        		for ($c=0; $c < $num; $c++) 
@@ -41,15 +41,15 @@
 				if($row%2==0)
 				{
 					echo "<td class=even>";
-					if($data[4]<0&&($c==4||$c==1||$c==0))
+					if($data[4]<0&&($c==4||$c==1||$c==0)) //Colouring of negative equities numbers
 						echo "<font color=red>";
 					else	
 					{
-						if($data[4]>0&&($c==4||$c==1||$c==0))
+						if($data[4]>0&&($c==4||$c==1||$c==0)) //Colouring of positive equities numbers
 						echo "<font color=green>";
 					}
-					echo $data[$c]."</font>";
-					if(($c+1)==$num)
+					echo $data[$c]."</font>"; //Colouring of positive/negative equities names
+					if(($c+1)==$num)//Printing of charts
 					{
 						echo "</td><td class=even><img src=http://ichart.finance.yahoo.com/h?s=".$data[0]."&lang=en-IN&region=in></td>";
 					}
@@ -59,15 +59,15 @@
 					else
 					{
 						echo "<td class=odd>";
-						if($data[4]<0&&($c==4||$c==1||$c==0))
+						if($data[4]<0&&($c==4||$c==1||$c==0)) //Colouring of negative equities numbers
 							echo "<font color=red>";
 						else
 						{
-							if($data[4]>0&&($c==4||$c==1||$c==0))
+							if($data[4]>0&&($c==4||$c==1||$c==0)) //Colouring of postive equities numbers
 								echo "<font color=green>";
 						}
-							echo $data[$c]."</font>";
-							if(($c+1)==$num)
+							echo $data[$c]."</font>"; //Colouring of positive/negative equities names
+							if(($c+1)==$num)//Printing of charts
 							{
 								echo "</td><td class=odd><img src=http://ichart.finance.yahoo.com/h?s=".$data[0]."&lang=en-IN&region=in></td>";
 							}
@@ -90,6 +90,6 @@
   }  
   $stocks = new yahoo_stocks();
   
-  $stocks->get_stocks("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+FB+D05.SI+O39.SI+TRI+MSFT&f=sl1ok2c6ghj5k4j6k5jk", "n");
+  $stocks->get_stocks("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+FB+D05.SI+O39.SI+TRI+MSFT&f=sl1ok2c6ghj5k4j6k5jk", "n"); //Get stocks
   
 ?>  
