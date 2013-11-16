@@ -53,6 +53,7 @@
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"></script>
       <script src="scripts/jquery-1.10.2.min.js"></script>
+      <script src="scripts/jquery-1.8.3.js"></script>
       
       <script> 
 	  $(document).ready(function(){
