@@ -82,7 +82,6 @@ $(document).ready(refresh_handler);
 
       <script src="scripts/core.js"></script>
       <script src="scripts/userinterface.js"></script>
-      <script src="scripts/ui.js"></script>
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
       
