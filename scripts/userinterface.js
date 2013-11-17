@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#portfolioButton").click(function(){
-		$("#showportfolio").slideToggle("slow");
+		$("#showPortfolio").slideToggle("slow");
 	});
 });
 
