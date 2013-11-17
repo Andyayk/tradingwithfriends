@@ -92,6 +92,7 @@
         }
       }
       </script>
+      
       <script>
       function refresh_handler() {
    			 function refresh() {
@@ -104,7 +105,8 @@
  
 $(document).ready(refresh_handler);
 </script>
-      
+      <div id ="myDiv">
+      </div>
       <div id="flip">Click to slide the panel down or up</div>
 	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
       

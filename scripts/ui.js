@@ -34,7 +34,7 @@ function createMenu() {
   tradeButton.style.top = "188px";
   tradeButton.style.left = "0px";
   tradeButton.style.zIndex = "10";
-  tradeButton.setAttribute('onclick', 'javascript:startGame(null, null)');
+  tradeButton.setAttribute('onclick', 'javascript:startGame()');
   tradeButton.style.backgroundImage = "url('images/button_trade.png')";
   menuContainer.appendChild(tradeButton);
   
@@ -345,9 +345,8 @@ function processIncomingURL() {
   return startedGame;
 }
 
-function startGame(fbid, name) {	  
-  initGame(fbid, name, Math.min(3, gPlayerBombs));
-  displayMenu(false, true)	  
+function startGame() {	  
+  $('#myDiv').load('scripts/equity.php');
 }
 
 function showPortfolio() {
