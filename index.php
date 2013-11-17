@@ -73,7 +73,7 @@
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	 
 	  <div id="portfolioButton">My Portfolio</div>
-	  <div id="showPortfolio">a</div>
+	  <div id="showPortfolio">My Portfolio</div>
 	  
 	  <div id="recommendButton">Recommend Friends</div>
                          
