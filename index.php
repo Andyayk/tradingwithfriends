@@ -65,7 +65,6 @@
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
 
-      <script src="scripts/core.js"></script>
       <script src="scripts/userinterface.js"></script>
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
