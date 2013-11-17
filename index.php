@@ -52,15 +52,6 @@
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script src="scripts/jquery-1.10.2.min.js"></script>
-      <script src="scripts/jquery-1.8.3.js"></script>
-      
-      <script> 
-	  $(document).ready(function(){
-  	  	$("#flip").click(function(){
-      		$("#panel").slideToggle("slow");
-      	});
-      });
-      </script>
 
   </head>
   <body>
@@ -74,25 +65,8 @@
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
-      <p>AStar Corp</p>
       <button onclick="welcome()">Click Here!</button>
-      <p id="welcome"></p>
-      
-      <script>
-      function welcome()
-      {
-      	var x;
 
-     	var person=prompt("Please enter your name","");
-
-      if (person!=null)
-        {
-        	x="Hi " + person + "! Welcome to Trading with Friends";
-        	document.getElementById("welcome").innerHTML=x;
-        }
-      }
-      </script>
-      
       <script>
       function refresh_handler() {
    			 function refresh() {
@@ -105,9 +79,10 @@
  
 $(document).ready(refresh_handler);
 </script>
-      <div id ="myDiv">
-      </div>
-      <div id="flip">Click to slide the panel down or up</div>
+      <div id ="showEquity"><?php require_once 'scripts/equity.php';?></div>
+      <input id="equityButton" value="Show Equities" type="button">
+      
+      <div id="flip">Slide up & Down</div>
 	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
       
       <div id="stage">
@@ -117,7 +92,7 @@ $(document).ready(refresh_handler);
       </div>
 
       <script src="scripts/core.js"></script>
-      <script src="scripts/game.js"></script>
+      <script src="scripts/userinterface.js"></script>
       <script src="scripts/ui.js"></script>
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
