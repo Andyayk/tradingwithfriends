@@ -10,3 +10,18 @@ $(document).ready(function(){
 	});
 });
 
+$(document).ready(function(){
+	$("#RecommendButton").click(function(){
+		FB.ui({
+			method: 'apprequests',
+			message: 'hello'
+		});
+	});
+});
+
+var auto_refresh = setInterval(
+		function ()
+		{
+			$("#showEquity").load("equity.php").fadeIn("slow");
+		}, 10000); //refresh every 10000 milliseconds
+

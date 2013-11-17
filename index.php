@@ -52,6 +52,13 @@
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+      
+      <script type="text/javascript">
+      if (top.location!= self.location)
+      {
+      top.location = self.location
+      }
+      </script>
 
   </head>
   <body>
@@ -71,7 +78,7 @@
       <script src="scripts/payments.js"></script>
       
       <div id="equityButton">Equities List</div>
-	  <div id="showEquity"><?php require_once 'scripts/equity.php';?></div>
+	  <div id="showEquity"></div>
 	 
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio">a</div>
