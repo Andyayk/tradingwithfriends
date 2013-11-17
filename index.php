@@ -36,7 +36,7 @@
 for($i=1; $i<50; $i++)
 {  
   $quantities = array(		
-	'$i' => '$i',			
+	$i => $i,			
   );
 }; 
    
@@ -80,9 +80,8 @@ for($i=1; $i<50; $i++)
 	  
 	  <p>
 		<b>Buying of Equities:</b>
-		Quantity
 		<select name="quantity" >
-			<option value="">Select Day</option>
+			<option value="">Select Quantity</option>
 			<?php foreach($quantities as $key=>$quantity) : ?>			
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['quantity']) && $_POST['quantity']==$key) echo "selected"; ?> ><?php echo $quantity; ?></option>			
 			<?php endforeach; ?>
