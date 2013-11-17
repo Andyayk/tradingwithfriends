@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function refresh_handler() {
 		 function refresh() {
-		$.get('index.php', null, function(data, textStatus) {
+		$.get("index.php", null, function(data, textStatus) {
   $("showEquity").html(data);
 });
 }
@@ -24,8 +24,8 @@ $("div#menuDemo > ul > li").hover(function() {
 	$(this).children("ul").fadeOut();
 });
 
-$('div#customAccordion').accordion({
+$("div#customAccordion").accordion({
 	collapsible: true,
     active: false,
-    heightStyle: 'content'
+    heightStyle: "content"
 });  
