@@ -72,8 +72,9 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require_once 'scripts/equity.php';?></div>
-	  
+	 
 	  <div id="portfolioButton">My Portfolio</div>
+	  <div id="showPortfolio">a</div>
 	  
 	  <div id="recommendButton">Recommend Friends</div>
                          
