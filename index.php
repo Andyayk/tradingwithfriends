@@ -65,8 +65,6 @@
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
-      <button onclick="welcome()">Click Here!</button>
-
       <script>
       function refresh_handler() {
    			 function refresh() {
@@ -88,6 +86,7 @@ $(document).ready(refresh_handler);
       
       <input id="equityButton" value="Show Equities" type="button">
       <div id ="showEquity">hello</div>
+      
       <div id="flip">Slide up & Down</div>
 	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
       

@@ -4,9 +4,8 @@ $(document).ready(function(){
 	});
 });
 
-$(document).ready(function(){
-	$('#equityButton').click(function(){
-		$('#showEquity').slidetoggle('slow');
-	});
+$('#equityButton').click(function(){
+	$('#showEquity').slideToggle('slow');
 });
+
 
