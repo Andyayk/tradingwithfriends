@@ -33,12 +33,15 @@
     ));
     print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
   }
-for($i=1; $i<50; $i++)
-{  
-  $quantities = array(		
-	$i => $i,			
-  );
-}; 
+  
+$names = array(	
+	'APPL' => 'APPL'
+	'FB' => 'FB'
+	'D05.SI' => 'D05.SI'
+	'039.SI' => '039.SI'
+	'TRI' => 'TRI'
+	'MSFT' => 'MSFT'	
+);
    
 ?>
 
@@ -79,13 +82,15 @@ for($i=1; $i<50; $i++)
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
 	  <p>
-		<b>Buying of Equities:</b>
-		<select name="quantity" >
-			<option value="">Select Quantity</option>
-			<?php foreach($quantities as $key=>$quantity) : ?>			
-				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['quantity']) && $_POST['quantity']==$key) echo "selected"; ?> ><?php echo $quantity; ?></option>			
+		<b>Buying Equity:</b>
+		<select name="name" >
+			<option value="">Select Equity</option>
+			<?php foreach($names as $key=>$name) : ?>			
+				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
+	  
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" />	
 	  </p>
 	  
 	  <p>
