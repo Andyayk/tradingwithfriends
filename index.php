@@ -90,6 +90,32 @@
         </li>
         </ul>
 	  </div>
+	  
+	  <div id="customAccordion">
+   	    <!-- First accordion menu item-->
+   		<h3>Custom Feature #1</h3>
+   		<div>
+       		<p>
+       			Allow collapsible menus - including the active one.
+     		</p>
+    	</div>
+    
+		<!-- Second accordion menu item-->
+    	<h3>Custom Feature #2</h3>
+    	<div>
+    		<p>
+        	    Sets active panel to false, making the menu start out with all menu items closed.
+       	 	</p>
+    	</div>
+    
+    	<!-- Third accordion menu item-->
+    	<h3>Custom Feature #3</h3>
+    	<div>
+    		<p>
+           		Make each inside panel only as tall as it's content requires.
+        	</p>
+    	</div>
+	  </div>
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require_once 'scripts/equity.php';?></div>

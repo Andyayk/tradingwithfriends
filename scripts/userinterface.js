@@ -23,3 +23,9 @@ $("div#menuDemo > ul > li").hover(function() {
 	//effect when the user leaves the current menu area - fade out
 	$(this).children("ul").fadeOut();
 });
+
+$('div#customAccordion').accordion({
+	collapsible: true,
+    active: false,
+    heightStyle: 'content'
+});  
