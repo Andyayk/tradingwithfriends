@@ -12,10 +12,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#RecommendButton").click(function(){
-		FB.ui({
-			method: 'apprequests',
-			message: 'hello'
-		});
+		alert("hello");
 	});
 });
 
