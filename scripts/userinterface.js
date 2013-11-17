@@ -31,3 +31,6 @@ $(document).ready(function(){
 	});
 });
 
+function fbCallback(response) {
+	  console.log(response);
+	}
