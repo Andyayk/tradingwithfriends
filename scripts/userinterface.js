@@ -11,7 +11,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$("#RecommendButton").click(function(){
+	$("#recommendButton").click(function(){
 		alert("hello");
 	});
 });
