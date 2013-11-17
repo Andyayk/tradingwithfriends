@@ -64,19 +64,6 @@
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-      
-      <script>
-      function refresh_handler() {
-   			 function refresh() {
-       		$.get('index.php', null, function(data, textStatus) {
-           $("panel").html(data);
-        });
-    }
-    setInterval(refresh, 1*1000); //every 5 minutes
-}
- 
-$(document).ready(refresh_handler);
-</script>
 
       <script src="scripts/core.js"></script>
       <script src="scripts/userinterface.js"></script>
@@ -89,13 +76,7 @@ $(document).ready(refresh_handler);
       
       <div id="flip">Slide up & Down</div>
 	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
-      
-      <div id="stage">
-        <div id="gameboard">
-            <canvas id="myCanvas"></canvas>
-        </div>
-      </div>                 
-      
+                         
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
 
