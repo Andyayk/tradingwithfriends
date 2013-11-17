@@ -7,10 +7,19 @@ $(document).ready(function(){
 function refresh_handler() {
 		 function refresh() {
 		$.get('index.php', null, function(data, textStatus) {
-  $("panel").html(data);
+  $("showEquity").html(data);
 });
 }
-setInterval(refresh, 1*1000); //every 5 minutes
+setInterval(refresh, 1*1000); //refresh every 1 second
 }
 
 $(document).ready(refresh_handler);
+
+$('div#menuDemo3 > ul > li').hover(function() {
+	//effect when the user hovers over the menu
+	//first hide the menu item, since the CSS displays it - then slide it down.
+   	$(this).children('ul').hide().slideDown();
+}, function() {
+	//effect when the user leaves the current menu area - fade out
+	$(this).children('ul').fadeOut();
+});
