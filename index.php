@@ -70,12 +70,8 @@
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
       
-      
-      <input id="equityButton" value="Show Equities" type="button">
-      <div id ="showEquity">hello</div>
-      
-      <div id="flip">Slide up & Down</div>
-	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
+      <div id="equityButton">Show Equities</div>
+	  <div id="showEquity"><?php require_once 'scripts/equity.php';?></div>
                          
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
