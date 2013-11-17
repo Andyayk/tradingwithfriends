@@ -33,40 +33,12 @@
     ));
     print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
   }
-  
-$days = array(		
-	'1' => '1',		
-	'2' => '2',		
-	'3'	=> '3',	
-	'4' => '4',		
-	'5' => '5',		
-	'6'	=> '6',
-	'7' => '7',		
-	'8' => '8',		
-	'9'	=> '9',
-	'10' => '10',		
-	'11' => '11',		
-	'12' => '12',
-	'13' => '13',		
-	'14' => '14',		
-	'15' => '15',
-	'16' => '16',		
-	'17' => '17',		
-	'18' => '18',
-	'19' => '19',		
-	'20' => '20',		
-	'21' => '21',
-	'22' => '22',		
-	'23' => '23',		
-	'24' => '24',
-	'25' => '25',		
-	'26' => '26',		
-	'27' => '27',
-	'28' => '28',		
-	'29' => '29',		
-	'30' => '30',
-	'31' => '31'	
-);  
+for($i=1; $i<50; $i++)
+{  
+  $quantities = array(		
+	'$i' => '$i',			
+  );
+}; 
    
 ?>
 
@@ -107,14 +79,18 @@ $days = array(
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
 	  <p>
-		<b>Date of Birth:</b>
-		Day
-		<select name="day" >
+		<b>Buying of Equities:</b>
+		Quantity
+		<select name="quantity" >
 			<option value="">Select Day</option>
-			<?php foreach($days as $key=>$day) : ?>			
-				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['day']) && $_POST['day']==$key) echo "selected"; ?> ><?php echo $day; ?></option>			
+			<?php foreach($quantities as $key=>$quantity) : ?>			
+				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['quantity']) && $_POST['quantity']==$key) echo "selected"; ?> ><?php echo $quantity; ?></option>			
 			<?php endforeach; ?>
 		</select>
+	  </p>
+	  
+	  <p>
+	  	<input type="submit" value="Submit" />
 	  </p>
 	 
 	  <div id="portfolioButton">My Portfolio</div>
