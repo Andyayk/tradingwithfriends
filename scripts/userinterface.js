@@ -15,7 +15,7 @@ setInterval(refresh, 1*1000); //refresh every 1 second
 
 $(document).ready(refresh_handler);
 
-$("div#menuDemo > ul > li").hover(function() {
+$("#menuDemo > ul > li").hover(function() {
 	//effect when the user hovers over the menu
 	//first hide the menu item, since the CSS displays it - then slide it down.
    	$(this).children("ul").hide().slideDown();
@@ -25,7 +25,7 @@ $("div#menuDemo > ul > li").hover(function() {
 });
 
 $(document).ready(function(){
-    $("div#customAccordion").accordion({
+    $("#customAccordion").accordion({
   		collapsible: true,
   	    active: false,
   	    heightStyle: "content"
