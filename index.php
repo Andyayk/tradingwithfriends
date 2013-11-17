@@ -79,6 +79,13 @@
  
 $(document).ready(refresh_handler);
 </script>
+
+      <script src="scripts/core.js"></script>
+      <script src="scripts/userinterface.js"></script>
+      <script src="scripts/ui.js"></script>
+      <script src="scripts/accounting.js"></script>
+      <script src="scripts/payments.js"></script>
+      
       <div id ="showEquity"><?php require_once 'scripts/equity.php';?></div>
       <input id="equityButton" value="Show Equities" type="button">
       
@@ -89,14 +96,7 @@ $(document).ready(refresh_handler);
         <div id="gameboard">
             <canvas id="myCanvas"></canvas>
         </div>
-      </div>
-
-      <script src="scripts/core.js"></script>
-      <script src="scripts/userinterface.js"></script>
-      <script src="scripts/ui.js"></script>
-      <script src="scripts/accounting.js"></script>
-      <script src="scripts/payments.js"></script>
-                 
+      </div>                 
       
       <script>
           var appId = '<?php echo $facebook->getAppID() ?>';
