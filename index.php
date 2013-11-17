@@ -35,11 +35,11 @@
   }
   
 $names = array(	
-	'APPL' => 'APPL'
-	'FB' => 'FB'
-	'D05.SI' => 'D05.SI'
-	'039.SI' => '039.SI'
-	'TRI' => 'TRI'
+	'APPL' => 'APPL',
+	'FB' => 'FB',
+	'D05.SI' => 'D05.SI',
+	'039.SI' => '039.SI',
+	'TRI' => 'TRI',
 	'MSFT' => 'MSFT'	
 );
    
