@@ -1,14 +1,6 @@
 $(document).ready(function(){
-	$("#equityButton").click(function(){
-		$("#showEquity").slideToggle("slow");
-		alert("Please choose your desired Equity")
-	});
-});
-
-$(document).ready(function(){
 	$("#portfolioButton").click(function(){
 		$("#showPortfolio").slideToggle("slow");
-		alert("My Portfolio");
 	});
 });
 
