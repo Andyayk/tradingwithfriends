@@ -51,6 +51,7 @@
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
+      <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
   </head>
