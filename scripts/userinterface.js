@@ -7,12 +7,16 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$("#portfolioButton").click(function(){
 		$("#showPortfolio").slideToggle("slow");
+		alert("hello");
 	});
 });
 
 $(document).ready(function(){
 	$("#recommendButton").click(function(){
-		alert("hello");
+		FB.ui({
+			method: 'apprequests',
+			message: 'hello you'
+		});
 	});
 });
 
