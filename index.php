@@ -85,9 +85,9 @@ $(document).ready(refresh_handler);
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
       
-      <div id ="showEquity"><?php require_once 'scripts/equity.php';?></div>
-      <input id="equityButton" value="Show Equities" type="button">
       
+      <input id="equityButton" value="Show Equities" type="button">
+      <div id ="showEquity">hello</div>
       <div id="flip">Slide up & Down</div>
 	  <div id="panel"><?php require_once 'scripts/equity.php';?></div>
       
