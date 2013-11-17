@@ -24,11 +24,3 @@ $("#menuDemo > ul > li").hover(function() {
 	$(this).children("ul").fadeOut();
 });
 
-$(document).ready(function(){
-    $("#customAccordion").accordion({
-  		collapsible: true,
-  	    active: false,
-  	    heightStyle: "content"
-  	});
-    }); 
-
