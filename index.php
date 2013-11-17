@@ -52,6 +52,16 @@
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script src="scripts/jquery-1.10.2.min.js"></script>
+      
+      <script>
+      $(document).ready(function(){
+      $("#customAccordion").accordion({
+    		collapsible: true,
+    	    active: false,
+    	    heightStyle: "content"
+    	});
+      });  
+      </script>
 
   </head>
   <body>
