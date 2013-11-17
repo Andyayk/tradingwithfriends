@@ -70,27 +70,6 @@
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
       
-      <div id="menuDemo">
-      	<ul>
-    	  <li id="homeMenu"><a href="#menuHome">Home</a>
-          </li>
-        <li><a href="#">Pages</a>
-        	<ul>
-              <li><a href="#menuPagesOne">Page Number One</a></li>
-              <li><a href="#menuPagesTwo">Page Number Two</a></li>
-              <li><a href="#menuPagesThree">Page Number Three</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Links</a>
-        	<ul>
-              <li><a href="#LinkNumber1">Link Number 1</a></li>
-              <li><a href="#LinkNumber2">Link Number 2</a></li>
-              <li><a href="#LinkNumber3">Link Number 3</a></li>
-            </ul>
-        </li>
-        </ul>
-	  </div>
-      
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require_once 'scripts/equity.php';?></div>
 	  

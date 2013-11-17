@@ -22,55 +22,6 @@ body {
   width: 100%;
 }
 
-div#menuDemo {
-	width: 800px;
-    height: 30px;
-    position: relative;
-    left: 0;
-    top: 0;
-	background-color: orange;
-	color: white;
-	border-bottom: 1px solid black;
-	/*Remove this next one in production - Used for demo purpose only*/
-	margin-bottom: 300px;	
-}
-
-div#menuDemo ul {
-	list-style: none;
-    margin: 0;
-    padding: 0;
-	background-color: orange;
-}
-
-div#menuDemo > ul > li {
-	float: left;
-}
-
-div#menuDemo ul li {
-	width: 267px;
-	background-color: orange;
-}
-
-div#menuDemo ul li#homeMenu {
-	width: 266px;
-	background-color: orange;
-}
-
-div#menuDemo ul li a {
-	width: 266px;
-	text-decoration: none;
-}
-
-div#menuDemo > ul > li > ul {
-	display: none;
-	background-color: orange;
-	width: 267px;
-}
-
-div#menuDemo > ul > li:hover > ul {
-	display: block;
-}
-
 #equityButton,#showEquity {
   padding:5px;
   text-align:center;
