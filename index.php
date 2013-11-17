@@ -51,7 +51,6 @@
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
-      <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"></script>
       <script src="scripts/jquery-1.10.2.min.js"></script>
       <script src="scripts/jquery-1.8.3.js"></script>
       
@@ -62,21 +61,6 @@
       	});
       });
       </script>
- 
-	  <style type="text/css"> 
-	  #panel,#flip
- 	  {
-		padding:5px;
-		text-align:center;
-		background-color:#e5eecc;
-		border:solid 1px #c3c3c3;
-	  }
-	  #panel
-	  {
-		padding:50px;
-		display:none;
-	  }
-	  </style>
 
   </head>
   <body>
