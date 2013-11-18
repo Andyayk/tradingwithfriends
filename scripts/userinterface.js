@@ -5,6 +5,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$("#purchasingformButton").click(function(){
+		$("#showForm").slideToggle("slow");
+	});
+});
+
+$(document).ready(function(){
 	$("#portfolioButton").click(function(){
 		$("#showPortfolio").slideToggle("slow");
 	});

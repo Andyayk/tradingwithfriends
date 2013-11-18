@@ -131,7 +131,8 @@
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
 	  <?php echo $message; ?>
-	  <?php if ($haveErrors || $userArriveByClickingOrDirectlyTypeURL) : ?>
+	  <div id="purchasingformButton">Purchasing Form</div>
+	  <div id="showForm">
 	  <p>
 		<b>Buying Equity:</b>
 		<select name="name" >
@@ -148,7 +149,7 @@
 	  <p>
 	  	<input type="submit" value="Submit" /><br>
 	  </p>
-	  <?php endif; ?>
+	  </div>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>

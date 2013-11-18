@@ -27,6 +27,18 @@ body {
   display:none;
 }
 
+#purchasingformButton, #showForm {
+  padding:5px;
+  text-align:center;
+  background-color:#e5eecc;
+  border:solid 1px #c3c3c3;
+}
+
+#showForm {
+  padding:50px;
+  display:none;
+}
+
 #portfolioButton, #showPortfolio {
   padding:5px;
   text-align:center;
