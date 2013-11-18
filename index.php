@@ -57,9 +57,9 @@
   if ($noErrors && $userArriveBySubmittingAForm) {
   
   $message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-
-		$message = $message . "\t\t" . 'You have bought ' . $quantity;
-		$message = $message . "\t\t" . $name . 'Shares.';
+  
+		$message = $message . "\t\t" . 'You have bought ' . $quantity . '<br>';
+		$message = $message . "\t\t" . $name . 'shares';
 
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	
 		foreach ($errors as $key=>$errorMessage) {
