@@ -13,3 +13,10 @@ $(document).ready(function(){
 	});
 });
 
+$(document).ready(function(){
+  var auto_refresh = setInterval(
+	  function (){
+	  $("#showEquity").load("scripts/equity.php");
+  }, 60000); //refresh every 60000 milliseconds
+});
+
