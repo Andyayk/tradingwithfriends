@@ -57,13 +57,13 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   
-	$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-	$message = $message . "\t\t" . 'You have bought ' . $quantity . '<br>';
-	$message = $message . "\t\t" . $name . 'shares';
+	$message = "\t\t" . '<font color="green">Purchasing Success!</font><br />' . "\n";
+	$message = $message . "\t\t" . 'You have bought ' . $quantity;
+	$message = $message . "\t\t" . $name . ' shares';
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
   
-	$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+	$message = "\t\t" . '<font color="red">Purchasing Unsuccessful!</font><br />' . "\n";
 	$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
 
 	$message = $message . "\t\t" . '<ol>' . "\n";
@@ -116,6 +116,7 @@
   </head>
   <body>
       <form action="index.php" method="post">
+      <input type="hidden" name="formSubmitted" value="true">
       
       <div id="topbar">
       <img src="images/logo.jpg"/>
