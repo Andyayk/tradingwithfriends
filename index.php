@@ -47,7 +47,24 @@ require_once('validations/equityformresult.php');
 
 if ($noErrors && $userArriveBySubmittingAForm) {
 
-	echo "hello";
+require_once('scripts/userinsertdatabase.php');
+	
+	$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+
+		$message = $message . "\t\t" . 'User ID : ' . $userid . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Password : ' . $password . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Retype Password : ' . $password2 . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Address : ' . $address . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Gender : ' . $gender . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Date of Birth : ' . $day . $month . $year .' <br />' . "\n";
+
+		$message = $message . "\t\t" . 'Interests : <br />' . "\n";
+		$message = $message . "\t\t" . '<ol>' . "\n";		
+		
+		foreach ($interest as $key=>$Interest) {
+			$message = $message . "\t\t\t" . '<li>' . $Interest . '</li>' . "\n";
+		}
 
 } else if ($haveErrors && $userArriveBySubmittingAForm) {
 	
