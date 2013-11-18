@@ -43,7 +43,7 @@
 	'MSFT' => 'MSFT'	
   );
   
-require_once('validations/registerformresult.php');
+require_once('validations/equityformresult.php');
 
 if ($noErrors && $userArriveBySubmittingAForm) {
 
