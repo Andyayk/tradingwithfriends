@@ -21,7 +21,7 @@ Welcome to My Portfolio
    	
    	 My Equity : <?php echo $_POST["name"]; ?><br>
    	 Quantity : <?php echo $_POST["quantity"]; ?><br>
-	}
+
 	</tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
