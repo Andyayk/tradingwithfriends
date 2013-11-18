@@ -8,7 +8,7 @@ if ($userArriveBySubmittingAForm) {
 
 	$nameNotSelected = empty($_POST['name']);
 	if ($nameNotSelected) {
-		$errors['name'] = "Please select an Equity";
+		$errors['name'] = "Please select an equity";
 	}	
 	
 	$noquantity = empty($_POST['quantity']);
@@ -16,7 +16,7 @@ if ($userArriveBySubmittingAForm) {
 	$quantityNotInRange = ($_POST['quantity'] < 0 || $_POST['quantity'] > 100); 
 
 	if ($noquantity) {
-		$errors['quantity'] = "Please enter the Quantity you wish to purchase";
+		$errors['quantity'] = "Please enter the quantity you wish to purchase";
 	} else if ($quantityNotNumeric) {
 			$errors['quantity'] = "Quantity entered is not a number";
 	} else if ($quantityNotInRange) {

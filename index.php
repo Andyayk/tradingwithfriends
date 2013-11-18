@@ -63,18 +63,7 @@
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
-	foreach ($errors as $key=>$errorMessage) {
-	
-		$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
-		if ($key == 'name') {
-			$nameError = $errorMessage;
-		}
-		if ($key == 'quantity') {
-			$quantityError = $errorMessage;
-		}
-	}
-	
-	$message = $message . "\t\t" . '</ol>' . "\n";
+  	$message = '';
 	
   } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive directly by url
   
@@ -170,6 +159,6 @@
       });
       </script>
       <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
-      <br /><b>Interested to Find Out More About eEuities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>
+      <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>
   </body>
 </html>
