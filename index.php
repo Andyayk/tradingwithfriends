@@ -137,11 +137,10 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  <?php endif; ?>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
-	  <div id="showPortfolio">This will show a table of equities bought</div>
-	  <P>
+	  <div id="showPortfolio">My Equity
 	  Your Equity <?php echo $_POST["name"]; ?><br>
 	  Your Quantity : <?php echo $_POST["quantity"]; ?>
-	  </P>
+	  </P></div>
 	  
 	  
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
