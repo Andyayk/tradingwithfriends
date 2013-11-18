@@ -100,7 +100,7 @@ if ($noErrors && $userArriveBySubmittingAForm) {
       <form action="index.php" method="post">
 	  <input type="hidden" name="formSubmitted" value="true"
       <div id="topbar">
-      <img src="images/logo.jpg"/>
+      <img src="images/astar.jpg"/>
       </div>
       
       <div id="fb-root"></div>
