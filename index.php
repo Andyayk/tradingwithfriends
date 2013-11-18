@@ -173,5 +173,7 @@
         uid = response.authResponse.userID ? response.authResponse.userID : null;
       });
       </script>
+      <b>Any Questions? Discuss it on our Forum!!</b><a href="http://astartalk.forumotion.com/">Enter our Discussion Forum</a>
+      <b>Interested to find out more about Equities?</b><a href="http://astartalk.forumotion.com/">Enter our Website</a>
   </body>
 </html>
