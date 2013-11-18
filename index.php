@@ -94,9 +94,9 @@ $names = array(
 	  </p>
 	  
 	  <p>
-	  	<input type="submit" value="Submit" />
-	  	Your Equity <?php echo $_POST["name"]; ?><br>
-	 	Your Quantity : <?php echo $_POST["quantity"]; ?>
+	  	<input type="submit" value="Submit" /><br>
+	  	Your Equity <?php echo $_POST["Buying Equity"]; ?><br>
+	 	Your Quantity : <?php echo $_POST["Quantity"]; ?>
 	  </p>
 	  
 	 
