@@ -21,6 +21,11 @@ Welcome to My Portfolio
    	 My Equity <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
 	 
+     <th>Ticker</th>
+     <th>Price</th>
+     <th>Shares</th>
+     <th>Total</th>
+    <th colwidth="2">(negative shares = sell)</th>
    </tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
