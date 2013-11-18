@@ -1,4 +1,12 @@
 <link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
+<?php
+session_start();
+// store session data
+$_SESSION['views']=1;
+?>
+
+<html>
+<body>
 
 <script>
   var STOCK_PRICE_AJAX_URL = '<?= $model['appUrl'] ?>/stockList';
@@ -18,10 +26,9 @@ Welcome to My Portfolio
 <table>
    <tr>
    	 <form name="input" action="index.php" method="POST">
-   	 My Equity <?php echo $_POST["name"]; ?><br>
+   	 My Equity : <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	 
-   </tr>
+	</tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
    <tr>
@@ -91,3 +98,11 @@ Welcome to My Portfolio
 <script>
 init();
 </script>
+
+<?php
+//retrieve session data
+echo "Pageviews=". $_SESSION['views'];
+?>
+
+</body>
+</html>
