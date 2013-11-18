@@ -43,11 +43,11 @@
 	'MSFT' => 'MSFT'	
   );
   
-  require_once('validations/registerformresult.php');
+require_once('validations/registerformresult.php');
 
 if ($noErrors && $userArriveBySubmittingAForm) {
 
-	
+	echo "hello";
 
 } else if ($haveErrors && $userArriveBySubmittingAForm) {
 	
@@ -55,10 +55,10 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 		$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
 		
 		if ($key == 'name') {
-			$dayError = $errorMessage;
+			$nameError = $errorMessage;
 		}
 		if ($key == 'quantity') {
-			$monthError = $errorMessage;
+			$quantityError = $errorMessage;
 		}
 	}
 
@@ -94,6 +94,8 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  </script>
   </head>
   <body>
+      <form action="index.php" method="post">
+	  <input type="hidden" name="formSubmitted" value="true">
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
@@ -111,6 +113,8 @@ if ($noErrors && $userArriveBySubmittingAForm) {
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
+	  <?php echo $message; ?>
+	  <?php if ($haveErrors || $userArriveByClickingOrDirectlyTypeURL) : ?>
 	  <p>
 		<b>Buying Equity:</b>
 		<select name="name" >
@@ -127,6 +131,7 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  <p>
 	  	<input type="submit" value="Submit" /><br>
 	  </p>
+	  <?php endif; ?>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio">This will show a table of equities bought</div>
