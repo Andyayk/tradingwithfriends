@@ -139,8 +139,7 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio">
 	  My Equity <?php echo $_POST["name"]; ?><br>
-	  Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	  Choose another Equity : <?php echo "<a href='index.php'>; ?>
+	  Your Quantity : <?php echo $_POST["quantity"]; ?>
 	  </P></div>
 	  
 	  
