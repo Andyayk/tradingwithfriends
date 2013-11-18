@@ -17,8 +17,7 @@ Welcome to My Portfolio
  
 <table>
    <tr>
-   	 <?php 
-   	 <form name="input" action="index.php" method="POST">
+   	 <form name="input" action="index.php?savedata=1" method="POST">
    	 $savedata = $_REQUEST['savedata'];
    	 if ($savedata == 1){
    	 $data = My Equity : <?php echo $_POST["name"]; ?><br>
@@ -32,7 +31,6 @@ Welcome to My Portfolio
 	echo "Your Form has been !";
 	
 	}
-	?>
 	</tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
