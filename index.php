@@ -114,7 +114,7 @@ if ($noErrors && $userArriveBySubmittingAForm) {
       <script src="scripts/payments.js"></script>
       
       <div id="equityButton">Equities List</div>
-	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
+	  <div id="showEquity"><?php require 'scripts/equity.php';?>
 	  
 	  <?php echo $message; ?>
 	  <?php if ($haveErrors || $userArriveByClickingOrDirectlyTypeURL) : ?>
@@ -133,7 +133,7 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  
 	  <p>
 	  	<input type="submit" value="Submit" /><br>
-	  </p>
+	  </p></div>
 	  <?php endif; ?>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
