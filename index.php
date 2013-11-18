@@ -126,12 +126,16 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  
 	  <p>
 	  	<input type="submit" value="Submit" /><br>
-	  	Your Equity <?php echo $_POST["Buying Equity"]; ?><br>
-	 	Your Quantity : <?php echo $_POST["Quantity"]; ?>
 	  </p>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio">This will show a table of equities bought</div>
+	  <P>
+	  Your Equity <?php echo $_POST["name"]; ?><br>
+	  Your Quantity : <?php echo $_POST["quantity"]; ?>
+	  </P>
+	  
+	  
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
                          
       <script>
