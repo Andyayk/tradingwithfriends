@@ -57,7 +57,7 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   
-	$message = "\t\t" . '<font color="green">Purchasing Success!</font><br />' . "\n";
+	$message = "\t\t" . '<font color="green">Success!! Added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
 	$message = $message . "\t\t" . $name . ' shares';
 	
@@ -134,7 +134,7 @@
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
-		<b>Buying Equity:</b>
+		<b>Equity:</b>
 		<select name="name" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
@@ -169,7 +169,7 @@
         uid = response.authResponse.userID ? response.authResponse.userID : null;
       });
       </script>
-      <b>Any Questions to ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
-      <br /><b>Interested to find out more about Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>
+      <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
+      <br /><b>Interested to Find Out More About eEuities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>
   </body>
 </html>
