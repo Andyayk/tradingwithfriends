@@ -52,15 +52,16 @@
 	'MSFT' => 'MSFT'	
   );
   
+  //Validations
   require_once('validations/equityformresult.php');
   
-  if ($noErrors && $userArriveBySubmittingAForm) {
+  if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   
 	$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity . '<br>';
 	$message = $message . "\t\t" . $name . 'shares';
 	
-  } else if ($haveErrors && $userArriveBySubmittingAForm) {	
+  } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
   
 	$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
 	$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
@@ -80,13 +81,12 @@
 	
 	$message = $message . "\t\t" . '</ol>' . "\n";
 	
-  } else if ($userArriveByClickingOrDirectlyTypeURL) {
+  } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive directly by url
   
 	$message = '';
 	
   }
  
-   
 ?>
 
 <!DOCTYPE html>
