@@ -168,7 +168,7 @@
         uid = response.authResponse.userID ? response.authResponse.userID : null;
       });
       </script>
-      <b>Any Questions? Discuss it on our Forum!! </b><a href="http://astartalk.forumotion.com/">Enter our Discussion Forum</a>
-      <br /><b>Interested to find out more about Equities? </b><a href="http://astartalk.forumotion.com/">Enter our Website</a>
+      <b>Any Questions to ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
+      <br /><b>Interested to find out more about Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>
   </body>
 </html>
