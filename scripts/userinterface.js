@@ -19,9 +19,9 @@ $(document).ready(function(){
 	});
 });
 
-$("document").ready(function(){
-	var interval = setInterval(refresh_box(), 1000);
-	function refresh_box(){
-		$("#showEquity").load("scripts/equity.php");
-	};
-});
+var auto_refresh = setInterval(
+	function (){
+		$("#showEquity").load("equity.php").fadeIn("slow");
+	}, 1000); //refresh every 1000 milliseconds
+	
+
