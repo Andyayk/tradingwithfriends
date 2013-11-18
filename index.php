@@ -63,7 +63,17 @@
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
-  	$message = '';
+	foreach ($errors as $key=>$errorMessage) {
+	
+		if ($key == 'name') {
+			$nameError = $errorMessage;
+		}
+		if ($key == 'quantity') {
+			$quantityError = $errorMessage;
+		}
+	}
+	
+	$message = '';
 	
   } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive directly by url
   
