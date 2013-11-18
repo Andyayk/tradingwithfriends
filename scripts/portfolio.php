@@ -1,12 +1,4 @@
 <link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
-<?php
-session_start();
-// store session data
-$_SESSION['views']=1;
-?>
-
-<html>
-<body>
 
 <script>
   var STOCK_PRICE_AJAX_URL = '<?= $model['appUrl'] ?>/stockList';
@@ -80,7 +72,7 @@ Welcome to My Portfolio
    </tr>
    <? endforeach; ?>
    <tr class="footer">
-     <td>Total:</td>
+     <td>Total:</td><br>
      <td id="total"></td>
      <td></td>
      <td></td>
@@ -98,11 +90,3 @@ Welcome to My Portfolio
 <script>
 init();
 </script>
-
-<?php
-//retrieve session data
-echo "Pageviews=". $_SESSION['views'];
-?>
-
-</body>
-</html>
