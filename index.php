@@ -55,8 +55,6 @@
   require_once('validations/equityformresult.php');
   
   if ($noErrors && $userArriveBySubmittingAForm) {
-
-  require_once('scripts/userinsertdatabase.php');
   
   $message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
 
