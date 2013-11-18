@@ -42,6 +42,29 @@
 	'TRI' => 'TRI',
 	'MSFT' => 'MSFT'	
   );
+  
+  require_once('validations/registerformresult.php');
+
+if ($noErrors && $userArriveBySubmittingAForm) {
+
+	
+
+} else if ($haveErrors && $userArriveBySubmittingAForm) {
+	
+	foreach ($errors as $key=>$errorMessage) {
+		$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+		
+		if ($key == 'name') {
+			$dayError = $errorMessage;
+		}
+		if ($key == 'quantity') {
+			$monthError = $errorMessage;
+		}
+	}
+
+	$message = $message . "\t\t" . '</ol>' . "\n";		
+
+}
    
 ?>
 
@@ -96,8 +119,9 @@
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
+		<font color="red"><?php echo $nameError; ?></font>
 	 
-		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" />	
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
 	  </p>
 	  
 	  <p>
