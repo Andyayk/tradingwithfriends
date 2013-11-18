@@ -20,12 +20,6 @@ Welcome to My Portfolio
    	 <form name="input" action="index.php" method="POST">
    	 My Equity <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	 
-     <th>Ticker</th>
-     <th>Price</th>
-     <th>Shares</th>
-     <th>Total</th>
-    <th colwidth="2">(negative shares = sell)</th>
    </tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
@@ -68,21 +62,12 @@ Welcome to My Portfolio
          Change: <span id="trade-result"></span>         
 
 	 <!-- leave the formatting to the javascript -->
-         <script>            
-	    tradeResult = <?= $model['tradeResult'] ?>;
-         </script>
-
+      
        <? endif; ?>
 
      </td>
    </tr>
    <? endforeach; ?>
-   <tr class="footer">
-     <td>Total:</td>
-     <td id="total"></td>
-     <td></td>
-     <td></td>
-   </tr>
 </table>
 
 <a id="toggle-refresh" onclick="toggleRefresh()">Start refresh</a>
