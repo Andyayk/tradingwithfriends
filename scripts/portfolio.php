@@ -23,6 +23,37 @@ Welcome to My Portfolio
    	 Quantity : <?php echo $_POST["quantity"]; ?><br>
 
 	</tr>
+	
+	<!-- recommend this stock to your friends -->
+         <a href="<?= $model['appUrl'] ?>/recommendStockToFriends?ticker=<?= $stock->TICKER ?>"
+            class="recommend-control">
+           Recommend to your friends!
+         </a>
+
+       </div>
+
+       <? if ($model['tradeResult'] && $model['tradeResultStockId'] == $stock->ID): ?>       				       
+         Change: <span id="trade-result"></span>         
+
+	 <!-- leave the formatting to the javascript -->
+         <script>            
+	    tradeResult = <?= $model['tradeResult'] ?>;
+         </script>
+
+       <? endif; ?>
+
+     </td>
+   </tr>
+   <? endforeach; ?>
+   <tr class="footer">
+     <td>Total:</td>
+     <td id="total"></td>
+     <td></td>
+     <td></td>
+   </tr>
+</table>
+
+<a id="toggle-refresh" onclick="toggleRefresh()">Start refresh</a>
 
 <div id="console">
     
