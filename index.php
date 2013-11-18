@@ -95,7 +95,10 @@ $names = array(
 	  
 	  <p>
 	  	<input type="submit" value="Submit" />
+	  	Your Equity <?php echo $_POST["name"]; ?><br>
+	 	Your Quantity : <?php echo $_POST["quantity"]; ?>
 	  </p>
+	  
 	 
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio">My Portfolio</div>
