@@ -62,11 +62,6 @@
 	$message = $message . "\t\t" . $name . ' shares';
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
-  
-	$message = "\t\t" . '<font color="red">Purchasing Unsuccessful!</font><br />' . "\n";
-	$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
-
-	$message = $message . "\t\t" . '<ol>' . "\n";
 	
 	foreach ($errors as $key=>$errorMessage) {
 	
@@ -173,7 +168,7 @@
         uid = response.authResponse.userID ? response.authResponse.userID : null;
       });
       </script>
-      <b>Any Questions? Discuss it on our Forum!!</b><a href="http://astartalk.forumotion.com/">Enter our Discussion Forum</a>
-      <b>Interested to find out more about Equities?</b><a href="http://astartalk.forumotion.com/">Enter our Website</a>
+      <b>Any Questions? Discuss it on our Forum!! </b><a href="http://astartalk.forumotion.com/">Enter our Discussion Forum</a>
+      <br /><b>Interested to find out more about Equities? </b><a href="http://astartalk.forumotion.com/">Enter our Website</a>
   </body>
 </html>
