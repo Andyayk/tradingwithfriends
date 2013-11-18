@@ -56,26 +56,34 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) {
   
-  $message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-  
-		$message = $message . "\t\t" . 'You have bought ' . $quantity . '<br>';
-		$message = $message . "\t\t" . $name . 'shares';
-
+	$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+	$message = $message . "\t\t" . 'You have bought ' . $quantity . '<br>';
+	$message = $message . "\t\t" . $name . 'shares';
+	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	
-		foreach ($errors as $key=>$errorMessage) {
-			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
-			if ($key == 'name') {
-				$nameError = $errorMessage;
-			}
-			if ($key == 'quantity') {
-				$quantityError = $errorMessage;
-			}
-		}
-		$message = $message . "\t\t" . '</ol>' . "\n";
-				
-  } else if ($userArriveByClickingOrDirectlyTypeURL) {
+  
+	$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+	$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
 
+	$message = $message . "\t\t" . '<ol>' . "\n";
+	
+	foreach ($errors as $key=>$errorMessage) {
+	
+		$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+		if ($key == 'name') {
+			$nameError = $errorMessage;
+		}
+		if ($key == 'quantity') {
+			$quantityError = $errorMessage;
+		}
+	}
+	
+	$message = $message . "\t\t" . '</ol>' . "\n";
+	
+  } else if ($userArriveByClickingOrDirectlyTypeURL) {
+  
 	$message = '';
+	
   }
  
    
