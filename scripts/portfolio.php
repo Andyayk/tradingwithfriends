@@ -17,19 +17,22 @@ Welcome to My Portfolio
  
 <table>
    <tr>
+   	 <?php 
    	 <form name="input" action="index.php" method="POST">
    	 $savedata = $_REQUEST['savedata'];
-   	 if ($savedata ==1){
+   	 if ($savedata == 1){
    	 $data = My Equity : <?php echo $_POST["name"]; ?><br>
-	 $data = Your Quantity : <?php echo $_POST["quantity"]; ?><br>
+	 $data . = Your Quantity : <?php echo $_POST["quantity"]; ?><br>
 	 $file = "YOURDATAFILE.txt";
+	 
 	 $fp = fopen($file, "a") or die("Couldn't open $file for writing!");
-	fwrite($fp, $data) or die("Couldn't write values to file!"); 
+	 fwrite($fp, $data) or die("Couldn't write values to file!"); 
 
 	fclose($fp); 
 	echo "Your Form has been !";
 	
 	}
+	?>
 	</tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
