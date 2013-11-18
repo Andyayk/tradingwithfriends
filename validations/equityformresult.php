@@ -2,6 +2,8 @@
 
 $userArriveBySubmittingAForm = !empty($_POST);
 
+$userArriveByClickingOrDirectlyTypeURL = !$userArriveBySubmittingAForm;
+
 if ($userArriveBySubmittingAForm) {
 
 	$nameNotSelected = empty($_POST['name']);
@@ -9,7 +11,7 @@ if ($userArriveBySubmittingAForm) {
 		$errors['name'] = "Please select an Equity";
 	}	
 	
-	$noQuantity = empty($_POST['quantity']);
+	$noquantity = empty($_POST['quantity']);
 	$quantityNotNumeric = !is_numeric($_POST['quantity']);
 	$quantityNotInRange = ($_POST['quantity'] < 0 || $_POST['quantity'] > 100); 
 

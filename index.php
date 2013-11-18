@@ -68,8 +68,13 @@
 				$quantityError = $errorMessage;
 			}
 		}
-		$message = $message . "\t\t" . '</ol>' . "\n";		
+		$message = $message . "\t\t" . '</ol>' . "\n";
+				
+  } else if ($userArriveByClickingOrDirectlyTypeURL) {
+
+	$message = '';
   }
+ 
    
 ?>
 
