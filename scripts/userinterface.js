@@ -17,5 +17,5 @@ $("document").ready(function(){
 	var interval = setInterval(refresh_box(), 1000);
 	function refresh_box(){
 		$("#showEquity").load("scripts/equity.php");
-	}
+	};
 });
