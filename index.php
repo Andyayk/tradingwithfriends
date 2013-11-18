@@ -65,7 +65,7 @@ $names = array(
       var auto_refresh = setInterval(
 	function (){
 		$("#showEquity").load("scripts/equity.php").fadeIn("slow");
-	}, 10000); //refresh every 60000 milliseconds
+	}, 10000); //refresh every 10000 milliseconds
 	</script>
 
   </head>
