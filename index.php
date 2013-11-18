@@ -1,5 +1,14 @@
 <?php
 
+  $name = '';
+  $quantity = '';
+  $nameError = '';
+  $quantityError = '';
+  $message = '';
+  $errors = array();
+  $noErrors = true;
+  $haveErrors = !($noErrors);
+
   // Server
   require 'server/fb-php-sdk/facebook.php';
   
@@ -43,48 +52,24 @@
 	'MSFT' => 'MSFT'	
   );
   
-require_once('validations/equityformresult.php');
+  require_once('validations/equityformresult.php');
+  
+  if ($noErrors && $userArriveBySubmittingAForm) {
 
-if ($noErrors && $userArriveBySubmittingAForm) {
+  require_once('scripts/userinsertdatabase.php');
 
-require_once('scripts/userinsertdatabase.php');
-	
-	$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-
-		$message = $message . "\t\t" . 'User ID : ' . $userid . ' <br />' . "\n";
-		$message = $message . "\t\t" . 'Password : ' . $password . ' <br />' . "\n";
-		$message = $message . "\t\t" . 'Retype Password : ' . $password2 . ' <br />' . "\n";
-		$message = $message . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
-		$message = $message . "\t\t" . 'Address : ' . $address . ' <br />' . "\n";
-		$message = $message . "\t\t" . 'Gender : ' . $gender . ' <br />' . "\n";
-		$message = $message . "\t\t" . 'Date of Birth : ' . $day . $month . $year .' <br />' . "\n";
-
-		$message = $message . "\t\t" . 'Interests : <br />' . "\n";
-		$message = $message . "\t\t" . '<ol>' . "\n";		
-		
-		foreach ($interest as $key=>$Interest) {
-			$message = $message . "\t\t\t" . '<li>' . $Interest . '</li>' . "\n";
+  } else if ($haveErrors && $userArriveBySubmittingAForm) {	
+		foreach ($errors as $key=>$errorMessage) {
+			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			if ($key == 'name') {
+				$nameError = $errorMessage;
+			}
+			if ($key == 'quantity') {
+				$quantityError = $errorMessage;
+			}
 		}
-
-} else if ($haveErrors && $userArriveBySubmittingAForm) {
-	
-	foreach ($errors as $key=>$errorMessage) {
-		$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
-		
-		if ($key == 'name') {
-			$nameError = $errorMessage;
-		}
-		if ($key == 'quantity') {
-			$quantityError = $errorMessage;
-		}
-	}
-
-	$message = $message . "\t\t" . '</ol>' . "\n";		
-
-} else if ($userArriveByClickingOrDirectlyTypeURL) {
-	
-	$message = 'hello';
-}
+		$message = $message . "\t\t" . '</ol>' . "\n";		
+  }
    
 ?>
 
@@ -100,7 +85,7 @@ require_once('scripts/userinsertdatabase.php');
       <meta property="og:image" content="https://github.com/Astarcorp/tradingwithfriends/blob/master/images/logo_large.jpg"/>
 
       <link href="scripts/style.css" rel="stylesheet" type="text/css">
-      
+    
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
       
@@ -109,13 +94,14 @@ require_once('scripts/userinsertdatabase.php');
         var auto_refresh = setInterval(
 		  function (){
 		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
-	    }, 10000); //refresh every 10000 milliseconds
+	    }, 30000); //refresh every 30000 milliseconds
       });
 	  </script>
   </head>
   <body>
       <form action="index.php" method="post">
 	  <input type="hidden" name="formSubmitted" value="true"
+      
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
@@ -154,10 +140,7 @@ require_once('scripts/userinsertdatabase.php');
 	  <?php endif; ?>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
-	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?>
-	  </P></div>
-	  
-	  
+	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
                          
       <script>
