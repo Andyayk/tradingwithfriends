@@ -108,7 +108,6 @@
   </head>
   <body>
       <form action="index.php" method="post">
-	  <input type="hidden" name="formSubmitted" value="true"
       
       <div id="topbar">
       <img src="images/logo.jpg"/>
