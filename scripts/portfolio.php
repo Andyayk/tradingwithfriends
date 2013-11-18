@@ -17,19 +17,10 @@ Welcome to My Portfolio
  
 <table>
    <tr>
-   	 <form name="input" action="index.php?savedata=1" method="POST">
-   	 $savedata = $_REQUEST['savedata'];
-   	 if ($savedata == 1){
-   	 $data = My Equity : <?php echo $_POST["name"]; ?><br>
-	 $data . = Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	 $file = "YOURDATAFILE.txt";
-	 
-	 $fp = fopen($file, "a") or die("Couldn't open $file for writing!");
-	 fwrite($fp, $data) or die("Couldn't write values to file!"); 
-
-	fclose($fp); 
-	echo "Your Form has been !";
-	
+   	 <form name="input" action="index.php" method="POST">
+   	
+   	 My Equity : <?php echo $_POST["name"]; ?><br>
+   	 Quantity : <?php echo $_POST["quantity"]; ?><br>
 	}
 	</tr>
    
