@@ -8,17 +8,20 @@
 
 <div id="content">
 
-<h2>Hi 
+<h2>Hi <br>
 
 <!-- first name-->
 <fb:name firstnameonly="true" useyou="false" uid="<?= $model['facebookId'] ?>"/>.
 
-Welcome to Stocks R Us
+Welcome to My Portfolio
 
 </h2>
  
 <table>
    <tr>
+   	 <form name="input" action="index.php" method="POST">
+   	 My Equity <?php echo $_POST["name"]; ?><br>
+	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
      <th>Ticker</th>
      <th>Price</th>
      <th>Shares</th>
