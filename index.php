@@ -137,7 +137,7 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 	  <?php endif; ?>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
-	  <div id="showPortfolio">
+	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?>
 	  My Equity <?php echo $_POST["name"]; ?><br>
 	  Your Quantity : <?php echo $_POST["quantity"]; ?>
 	  </P></div>
