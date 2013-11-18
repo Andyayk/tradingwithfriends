@@ -64,6 +64,9 @@ if ($noErrors && $userArriveBySubmittingAForm) {
 
 	$message = $message . "\t\t" . '</ol>' . "\n";		
 
+} else if ($userArriveByClickingOrDirectlyTypeURL) {
+	
+	$message = 'hello';
 }
    
 ?>

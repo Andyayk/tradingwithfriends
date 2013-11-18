@@ -2,6 +2,8 @@
 
 $userArriveBySubmittingAForm = !empty($_POST);
 
+$userArriveByClickingOrDirectlyTypeURL = !$userArriveBySubmittingAForm;
+
 if ($userArriveBySubmittingAForm) {
 
 	$nameNotSelected = empty($_POST['name']);
