@@ -57,6 +57,11 @@
   if ($noErrors && $userArriveBySubmittingAForm) {
 
   require_once('scripts/userinsertdatabase.php');
+  
+  $message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+
+		$message = $message . "\t\t" . 'You have bought ' . $quantity;
+		$message = $message . "\t\t" . $name . 'Shares.';
 
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	
 		foreach ($errors as $key=>$errorMessage) {
