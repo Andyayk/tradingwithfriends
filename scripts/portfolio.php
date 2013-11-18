@@ -27,7 +27,7 @@ Welcome to My Portfolio
 	fwrite($fp, $data) or die("Couldn't write values to file!"); 
 
 	fclose($fp); 
-	echo "Your Form has been Submitted!";
+	echo "Your Form has been !";
 	
 	}
 	</tr>
