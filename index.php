@@ -34,24 +34,23 @@
     print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
   }
   
-$names = array(	
+  $names = array(	
 	'APPL' => 'APPL',
 	'FB' => 'FB',
 	'D05.SI' => 'D05.SI',
 	'039.SI' => '039.SI',
 	'TRI' => 'TRI',
 	'MSFT' => 'MSFT'	
-);
+  );
    
 ?>
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Trading with Friends!</title>
+    <title>Trading with Friends</title>
     
    	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
       <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -61,6 +60,15 @@ $names = array(
       
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
+	    }, 10000); //refresh every 10000 milliseconds
+      });
+	  </script>
   </head>
   <body>
       <div id="topbar">
@@ -88,7 +96,7 @@ $names = array(
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
-	  
+	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" />	
 	  </p>
 	  
@@ -98,25 +106,23 @@ $names = array(
 	 	Your Quantity : <?php echo $_POST["Quantity"]; ?>
 	  </p>
 	  
-	 
 	  <div id="portfolioButton">My Portfolio</div>
-	  <div id="showPortfolio">My Portfolio</div>
-	  
-	  <div id="recommendButton">Recommend Friends</div>
+	  <div id="showPortfolio">This will show a table of equities bought</div>
+	  <div id="recommendButton">Recommend this App to Your Friends!</div>
                          
       <script>
-          var appId = '<?php echo $facebook->getAppID() ?>';
+      var appId = '<?php echo $facebook->getAppID() ?>';
 
-          // Initialize the JS SDK
-          FB.init({
-            appId: appId,
-            frictionlessRequests: true,
-            cookie: true,
-          });
+      // Initialize the JS SDK
+      FB.init({
+        appId: appId,
+        frictionlessRequests: true,
+        cookie: true,
+      });
 
-          FB.getLoginStatus(function(response) {
-            uid = response.authResponse.userID ? response.authResponse.userID : null;
-          });
+      FB.getLoginStatus(function(response) {
+        uid = response.authResponse.userID ? response.authResponse.userID : null;
+      });
       </script>
   </body>
 </html>

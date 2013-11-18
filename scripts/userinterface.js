@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	$("#equityButton").click(function(){
+		$("#showEquity").slideToggle("slow");
+	});
+});
+
+$(document).ready(function(){
 	$("#portfolioButton").click(function(){
 		$("#showPortfolio").slideToggle("slow");
 	});
@@ -12,11 +18,3 @@ $(document).ready(function(){
 		});
 	});
 });
-
-$(document).ready(function(){
-  var auto_refresh = setInterval(
-	  function (){
-	  $("#showEquity").load("scripts/equity.php");
-  }, 60000); //refresh every 60000 milliseconds
-});
-
