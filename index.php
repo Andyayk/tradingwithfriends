@@ -8,7 +8,6 @@
   $errors = array();
   $noErrors = true;
   $haveErrors = !($noErrors);
-  $price = '';
   $total = '';
 
   // Server
@@ -164,7 +163,7 @@
 	  	echo $aapl;
 	  	}
 	  	elseif ($_POST['name']=="FB"){
-	  	$price = $aapl;
+	  	$price = $fb;
 	  	echo $fb;
 	  	}
 	  	elseif ($_POST['name']=="D05.SI"){
