@@ -8,12 +8,6 @@
   $errors = array();
   $noErrors = true;
   $haveErrors = !($noErrors);
-  $aapl = '';
-  $fb = '';
-  $dbs = '';
-  $ocbc = '';
-  $tri = '';
-  $msft = '';
   $price = '';
   $total = '';
 
@@ -65,7 +59,7 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
  	$total = $price*$quantity;
-	$message = "\t\t" . '<font color="green">Success!! Equity added into your Portfolio</font><br />' . "\n";
+	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
 	$message = $message . "\t\t" . $name . ' shares';
 	$message = $message . "\t\t" . 'at ' . $total;
@@ -164,6 +158,7 @@
 	  	<b>Price:</b> <input type="text" name="price" value="
 	  	<?php 
 	  	require 'scripts/equity_price.php';
+	  	global $price;
 	  	if ($_POST['name']=="AAPL"){
 	  	$price = $aapl;
 	  	echo $aapl;
@@ -189,7 +184,8 @@
 	  	echo $msft;
 	  	}
 	  	else{
-	  	} echo "";
+	  	} $price = 0;
+	  	echo "";
 	  	?>" readonly />
 	  </p>
 	  
