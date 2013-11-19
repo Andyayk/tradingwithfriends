@@ -33,9 +33,29 @@ if ($userArriveBySubmittingAForm) {
 		if (!empty($_POST['quantity'])) {
 			$quantity = $_POST['quantity'];
 		}
-		if (!empty($_POST['price'])) {
-			$price = $_POST['price'];
-		}
+
+	    require 'scripts/equity_price.php';
+	  	if ($_POST['name']=="AAPL"){
+	  	$price = $aapl;
+	  	}
+	  	elseif ($_POST['name']=="FB"){
+	  	$price = $fb;
+	  	}
+	  	elseif ($_POST['name']=="D05.SI"){
+	  	$price = $dbs;
+	  	}
+	  	elseif ($_POST['name']=="039.SI"){
+	  	$price = $ocbc;
+	  	}
+	  	elseif ($_POST['name']=="TRI"){
+	  	$price = $tri;
+	  	}
+	  	elseif ($_POST['name']=="MSFT"){
+	  	$price = $msft;
+	  	}
+	  	else{
+	  	$price = "";
+	  	}
 	}
 }
 

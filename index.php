@@ -62,7 +62,7 @@
 	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
 	$message = $message . "\t\t" . $name . ' shares';
-	$message = $message . "\t\t" . 'at ' . $total;
+	$message = $message . "\t\t" . 'at $' . $total;
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
@@ -155,31 +155,7 @@
 		<font color="red"><?php echo $nameError; ?></font>
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
-	  	<b>Price:</b> <input type="text" name="price" value="
-	  	<?php 
-	  	require 'scripts/equity_price.php';
-	  	if ($_POST['name']=="AAPL"){
-	  	echo $aapl;
-	  	}
-	  	elseif ($_POST['name']=="FB"){
-	  	echo $fb;
-	  	}
-	  	elseif ($_POST['name']=="D05.SI"){
-	  	echo $dbs;
-	  	}
-	  	elseif ($_POST['name']=="039.SI"){
-	  	echo $ocbc;
-	  	}
-	  	elseif ($_POST['name']=="TRI"){
-	  	echo $tri;
-	  	}
-	  	elseif ($_POST['name']=="MSFT"){
-	  	echo $msft;
-	  	}
-	  	else{
-	  	echo "";
-	  	}
-	  	?>" readonly />
+	  	<b>Price:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
 	  </p>
 	  
 	  <p>
