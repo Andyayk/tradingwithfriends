@@ -33,6 +33,9 @@ if ($userArriveBySubmittingAForm) {
 		if (!empty($_POST['quantity'])) {
 			$quantity = $_POST['quantity'];
 		}
+		if (!empty($_POST['price'])) {
+			$price = $_POST['price'];
+		}
 	}
 }
 

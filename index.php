@@ -2,13 +2,14 @@
 
   $name = '';
   $quantity = '';
+  $price = '';
+  $total = '';
   $nameError = '';
   $quantityError = '';
   $message = '';
   $errors = array();
   $noErrors = true;
   $haveErrors = !($noErrors);
-  $total = '';
 
   // Server
   require 'server/fb-php-sdk/facebook.php';
@@ -157,34 +158,27 @@
 	  	<b>Price:</b> <input type="text" name="price" value="
 	  	<?php 
 	  	require 'scripts/equity_price.php';
-	  	global $price;
 	  	if ($_POST['name']=="AAPL"){
-	  	$price = $aapl;
 	  	echo $aapl;
 	  	}
 	  	elseif ($_POST['name']=="FB"){
-	  	$price = $fb;
 	  	echo $fb;
 	  	}
 	  	elseif ($_POST['name']=="D05.SI"){
-	  	$price = $dbs;
 	  	echo $dbs;
 	  	}
 	  	elseif ($_POST['name']=="039.SI"){
-	  	$price = $ocbc;
 	  	echo $ocbc;
 	  	}
 	  	elseif ($_POST['name']=="TRI"){
-	  	$price = $tri;
 	  	echo $tri;
 	  	}
 	  	elseif ($_POST['name']=="MSFT"){
-	  	$price = $msft;
 	  	echo $msft;
 	  	}
 	  	else{
-	  	} $price = 0;
 	  	echo "";
+	  	}
 	  	?>" readonly />
 	  </p>
 	  
