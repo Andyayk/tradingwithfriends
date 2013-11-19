@@ -50,27 +50,27 @@
 					{
 						echo "</td><td class=even><img src=http://ichart.finance.yahoo.com/h?s=".$data[1]."&lang=en-SG&region=sg></td>";
 					}
-				else 
+					else 
 					echo "</td>";
 				}
+				else
+				{
+					echo "<td class=odd>"; //Odd rows
+					if($data[5]<0&&($c==5||$c==2||$c==1)) //Finding negative equities' changes, last trade & name
+						echo "<font color=red>";
 					else
 					{
-						echo "<td class=odd>"; //Odd rows
-						if($data[5]<0&&($c==5||$c==2||$c==1)) //Finding negative equities' changes, last trade & name
-							echo "<font color=red>";
-						else
-						{
-							if($data[5]>0&&($c==5||$c==2||$c==1)) //Finding positive equities' changes, last trade & name
-								echo "<font color=green>";
-						}
-							echo $data[$c]."</font>"; //Colouring of positive/negative equities changes, last trade & name
-							if(($c+1)==$num)//Printing of charts
-							{
-								echo "</td><td class=odd><img src=http://ichart.finance.yahoo.com/h?s=".$data[1]."&lang=en-SG&region=sg></td>";
-							}
-							else 
-								echo "</td>";
+						if($data[5]>0&&($c==5||$c==2||$c==1)) //Finding positive equities' changes, last trade & name
+						echo "<font color=green>";
 					}
+					echo $data[$c]."</font>"; //Colouring of positive/negative equities changes, last trade & name
+					if(($c+1)==$num)//Printing of charts
+					{
+						echo "</td><td class=odd><img src=http://ichart.finance.yahoo.com/h?s=".$data[1]."&lang=en-SG&region=sg></td>";
+					}
+					else 
+					echo "</td>";
+				}
         	} 
    	 	} echo "</tr>";
 		  echo "</table>";

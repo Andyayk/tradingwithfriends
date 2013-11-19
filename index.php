@@ -8,6 +8,12 @@
   $errors = array();
   $noErrors = true;
   $haveErrors = !($noErrors);
+  $aapl = '';
+  $fb = '';
+  $dbs = '';
+  $ocbc = '';
+  $tri = '';
+  $msft = '';
 
   // Server
   require 'server/fb-php-sdk/facebook.php';
@@ -44,7 +50,7 @@
   }
   
   $names = array(	
-	'APPL' => 'APPL',
+	'AAPL' => 'AAPL',
 	'FB' => 'FB',
 	'D05.SI' => 'D05.SI',
 	'039.SI' => '039.SI',
@@ -106,6 +112,15 @@
 		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
 	    }, 30000); //refresh every 30000 milliseconds
       });
+      </script>
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#price").load("scripts/equity_price.php").fadeIn("slow");
+	    }, 10000); //refresh every 10000 milliseconds
+      });
 	  </script>
   </head>
   <body>
@@ -143,6 +158,17 @@
 		<font color="red"><?php echo $nameError; ?></font>
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
+	  	<b>Price:</b> <input type="text" name="price" value="
+	  	<?php 
+	  	require 'scripts/equity_price.php';
+	  	if ($name=="AAPL") echo $aapl;
+	  	elseif ($name=="FB") echo $fb;
+	  	elseif ($name=="D05.SI") echo $dbs;
+	  	elseif ($name=="039.SI") echo $ocbc;
+	  	elseif ($name=="TRI") echo $tri;
+	  	elseif ($name=="MSFT") echo $msft;
+	  	else echo "Price";
+	  	?>" readonly />
 	  </p>
 	  
 	  <p>
