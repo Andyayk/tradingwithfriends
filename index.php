@@ -110,15 +110,6 @@
 	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
-      
-      <script> 
-      $(document).ready(function(){
-        var auto_refresh = setInterval(
-		  function (){
-		  $("#price").load("scripts/equity_price.php").fadeIn("slow");
-	    }, 10000); //refresh every 10000 milliseconds
-      });
-	  </script>
   </head>
   <body>
       <form action="index.php" method="post">

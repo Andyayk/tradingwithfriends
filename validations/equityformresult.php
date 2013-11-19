@@ -9,7 +9,7 @@ if ($userArriveBySubmittingAForm) {
 	$nameNotSelected = empty($_POST['name']);
 	if ($nameNotSelected) {
 		$errors['name'] = "Please select an equity";
-	}	
+	}
 	
 	$noquantity = empty($_POST['quantity']);
 	$quantityNotNumeric = !is_numeric($_POST['quantity']);
