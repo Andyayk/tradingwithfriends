@@ -36,7 +36,7 @@ if ($userArriveBySubmittingAForm) {
 
 	    require 'scripts/equity_price.php';
 	  	if ($_POST['name']=="A33.SI"){
-	  	$price = $bluemont;
+	  	$price = $blumont;
 	  	}
 	  	elseif ($_POST['name']=="P05.SI"){
 	  	$price = $pfood;
