@@ -14,6 +14,8 @@
   $ocbc = '';
   $tri = '';
   $msft = '';
+  $price = '';
+  $total = '';
 
   // Server
   require 'server/fb-php-sdk/facebook.php';
@@ -62,10 +64,11 @@
   require_once('validations/equityformresult.php');
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
-  
-	$message = "\t\t" . '<font color="green">Success!! Added into your Portfolio</font><br />' . "\n";
+ 	$total = $price*$quantity;
+	$message = "\t\t" . '<font color="green">Success!! Equity added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
 	$message = $message . "\t\t" . $name . ' shares';
+	$message = $message . "\t\t" . 'at ' . $total;
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
@@ -161,13 +164,32 @@
 	  	<b>Price:</b> <input type="text" name="price" value="
 	  	<?php 
 	  	require 'scripts/equity_price.php';
-	  	if ($name=="AAPL") echo $aapl;
-	  	elseif ($name=="FB") echo $fb;
-	  	elseif ($name=="D05.SI") echo $dbs;
-	  	elseif ($name=="039.SI") echo $ocbc;
-	  	elseif ($name=="TRI") echo $tri;
-	  	elseif ($name=="MSFT") echo $msft;
-	  	else echo "Price";
+	  	if ($_POST['name']=="AAPL"){
+	  	$price = $aapl;
+	  	echo $aapl;
+	  	}
+	  	elseif ($_POST['name']=="FB"){
+	  	$price = $aapl;
+	  	echo $fb;
+	  	}
+	  	elseif ($_POST['name']=="D05.SI"){
+	  	$price = $dbs;
+	  	echo $dbs;
+	  	}
+	  	elseif ($_POST['name']=="039.SI"){
+	  	$price = $ocbc;
+	  	echo $ocbc;
+	  	}
+	  	elseif ($_POST['name']=="TRI"){
+	  	$price = $tri;
+	  	echo $tri;
+	  	}
+	  	elseif ($_POST['name']=="MSFT"){
+	  	$price = $msft;
+	  	echo $msft;
+	  	}
+	  	else{
+	  	} echo "";
 	  	?>" readonly />
 	  </p>
 	  
