@@ -46,12 +46,16 @@
   }
   
   $names = array(	
-	'AAPL' => 'AAPL',
-	'FB' => 'FB',
-	'D05.SI' => 'D05.SI',
-	'039.SI' => '039.SI',
-	'TRI' => 'TRI',
-	'MSFT' => 'MSFT'	
+	'A33.SI' => 'A33.SI',
+	'P05.SI' => 'P05.SI',
+	'E5H.SI' => 'E5H.SI',
+	'557.SI' => '557.SI',
+	'N21.SI' => 'N21.SI',
+	'5WH.SI' => '5WH.SI',
+	'MT1.SI' => 'MT1.SI',
+	'A78.SI' => 'A78.SI',
+	'Z74.SI' => 'Z74.SI',
+	'5MM.SI' => '5MM.SI'	
   );
   
   //Validations

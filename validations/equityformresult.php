@@ -35,23 +35,35 @@ if ($userArriveBySubmittingAForm) {
 		}
 
 	    require 'scripts/equity_price.php';
-	  	if ($_POST['name']=="AAPL"){
-	  	$price = $aapl;
+	  	if ($_POST['name']=="A33.SI"){
+	  	$price = $bluemont;
 	  	}
-	  	elseif ($_POST['name']=="FB"){
-	  	$price = $fb;
+	  	elseif ($_POST['name']=="P05.SI"){
+	  	$price = $pfood;
 	  	}
-	  	elseif ($_POST['name']=="D05.SI"){
-	  	$price = $dbs;
+	  	elseif ($_POST['name']=="E5H.SI"){
+	  	$price = $goldenagr;
 	  	}
-	  	elseif ($_POST['name']=="039.SI"){
-	  	$price = $ocbc;
+	  	elseif ($_POST['name']=="557.SI"){
+	  	$price = $viking;
 	  	}
-	  	elseif ($_POST['name']=="TRI"){
-	  	$price = $tri;
+	  	elseif ($_POST['name']=="N21.SI"){
+	  	$price = $noble;
 	  	}
-	  	elseif ($_POST['name']=="MSFT"){
-	  	$price = $msft;
+	  	elseif ($_POST['name']=="5WH.SI"){
+	  	$price = $rex;
+	  	}
+		elseif ($_POST['name']=="MT1.SI"){
+	  	$price = $dragon;
+	  	}
+		elseif ($_POST['name']=="A78.SI"){
+	  	$price = $liongold;
+	  	}
+		elseif ($_POST['name']=="Z74.SI"){
+	  	$price = $singtel;
+	  	}
+		elseif ($_POST['name']=="5MM.SI"){
+	  	$price = $skyone;
 	  	}
 	  	else{
 	  	$price = "";

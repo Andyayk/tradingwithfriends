@@ -1,11 +1,15 @@
 <?php
 
-  $aapl = '';
-  $fb = '';
-  $dbs = '';
-  $ocbc = '';
-  $tri = '';
-  $msft = '';
+  $blumont = '';
+  $pfood = '';
+  $goldenagr = '';
+  $viking = '';
+  $noble = '';
+  $rex = '';
+  $dragon = '';
+  $liongold = '';
+  $singtel = '';
+  $skyone = '';
   
   class yahooEquities
   {
@@ -17,7 +21,7 @@
      
   function generate_equity_array($equity) //Create array
   {	
-  	global $aapl,$fb,$dbs,$ocbc,$tri,$msft;
+  	global $blumont,$pfood,$goldenagr,$viking,$noble,$rex, $dragon,$liongold,$singtel,$skyone;
 
 	$row = 1;
 	if (($handle = fopen($equity, "r")) !== FALSE) 
@@ -27,18 +31,26 @@
         	$row++;
        		for ($c=0; $c < 1; $c++) //Getting data
         	{
-				if ($data[$c]=="AAPL") 
-				$aapl = $data[$c+1];
-				elseif ($data[$c]=="FB")
-				$fb = $data[$c+1];
-				elseif ($data[$c]=="D05.SI")
-				$dbs = $data[$c+1];
-				elseif ($data[$c]=="O39.SI")
-				$ocbc = $data[$c+1];
-				elseif ($data[$c]=="TRI")
-				$tri = $data[$c+1];
+				if ($data[$c]=="A33.SI") 
+				$blumont = $data[$c+1];
+				elseif ($data[$c]=="P05.SI")
+				$pfood = $data[$c+1];
+				elseif ($data[$c]=="E5H.SI")
+				$goldenagr = $data[$c+1];
+				elseif ($data[$c]=="557.SI")
+				$viking = $data[$c+1];
+				elseif ($data[$c]=="N21.SI")
+				$noble = $data[$c+1];
+				elseif ($data[$c]=="5WH.SI")
+				$rex = $data[$c+1];
+				elseif ($data[$c]=="MT1.SI")
+				$dragon = $data[$c+1];
+				elseif ($data[$c]=="A78.SI")
+				$liongold = $data[$c+1];
+				elseif ($data[$c]=="Z74.SI")
+				$singtel = $data[$c+1];
 				else
-				$msft = $data[$c+1];
+				$skyone = $data[$c+1];
 			}		
     	}
    	}
@@ -47,6 +59,6 @@
   }  
   $equities = new yahooEquities();
   
-  $equities->getEquities("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+FB+D05.SI+O39.SI+TRI+MSFT&f=sl1", "n"); //Get equities last trade
+  $equities->getEquities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+P05.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI&f=sl1", "n"); //Get equities last trade
 
 ?>  
