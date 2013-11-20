@@ -149,7 +149,7 @@
 		</select>
 		<font color="red"><?php echo $nameError; ?></font>
 	 
-		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br>	
 	  	<b>Price:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
 	  </p>
 	  
