@@ -20,7 +20,7 @@ Welcome to My Portfolio
    	 <form name="input" action="index.php" method="POST">
    	 My Equity <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	 Total Price : <?php echo $price; ?>
+	 Total Price : <?php echo $price; ?><br>
    </tr>
    
    <? foreach ($model['stocks'] as $stock): ?>
