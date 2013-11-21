@@ -1,16 +1,5 @@
 <link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
 
-<?php 
-// Create connection
-$con=mysqli_connect("http://obscure-lake-4602.herokuapp.com/","corepbl@hotmail.com","Sktam1988","tradingwithfriends");
-
-// Check connection
-if (mysqli_connect_errno($con))
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-?>
-
 <script>
   var STOCK_PRICE_AJAX_URL = '<?= $model['appUrl'] ?>/stockList';
 </script>
