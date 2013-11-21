@@ -20,6 +20,23 @@ Welcome to My Portfolio
 	 Total Price : $<?php echo $price; ?><br>
    </tr>
    
+<?php
+$savedata = $_REQUEST['savedata'];
+if ($savedata == 1){ 
+$data = $_POST['name'];
+$data . = $_POST['quantity'];
+$data . = $_POST['$price'];
+$file = "YOURDATAFILE.txt"; 
+
+$fp = fopen($file, "a") or die("Couldn't open $file for writing!");
+fwrite($fp, $data) or die("Couldn't write values to file!"); 
+
+fclose($fp); 
+echo "Your Form has been Submitted!";
+echo $data
+
+}
+?>
  
    
    <? foreach ($model['stocks'] as $stock): ?>
