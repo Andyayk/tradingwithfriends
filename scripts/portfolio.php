@@ -1,6 +1,9 @@
-session start()
-
 <link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
+
+<?php 
+session_start();
+$_SESSION['views']=1;
+?>
 
 <script>
   var STOCK_PRICE_AJAX_URL = '<?= $model['appUrl'] ?>/stockList';
@@ -26,6 +29,11 @@ Welcome to My Portfolio
    
    	$_SESSION["name"] = "Equity" ;
    	$_SESSION["quantity"] = "Quantity" ;
+   	
+   	<?php 
+   	echo "pageviews=". $_SESSION['views']
+   	?>
+   
    </tr>
    
  
