@@ -2,7 +2,8 @@
 
 <?php 
 session_start();
-$_SESSION['views']=1;
+$_SESSION['name'];
+$_SESSION['quantity'];
 ?>
 
 <script>
@@ -26,12 +27,9 @@ Welcome to My Portfolio
    	 My Equity <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
 	 Total Price : <?php echo $price; ?><br>
-   
-   	$_SESSION["name"] = "Equity" ;
-   	$_SESSION["quantity"] = "Quantity" ;
-   	
-   	<?php 
-   	echo "pageviews=". $_SESSION['views']
+	<?php 
+   	echo "Equity=". $_SESSION['name'];
+   	echo "Quantity". $_SESSION['quantity'];
    	?>
    
    </tr>
