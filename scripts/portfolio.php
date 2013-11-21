@@ -21,17 +21,18 @@ $_SESSION['quantity'];
 Welcome to My Portfolio
 </h2>
  
+<?php 
+   	echo "Equity=". $_SESSION['name'];
+   	echo "Quantity". $_SESSION['quantity'];
+   	?>
+    
+ 
 <table>
    <tr>
    	 <form name="input" action="index.php" method="POST">
    	 My Equity <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
 	 Total Price : <?php echo $price; ?><br>
-	<?php 
-   	echo "Equity=". $_SESSION['name'];
-   	echo "Quantity". $_SESSION['quantity'];
-   	?>
-   
    </tr>
    
  
