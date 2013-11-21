@@ -1,3 +1,5 @@
+session start()
+
 <link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
 
 <script>
@@ -21,7 +23,12 @@ Welcome to My Portfolio
    	 My Equity <?php echo $_POST["name"]; ?><br>
 	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
 	 Total Price : <?php echo $price; ?><br>
+   
+   	$_SESSION["name"] = "Equity" ;
+   	$_SESSION["quantity"] = "Quantity" ;
    </tr>
+   
+ 
    
    <? foreach ($model['stocks'] as $stock): ?>
    <tr>
