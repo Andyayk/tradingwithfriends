@@ -5,11 +5,8 @@
 </script>
 
 <script src="<?= $model['appUrl'] ?>scripts/portfolio.js"></script>
-
 <div id="content">
-
 <h2>Hi <br>
-
 <!-- first name-->
 <fb:name firstnameonly="true" useyou="false" uid="<?= $model['facebookId'] ?>"/>
 Welcome to My Portfolio
