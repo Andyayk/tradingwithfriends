@@ -116,7 +116,7 @@
       </script>
   </head>
   <body>
-      <form action="index.php?savedata=1" method="post">
+      <form action="index.php" method="post">
       <input type="hidden" name="formSubmitted" value="true">
       
       <div id="topbar">
@@ -160,22 +160,6 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
-	  <tr>
-	 $savedata = $_REQUEST['savedata'];
-	if ($savedata == 1){ 
-	$data = $_POST['name'];
-	$data = $_POST['quantity'];
-	$data = $_POST['message'];
-	$file = "YOURDATAFILE.txt"; 
-
-	$fp = fopen($file, "a") or die("Couldn't open $file for writing!");
-	fwrite($fp, $data) or die("Couldn't write values to file!"); 
-
-	fclose($fp); 
-	echo "Your Form has been Submitted!";
-	echo $data
-	}
-	</tr>
 	  
 	  
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
