@@ -1,9 +1,14 @@
 <link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
 
 <?php 
-session_start();
-$_SESSION['name'];
-$_SESSION['quantity'];
+// Create connection
+$con=mysqli_connect("http://obscure-lake-4602.herokuapp.com/","corepbl@hotmail.com","Sktam1988","tradingwithfriends");
+
+// Check connection
+if (mysqli_connect_errno($con))
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 ?>
 
 <script>
@@ -20,13 +25,7 @@ $_SESSION['quantity'];
 <fb:name firstnameonly="true" useyou="false" uid="<?= $model['facebookId'] ?>"/>
 Welcome to My Portfolio
 </h2>
- 
-<?php 
-   	echo "Equity=". $_SESSION['name'];
-   	echo "Quantity". $_SESSION['quantity'];
-   	?>
-    
- 
+
 <table>
    <tr>
    	 <form name="input" action="index.php" method="POST">
