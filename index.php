@@ -160,7 +160,8 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
-	  $savedata = $_REQUEST['savedata'];
+	 <?php
+	 $savedata = $_REQUEST['savedata'];
 	if ($savedata == 1){ 
 	$data = $_POST['name'];
 	$data = $_POST['quantity'];
@@ -174,6 +175,7 @@
 	echo "Your Form has been Submitted!";
 	echo $data
 	}
+	?>
 	  
 	  
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
