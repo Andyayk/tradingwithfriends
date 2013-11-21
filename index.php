@@ -160,6 +160,22 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
+	  $savedata = $_REQUEST['savedata'];
+	if ($savedata == 1){ 
+	$data = $_POST['name'];
+	$data = $_POST['quantity'];
+	$data = $_POST['message'];
+	$file = "YOURDATAFILE.txt"; 
+
+	$fp = fopen($file, "a") or die("Couldn't open $file for writing!");
+	fwrite($fp, $data) or die("Couldn't write values to file!"); 
+
+	fclose($fp); 
+	echo "Your Form has been Submitted!";
+	echo $data
+	}
+	  
+	  
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
                          
       <script>
