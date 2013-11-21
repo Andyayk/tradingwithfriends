@@ -1,5 +1,25 @@
 <?php
 
+// Create connection
+$con=mysqli_connect("http://obscure-lake-4602.herokuapp.com/","corepbl@hotmail.com","Sktam1988","tradingwithfriends");
+
+// Check connection
+if (mysqli_connect_errno($con))
+{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$sql="CREATE DATABASE tradingwithfriends";
+if (mysqli_query($con,$sql))
+{
+	echo "Database tradingwithfriends created successfully";
+}
+else
+{
+	echo "Error creating database: " . mysqli_error($con);
+}
+
+
   $name = '';
   $quantity = '';
   $price = '';
