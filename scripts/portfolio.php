@@ -1,5 +1,4 @@
 <?php
-try {
 	
 	$m = new MongoClient();
 
@@ -26,14 +25,5 @@ foreach ($msgs as $msg) {
 
 		// disconnect from server
 		$m->close();
-} catch ( MongoConnectionException $e ) {
-die('Error connecting to MongoDB server');
-} catch ( MongoException $e ) {
-die('Mongo Error: ' . $e->getMessage());
-} catch ( Exception $e ) {
-die('Error: ' . $e->getMessage());
-}
-?>
 
-</body>
-</html>
+?>
