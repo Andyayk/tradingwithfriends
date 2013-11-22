@@ -20,7 +20,7 @@ $(document).ready(function(){
 	$("#recommendButton").click(function(){
 		FB.ui({
 			method: 'apprequests',
-			message: 'hello you'
+			message: 'Join me and start trading together!!'
 		});
 	});
 });
