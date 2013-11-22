@@ -3,7 +3,7 @@ try {
 	
 	$m = new MongoClient();
 
-	$db = $m->selectDB("tradingwithfriends");
+	$db = $m->tradingwithfriends;
 
 	echo "<h2>Collections</h2>";
 	echo "<ul>";
