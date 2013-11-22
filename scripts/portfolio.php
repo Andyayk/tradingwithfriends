@@ -57,6 +57,7 @@ die('Error: ' . $e->getMessage());
 ?>
 
 	<tr>
+	<form name="input" action="index.php" method="POST">
     My Equity <?php echo $_POST["name"]; ?><br>
  	Your Quantity : <?php echo $_POST["quantity"]; ?><br>
 	Total Price : <?php echo $price; ?>

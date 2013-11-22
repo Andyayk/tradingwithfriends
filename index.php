@@ -69,7 +69,6 @@
 	$message = $message . "\t\t" . $name . ' shares';
 	$message = $message . "\t\t" . 'at $' . $total;
 	
-	require 'scripts/userinsertdatabase.php';
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
 	foreach ($errors as $key=>$errorMessage) {
