@@ -55,5 +55,34 @@ die('Mongo Error: ' . $e->getMessage());
 die('Error: ' . $e->getMessage());
 }
 ?>
+        <a href="<?= $model['appUrl'] ?>/recommendStockToFriends?ticker=<?= $stock->TICKER ?>"
+            class="recommend-control">
+           Recommend to your friends!
+         </a>
+
+       </div>
+
+       <? if ($model['tradeResult'] && $model['tradeResultStockId'] == $stock->ID): ?>       				       
+         Change: <span id="trade-result"></span>         
+
+	 <!-- leave the formatting to the javascript -->
+      
+       <? endif; ?>
+
+     </td>
+   </tr>
+   <? endforeach; ?>
+</table>
+
+<div id="console">
+    
+</div>
+
+</div>
+
+<script>
+init();
+</script>
+
 </body>
 </html>
