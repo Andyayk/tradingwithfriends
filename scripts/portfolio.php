@@ -1,6 +1,7 @@
 <html>
 <body>
 <h1>MongoHQ Test</h1>
+
 <?php
 try {
 	// connect to MongoHQ assuming your MONGOHQ_URL environment
@@ -55,14 +56,6 @@ die('Mongo Error: ' . $e->getMessage());
 die('Error: ' . $e->getMessage());
 }
 ?>
-
-	<tr>
-	<form name="input" action="index.php" method="POST">
-    My Equity <?php echo $_POST["name"]; ?><br>
- 	Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	Total Price : <?php echo $price; ?>
-    </tr>
-
 
 </body>
 </html>
