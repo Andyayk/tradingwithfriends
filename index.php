@@ -62,13 +62,14 @@
   require_once('validations/equityformresult.php');
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
-  	require_once('scripts/userinsertdatabase.php');
+  	
  	$total = $price*$quantity;
 	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
 	$message = $message . "\t\t" . $name . ' shares';
 	$message = $message . "\t\t" . 'at $' . $total;
-
+	
+	require 'scripts/userinsertdatabase.php';
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
 	foreach ($errors as $key=>$errorMessage) {
