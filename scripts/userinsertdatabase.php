@@ -1,21 +1,35 @@
 <?php
 
-	require_once('config/database.php');
+try {
+	// connect to MongoHQ assuming your MONGOHQ_URL environment
+	// variable contains the connection string
+	$connection_url = getenv("MONGOHQ_URL");
 
-	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
+	// create the mongo connection object
+	$m = new Mongo($connection_url);
 
-	$stmt = $mysqli->prepare("INSERT INTO `assignment_users` (`userid`, `name`, `password`, `interests`, `address`, `gender`, `dob`) VALUES (?, ?, ?, ?, ?, ?, ?)"); 
+	// extract the DB name from the connection path
+	$url = parse_url($connection_url);
+	$db_name = preg_replace('/\/(.*)/', '$1', $url['path']);
 
-	$interestAsString = implode(",", $interest); 
-	
-	$dob = $day . $month . $year; 
-	
-	$stmt->bind_param("sssssss", $userid, $name, $password, $interestAsString, $address, $gender, $dob); 
+	// use the database we connected to
+	$db = $m->selectDB($db_name);
 
-	$successfullyInserted = $stmt->execute(); 
+	$products = array(
+		'name' => $name,
+		'quantity' => $quantity,
+		'price' => $price,
+		'total' => $total
+	);
 
-	$stmt->close();
-
-	$mysqli->close();
+		// disconnect from server
+		$m->close();
+} catch ( MongoConnectionException $e ) {
+die('Error connecting to MongoDB server');
+} catch ( MongoException $e ) {
+die('Mongo Error: ' . $e->getMessage());
+} catch ( Exception $e ) {
+die('Error: ' . $e->getMessage());
+}
 
 ?>
