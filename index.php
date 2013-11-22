@@ -152,11 +152,8 @@
 		<font color="red"><?php echo $nameError; ?></font>
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
-<<<<<<< HEAD
+
 	  	<b>Prices:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
-=======
-	  	<b>Price:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
->>>>>>> f14057d7a94cec471aa121f76e1d2426928f6827
 	  </p>
 	  
 	  <p>
