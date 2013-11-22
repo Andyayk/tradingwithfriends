@@ -1,80 +1,59 @@
-<link rel="stylesheet" type="text/css" media="screen" href="<?= $model['appUrl'] ?>scripts/portfolio.css?v=1.0" />
+<html>
+<body>
+<h1>MongoHQ Test</h1>
+<?php
+try {
+	// connect to MongoHQ assuming your MONGOHQ_URL environment
+	// variable contains the connection string
+	$connection_url = getenv("MONGOHQ_URL");
 
-<script>
-  var STOCK_PRICE_AJAX_URL = '<?= $model['appUrl'] ?>/stockList';
-</script>
+	// create the mongo connection object
+	$m = new Mongo($connection_url);
 
-<script src="<?= $model['appUrl'] ?>scripts/portfolio.js"></script>
-<div id="content">
-<h2>Hi <br>
-<!-- first name-->
-<fb:name firstnameonly="true" useyou="false" uid="<?= $model['facebookId'] ?>"/>
-Welcome to My Portfolio
-</h2>
+	// extract the DB name from the connection path
+	$url = parse_url($connection_url);
+	$db_name = preg_replace('/\/(.*)/', '$1', $url['path']);
 
-<table>
-   <tr>
-   	 <form name="input" action="index.php" method="POST">
-   	 My Equity <?php echo $_POST["name"]; ?><br>
-	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	 Total Price : $<?php echo $price; ?><br>
-   </tr>
- 
-   
-   <? foreach ($model['stocks'] as $stock): ?>
-   <tr>
-     <td><?= $stock->TICKER ?></td>
-     <td id="stock-price-<?= $stock->ID ?>"></td>
-    
-    <td id="stock-shares-<?= $stock->ID ?>">
-       <?= $stock->SHARES ?>
-     </td>
+	// use the database we connected to
+	$db = $m->selectDB($db_name);
 
-    <!-- because we cannot get the innerHTML of the shares element in FBJS -->
-    <? if ($stock->SHARES): ?>
-      <script> 
-          portfolioShares[<?= $stock->ID ?>] = <?= $stock->SHARES ?>; 
-      </script>
-    <? endif; ?>
- 
-     <td id="stock-total-<?= $stock->ID ?>"></td>
-     <td class="row-controls">
-       <div>
+	echo "<h2>Collections</h2>";
+	echo "<ul>";
 
-         <!-- buy/sell form for this stock -->
-         <form action="<?= $model['appUrl'] ?>/tradeStock">
-           <input type="submit" value="Buy/Sell" class="trade-button"/>
-           <input type="hidden" name="stockId" value="<?= $stock->ID ?>"/>
-           <input type="text" name="shares" class="shares"/>           
-           shares.
-         </form>
+	// print out list of collections
+	$cursor = $db->listCollections();
+	$collection_name = "";
+	foreach( $cursor as $doc ) {
+		echo "<li>" .  $doc->getName() . "</li>";
+		$collection_name = $doc->getName();
+	}
+	echo "</ul>";
 
-         <!-- recommend this stock to your friends -->
-         <a href="<?= $model['appUrl'] ?>/recommendStockToFriends?ticker=<?= $stock->TICKER ?>"
-            class="recommend-control">
-           Recommend to your friends!
-         </a>
+	// print out last collection
+	if ( $collection_name != "" ) {
+		$collection = $db->selectCollection($collection_name);
+		echo "<h2>Documents in ${collection_name}</h2>";
 
-       </div>
+		// only print out the first 5 docs
+		$cursor = $collection->find();
+		$cursor->limit(5);
+		echo $cursor->count() . ' document(s) found. <br/>';
+		foreach( $cursor as $doc ) {
+		echo "<pre>";
+		var_dump($doc);
+		echo "</pre>";
+}
+}
 
-       <? if ($model['tradeResult'] && $model['tradeResultStockId'] == $stock->ID): ?>       				       
-         Change: <span id="trade-result"></span>         
-
-	 <!-- leave the formatting to the javascript -->
-      
-       <? endif; ?>
-
-     </td>
-   </tr>
-   <? endforeach; ?>
-</table>
-
-<div id="console">
-    
-</div>
-
-</div>
-
-<script>
-init();
-</script>
+		// disconnect from server
+		$m->close();
+} catch ( MongoConnectionException $e ) {
+die('Error connecting to MongoDB server');
+} catch ( MongoException $e ) {
+die('Mongo Error: ' . $e->getMessage());
+} catch ( Exception $e ) {
+die('Error: ' . $e->getMessage());
+}
+?>
+</body>
+</html>
