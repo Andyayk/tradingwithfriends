@@ -165,7 +165,10 @@
 	 <div id="showPortfolio"><?php require 'scripts/portfolio.php';?>
 	   
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
-                         
+      
+      <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
+      <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>                  
+      
       <script>
       var appId = '<?php echo $facebook->getAppID() ?>';
 
@@ -180,7 +183,5 @@
         uid = response.authResponse.userID ? response.authResponse.userID : null;
       });
       </script>
-      <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
-      <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>
   </body>
 </html>
