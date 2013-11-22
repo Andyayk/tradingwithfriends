@@ -163,7 +163,7 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
-	  <div id="recommendButton">Recommend this App to Your Friends!</div>               
+	  <div id="recommendButton">Recommend this app to your friends!!</div>              
       
       <script>
       var appId = '<?php echo $facebook->getAppID() ?>';
