@@ -63,7 +63,7 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
-  	require_once('userinsertdatabase.php'); //Insert into database
+  	require_once('scripts/userinsertdatabase.php'); //Insert into database
   	
  	$total = $price*$quantity;
 	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
