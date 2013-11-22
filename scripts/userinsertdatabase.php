@@ -22,7 +22,7 @@ try {
 		'total' => $total
 	);
 	
-	$colletion->insert($product);
+	$collection->insert($product);
 	
 	echo 'Product inserts with ID: ' . $product['_id'] . "\n";
 
