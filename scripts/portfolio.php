@@ -1,7 +1,7 @@
 <?php 
 echo "Dont touch this until we have settled with putting data into DATABASE";
 
-session_start();
+/*session_start();
 	
 $user = '';
 
@@ -44,6 +44,5 @@ $message = '';
 if (!empty($_SESSION['message'])) {
 	$message = $_SESSION['message'];
 	unset($_SESSION['message']);
-}
-
+}*/
 ?>
