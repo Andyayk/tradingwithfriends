@@ -62,7 +62,45 @@
   require_once('validations/equityformresult.php');
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
-  	require_once('scripts/userinsertdatabase.php');
+  try {
+	// connect to MongoHQ assuming your MONGOHQ_URL environment
+	// variable contains the connection string
+	$connection_url = getenv("MONGOHQ_URL");
+
+	// create the mongo connection object
+	$m = new Mongo($connection_url);
+
+	// extract the DB name from the connection path
+	$url = parse_url($connection_url);
+	$db_name = preg_replace('/\/(.*)/', '$1', $url['path']);
+
+	// use the database we connected to
+	$db = $m->selectDB($db_name);
+
+	$product = array(
+		'name' => $name,
+		'quantity' => $quantity,
+		'price' => $price,
+		'total' => $total
+	);
+	
+	$colletion->insert($product);
+
+	// disconnect from server
+	$m->close();
+} 
+
+catch ( MongoConnectionException $e ) {
+	die('Error connecting to MongoDB server');
+} 
+
+catch ( MongoException $e ) {
+	die('Mongo Error: ' . $e->getMessage());
+} 
+
+catch ( Exception $e ) {
+	die('Error: ' . $e->getMessage());
+}
  	$total = $price*$quantity;
 	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
