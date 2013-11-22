@@ -1,6 +1,6 @@
 <?php 
 	
-	$m = new Mongo(getenv("MONGOHQ"));
+	$m = new Mongo(getenv("MONGOHQ_URL"));
 	
 	$db = $m->tradingwithfriends;
 	
