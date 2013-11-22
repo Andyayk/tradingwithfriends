@@ -161,11 +161,7 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	 <div id="showPortfolio"><?php require 'scripts/portfolio.php';?>
-	 My Equity <?php echo $_POST["name"]; ?><br>
-	 Your Quantity : <?php echo $_POST["quantity"]; ?><br>
-	 Total Price : $<?php echo $price; ?><br></div>
-	  
-	  
+	   
 	  <div id="recommendButton">Recommend this App to Your Friends!</div>
                          
       <script>
