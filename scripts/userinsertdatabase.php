@@ -15,21 +15,31 @@ try {
 	// use the database we connected to
 	$db = $m->selectDB($db_name);
 
-	$products = array(
+	$product = array(
 		'name' => $name,
 		'quantity' => $quantity,
 		'price' => $price,
 		'total' => $total
 	);
+	
+	$colletion->insert($product);
+	
+	echo 'Product inserts with ID: ' . $product['_id'] . "\n";
 
-		// disconnect from server
-		$m->close();
-} catch ( MongoConnectionException $e ) {
-die('Error connecting to MongoDB server');
-} catch ( MongoException $e ) {
-die('Mongo Error: ' . $e->getMessage());
-} catch ( Exception $e ) {
-die('Error: ' . $e->getMessage());
+	// disconnect from server
+	$m->close();
+} 
+
+catch ( MongoConnectionException $e ) {
+	die('Error connecting to MongoDB server');
+} 
+
+catch ( MongoException $e ) {
+	die('Mongo Error: ' . $e->getMessage());
+} 
+
+catch ( Exception $e ) {
+	die('Error: ' . $e->getMessage());
 }
 
 ?>
