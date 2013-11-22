@@ -1,21 +1,49 @@
 <?php 
+echo "Dont touch this until we have settled with putting data into DATABASE";
+
+session_start();
 	
-	$m = new Mongo("mongodb://corepbl:542321@dharma.mongohq.com:10057/tradingwithfriends");
+$user = '';
+
+$loggedIn = (!empty($_SESSION['user']));
 	
-	$db = $m->tradingwithfriends;
+if ($loggedIn) {
+	$user = $_SESSION['user'];
+} else {
+	header('Location: index.php');
+	exit;
+}
+
+require_once('config/database.php');
 	
-	$collection = $db->myportfolio;
+$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
 	
-	$obj = array( "title" => "Calvin and Hobbes", "author" => "Bill Watterson");
-	$collection->insert($obj);
+$stmt = $mysqli->prepare("SELECT * FROM `assignment_speeches`"); 
+
+$stmt->execute(); 
+
+$stmt->bind_result($id, $subject, $body, $tags, $image);
+
+$speeches = array();
+while ($stmt->fetch()) {
+	$speeches[$id] = array(
+		'id' => $id,
+		'subject' => $subject,
+		'body' => $body,
+		'tags' => $tags,
+		'image' => $image
+	);
+}
+
+$stmt->close();
 	
-	$obj = array( "title" => "XKCD", "online" => true);
-	$collection->insert($obj);
+$mysqli->close();
+
+$message = ''; 
 	
-	$cursor = $collection->find();
-	
-	foreach ($cursor as $obj){
-		echo $obj("title") . "\n";
-	}
-	
+if (!empty($_SESSION['message'])) {
+	$message = $_SESSION['message'];
+	unset($_SESSION['message']);
+}
+
 ?>
