@@ -122,7 +122,7 @@
       <form action="index.php" method="post">
       
       <div id="topbar">
-      <img src="images/logo.png"/>
+      <img src="images/logo.jpg"/>
       </div>
       
       <div id="fb-root"></div>
