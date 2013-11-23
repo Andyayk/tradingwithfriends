@@ -128,10 +128,10 @@
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
+      <div><?php echo "Welcome " . $username;?></div>
+      
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-	  
-      <?php echo "Welcome " . $username;?>
       
       <script src="scripts/userinterface.js"></script>
       <script src="scripts/accounting.js"></script>
