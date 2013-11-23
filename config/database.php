@@ -1,4 +1,5 @@
 <?php
+
 	$url = $_SERVER['HTTP_HOST'];
 
 	// read more about strpos here http://php.net/manual/en/function.strpos.php
@@ -20,6 +21,5 @@
 		$database_password = 'p6A2wObwmahl';
 		$database_hostname = 'mysqlsdb.co8hm2var4k9.eu-west-1.rds.amazonaws.com';
 	}
-	
 
 ?>

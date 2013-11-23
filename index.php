@@ -63,41 +63,9 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
-  	$url = $_SERVER['HTTP_HOST'];
+  	$total = $price*$quantity;
+    require_once('scripts/userinsertdatabase.php');
 
-	// read more about strpos here http://php.net/manual/en/function.strpos.php
-	$thisIsLocalHostUrl = (strpos($url, 'localhost') !== false);
-	$thisIsCloudControlUrl = (strpos($url, 'cloudcontrolled') !== false);
-
-	// the credentials for localhost database
-	if ($thisIsLocalHostUrl) {
-		$database_name = 'tradingwithfriends';
-		$database_username = 'root';
-		$database_password = '';
-		$database_hostname = 'localhost';
-	}
-	
-	// the credentials for cloudcontrol database
-	if ($thisIsCloudControlUrl) {
-		$database_name = 'depqdrc7d65';
-		$database_username = 'depqdrc7d65';
-		$database_password = 'p6A2wObwmahl';
-		$database_hostname = 'mysqlsdb.co8hm2var4k9.eu-west-1.rds.amazonaws.com';
-	}
-	
-	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
-
-	$stmt = $mysqli->prepare("INSERT INTO `portfolio` (`name`, `quantity`, `price`, `total`) VALUES (?, ?, ?, ?)"); 
-
-	$stmt->bind_param("ssss", $name, $quantity, $price, $total); 
-
-	$successfullyInserted = $stmt->execute(); 
-
-	$stmt->close();
-
-	$mysqli->close();
-  	
- 	$total = $price*$quantity;
 	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
 	$message = $message . "\t\t" . 'You have bought ' . $quantity;
 	$message = $message . "\t\t" . $name . ' shares';
