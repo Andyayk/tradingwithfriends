@@ -8,7 +8,7 @@
 	// the credentials for localhost database
 	if ($thisIsLocalHostUrl) {
 
-		$database_name = 'phpwebp_1104259e';
+		$database_name = 'tradingwithfriends';
 		$database_username = 'root';
 		$database_password = '';
 		$database_hostname = 'localhost';
