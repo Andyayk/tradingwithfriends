@@ -40,7 +40,6 @@
     print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
   } else { //Get their names
  	 $user_profile = $facebook->api('/me','GET');
-  	 echo "Name: " . $user_profile['name'];
   }
  
   $names = array(	
@@ -128,7 +127,10 @@
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-
+	  
+	  <?php $user_profile['picture']; ?>
+      <?php echo "Welcome " . $user_profile['name'];?>
+      
       <script src="scripts/userinterface.js"></script>
       <script src="scripts/accounting.js"></script>
       <script src="scripts/payments.js"></script>
