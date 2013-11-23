@@ -10,11 +10,11 @@ $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $price, $total);
+$stmt->bind_result($username, $name, $quantity, $price, $total, $id);
 
 $portfolioEquities = array();
 while ($stmt->fetch()) {
-	$portfolioEquities[$username] = array(
+	$portfolioEquities[$id] = array(
 		'name' => $name,
 		'quantity' => $quantity,
 		'price' => $price,
@@ -32,24 +32,24 @@ $mysqli->close();
   <?php foreach($portfolioEquities as $key => $portfolioEquity) : ?>
 
   <?php 
-  $name = $portfolioEquity['name'];
-  $quantity = $portfolioEquity['quantity'];
-  $price = $portfolioEquity['price'];
-  $total = $portfolioEquity['total'];
+	$name = $portfolioEquity['name'];
+    $quantity = $portfolioEquity['quantity'];
+    $price = $portfolioEquity['price'];
+    $total = $portfolioEquity['total'];
   ?>
 
   <tr>
 	<td>
-		<b>Subject:</b> <?php echo $name; ?>
+		<b>Equity:</b> <?php echo $name; ?>
 	</td>
 	<td>
-		<b>Subject:</b> <?php echo $quantity; ?>
+		<b>Quantity:</b> <?php echo $quantity; ?>
 	</td>
 	<td>
-		<b>Subject:</b> <?php echo $price; ?>
+		<b>Price:</b> <?php echo $price; ?>
 	</td>
 	<td>
-		<b>Subject:</b> <?php echo $total; ?>
+		<b>Total:</b> <?php echo $total; ?>
 	</td>
   </tr>
   <?php endforeach; ?>
