@@ -12,25 +12,46 @@ $stmt->execute();
 
 $stmt->bind_result($username, $name, $quantity, $price, $total);
 
-$stmt->fetch();
-
-$isUsernameValid = !empty($username);
+$portfolioEquities = array();
+while ($stmt->fetch()) {
+	$portfolioEquities[$username] = array(
+		'name' => $name,
+		'quantity' => $quantity,
+		'price' => $price,
+		'total' => $total
+	);
+}
 
 $stmt->close();
 
 $mysqli->close();
 
-if ($isUsernameValid) {
-	
-	echo $name;
-	echo $quantity;
-	echo $price;
-	echo $total;
-					
-} else {
-	
-	echo "You have not bought anything yet";	
-	
-}
-	
 ?>
+
+<table>
+  <?php foreach($portfolioEquities as $key => $portfolioEquity) : ?>
+
+  <?php 
+  $name = $portfolioEquity['name'];
+  $quantity = $portfolioEquity['quantity'];
+  $price = $portfolioEquity['price'];
+  $total = $portfolioEquity['total'];
+  ?>
+
+  <tr>
+	<td>
+		<b>Subject:</b> <?php echo $name; ?>
+	</td>
+	<td>
+		<b>Subject:</b> <?php echo $quantity; ?>
+	</td>
+	<td>
+		<b>Subject:</b> <?php echo $price; ?>
+	</td>
+	<td>
+		<b>Subject:</b> <?php echo $total; ?>
+	</td>
+  </tr>
+  <?php endforeach; ?>
+
+</table>
