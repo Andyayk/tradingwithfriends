@@ -11,15 +11,10 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
 
-  // Server
+  //Server
   require 'server/fb-php-sdk/facebook.php';
-  
-  function get_stocks($stock, $cache)
-  {
-  	return $this->generate_stock_array($stock);   
-  } 
 
-  // Linking to Facebook Application
+  //Linking to Facebook Application
   $app_id = '418284238273760';
   $app_secret = '44926e66c8b6d95019865554ec58c9a2';
   $app_namespace = 'tradingwithfriends';
@@ -27,22 +22,25 @@
   $app_url = 'http://apps.facebook.com/' . $app_namespace . '/';
   $scope = 'email,publish_actions';
 
-  // Init the Facebook SDK
+  //Init the Facebook SDK
   $facebook = new Facebook(array(
      'appId'  => $app_id,
      'secret' => $app_secret,
    ));
 
-   // Get the current user
+   //Get the current user
   $user = $facebook->getUser();
 
-   // If the user has not installed the app, redirect them to the Login Dialog
+   //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
     $loginUrl = $facebook->getLoginUrl(array(
       'scope' => $scope,
       'redirect_uri' => $app_url,
     ));
     print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
+  } else { //Get their names
+ 	 $user_profile = $facebook->api('/me','GET');
+  	 echo "Name: " . $user_profile['name'];
   }
  
   $names = array(	
