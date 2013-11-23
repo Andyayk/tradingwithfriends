@@ -12,7 +12,7 @@ $stmt->bind_result($name, $quantity, $price, $total);
 
 $portfolioData = array();
 while ($stmt->fetch()) {
-	$portfolioData[$id] = array(
+	$portfolioData[$username] = array(
 		'name' => $name,
 		'quantity' => $quantity,
 		'price' => $price,

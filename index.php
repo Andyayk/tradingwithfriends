@@ -10,6 +10,7 @@
   $errors = array();
   $noErrors = true;
   $haveErrors = !($noErrors);
+  $username = '';
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -40,6 +41,7 @@
     print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
   } else { //Get their names
  	 $user_profile = $facebook->api('/me','GET');
+ 	 $username = $user_profile['name'];
   }
  
   $names = array(	
@@ -61,6 +63,7 @@
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
   	$total = $price*$quantity;
+  	$username = $user_profile['name'];
     require_once('scripts/userinsertdatabase.php');
 
 	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
@@ -128,8 +131,7 @@
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
 	  
-	  <?php $user_profile['picture']; ?>
-      <?php echo "Welcome " . $user_profile['name'];?>
+      <?php echo "Welcome " . $username;?>
       
       <script src="scripts/userinterface.js"></script>
       <script src="scripts/accounting.js"></script>
