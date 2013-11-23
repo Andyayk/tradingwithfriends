@@ -71,7 +71,6 @@
 
 	// the credentials for localhost database
 	if ($thisIsLocalHostUrl) {
-
 		$database_name = 'tradingwithfriends';
 		$database_username = 'root';
 		$database_password = '';
@@ -82,7 +81,7 @@
 	if ($thisIsCloudControlUrl) {
 		$database_name = 'depqdrc7d65';
 		$database_username = 'depqdrc7d65';
-		$database_password = 'p6A2wObwmah1';
+		$database_password = 'p6A2wObwmahl';
 		$database_hostname = 'mysqlsdb.co8hm2var4k9.eu-west-1.rds.amazonaws.com';
 	}
 	
