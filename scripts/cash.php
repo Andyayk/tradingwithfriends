@@ -10,7 +10,7 @@ $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
+$stmt->bind_result($username, ?, ?, ?, ?, $cash, $id);
 
 $getCashes = array();
 while ($stmt->fetch()) {
@@ -23,7 +23,4 @@ $stmt->close();
 
 $mysqli->close();
 
-foreach($getCashes as $key => $getCash){
-	$cash = $getCash['cash'];
-}
 ?>
