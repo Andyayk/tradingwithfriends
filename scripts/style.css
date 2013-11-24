@@ -27,7 +27,7 @@ body {
   display:none;
 }
 
-#purchasingformButton {
+#purchasingformButton, #showForm {
   padding:5px;
   text-align:center;
   background-color:#6495ED;
@@ -35,7 +35,6 @@ body {
 }
 
 #showForm {
-  text-align:left;	
   padding:50px;
   display:none;
 }
