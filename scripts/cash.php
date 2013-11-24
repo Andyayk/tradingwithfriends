@@ -15,10 +15,6 @@ $stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 $portfolioEquities = array();
 while ($stmt->fetch()) {
 	$portfolioEquities[$id] = array(
-		'name' => $name,
-		'quantity' => $quantity,
-		'price' => $price,
-		'total' => $total,
 		'cash' => $cash
 	);
 }
