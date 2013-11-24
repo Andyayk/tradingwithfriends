@@ -17,6 +17,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$("#historyButton").click(function(){
+		$("#showHistory").slideToggle("slow");
+	});
+});
+
+$(document).ready(function(){
 	$("#recommendButton").click(function(){
 		FB.ui({
 			method: 'apprequests',

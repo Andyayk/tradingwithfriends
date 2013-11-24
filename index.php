@@ -12,6 +12,7 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
+  $cash = 10000;
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -72,6 +73,7 @@
   		$username = $user_profile['name'];
     	
   		require_once('scripts/userinsertdatabase.php');
+  		require_once('scripts/historyinsertdatabase.php');
 
 		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
@@ -88,6 +90,7 @@
   		$username = $user_profile['name'];
     
   		require_once('scripts/userinsertdatabase.php');
+  		require_once('scripts/historyinsertdatabase.php');
 
 		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have sold ' . $quantity;
@@ -154,7 +157,9 @@
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-      <p style="text-align: center;"><b><?php echo "Welcome " . $username;?></b></p><br/>
+      <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!!";?></b></p><br/>
+      <p style="text-align: center;"><b><?php echo "Currently, You have $" . $cash . " to spend on trading!!";?></b></p><br/>
+      
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
@@ -189,6 +194,8 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
+	  <div id="historyButton">History of Transaction</div>
+	  <div id="showHistory"><?php require 'scripts/history.php';?></div>
 	  <div id="recommendButton">Recommend this app to your friends!!</div>    
       
       <script>
