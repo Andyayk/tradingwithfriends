@@ -154,7 +154,7 @@
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-      <p style="text-align: center;"><h2><?php echo "Welcome " . $username;?></p></h2><br/>
+      <p style="text-align: center;"><?php echo "Welcome " . $username;?></p><br/>
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
@@ -167,6 +167,7 @@
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
+	  <p style="text-align: right;">
 	  	<div>Tip: To sell an equity, type in negative quantity</div>
 		<b>Symbol:</b>
 		<select name="name" >
@@ -175,15 +176,16 @@
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
-		<font color="red"><?php echo $nameError; ?></font>
+		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
-		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 
-	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
+	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
 	  </p>
 	  
 	  <p>
 	  	<input type="submit" value="Submit" /><br>
+	  </p>
 	  </p>
 	  </div>
 	  
