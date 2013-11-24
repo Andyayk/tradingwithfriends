@@ -12,7 +12,6 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
-  $cash = 10000;
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
