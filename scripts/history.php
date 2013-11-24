@@ -29,7 +29,7 @@ $mysqli->close();
 
 ?>
 
-<table>
+<textarea rows="4" cols="50">
   <?php foreach($historyEquities as $key => $historyEquity) : ?>
 
   <?php 
@@ -59,4 +59,4 @@ $mysqli->close();
   </tr>
   <?php endforeach; ?>
 
-</table>
+</textarea>
