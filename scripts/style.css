@@ -18,7 +18,7 @@ body {
 #equityButton,#showEquity {
   padding:5px;
   text-align:center;
-  background-color:#0000ff;
+  background-color:#00ffff;
   border:solid 1px #c3c3c3;
 }
 
@@ -29,8 +29,8 @@ body {
 
 #purchasingformButton, #showForm {
   padding:5px;
-  text-align:centre;
-  background-color:#ff00ff;
+  text-align:center;
+  background-color:#0000ff;
   border:solid 1px #c3c3c3;
 }
 
@@ -42,7 +42,7 @@ body {
 #portfolioButton, #showPortfolio {
   padding:5px;
   text-align:center;
-  background-color:#00ff00;
+  background-color:#7FFFD4;
   border:solid 1px #c3c3c3;
 }
 
@@ -54,7 +54,7 @@ body {
 #recommendButton {
   padding:5px;
   text-align:center;
-  background-color:#ff0000;
+  background-color:#00ffff;
   border:solid 1px #c3c3c3;
 }
 
