@@ -19,8 +19,6 @@ if ($userArriveBySubmittingAForm) {
 		$errors['quantity'] = "Please enter the quantity you wish to purchase";
 	} else if ($quantityNotNumeric) {
 			$errors['quantity'] = "Quantity entered is not a number";
-	} else if ($quantityNotInRange) {
-			$errors['quantity'] = "Quantity entered is not logical";
 	}
 	
 	$noErrors = (count($errors) == 0);
