@@ -15,30 +15,20 @@ $stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 $portfolioEquities = array();
 while ($stmt->fetch()) {
 	$portfolioEquities[$id] = array(
+		'name' => $name,
+		'quantity' => $quantity,
+		'price' => $price,
+		'total' => $total,
 		'cash' => $cash
 	);
-}
-
-foreach($portfolioEquities as $key => $portfolioEquity) :
-	$cash = $portfolioEquity['cash'];
-endforeach;
-
-if($cash = 0 || $cash = ''){
-
-$cash = 10000;
-
-} else {
-
-$cash = $portfolioEquity['cash'];
-
 }
 
 $stmt->close();
 
 $mysqli->close();
 
-
+foreach($portfolioEquities as $key => $portfolioEquity){
+	$cash = $portfolioEquity['cash'];
+}
 
 ?>
-
-
