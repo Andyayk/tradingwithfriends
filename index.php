@@ -73,23 +73,24 @@
     	
   		require_once('scripts/userinsertdatabase.php');
 
-		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
-  	}else { //Shortsell
-  	
+  	}else { //Sell
+  		
+  		require_once('scripts/cash.php');
   		$total = ($price*$quantity)*-1;
-  		$cash = $cash-$total-40;
+  		$cash = $cash+$total-40;
   		$username = $user_profile['name'];
     
   		require_once('scripts/userinsertdatabase.php');
 
-		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
-		$message = $message . "\t\t" . 'You have shortsell ' . $quantity;
+		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
+		$message = $message . "\t\t" . 'You have sold ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
