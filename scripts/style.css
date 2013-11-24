@@ -29,7 +29,7 @@ body {
 
 #purchasingformButton, #showForm {
   padding:5px;
-  text-align:center;
+  text-align:left;
   background-color:#ff00ff;
   border:solid 1px #c3c3c3;
 }
