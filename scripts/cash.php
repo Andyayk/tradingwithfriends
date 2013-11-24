@@ -12,19 +12,17 @@ $stmt->execute();
 
 $stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 
-$portfolioEquities = array();
+$getCashes = array();
 while ($stmt->fetch()) {
-	$portfolioEquities[$id] = array(
+	$getCashes[$id] = array(
 		'cash' => $cash
 	);
 }
-
+foreach($getCashes as $key => $getCash){
+	$cash = $getCash['cash'];
+}
 $stmt->close();
 
 $mysqli->close();
-
-foreach($portfolioEquities as $key => $portfolioEquity){
-	$cash = $portfolioEquity['cash'];
-}
 
 ?>
