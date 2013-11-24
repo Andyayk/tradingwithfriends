@@ -35,18 +35,18 @@
         	$row++;
        		for ($c=0; $c < $num; $c++) //Getting data
         	{
-				if($row%2==0)
+				if ($row%2==0)
 				{
 					echo "<td class=even>"; //Even rows
-					if($data[5]<0&&($c==5||$c==2||$c==1)) //Finding negative equities' changes, last trade & name
+					if ($data[5]<0&&($c==5||$c==2||$c==1)) //Finding negative equities' changes, last trade & name
 						echo "<font color=red>";
 					else	
 					{
-						if($data[5]>0&&($c==5||$c==2||$c==1)) //Finding positive equities' changes, last trade & name
+						if ($data[5]>0&&($c==5||$c==2||$c==1)) //Finding positive equities' changes, last trade & name
 						echo "<font color=green>";
 					}
 					echo $data[$c]."</font>"; //Colouring of positive/negative equities changes, last trade & name
-					if(($c+1)==$num)//Printing of charts
+					if (($c+1)==$num)//Printing of charts
 					{
 						echo "</td><td class=even><img src=http://ichart.finance.yahoo.com/h?s=".$data[1]."&lang=en-SG&region=sg></td>";
 					}
@@ -56,15 +56,15 @@
 				else
 				{
 					echo "<td class=odd>"; //Odd rows
-					if($data[5]<0&&($c==5||$c==2||$c==1)) //Finding negative equities' changes, last trade & name
+					if ($data[5]<0&&($c==5||$c==2||$c==1)) //Finding negative equities' changes, last trade & name
 						echo "<font color=red>";
 					else
 					{
-						if($data[5]>0&&($c==5||$c==2||$c==1)) //Finding positive equities' changes, last trade & name
+						if ($data[5]>0&&($c==5||$c==2||$c==1)) //Finding positive equities' changes, last trade & name
 						echo "<font color=green>";
 					}
 					echo $data[$c]."</font>"; //Colouring of positive/negative equities changes, last trade & name
-					if(($c+1)==$num)//Printing of charts
+					if (($c+1)==$num)//Printing of charts
 					{
 						echo "</td><td class=odd><img src=http://ichart.finance.yahoo.com/h?s=".$data[1]."&lang=en-SG&region=sg></td>";
 					}
