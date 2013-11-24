@@ -1,4 +1,5 @@
 <?php
+/*
 	
 	require_once('config/database.php');
 
@@ -13,5 +14,5 @@
 	$stmt->close();
 	
 	$mysqli->close();
-
+*/
 ?>

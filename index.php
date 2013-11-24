@@ -89,7 +89,7 @@
   		$cash = $cash+$total-40;
   		$username = $user_profile['name'];
     
-  		require_once('scripts/userupdatedatabase.php');
+  		require_once('scripts/userinsertdatabase.php');
   		require_once('scripts/historyinsertdatabase.php');
 
 		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
@@ -158,7 +158,7 @@
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!!";?></b></p><br/>
-      <p style="text-align: center;"><b><?php echo "Currently, You have $" . $cash . " to spend on trading!!";?></b></p><br/>
+      <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading!!";?></b></p><br/>
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
