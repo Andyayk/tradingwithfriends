@@ -29,7 +29,9 @@ $cash = 10000;
 
 } else {
 
+foreach($portfolioEquities as $key => $portfolioEquity) :
 $cash = $portfolioEquity['cash'];
+endforeach;
 
 }
 
