@@ -6,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("UPDATE `portfolio` SET `quantity` = quantity - (SELECT quantity FROM `portfolio` WHERE username = ?) WHERE name = ?"); 
 
-	$stmt->bind_param("sss", $quantity, $name, $username);
+	$stmt->bind_param("s", $username);
 
 	$successfullyUpdated = $stmt->execute(); 
 
