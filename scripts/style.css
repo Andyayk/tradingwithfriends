@@ -10,7 +10,7 @@ img {
 
 body {
   margin: 0px; 
-  background-color: Cerise;
+  background-color:green;
   background-image: url("../images/pagebg.jpg");
   min-height: 700px;
 }
@@ -30,7 +30,7 @@ body {
 #purchasingformButton, #showForm {
   padding:5px;
   text-align:center;
-  background-color:#e5eecc;
+  background-color:#ff00ff;
   border:solid 1px #c3c3c3;
 }
 
@@ -42,7 +42,7 @@ body {
 #portfolioButton, #showPortfolio {
   padding:5px;
   text-align:center;
-  background-color:#e5eecc;
+  background-color:#00ff00;
   border:solid 1px #c3c3c3;
 }
 
@@ -54,7 +54,7 @@ body {
 #recommendButton {
   padding:5px;
   text-align:center;
-  background-color:#e5eecc;
+  background-color:#ff0000;
   border:solid 1px #c3c3c3;
 }
 
