@@ -29,7 +29,7 @@ $mysqli->close();
 
 ?>
 
-<textarea rows="4" cols="50">
+<table>
   <?php foreach($historyEquities as $key => $historyEquity) : ?>
 
   <?php 
@@ -39,16 +39,16 @@ $mysqli->close();
     $total = $historyEquity['total'];
     $cash = $historyEquity['cash'];
   ?>
-
+  
   <tr>
 	<td>
-		<b>Equity:</b> <?php echo $name; ?> </br>
+		<b>Symbol:</b> <?php echo $name; ?> </br>
 	</td>
 	<td>
 		<b>Quantity:</b> <?php echo $quantity; ?> </br>
 	</td>
 	<td>
-		<b>Price:</b> <?php echo $price; ?> </br>
+		<b>Last Trade:</b> <?php echo $price; ?> </br>
 	</td>
 	<td>
 		<b>Total:</b> <?php echo $total; ?> </br>
@@ -59,4 +59,4 @@ $mysqli->close();
   </tr>
   <?php endforeach; ?>
 
-</textarea>
+</table>

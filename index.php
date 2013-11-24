@@ -89,7 +89,7 @@
   		$cash = $cash+$total-40;
   		$username = $user_profile['name'];
     
-  		require_once('scripts/userinsertdatabase.php');
+  		require_once('scripts/userupdatedatabase.php');
   		require_once('scripts/historyinsertdatabase.php');
 
 		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";

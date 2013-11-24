@@ -4,22 +4,19 @@ require_once('config/database.php');
 
 $mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
 
-$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ?"); 
+$stmt = $mysqli->prepare("SELECT username, name, quantity, id FROM `portfolio` WHERE username = ?"); 
 
 $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
+$stmt->bind_result($username, $name, $quantity, $id);
 
 $portfolioEquities = array();
 while ($stmt->fetch()) {
 	$portfolioEquities[$id] = array(
 		'name' => $name,
-		'quantity' => $quantity,
-		'price' => $price,
-		'total' => $total,
-		'cash' => $cash
+		'quantity' => $quantity
 	);
 }
 
@@ -35,26 +32,14 @@ $mysqli->close();
   <?php 
 	$name = $portfolioEquity['name'];
     $quantity = $portfolioEquity['quantity'];
-    $price = $portfolioEquity['price'];
-    $total = $portfolioEquity['total'];
-    $cash = $portfolioEquity['cash'];
   ?>
 
   <tr>
 	<td>
-		<b>Equity:</b> <?php echo $name; ?> </br>
+		<b>Symbol:</b> <?php echo $name; ?> </br>
 	</td>
 	<td>
 		<b>Quantity:</b> <?php echo $quantity; ?> </br>
-	</td>
-	<td>
-		<b>Price:</b> <?php echo $price; ?> </br>
-	</td>
-	<td>
-		<b>Total:</b> <?php echo $total; ?> </br>
-	</td>
-	<td>
-		<b>Cash Left:</b> <?php echo $cash; ?> </br>
 	</td>
   </tr>
   <?php endforeach; ?>
