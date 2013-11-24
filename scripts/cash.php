@@ -10,7 +10,7 @@ $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
+$stmt->bind_result($username, $cash, $id);
 
 $portfolioEquities = array();
 while ($stmt->fetch()) {
@@ -23,15 +23,17 @@ $stmt->close();
 
 $mysqli->close();
 
+foreach($portfolioEquities as $key => $portfolioEquity) :
+	$cash = $portfolioEquity['cash'];
+endforeach;
+
 if($cash = 0 || $cash = ''){
 
 $cash = 10000;
 
 } else {
 
-foreach($portfolioEquities as $key => $portfolioEquity) :
 $cash = $portfolioEquity['cash'];
-endforeach;
 
 }
 
