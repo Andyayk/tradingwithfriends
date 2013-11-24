@@ -1,6 +1,4 @@
 <?php
-
-	$newQuantity = $quantity;
 	
 	require_once('config/database.php');
 
@@ -8,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("UPDATE `portfolio` SET `quantity` = quantity - (SELECT quantity FROM `portfolio` WHERE username = ?) WHERE name = ?"); 
 
-	$stmt->bind_param("sss", $newQuantity, $name, $username);
+	$stmt->bind_param("sss", $quantity, $name, $username);
 
 	$successfullyUpdated = $stmt->execute(); 
 
