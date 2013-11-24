@@ -12,13 +12,13 @@
   {
     echo "<style type=\"text/css\">";
 	echo "td.even {";
-	echo "	background-color: #F08080; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
+	echo "	background-color: #d3d3d3; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
 	echo "}";
 	echo "td.odd {";
-	echo "	background-color: #F08080; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
+	echo "	background-color: #d3d3d3; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
 	echo "}";
 	echo "tr.head {";
-	echo "color:#000000;background-color: #F0F0F0;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:80%;";
+	echo "color:#000000;background-color: #00ff00;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:80%;";
 	echo "}";
 	echo "</style>";
 	echo "<table border=1 cellspacing=1 cellpadding=2>";

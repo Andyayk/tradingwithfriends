@@ -42,19 +42,19 @@ $mysqli->close();
 
   <tr>
 	<td>
-		<b>Equity:</b> <?php echo $name; ?>
+		<b>Equity:</b> <?php echo $name; ?> </br>
 	</td>
 	<td>
-		<b>Quantity:</b> <?php echo $quantity; ?>
+		<b>Quantity:</b> <?php echo $quantity; ?> </br>
 	</td>
 	<td>
-		<b>Price:</b> <?php echo $price; ?>
+		<b>Price:</b> <?php echo $price; ?> </br>
 	</td>
 	<td>
-		<b>Total:</b> <?php echo $total; ?>
+		<b>Total:</b> <?php echo $total; ?> </br>
 	</td>
 	<td>
-		<b>Cash Left:</b> <?php echo $cash; ?>
+		<b>Cash Left:</b> <?php echo $cash; ?> </br>
 	</td>
   </tr>
   <?php endforeach; ?>
