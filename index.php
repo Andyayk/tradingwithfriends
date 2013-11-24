@@ -66,7 +66,8 @@
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
   	if ($quantity>0){ //Buy
-  		
+  	
+  		require_once('scripts/cash.php');
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
