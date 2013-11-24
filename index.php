@@ -67,6 +67,7 @@
   	
   	if ($quantity>0){ //Buy
   		
+  		require_once('scripts/cash.php');
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
@@ -76,12 +77,13 @@
 		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
-		$message = $message . "\t\t" . 'at $' . $total . "/n";
-		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.' . "/n";
-		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.' . "/n";
+		$message = $message . "\t\t" . 'at $' . $total . '<br />';
+		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
   	}else { //Shortsell
   	
+  		require_once('scripts/cash.php');
   		$total = ($price*$quantity)*-1;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
@@ -91,8 +93,8 @@
 		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have shortsell ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
-		$message = $message . "\t\t" . 'at $' . $total . "\n";
-		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.' . "\n";
+		$message = $message . "\t\t" . 'at $' . $total . '<br />';
+		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
   	}
