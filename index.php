@@ -67,10 +67,6 @@
   	
   	if ($quantity>0){ //Buy
   		
-  		require_once('scripts/cash.php');
-  		if ($cash = 0 || $cash = ''){
-  			$cash = 10000;
-  		}
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
@@ -86,10 +82,6 @@
 		
   	}else { //Shortsell
   	
-  		require_once('scripts/cash.php');
-  		if ($cash = 0 || $cash = ''){
-  			$cash = 10000;
-  		}
   		$total = ($price*$quantity)*-1;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
