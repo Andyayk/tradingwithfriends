@@ -154,7 +154,7 @@
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-      <p style="text-align: center;"><?php echo "Welcome " . $username;?></p><br/>
+      <p style="text-align: center;"><h2><?php echo "Welcome " . $username;?></h2></p><br/>
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
@@ -167,7 +167,7 @@
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
-	  <p style="text-align: right;">
+	  <p style="text-align: left;">
 	  	<div>Tip: To sell an equity, type in negative quantity</div>
 		<b>Symbol:</b>
 		<select name="name" >
@@ -182,9 +182,11 @@
 
 	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
 	  </p>
+	  </p>
 	  
 	  <p>
-	  	<input type="submit" value="Submit" /><br>
+	  <p style="text-align: left;">	
+	  <input type="submit" value="Submit" /><br>
 	  </p>
 	  </p>
 	  </div>

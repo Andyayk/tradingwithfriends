@@ -10,8 +10,8 @@ img {
 
 body {
   margin: 0px; 
-  background-color:ff0000;
-  background-image: url("../images/pagebg.jpg");
+  background-color:green;
+  background-image: url("../images/lb.jpg");
   min-height: 700px;
 }
 
