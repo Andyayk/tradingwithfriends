@@ -10,7 +10,7 @@ $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $price, $total, $id);
+$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 
 $portfolioEquities = array();
 while ($stmt->fetch()) {
@@ -18,7 +18,8 @@ while ($stmt->fetch()) {
 		'name' => $name,
 		'quantity' => $quantity,
 		'price' => $price,
-		'total' => $total
+		'total' => $total,
+		'cash' => $cash
 	);
 }
 
@@ -36,6 +37,7 @@ $mysqli->close();
     $quantity = $portfolioEquity['quantity'];
     $price = $portfolioEquity['price'];
     $total = $portfolioEquity['total'];
+    $cash = $portfolioEquity['cash'];
   ?>
 
   <tr>
@@ -50,6 +52,9 @@ $mysqli->close();
 	</td>
 	<td>
 		<b>Total:</b> <?php echo $total; ?>
+	</td>
+	<td>
+		<b>Cash Left:</b> <?php echo $cash; ?>
 	</td>
   </tr>
   <?php endforeach; ?>
