@@ -1,5 +1,6 @@
 <?php
 
+  //Define variables
   $name = '';
   $quantity = '';
   $price = '';
@@ -11,6 +12,8 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
+  $cash = 10000;
+  $fees = '';
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -43,7 +46,8 @@
  	 $user_profile = $facebook->api('/me','GET');
  	 $username = $user_profile['name'];
   }
- 
+  
+  //Array storing equities names
   $names = array(	
 	'A33.SI' => 'A33.SI',
 	'P05.SI' => 'P05.SI',
@@ -62,14 +66,37 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
-  	$total = $price*$quantity;
-  	$username = $user_profile['name'];
-    require_once('scripts/userinsertdatabase.php');
+  	if ($quantity>0){ //Buy
+  		
+  		$total = $price*$quantity;
+  		$cash = $cash-$total-40;
+  		$username = $user_profile['name'];
+    	
+  		require_once('scripts/userinsertdatabase.php');
 
-	$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio</font><br />' . "\n";
-	$message = $message . "\t\t" . 'You have bought ' . $quantity;
-	$message = $message . "\t\t" . $name . ' shares';
-	$message = $message . "\t\t" . 'at $' . $total;
+		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
+		$message = $message . "\t\t" . 'You have bought ' . $quantity;
+		$message = $message . "\t\t" . $name . ' shares';
+		$message = $message . "\t\t" . 'at $' . $total . "/n";
+		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.' . "/n";
+		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.' . "/n";
+		
+  	}else { //Shortsell
+  	
+  		$total = $price*$quantity;
+  		$cash = $cash+$total-40;
+  		$username = $user_profile['name'];
+    
+  		require_once('scripts/userinsertdatabase.php');
+
+		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
+		$message = $message . "\t\t" . 'You have shortsell ' . $quantity;
+		$message = $message . "\t\t" . $name . ' shares';
+		$message = $message . "\t\t" . 'at $' . $total . "/n";
+		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.' . "/n";
+		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.' . "/n";
+		
+  	}
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
@@ -134,8 +161,6 @@
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
       <script src="scripts/userinterface.js"></script>
-      <script src="scripts/accounting.js"></script>
-      <script src="scripts/payments.js"></script>
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
@@ -144,7 +169,8 @@
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
-		<b>Equity:</b>
+	  	Tip: To sell an Equity, type in negative quantity
+		<b>Symbol:</b>
 		<select name="name" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
@@ -155,7 +181,7 @@
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
 
-	  	<b>Price:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
+	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly />
 	  </p>
 	  
 	  <p>

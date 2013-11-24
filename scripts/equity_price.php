@@ -1,5 +1,6 @@
 <?php
 
+  //Define variables
   $blumont = '';
   $pfood = '';
   $goldenagr = '';

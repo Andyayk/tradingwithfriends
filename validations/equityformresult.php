@@ -6,15 +6,15 @@ $userArriveByClickingOrDirectlyTypeURL = !$userArriveBySubmittingAForm;
 
 if ($userArriveBySubmittingAForm) {
 
-	$nameNotSelected = empty($_POST['name']);
+	$nameNotSelected = empty($_POST['name']); //Empty post
 	if ($nameNotSelected) {
-		$errors['name'] = "Please select an equity";
+		$errors['name'] = "Please select an equity"; //If no name selected
 	}
 	
-	$noquantity = empty($_POST['quantity']);
-	$quantityNotNumeric = !is_numeric($_POST['quantity']);
-	$quantityNotInRange = ($_POST['quantity'] < 0 || $_POST['quantity'] > 100); 
+	$noquantity = empty($_POST['quantity']); //Empty post
+	$quantityNotNumeric = !is_numeric($_POST['quantity']); //Post not numeric
 
+	//Error messages
 	if ($noquantity) {
 		$errors['quantity'] = "Please enter the quantity you wish to purchase";
 	} else if ($quantityNotNumeric) {
