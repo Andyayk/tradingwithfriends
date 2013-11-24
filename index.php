@@ -167,7 +167,7 @@
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
-	  <
+	  
 	  	<div>Tip: To sell an equity, type in negative quantity</div>
 		<b>Symbol:</b>
 		<select name="name" >

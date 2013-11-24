@@ -35,6 +35,7 @@ body {
 }
 
 #showForm {
+  text-align:left;
   padding:50px;
   display:none;
 }
