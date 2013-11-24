@@ -155,7 +155,7 @@
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
-      <div><?php echo "Welcome " . $username;?></div>
+     <span style="font-weight:bold"><?php echo "Welcome " . $username;?></span>
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
