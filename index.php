@@ -13,7 +13,6 @@
   $haveErrors = !($noErrors);
   $username = '';
   $cash = 10000;
-  $fees = '';
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -83,8 +82,8 @@
 		
   	}else { //Shortsell
   	
-  		$total = $price*$quantity;
-  		$cash = $cash+$total-40;
+  		$total = ($price*$quantity)*-1;
+  		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
     
   		require_once('scripts/userinsertdatabase.php');
@@ -92,9 +91,9 @@
 		$message = "\t\t" . '<font color="green">Success!! Equity has been added into your Portfolio!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have shortsell ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
-		$message = $message . "\t\t" . 'at $' . $total . "/n";
-		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.' . "/n";
-		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.' . "/n";
+		$message = $message . "\t\t" . 'at $' . $total . "\n";
+		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.' . "\n";
+		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
   	}
 	
@@ -169,7 +168,7 @@
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
-	  	Tip: To sell an Equity, type in negative quantity
+	  	<div>Tip: To shortsell an equity, type in negative quantity</div>
 		<b>Symbol:</b>
 		<select name="name" >
 			<option value="">Select Equity</option>
