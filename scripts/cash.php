@@ -10,17 +10,24 @@ $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, ?, ?, ?, ?, $cash, $id);
+$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 
-$getCashes = array();
-while ($stmt->fetch()) {
-	$getCashes[$id] = array(
-		'cash' => $cash
-	);
-}
+$stmt->fetch();
+
+$isCashValid = !empty($cash);
 
 $stmt->close();
 
 $mysqli->close();
+
+if ($isCashValid){
+
+$cash = $cash;
+
+} else {
+
+$cash = 10000;
+
+}
 
 ?>
