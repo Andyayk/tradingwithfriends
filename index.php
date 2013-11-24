@@ -154,7 +154,7 @@
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-      <p style="text-align: center;"><b><?php echo "Welcome " <br/> . $username;?></b><br/>
+      <p style="text-align: center;"><b><?php echo "Welcome " . $username;?></b></p><br/>
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
@@ -181,7 +181,6 @@
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 
 	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
-	  </p>
 	  </p>
 	  
 	  <p>
