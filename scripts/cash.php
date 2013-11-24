@@ -18,11 +18,12 @@ while ($stmt->fetch()) {
 		'cash' => $cash
 	);
 }
-foreach($getCashes as $key => $getCash){
-	$cash = $getCash['cash'];
-}
+
 $stmt->close();
 
 $mysqli->close();
 
+foreach($getCashes as $key => $getCash){
+	$cash = $getCash['cash'];
+}
 ?>

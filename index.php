@@ -12,6 +12,7 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
+  $cash = 0;
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -67,7 +68,7 @@
   	if ($quantity>0){ //Buy
   		
   		require_once('scripts/cash.php');
-  		if ($cash = 0){
+  		if ($cash = 0 || $cash = ''){
   			$cash = 10000;
   		}
   		$total = $price*$quantity;
@@ -86,7 +87,7 @@
   	}else { //Shortsell
   	
   		require_once('scripts/cash.php');
-  		if ($cash = 0){
+  		if ($cash = 0 || $cash = ''){
   			$cash = 10000;
   		}
   		$total = ($price*$quantity)*-1;
