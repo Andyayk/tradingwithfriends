@@ -29,13 +29,14 @@ body {
 
 #purchasingformButton, #showForm {
   padding:5px;
-  text-align:left;
+  text-align:centre;
   background-color:#ff00ff;
   border:solid 1px #c3c3c3;
 }
 
 #showForm {
   padding:50px;
+  text-align:left;
   display:none;
 }
 
