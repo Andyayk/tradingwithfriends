@@ -119,10 +119,14 @@
 	
 	$message = '';
 	
-	echo "<script language=javascript>alert('Transaction unsuccessful!! Please try again.')</script>";
+	echo "<script language=javascript>alert('Please try again!!')</script>";
 	
-  }
+  } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
+	
+	$message = '';
  
+	echo "<script language=javascript>alert('Welcome!!')</script>";
+	
 ?>
 
 <!DOCTYPE html>
