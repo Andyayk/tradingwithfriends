@@ -1,10 +1,10 @@
 <?php 
 
-require_once('config/database.php');
+require_once('config/database.php'); //Login to database
 
-$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
+$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-$stmt = $mysqli->prepare("SELECT username, name, quantity, id FROM `portfolio` WHERE username = ?"); 
+$stmt = $mysqli->prepare("SELECT username, name, quantity, id FROM `portfolio` WHERE username = ?"); //Select
 
 $stmt->bind_param("s", $username);
 

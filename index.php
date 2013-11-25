@@ -165,11 +165,7 @@
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
-	  <script>
-	  function alertMessage(){
-	  alert("<?php echo $message; ?>");
-	  }
-	  </script>
+	  <?php echo $message; ?>
 	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
@@ -190,7 +186,7 @@
 	  </p>
 	  
 	  <p>
-	  <button onclick="alertMessage()" input type="submit" value="Submit" /><br>
+	  <input type="submit" value="Submit" /><br>
 	  </p>
 	  </div>
 	  

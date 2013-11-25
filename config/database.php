@@ -2,11 +2,10 @@
 
 	$url = $_SERVER['HTTP_HOST'];
 
-	// read more about strpos here http://php.net/manual/en/function.strpos.php
 	$thisIsLocalHostUrl = (strpos($url, 'localhost') !== false);
 	$thisIsCloudControlUrl = (strpos($url, 'cloudcontrolled') !== false);
 
-	// the credentials for localhost database
+	//Credentials for localhost database
 	if ($thisIsLocalHostUrl) {
 		$database_name = 'tradingwithfriends';
 		$database_username = 'root';
@@ -14,7 +13,7 @@
 		$database_hostname = 'localhost';
 	}
 	
-	// the credentials for cloudcontrol database
+	//Credentials for cloudcontrol database
 	if ($thisIsCloudControlUrl) {
 		$database_name = 'depqdrc7d65';
 		$database_username = 'depqdrc7d65';

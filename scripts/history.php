@@ -1,10 +1,10 @@
 <?php 
 
-require_once('config/database.php');
+require_once('config/database.php'); //Login to database
 
-$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
+$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-$stmt = $mysqli->prepare("SELECT * FROM `history` WHERE username = ?"); 
+$stmt = $mysqli->prepare("SELECT * FROM `history` WHERE username = ?");  //Select all from history
 
 $stmt->bind_param("s", $username);
 
@@ -12,7 +12,7 @@ $stmt->execute();
 
 $stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 
-$historyEquities = array();
+$historyEquities = array(); //Fetch and store in array
 while ($stmt->fetch()) {
 	$historyEquities[$id] = array(
 		'name' => $name,
