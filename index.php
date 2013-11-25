@@ -162,14 +162,6 @@
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-	  
-   <p>
-   date_default_timezone_set('America/New_York');
-   echo date_default_timezone_get();
-   $currenttime = date('h:i:s:u');
-   list($hrs,$mins,$secs,$msecs) = split(':',$currenttime);
-   echo " => $hrs:$mins:$secs\n";
-   </p>
       
       <script src="scripts/userinterface.js"></script>
       
