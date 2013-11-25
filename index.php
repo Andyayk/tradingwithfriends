@@ -75,7 +75,7 @@
   		require_once('scripts/userinsertdatabase.php');
   		require_once('scripts/historyinsertdatabase.php');
 
-		$message = "\t\t" . '<b><font color="green">Transaction Success!!</font></b><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
