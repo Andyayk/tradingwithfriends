@@ -153,12 +153,15 @@
   <body>
       <form action="index.php" method="post">
       
+      <div id="fb-root"></div>
+      <script src="//connect.facebook.net/en_US/all.js"></script>
+      
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
       
-      <div id="fb-root"></div>
-      <script src="//connect.facebook.net/en_US/all.js"></script>
+      <span id="date_time"></span>
+	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
@@ -166,12 +169,14 @@
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
+      <span id="date_time"></span>
+	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       <script src="scripts/userinterface.js"></script>
+      
+      <?php echo $message; ?>
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
-	  
-	  <?php echo $message; ?>
 	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
