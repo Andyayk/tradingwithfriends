@@ -102,7 +102,7 @@
 		
   	}
 	
-  } elseif ($haveErrors && $userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
+  } elseif ($userArriveBySubmittingAForm) { //If arrive by URL
   
   	$message = '';
   	
