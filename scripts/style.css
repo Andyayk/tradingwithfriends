@@ -41,26 +41,6 @@ body {
 }
 
 #portfolioButton, #showPortfolio {
-  padding:5px;
-  text-align:center;
-  background-color:#7FFFD4;
-  border:solid 1px #c3c3c3;
-}
-
-#showPortfolio {
-  padding:50px;
-  background-colour:#4169E1;
-  display:none;
-}
-
-#historyButton, #showHistory{
-  padding:5px;
-  text-align:center;
-  background-color:#87CEFA;
-  border:solid 1px #c3c3c3;
-}
-
-#showHistory {
    padding: 20px;
    margin: 10px;
    background: #ff0030;
@@ -77,6 +57,36 @@ body {
 
 body {
   padding: 10px;
+}
+
+#showPortfolio {
+  padding:50px;
+  background-colour:#4169E1;
+  display:none;
+}
+
+#historyButton, #showHistory{
+   padding: 20px;
+   margin: 10px;
+   background: #ff0030;
+   color: #fff;
+   font-size: 21px;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #aa3030;
+   font-weight: normal;
+}
+
+body {
+  padding: 10px;
+}
+
+#showHistory {
+  padding:50px;
+  display:none;
 }
 
 #recommendButton {
