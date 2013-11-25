@@ -16,99 +16,69 @@ body {
 }
 
 #equityButton,#showEquity {
-  padding:5px;
-  text-align:center;
-  background-color:#F0f8ff;
-  border:solid 1px #c3c3c3;
+ .stitched {
+   padding: 10px;
+   margin: 10px;
+   background: #ff0030;
+   color: #fff;
+   font-size: 20px;
+   font-weight: bol;
+   line-height: 1.1em;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #aa303;
+   font-weight: normal;
+}
+
+body {
+  padding: 10px;
+
 }
 
 #showEquity {
   padding:50px;
-  background-colour:#7FFFD4;
+  background-colour:#f0f8ff;
   display:none;
 }
 
 #purchasingformButton, #showForm {
   padding:5px;
   text-align:center;
-  background-color:#f0f8ff;
+  background-colour:#7FFFD4;
   border:solid 1px #c3c3c3;
 }
 
 #showForm {
   text-align:left;
   padding:50px;
-  background-colour:#7FFFD4;
+  background-colour:#f0f8ff;
   display:none;
 }
 
 #portfolioButton, #showPortfolio {
   padding:5px;
   text-align:center;
-  background-color:#f0f8ff;
+  background-colour:#7FFFD4;
   border:solid 1px #c3c3c3;
 }
 
 #showPortfolio {
   padding:50px;
-  background-colour:#7FFFD4;
+  background-colour:#f0f8ff;
   display:none;
 }
 
 #historyButton, #showHistory{
- .container{
-	width:200px;
-	margin: 0 auto;
-	overflow:hidden;
-}
-
-.main-section{
-	background-color:#CDEBC4;
-	color:#6D8B64;
-	width:150px;
-	float:left;
-	height:200px;
-}
-
-.sidebar{
-	background-color:#ccc;
-	width:150px;
-	float:right;
-	height:200px;
-}
-
-.container p{
-	padding-top:100px;
-	text-align:center;
-}
-
-.note{
-	text-align:center;
-	padding-top:60px;
-	font-style:italic;
-}
-
-/* This simple media query makes the column layout
-   linear on smaller screens */
-
-@media (max-width:900px){
-
-	.container{
-		width:100%;
-	}
-
-	.main-section, .sidebar{
-		width:auto;
-		margin-bottom:20px;
-		float:none;
-	}
-
-}
+  padding:5px;
+  text-align:center;
+  background-colour:#7FFFD4;
+  border:solid 1px #c3c3c3;
 }
 
 #showHistory {
-  padding:50px;
-  background-colour:#7FFFD4;
+  padding:10px;
+  background-colour:#f0f8ff;
   display:none;
 }
 
