@@ -80,7 +80,7 @@
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-		$message = $message . "\t\t" . <b>'All prices are quoted in SGD dollars. Terms & Conditions may apply.'</b>;
+		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
   	}else { //Sell
   		
@@ -97,7 +97,7 @@
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-		$message = $message . "\t\t" .<b> 'All prices are quoted in SGD dollars. Terms & Conditions may apply.'</b>;
+		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
   	}
 	
