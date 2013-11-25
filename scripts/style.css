@@ -18,80 +18,59 @@ body {
 #equityButton,#showEquity {
   padding:5px;
   text-align:center;
-  background-color:#00ffff;
+  background-color:#F0F8FF;
   border:solid 1px #c3c3c3;
 }
 
 #showEquity {
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
 #purchasingformButton, #showForm {
   padding:5px;
   text-align:center;
-  background-color:#40E0D0;
+  background-color:#f0f8ff;
   border:solid 1px #c3c3c3;
 }
 
 #showForm {
   text-align:left;
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
 #portfolioButton, #showPortfolio {
-   padding: 20px;
-   margin: 10px;
-   background: #ff0030;
-   color: #fff;
-   font-size: 21px;
-   font-weight: bold;
-   line-height: 1.3em;
-   border: 2px dashed #fff;
-   border-radius: 10px;
-   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   text-shadow: -1px -1px #aa3030;
-   font-weight: normal;
-}
-
-body {
-  padding: 10px;
+  padding:5px;
+  text-align:center;
+  background-color:#f0f8ff;
+  border:solid 1px #c3c3c3;
 }
 
 #showPortfolio {
   padding:50px;
-  background-colour:#4169E1;
+  background-colour:#7FFFD4;
   display:none;
 }
 
 #historyButton, #showHistory{
-   padding: 20px;
-   margin: 10px;
-   background: #ff0030;
-   color: #fff;
-   font-size: 21px;
-   font-weight: bold;
-   line-height: 1.3em;
-   border: 2px dashed #fff;
-   border-radius: 10px;
-   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   text-shadow: -1px -1px #aa3030;
-   font-weight: normal;
-}
-
-body {
-  padding: 10px;
+  padding:5px;
+  text-align:center;
+  background-color:#f0f8ff;
+  border:solid 1px #c3c3c3;
 }
 
 #showHistory {
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
 #recommendButton {
   padding:5px;
   text-align:center;
-  background-color:#00ffff;
+    background-color:#f0f8ff;
   border:solid 1px #c3c3c3;
 }
