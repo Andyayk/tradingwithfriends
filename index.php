@@ -155,12 +155,12 @@
   <body>
       <form action="index.php" method="post">
       
-      <div id="fb-root"></div>
-      <script src="//connect.facebook.net/en_US/all.js"></script>
-      
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
+      
+      <div id="fb-root"></div>
+      <script src="//connect.facebook.net/en_US/all.js"></script>
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
