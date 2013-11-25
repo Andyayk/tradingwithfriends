@@ -24,6 +24,7 @@ body {
 
 #showEquity {
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
@@ -37,6 +38,7 @@ body {
 #showForm {
   text-align:left;
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
@@ -49,18 +51,64 @@ body {
 
 #showPortfolio {
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
 #historyButton, #showHistory{
-  padding:5px;
-  text-align:center;
-  background-color:#f0f8ff;
-  border:solid 1px #c3c3c3;
+ .container{
+	width:200px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+.main-section{
+	background-color:#CDEBC4;
+	color:#6D8B64;
+	width:150px;
+	float:left;
+	height:200px;
+}
+
+.sidebar{
+	background-color:#ccc;
+	width:150px;
+	float:right;
+	height:200px;
+}
+
+.container p{
+	padding-top:100px;
+	text-align:center;
+}
+
+.note{
+	text-align:center;
+	padding-top:60px;
+	font-style:italic;
+}
+
+/* This simple media query makes the column layout
+   linear on smaller screens */
+
+@media (max-width:900px){
+
+	.container{
+		width:100%;
+	}
+
+	.main-section, .sidebar{
+		width:auto;
+		margin-bottom:20px;
+		float:none;
+	}
+
+}
 }
 
 #showHistory {
   padding:50px;
+  background-colour:#7FFFD4;
   display:none;
 }
 
