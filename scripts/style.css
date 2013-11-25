@@ -16,8 +16,8 @@ body {
 }
 
 #equityButton,#showEquity {
-   padding: 10px;
-   margin: 10px;
+   padding: 12px;
+   margin: 12px;
    background: #7fff00;
    color: #fff;
    font-size: 20px;
@@ -31,7 +31,7 @@ body {
 }
 
 body {
-  padding: 8px;
+  padding: 15px;
 }
 
 #showEquity {
