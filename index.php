@@ -81,6 +81,8 @@
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+
+		echo "<script language=javascript>alert('Transaction Success!!')</script>";
 		
   	}else { //Sell
   		
