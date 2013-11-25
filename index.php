@@ -199,7 +199,7 @@
 
 	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
 	  	
-	  	<select id="name2" name="name2">
+	  	<select id="Name" name="Name">
 			<option value="" selected="selected">Please select...</option>
 			<option value="Elvis" data-phonenumber="11111">Elvis</option>
 			<option value="Frank" data-phonenumber="22222">Frank</option>

@@ -32,7 +32,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function() {                                       
-    $("#name2").live("change", function() {
+    $("#Name").live("change", function() {
       $("#phonenumber").val($(this).find("option:selected").attr("data-phonenumber"));
     });
 });  
