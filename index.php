@@ -14,8 +14,7 @@
   $username = '';
   $cash = '';
 
-  //Server
-  require 'server/fb-php-sdk/facebook.php';
+  require 'server/fb-php-sdk/facebook.php'; //Server
 
   //Linking to Facebook Application
   $app_id = '418284238273760';
@@ -24,17 +23,15 @@
 
   $app_url = 'http://apps.facebook.com/' . $app_namespace . '/';
   $scope = 'email,publish_actions';
-
-  //Init the Facebook SDK
-  $facebook = new Facebook(array(
+  
+  $facebook = new Facebook(array( //Init the Facebook SDK
      'appId'  => $app_id,
      'secret' => $app_secret,
    ));
 
-   //Get the current user
-  $user = $facebook->getUser();
+  $user = $facebook->getUser(); //Get the current user
 
-   //If the user has not installed the app, redirect them to the Login Dialog
+  //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
     $loginUrl = $facebook->getLoginUrl(array(
       'scope' => $scope,
@@ -124,6 +121,11 @@
   } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
   
   	$message = '';
+  	
+  	echo "<script language=javascript>alert('Welcome!!')</script>";
+  
+  }
+  
 	
 ?>
 
@@ -155,13 +157,13 @@
   <body>
       <form action="index.php" method="post">
       
-      <div id="topbar">
-      <img src="images/logo.jpg"/>
-      </div>
-      
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
+      <div id="topbar">
+      <img src="images/logo.jpg"/>
+      </div>
+
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
