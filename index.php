@@ -12,7 +12,7 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
-  $cash = 10000;
+  $cash = '';
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -46,6 +46,8 @@
  	 $username = $user_profile['name'];
   }
   
+  require_once('scripts/cash.php'); //Get cash data
+  
   //Array storing equities names
   $names = array(	
 	'A33.SI' => 'A33.SI',
@@ -67,7 +69,6 @@
   	
   	if ($quantity>0){ //Buy
   	
-  		require_once('scripts/cash.php'); //Get cash data
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
@@ -86,7 +87,6 @@
 		
   	}else { //Sell
   		
-  		require_once('scripts/cash.php'); //Get cash data
   		$total = ($price*$quantity)*-1;
   		$cash = $cash+$total-40;
   		$username = $user_profile['name'];
