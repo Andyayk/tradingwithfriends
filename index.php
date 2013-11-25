@@ -82,7 +82,7 @@
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 
-		echo "<script language=javascript>alert('Transaction Success!!')</script>";
+		echo "<script language=javascript>alert('Transaction Successful!!')</script>";
 		
   	}else { //Sell
   		
@@ -101,6 +101,8 @@
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
+		echo "<script language=javascript>alert('Transaction Successful!!')</script>";
+		
   	}
 	
   } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
@@ -116,6 +118,8 @@
 	}
 	
 	$message = '';
+	
+	echo "<script language=javascript>alert('Transaction unsuccessful!! Please try again.')</script>";
 	
   }
  
