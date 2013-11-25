@@ -174,6 +174,7 @@
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
+	  
       <script src="scripts/userinterface.js"></script>
       
       <?php echo $message; ?>
@@ -186,7 +187,7 @@
 	  <p>
 	  	<div><i>Tip: To sell an equity, type in negative quantity</i></div></br></br>
 		<b>Symbol:</b>
-		<select name="name" >
+		<select id=name name="name" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
@@ -197,6 +198,15 @@
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 
 	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
+	  	
+	  	<select id="name2" name="name2">
+			<option value="" selected="selected">Please select...</option>
+			<option value="Elvis" data-phonenumber="11111">Elvis</option>
+			<option value="Frank" data-phonenumber="22222">Frank</option>
+			<option value="Jim" data-phonenumber="33333">Jim</option>
+		</select>
+
+		<input type="text" id="phonenumber" name="phonenumber" value="" readonly="readonly">
 	  </p>
 	  
 	  <p>
@@ -206,8 +216,10 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
+	  
 	  <div id="historyButton">History of Transaction</div>
 	  <div id="showHistory"><?php require 'scripts/history.php';?></div>
+	  
 	  <div id="recommendButton">Recommend this app to your friends!!</div>    
       
       <script>
