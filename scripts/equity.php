@@ -12,10 +12,10 @@
   {
     echo "<style type=\"text/css\">";
 	echo "td.even {";
-	echo "	background-color: #d3d3d3; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
+	echo "	background-color: #0f0f0f; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
 	echo "}";
 	echo "td.odd {";
-	echo "	background-color: #d3d3d3; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
+	echo "	background-color: #0f0f0f; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
 	echo "}";
 	echo "tr.head {";
 	echo "color:#000000;background-color: #7fffd4;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:80%;";
