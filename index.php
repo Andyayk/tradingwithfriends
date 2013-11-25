@@ -152,6 +152,14 @@
 	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
+      
+      <script>
+      $(document).ready(function() {                                       
+		$("#Name").live("change", function() {
+			$("#phonenumber").val($(this).find("option:selected").attr("data-phonenumber"));
+    	});
+	  });  
+	  </script>
   </head>
   <body>
       <form action="index.php" method="post">
@@ -198,13 +206,7 @@
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 
 	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
-	  </p>
-	  
-	  <p>
-	  <input type="submit" value="Submit" /><br>
-	  </p>
-	  </div>
-	  	  	
+	  	
 	  	<select id="Name" name="Name">
 			<option value="" selected="selected">Please select...</option>
 			<option value="Elvis" data-phonenumber="11111">Elvis</option>
@@ -213,6 +215,12 @@
 		</select>
 
 		<input type="text" id="phonenumber" name="phonenumber" value="" readonly />
+	  </p>
+	  
+	  <p>
+	  <input type="submit" value="Submit" /><br>
+	  </p>
+	  </div>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
