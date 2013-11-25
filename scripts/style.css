@@ -12,7 +12,7 @@ body {
   margin: 0px; 
   background-color:green;
   background-image: url("../images/lb.jpg");
-  min-height: 700px;
+  min-height: 900px;
 }
 
 #equityButton,#showEquity {
@@ -30,7 +30,7 @@ body {
 #purchasingformButton, #showForm {
   padding:5px;
   text-align:center;
-  background-color:#6495ED;
+  background-color:#40E0D0;
   border:solid 1px #c3c3c3;
 }
 

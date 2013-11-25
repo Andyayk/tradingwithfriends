@@ -12,7 +12,7 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
-  $cash = 10000;
+  $cash = 1000;
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -157,11 +157,19 @@
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
-      <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p><br/>
-      <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p><br/>
+      <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
+      <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
+	  
+   <p>
+   date_default_timezone_set('America/New_York');
+   echo date_default_timezone_get();
+   $currenttime = date('h:i:s:u');
+   list($hrs,$mins,$secs,$msecs) = split(':',$currenttime);
+   echo " => $hrs:$mins:$secs\n";
+   </p>
       
       <script src="scripts/userinterface.js"></script>
       
