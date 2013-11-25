@@ -33,7 +33,7 @@ if ($isCashValid){ //Make sure cash is valid
 
 $cash = $cash;
 
-} else {
+} else { //Else cash = 10000
 
 $cash = 10000;
 
