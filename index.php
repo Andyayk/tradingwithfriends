@@ -122,8 +122,8 @@
 	echo "<script language=javascript>alert('Please try again!!')</script>";
 	
   } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
- 
-	echo "<script language=javascript>alert('Welcome!!')</script>";
+  
+  	$message = '';
 	
 ?>
 
