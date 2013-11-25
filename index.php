@@ -98,11 +98,17 @@
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
-		echo "<script language=javascript>alert('Transaction Successful!!')</script>";
+		echo "<script language=javascript>alert('Transaction successful!!')</script>";
 		
   	}
 	
-  } else if ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
+  } elseif ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
+  
+  	$message = '';
+  	
+  	echo "<script language=javascript>alert('Welcome!!')</script>";
+  
+  } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
 	foreach ($errors as $key=>$errorMessage) {
 	
@@ -116,14 +122,8 @@
 	
 	$message = '';
 	
-	echo "<script language=javascript>alert('Please try again!!')</script>";
+	echo "<script language=javascript>alert('Transaction unsuccessful!! Please try again!!')</script>";
 	
-  } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
-  
-  	$message = '';
-  	
-  	echo "<script language=javascript>alert('Welcome!!')</script>";
-  
   }
   
 	
