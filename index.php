@@ -206,7 +206,7 @@
 			<option value="Jim" data-phonenumber="33333">Jim</option>
 		</select>
 
-		<input type="text" id="phonenumber" name="phonenumber" value="" readonly="readonly">
+		<input type="text" id="phonenumber" name="phonenumber" value="" readonly />
 	  </p>
 	  
 	  <p>
