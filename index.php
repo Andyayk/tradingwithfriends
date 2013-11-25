@@ -12,7 +12,7 @@
   $noErrors = true;
   $haveErrors = !($noErrors);
   $username = '';
-  $cash = 1000;
+  $cash = 10000;
 
   //Server
   require 'server/fb-php-sdk/facebook.php';
@@ -67,13 +67,13 @@
   	
   	if ($quantity>0){ //Buy
   	
-  		require_once('scripts/cash.php');
+  		require_once('scripts/cash.php'); //Get cash data
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
   		$username = $user_profile['name'];
     	
-  		require_once('scripts/userinsertdatabase.php');
-  		require_once('scripts/historyinsertdatabase.php');
+  		require_once('scripts/userinsertdatabase.php'); //Insert into database
+  		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
 		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
@@ -84,15 +84,15 @@
 		
   	}else { //Sell
   		
-  		require_once('scripts/cash.php');
+  		require_once('scripts/cash.php'); //Get cash data
   		$total = ($price*$quantity)*-1;
   		$cash = $cash+$total-40;
   		$username = $user_profile['name'];
     
-  		require_once('scripts/userinsertdatabase.php');
-  		require_once('scripts/historyinsertdatabase.php');
+  		require_once('scripts/userinsertdatabase.php'); //Insert into database
+  		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction Successful!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have sold ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -113,10 +113,6 @@
 		}
 	}
 	
-	$message = '';
-	
-  } else if ($userArriveByClickingOrDirectlyTypeURL) { //If arrive directly by url
-  
 	$message = '';
 	
   }
@@ -157,6 +153,7 @@
       
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
+      
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
@@ -168,7 +165,12 @@
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
-	  <?php echo $message; ?>
+	  <script>
+	  function alertMessage(){
+	  alert("<?php echo $message; ?>");
+	  }
+	  </script>
+	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
@@ -188,7 +190,7 @@
 	  </p>
 	  
 	  <p>
-	  <input type="submit" value="Submit" /><br>
+	  <button onclick="alertMessage()" input type="submit" value="Submit" /><br>
 	  </p>
 	  </div>
 	  

@@ -2,8 +2,6 @@
 
 $userArriveBySubmittingAForm = !empty($_POST);
 
-$userArriveByClickingOrDirectlyTypeURL = !$userArriveBySubmittingAForm;
-
 if ($userArriveBySubmittingAForm) {
 
 	$nameNotSelected = empty($_POST['name']); //Empty post
@@ -18,12 +16,13 @@ if ($userArriveBySubmittingAForm) {
 	if ($noquantity) {
 		$errors['quantity'] = "Please enter the quantity you wish to purchase";
 	} else if ($quantityNotNumeric) {
-			$errors['quantity'] = "Quantity entered is not a number";
+		$errors['quantity'] = "Quantity entered is not a number";
 	}
 	
 	$noErrors = (count($errors) == 0);
 	$haveErrors = !$noErrors;
 
+	//No errors
 	if ($noErrors) {
 		if (!empty($_POST['name'])) {
 			$name = $_POST['name'];
