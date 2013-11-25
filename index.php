@@ -153,13 +153,6 @@
       });
       </script>
       
-      <script>
-      $(document).ready(function() {                                       
-		$("#Name").live("change", function() {
-			$("#phonenumber").val($(this).find("option:selected").attr("data-phonenumber"));
-    	})
-	  });  
-	  </script>
   </head>
   <body>
       <form action="index.php" method="post">
