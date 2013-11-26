@@ -4,13 +4,13 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ? AND name = ? AND price = ?"); //Select all from portfolio
+	$stmt = $mysqli->prepare("SELECT quantity, id FROM `portfolio` WHERE username = ? AND name = ? AND price = ?"); //Select quantity and id from portfolio
 
 	$stmt->bind_param("sss", $username, $name, $price);
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
+	$stmt->bind_result($quantity, $id);
 	
 	$checkPortfolio = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
