@@ -73,14 +73,14 @@
   		require_once('scripts/userinsertdatabase.php'); //Insert into database
   		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 
-		echo "<script language=javascript>alert('Transaction successful!!')</script>";
+		echo "<script language=javascript>alert('Transaction Successful!!')</script>";
 		
   	}else { //Sell
   		
@@ -91,7 +91,7 @@
   		require_once('scripts/userinsertdatabase.php'); //Insert into database
   		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction Successful!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have sold ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -169,6 +169,12 @@
       
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
+      
+      <span id="date_time"></span>
+	  <script type="text/javascript">window.onload = date_time('date_time');</script>
+      
+      <span id="date_time"></span>
+	  <script type="text/javascript">window.onload = date_time('date_time');</script>
 	  
       <script src="scripts/userinterface.js"></script>
       
@@ -203,20 +209,9 @@
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
-<<<<<<< HEAD
-	  <div class='container'>
 	  
-	  <aside class="sidebar"><div id="historyButton">History of Transaction</div></aside>
-	  <div class="main-section"><div id="showHistory"><?php require 'scripts/history.php';?></div>
-=======
-	  <div id="historyButton">History of Transactions</div>
-	  <div class="container"><div id="showHistory"><?php require 'scripts/history.php';?></div>
-
-	<aside class="sidebar"><p>This is the sidebar<p></aside>
->>>>>>> cb0ad76870a7d021ea29882398d6572f57a54fb2
-
-	 </div>
-	 </div>
+	  <div id="historyButton">History of Transaction</div>
+	  <div id="showHistory"><?php require 'scripts/history.php';?></div>
   
 	  <div id="recommendButton">Recommend this app to your friends!!</div>    
       
