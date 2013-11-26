@@ -209,15 +209,13 @@
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
-	  <div id="historyButton">History of Transaction</div>
-	  <div class="container"><div id="showHistory"><?php require 'scripts/history.php';?></div>
+	  <div class='container'>
+	  
+	  <aside class="sidebar"><div id="historyButton">History of Transaction</div></aside>
+	  <div class="main-section"><div id="showHistory"><?php require 'scripts/history.php';?></div>
 
-	<aside class="sidebar"><p>This is the sidebar<p></aside>
-
-	<div class="main-section">
-		<p>The main content of the article goes here</p>
-	</div>
-	</div>
+	 </div>
+	 </div>
   
 	  <div id="recommendButton">Recommend this app to your friends!!</div>    
       
