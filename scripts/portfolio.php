@@ -10,7 +10,7 @@ $stmt->bind_param("s", $username);
 
 $stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $id);
+$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 
 $portfolioEquities = array();
 while ($stmt->fetch()) {
