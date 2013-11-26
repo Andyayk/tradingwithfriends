@@ -39,7 +39,7 @@ $mysqli->close();
     $total = $historyEquity['total'];
     $cash = $historyEquity['cash'];
   ?>
-  
+
   <tr>
 	<td>
 		<b>Symbol:</b> <?php echo $name; ?> </br>
@@ -48,13 +48,13 @@ $mysqli->close();
 		<b>Quantity:</b> <?php echo $quantity; ?> </br>
 	</td>
 	<td>
-		<b>Last Trade:</b> <?php echo $price; ?> </br>
+		<b>Price:</b> <?php echo $price; ?> </br>
 	</td>
 	<td>
-		<b>Total:</b> <?php echo $total; ?> </br>
+		<b>Total:</b> $<?php echo $total; ?> </br>
 	</td>
 	<td>
-		<b>Cash Left:</b> <?php echo $cash; ?> </br>
+		<b>Cash left:</b> $<?php echo $cash; ?> </br>
 	</td>
   </tr>
   <?php endforeach; ?>

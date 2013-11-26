@@ -45,6 +45,9 @@ $mysqli->close();
 	<td>
 		<b>Quantity:</b> <?php echo $quantity; ?> </br>
 	</td>
+	<td>
+		<b>Price:</b> <?php echo $price; ?> </br>
+	</td>
   </tr>
   <?php endforeach; ?>
 
