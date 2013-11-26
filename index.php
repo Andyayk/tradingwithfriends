@@ -74,8 +74,18 @@
   			$username = $user_profile['name'];
     		
   			require_once('scripts/quantity.php'); //Get quantity data
-  			require_once('scripts/userinsertdatabase.php'); //Insert into database
-  			require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			
+  			if ($newQuantity = 0){
+  				
+  				require_once('scripts/userinsertdatabase.php'); //Insert into database
+  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  				
+  			} else {
+  				
+  				require_once('scripts/userupdatedatabase.php'); //Insert into database
+  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			
+  			}
 
   			//Message
 			$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";

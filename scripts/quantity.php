@@ -30,9 +30,10 @@
 	$mysqli->close();
 
 	if ($isQuantityValid){ //Make sure quantity is valid
-		$quantity = $oldQuantity+$quantity;
+		$newQuantity = $oldQuantity+$quantity;
 	} else { //Else original quantity the user posted
 		$quantity = quantity;
+		$newQuantity = 0;
 	}
 
 ?>
