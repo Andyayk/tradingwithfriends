@@ -22,7 +22,7 @@ body {
    color: #fff;
    font-size: 20px;
    font-weight: bolder;
-   line-height: 1.3em;
+   line-height: 0.6em;
    border: 2px dashed #fff;
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -48,7 +48,7 @@ body {
    background: #ff7f50;
    color: #fff;
    font-size: 20px;
-   font-weight: normal;
+   font-weight: bolder;
    line-height: 1.3em;
    border: 2px dashed #fff;
    border-radius: 10px;
@@ -75,7 +75,7 @@ body {
    background: #ff7f50;
    color: #fff;
    font-size: 20px;
-   font-weight: normal;
+   font-weight: bolder;
    line-height: 1.3em;
    border: 2px dashed #fff;
    border-radius: 10px;
@@ -101,7 +101,7 @@ body {
    background: #ff7f50;
    color: #fff;
    font-size: 20px;
-   font-weight: 900;
+   font-weight: bolder;
    line-height: 1.3em;
    border: 2px dashed #fff;
    border-radius: 10px;
@@ -128,7 +128,7 @@ body {
    background: #ff7f50;
    color: #fff;
    font-size: 20px;
-   font-weight: 900;
+   font-weight: bolder;
    line-height: 1.3em;
    border: 2px dashed #fff;
    border-radius: 10px;
