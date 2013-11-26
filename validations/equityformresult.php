@@ -17,7 +17,7 @@ if ($userArriveBySubmittingAForm) {
 	//Error messages
 	if ($noquantity) {
 		$errors['quantity'] = "Please enter the quantity you wish to purchase";
-	} else if ($quantityNotNumeric) {
+	} elseif ($quantityNotNumeric) {
 		$errors['quantity'] = "Quantity entered is not a number";
 	}
 	

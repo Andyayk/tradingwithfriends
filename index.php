@@ -68,19 +68,25 @@
   	
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
-  		$username = $user_profile['name'];
+  		
+  		if ($cash>0){
+  		
+  			$username = $user_profile['name'];
     	
-  		require_once('scripts/userinsertdatabase.php'); //Insert into database
-  		require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			require_once('scripts/userinsertdatabase.php'); //Insert into database
+  			require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
-		$message = $message . "\t\t" . 'You have bought ' . $quantity;
-		$message = $message . "\t\t" . $name . ' shares';
-		$message = $message . "\t\t" . 'at $' . $total . '<br />';
-		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+			$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+			$message = $message . "\t\t" . 'You have bought ' . $quantity;
+			$message = $message . "\t\t" . $name . ' shares';
+			$message = $message . "\t\t" . 'at $' . $total . '<br />';
+			$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+			$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 
-		echo "<script language=javascript>alert('Transaction Successful!!')</script>";
+			echo "<script language=javascript>alert('Transaction successful!!')</script>";
+  		} else {
+  			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
+  		}
 		
   	}else { //Sell
   		
@@ -91,7 +97,7 @@
   		require_once('scripts/userinsertdatabase.php'); //Insert into database
   		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction Successful!!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have sold ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
