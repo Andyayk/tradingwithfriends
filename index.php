@@ -83,7 +83,7 @@
   				
   			} else {
   				
-  				require_once('scripts/userupdatedatabase.php'); //Insert into database
+  				require_once('scripts/userinsertdatabase.php'); //Insert into database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   			
   			}
