@@ -69,13 +69,14 @@
   		$total = $price*$quantity;
   		$cash = $cash-$total-40;
   		
-  		if ($cash>0){
+  		if ($cash>0){ //Enough cash to buy
   		
   			$username = $user_profile['name'];
     	
   			require_once('scripts/userinsertdatabase.php'); //Insert into database
   			require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
+  			//Message
 			$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
 			$message = $message . "\t\t" . 'You have bought ' . $quantity;
 			$message = $message . "\t\t" . $name . ' shares';
@@ -84,11 +85,11 @@
 			$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 
 			echo "<script language=javascript>alert('Transaction successful!!')</script>";
-  		} else {
+  		} else { //Not enough cash to buy
   			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
   		}
-		
-  	}else { //Sell
+	
+  	} else { //Sell
   		
   		$total = ($price*$quantity)*-1;
   		$cash = $cash+$total-40;
@@ -97,6 +98,7 @@
   		require_once('scripts/userinsertdatabase.php'); //Insert into database
   		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
+  		//Message
 		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have sold ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
