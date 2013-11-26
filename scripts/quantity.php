@@ -10,12 +10,12 @@
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($quantity, $id);
+	$stmt->bind_result($oldQuantity, $id);
 	
 	$checkPortfolio = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
 		$checkPortfolio[$id] = array(
-			'quantity' => $quantity,
+			'quantity' => $oldQuantity,
 		);
 	}
 
@@ -32,6 +32,7 @@
 	if ($isQuantityValid){ //Make sure quantity is valid
 		$oldQuantity = $oldQuantity;
 	} else { //Else original quantity the user posted
+		$quantity = $quantity;
 		$oldQuantity = 0;
 	}
 
