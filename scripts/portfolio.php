@@ -4,7 +4,7 @@ require_once('config/database.php'); //Login to database
 
 $mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-$stmt = $mysqli->prepare("SELECT username, name, quantity, id FROM `portfolio` WHERE username = ?"); //Select
+$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ?"); //Select all from portfolio
 
 $stmt->bind_param("s", $username);
 
@@ -16,7 +16,10 @@ $portfolioEquities = array();
 while ($stmt->fetch()) {
 	$portfolioEquities[$id] = array(
 		'name' => $name,
-		'quantity' => $quantity
+		'quantity' => $quantity,
+		'price' => $price,
+		'total' => $total,
+		'cash' => $cash
 	);
 }
 
@@ -32,6 +35,7 @@ $mysqli->close();
   <?php 
 	$name = $portfolioEquity['name'];
     $quantity = $portfolioEquity['quantity'];
+    $price = $historyEquity['price'];
   ?>
 
   <tr>

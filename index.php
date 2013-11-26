@@ -68,7 +68,7 @@
   	
   		$total = $price*$quantity;
   		
-  		if (($cash-$total)>0){ //Enough cash to buy
+  		if (($cash-$total-40)>0){ //Enough cash to buy
   			
   			$cash = $cash-$total-40;
   			$username = $user_profile['name'];
