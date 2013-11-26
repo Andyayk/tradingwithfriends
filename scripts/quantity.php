@@ -6,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ? AND name = ? AND price = ?)"); //Select all from portfolio
 
-	$stmt->bind_param("sss", $username, $name, $price);
+	$stmt->bind_param("s", $username);
 
 	$stmt->execute(); 
 
