@@ -35,7 +35,9 @@ $mysqli->close();
   <?php 
 	$name = $portfolioEquity['name'];
     $quantity = $portfolioEquity['quantity'];
-    $price = $historyEquity['price'];
+    $price = $portfolioEquity['price'];
+    $total = $portfolioEquity['total'];
+    $cash = $portfolioEquity['cash'];
   ?>
 
   <tr>
