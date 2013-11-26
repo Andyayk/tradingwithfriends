@@ -14,7 +14,7 @@
 	
 	$checkPortfolio = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
-		$checkPortfolio[$price] = array(
+		$checkPortfolio[$id] = array(
 			'quantity' => $quantity,
 		);
 	}
