@@ -77,15 +77,15 @@
     		
   			require_once('scripts/quantity.php'); //Get quantity data
   			
-  			if ($oldQuantity = 0){
+  			if ($oldQuantity>0){
   				
-  				require_once('scripts/userinsertdatabase.php'); //Insert into database
+  				$newQuantity = $oldQuantity+$quantity;
+  				require_once('scripts/userupdatedatabase.php'); //Update database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   			} else {
   			
-  				$newQuantity = $oldQuantity+$quantity;
-  				require_once('scripts/userupdatedatabase.php'); //Update database
+  				require_once('scripts/userinsertdatabase.php'); //Insert into database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   			
   			}
