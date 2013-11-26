@@ -67,10 +67,10 @@
   	if ($quantity>0){ //Buy
   	
   		$total = $price*$quantity;
-  		$cash = $cash-$total-40;
   		
-  		if ($cash>0){ //Enough cash to buy
-  		
+  		if (($cash-$total)>0){ //Enough cash to buy
+  			
+  			$cash = $cash-$total-40;
   			$username = $user_profile['name'];
     	
   			require_once('scripts/userinsertdatabase.php'); //Insert into database
@@ -86,7 +86,6 @@
 
 			echo "<script language=javascript>alert('Transaction successful!!')</script>";
   		} else { //Not enough cash to buy
-  			$cash = $cash+$total+40;
   			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
   		}
 	
