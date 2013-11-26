@@ -149,7 +149,7 @@
         var auto_refresh = setInterval(
 		  function (){
 		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
-	    }, 1000); //refresh every 30000 milliseconds
+	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
 

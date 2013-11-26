@@ -81,6 +81,6 @@
   }  
   $equities = new yahoo_equities();
   
-  $equities->get_equities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+P05.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI&f=nsk1opc6b2b3vghjkd1t1", "n"); //Get equities
+  $equities->get_equities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+P05.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI&f=nsl1opc6b2b3vghjkd1t1", "n"); //Get equities
 
 ?>  
