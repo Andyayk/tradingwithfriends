@@ -32,7 +32,7 @@
 	if ($isQuantityValid){ //Make sure quantity is valid
 		$newQuantity = $oldQuantity+$quantity;
 	} else { //Else original quantity the user posted
-		$quantity = quantity;
+		$quantity = $quantity;
 		$newQuantity = 0;
 	}
 
