@@ -1,31 +1,31 @@
 <?php 
 
-require_once('config/database.php'); //Login to database
+	require_once('config/database.php'); //Login to database
 
-$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
+	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ?"); //Select all from portfolio
+	$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ?"); //Select all from portfolio
 
-$stmt->bind_param("s", $username);
+	$stmt->bind_param("s", $username);
 
-$stmt->execute(); 
+	$stmt->execute(); 
 
-$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
+	$stmt->bind_result($username, $name, $quantity, $price, $total, $cash, $id);
 
-$portfolioEquities = array();
-while ($stmt->fetch()) {
-	$portfolioEquities[$id] = array(
-		'name' => $name,
-		'quantity' => $quantity,
-		'price' => $price,
-		'total' => $total,
-		'cash' => $cash
-	);
-}
+	$portfolioEquities = array(); //Fetch and store in array
+	while ($stmt->fetch()) {
+		$portfolioEquities[$id] = array(
+			'name' => $name,
+			'quantity' => $quantity,
+			'price' => $price,
+			'total' => $total,
+			'cash' => $cash
+		);
+	}
 
-$stmt->close();
+	$stmt->close();
 
-$mysqli->close();
+	$mysqli->close();
 
 ?>
 
