@@ -13,6 +13,7 @@
   $haveErrors = !($noErrors);
   $username = '';
   $cash = '';
+  $newQuantity = 0;
 
   require 'server/fb-php-sdk/facebook.php'; //Server
 
