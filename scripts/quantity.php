@@ -4,9 +4,9 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ? AND name = ? AND price = ?)"); //Select all from portfolio
+	$stmt = $mysqli->prepare("SELECT * FROM `portfolio` WHERE username = ? AND name = ? AND price = ?"); //Select all from portfolio
 
-	$stmt->bind_param("s", $username);
+	$stmt->bind_param("sss", $username, $name, $price);
 
 	$stmt->execute(); 
 
