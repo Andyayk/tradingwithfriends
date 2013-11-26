@@ -27,7 +27,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: bolder;
-   width:60%;
+   width:40%;
 }
 
 body {
@@ -53,7 +53,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:60%;
+   width:40%;
 }
 
 body {
@@ -78,7 +78,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:60%;
+   width:40%;
 }
 
 body {
@@ -102,7 +102,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:60%;
+   width:40%;
 
 }
 
@@ -116,18 +116,15 @@ body {
 }
 
 #recommendButton {
-  padding: 20px;
-   margin: 12px;
-   background: #ff7f50;
-   color: #fff;
-   font-size: 20px;
-   font-weight: 900;
-   line-height: 1.3em;
-   border: 2px dashed #fff;
-   border-radius: 10px;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: normal;
-   width:60%;
+ font-family: Arial, Sans-Serif;
+    font-size: 15px;
+    color:#779EC0;
+    display: block;
+    padding: 4px;
+    margin-top:10px;
+    border: solid 1px #85b1de;
+    background-color: #EDF2F7;
+    width:50%;
 }
 
 body {
