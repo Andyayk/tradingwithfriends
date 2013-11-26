@@ -170,12 +170,6 @@
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
-      <span id="date_time"></span>
-	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-      
-      <span id="date_time"></span>
-	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-	  
       <script src="scripts/userinterface.js"></script>
       
       <?php echo $message; ?>
