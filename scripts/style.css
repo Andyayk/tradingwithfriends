@@ -27,7 +27,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: bolder;
-   width:80%;
+   width:60%;
 }
 
 body {
@@ -35,9 +35,10 @@ body {
 }
 
 #showEquity {
-  text-align:left;
+  text-align:left;	
   padding:50px;
   display:none;
+  width:85%;
 }
 
 #purchasingformButton, #showForm {
@@ -52,7 +53,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:80%;
+   width:60%;
 }
 
 body {
@@ -77,7 +78,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:80%;
+   width:60%;
 }
 
 body {
@@ -101,7 +102,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:80%;
+   width:60%;
 
 }
 
@@ -126,7 +127,7 @@ body {
    border-radius: 10px;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: normal;
-   width:80%;
+   width:60%;
 }
 
 body {
