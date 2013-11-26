@@ -73,14 +73,14 @@
   		require_once('scripts/userinsertdatabase.php'); //Insert into database
   		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction Success!!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have bought ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
 		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 
-		echo "<script language=javascript>alert('Transaction Successful!!')</script>";
+		echo "<script language=javascript>alert('Transaction successful!!')</script>";
 		
   	}else { //Sell
   		
@@ -91,7 +91,7 @@
   		require_once('scripts/userinsertdatabase.php'); //Insert into database
   		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
-		$message = "\t\t" . '<font color="green">Transaction Successful!!</font><br />' . "\n";
+		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'You have sold ' . $quantity;
 		$message = $message . "\t\t" . $name . ' shares';
 		$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -209,7 +209,7 @@
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
-	  <div id="historyButton">History of Transaction</div>
+	  <div id="historyButton">History of Transactions</div>
 	  <div class="container"><div id="showHistory"><?php require 'scripts/history.php';?></div>
 
 	<aside class="sidebar"><p>This is the sidebar<p></aside>
