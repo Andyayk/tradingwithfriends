@@ -4,9 +4,9 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("DELETE FROM `portfolio` WHERE username = ? AND name = ? AND price = ?"); //Delete from portfolio
+	$stmt = $mysqli->prepare("DELETE FROM `portfolio` WHERE username = ? AND name = ?"); //Delete from portfolio
 
-	$stmt->bind_param("sss", $username, $name, $price);
+	$stmt->bind_param("ss", $username, $name);
 
 	$stmt->execute(); 
 
