@@ -50,16 +50,16 @@
   
   //Array storing equities names
   $names = array(	
-	'A33.SI' => 'Blumont, A33.SI',
-	'P05.SI' => 'PFood, P05.SI',
-	'E5H.SI' => 'GoldenAgr, E5H.SI',
-	'557.SI' => '$ Viking, 557.SI',
-	'N21.SI' => 'Noble Grp, N21.SI',
-	'5WH.SI' => '$ Rex Intl, 5WH.SI',
-	'MT1.SI' => 'Dragon Gp, MT1.SI',
-	'A78.SI' => 'LionGold, A78.SI',
-	'Z74.SI' => 'Singtel, Z74.SI',
-	'5MM.SI' => '$ Sky One, 5MM.SI'	
+	'Blumont, A33.SI' => 'Blumont, A33.SI',
+	'PFood, P05.SI' => 'PFood, P05.SI',
+	'GoldenAgr, E5H.SI' => 'GoldenAgr, E5H.SI',
+	'$ Viking, 557.SI' => '$ Viking, 557.SI',
+	'Noble Grp, N21.SI' => 'Noble Grp, N21.SI',
+	'$ Rex Intl, 5WH.SI' => '$ Rex Intl, 5WH.SI',
+	'Dragon Gp, MT1.SI' => 'Dragon Gp, MT1.SI',
+	'LionGold, A78.SI' => 'LionGold, A78.SI',
+	'Singtel, Z74.SI' => 'Singtel, Z74.SI',
+	'$ Sky One, 5MM.SI' => '$ Sky One, 5MM.SI'	
   );
   
   //Validations
