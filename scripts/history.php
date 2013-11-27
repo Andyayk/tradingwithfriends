@@ -42,7 +42,7 @@ $mysqli->close();
 
   <tr>
 	<td>
-		<b>Symbol:</b> <?php echo $name; ?> </br>
+		<b>Equity:</b> <?php echo $name; ?> </br>
 	</td>
 	<td>
 		<b>Quantity:</b> <?php echo $quantity; ?> </br>

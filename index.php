@@ -239,7 +239,7 @@
 	  <div id="showForm">
 	  <p>
 	  	<div><i>Tip: To sell an equity, type in negative number e.g -20</i></div></br></br>
-		<b>Symbol:</b>
+		<b>Equity:</b>
 		<select id=name name="name" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
