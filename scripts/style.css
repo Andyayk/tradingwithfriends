@@ -57,7 +57,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   float: left;
+   float:left;
 }
 
 body {
@@ -86,7 +86,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   margin-right: 10px;
+   float:left;
 }
 
 body {
