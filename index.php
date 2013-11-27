@@ -105,12 +105,31 @@
 	
   	} else { //Sell
   		
+  		$username = $user_profile['name'];
+  		require_once('scripts/quantity.php'); //Get quantity data
+  			
+  		if ($oldQuantity>0){
+  				
+  			$newQuantity = $oldQuantity+$quantity; 
+  			if ($newQuantity>0){
+
+  			require_once('scripts/userupdatedatabase.php'); //Update database
+  			require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			
+  			} elseif ($newQuantity=0){
+  			//delete
+  			} else {
+  			echo "<script language=javascript>alert('You can't sell!! Please try again!!')</script>";
+  			}
+  				
+  		} else {
+  			
+  			require_once('scripts/userinsertdatabase.php'); //Insert into database
+  			require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			
+  		}
   		$total = ($price*$quantity)*-1;
   		$cash = $cash+$total-40;
-  		$username = $user_profile['name'];
-    
-  		require_once('scripts/userinsertdatabase.php'); //Insert into database
-  		require_once('scripts/historyinsertdatabase.php'); //Insert into database
 
   		//Message
 		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
