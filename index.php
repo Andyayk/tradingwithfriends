@@ -109,7 +109,9 @@
   		require_once('scripts/quantity2.php'); //Get quantity data from database
   			
   		if ($oldQuantity>0){ //There is quantity in database
-  				
+  			
+  			require_once('scripts/quantity.php'); //Get quantity data from database
+  			
   			$newQuantity = $oldQuantity+$quantity;
   			
   			if ($newQuantity>0){ //Updated quantity is more than 0
@@ -130,8 +132,10 @@
 		
 				echo "<script language=javascript>alert('Transaction successful!!')</script>";
   			
-  			} elseif ($newQuantity=0){ //Updated quantity is equal to 0
-  				
+  			} elseif ($newQuantity<0){ //Updated quantity is less than 0
+				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
+  			} else { //Updated quantity is equal to 0
+
   				$total = ($price*$quantity)*-1;
   				$cash = $cash+$total-40;
   				
@@ -147,9 +151,6 @@
 				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
 				echo "<script language=javascript>alert('Transaction successful!!')</script>";
-				
-  			} else { //Updated quantity is less than 0
-  				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
   			}
   				
   		} else { //No quantity in database
