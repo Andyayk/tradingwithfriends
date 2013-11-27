@@ -64,7 +64,7 @@ body {
   padding:50px;
   display:none;
   background: #FFFF00;
-  width:55%;
+  width:45%;
 }
 
 #portfolioButton, #showPortfolio {
@@ -89,7 +89,7 @@ body {
   padding:50px;
   display:none;
   background: #FFFF00;
-  width:55%;
+  width:45%;
 }
 
 #historyButton, #showHistory{
@@ -114,7 +114,7 @@ body {
   padding:50px;
   display:none;
   background: #FFFF00;
-  width:55%;
+  width:45%;
 }
 
 #recommendButton {

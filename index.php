@@ -199,8 +199,6 @@
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
-	  <tr>
-	  <td colspan='1'>
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <p>
@@ -226,8 +224,6 @@
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
-	  </td>
-	  </tr>
 	  
 	  
 	  <div id="historyButton">History of Transaction</div>
