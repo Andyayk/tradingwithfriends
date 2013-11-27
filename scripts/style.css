@@ -85,7 +85,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   float:left;
 }
 
 body {
@@ -97,7 +96,6 @@ body {
   display:none;
   background: #FFFF00;
   width:45%;
-  float:left;
 }
 
 #historyButton, #showHistory{
