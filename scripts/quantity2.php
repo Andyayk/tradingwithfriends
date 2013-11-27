@@ -20,7 +20,7 @@
 		);
 	}
 
-	foreach($checkPortfolio as $key => $checkKey){ //Get lastest quantity
+	foreach($checkPortfolio as $key => $checkKey){ //Get lastest quantity and price
 		$oldQuantity = $checkKey['quantity'];
 		$oldPrice = $checkKey['price'];
 	}

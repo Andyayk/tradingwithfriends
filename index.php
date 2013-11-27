@@ -107,7 +107,7 @@
   		
   		$username = $user_profile['name'];
   		
-  		require_once('scripts/quantity2.php'); //Get quantity data from database
+  		require_once('scripts/quantity2.php'); //Checking for quantity, prices may differ when selling
   			
   		if ($oldQuantity>0){ //There is quantity in database
   			
