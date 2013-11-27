@@ -70,7 +70,7 @@ body {
   display:none;
   background: #FFFF00;
   width:45%;
-  display: inline-block;
+  float:left;
 }
 
 #portfolioButton, #showPortfolio {
@@ -116,7 +116,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
 }
 
 body {
