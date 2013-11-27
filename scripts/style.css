@@ -57,6 +57,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
+   float:left;
 }
 
 body {
@@ -90,6 +91,7 @@ body {
 
 body {
   padding: 15px;
+  float:left;
 }
 
 #showPortfolio {
