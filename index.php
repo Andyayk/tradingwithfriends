@@ -119,7 +119,7 @@
   				$total = ($price*$quantity)*-1;
   				$cash = $cash+$total-40;
   				
-  				require_once('scripts/userupdatedatabase.php'); //Update database
+  				require_once('scripts/userupdatedatabase2.php'); //Update database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   				//Message
@@ -249,7 +249,6 @@
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 
-	  	<b>Last Trade:</b> <input type="text" name="price" value="<?php echo $price; ?>" readonly /><br/>
 	  </p>
 	  
 	  <p>
