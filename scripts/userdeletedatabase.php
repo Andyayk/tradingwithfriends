@@ -7,10 +7,6 @@
 	$stmt = $mysqli->prepare("DELETE FROM `portfolio` WHERE `username` = ? AND `name` = ? AND `price` = ?"); //Delete from portfolio
 
 	$stmt->bind_param("sss", $username, $name, $oldPrice);
-
-	$stmt->execute(); 
-
-	$stmt->bind_result($oldQuantity, $id);
 	
 	$successfullyDeleted = $stmt->execute();
 	
