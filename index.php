@@ -83,9 +83,11 @@
   				require_once('scripts/userupdatedatabase.php'); //Update database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
-  			} else {
+  			} elseif ($oldQuantity=0) {
   				require_once('scripts/userinsertdatabase.php'); //Insert into database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			} else {
+  			
   			}
 
   			//Message
@@ -151,6 +153,8 @@
   				
   		} elseif ($oldQuantity=0) { //Shortsell
   			
+  			$total = ($price*$quantity)*-1;
+  			$cash = $cash+$total-40;
   			require_once('scripts/userinsertdatabase.php'); //Insert into database
   			require_once('scripts/historyinsertdatabase.php'); //Insert into database
   			
