@@ -15,6 +15,7 @@
   $cash = '';
   $newQuantity = '';
   $oldQuantity = '';
+  $oldPrice = '';
 
   require 'server/fb-php-sdk/facebook.php'; //Server
 
