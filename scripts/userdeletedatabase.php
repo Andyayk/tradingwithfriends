@@ -8,7 +8,7 @@
 
 	$stmt->bind_param("sss", $username, $name, $oldPrice);
 	
-	$successfullyDeleted = $stmt->execute();
+	$stmt->execute();
 	
 	$stmt->close();
 	
