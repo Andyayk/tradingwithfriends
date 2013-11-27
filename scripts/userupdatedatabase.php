@@ -4,9 +4,9 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); 
 
-	$stmt = $mysqli->prepare("UPDATE `portfolio` SET `quantity` = ? WHERE `name` = ?"); 
+	$stmt = $mysqli->prepare("UPDATE `portfolio` SET `quantity` = ? WHERE `name` = ? AND `price` = ?"); 
 
-	$stmt->bind_param("ss", $newQuantity, $name);
+	$stmt->bind_param("ss", $newQuantity, $name, $price);
 
 	$successfullyUpdated = $stmt->execute(); 
 
