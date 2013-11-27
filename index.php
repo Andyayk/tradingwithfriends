@@ -135,7 +135,7 @@
   				$total = ($price*$quantity)*-1;
   				$cash = $cash+$total-40;
   				
-  				//delete
+  				require_once ('scripts/userdeletedatabase.php'); //Delete from database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   				//Message
