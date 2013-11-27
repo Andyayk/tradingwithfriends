@@ -105,6 +105,7 @@
   	} else { //Sell
   		
   		$username = $user_profile['name'];
+  		
   		require_once('scripts/quantity.php'); //Get quantity data
   			
   		if ($oldQuantity>0){
@@ -113,6 +114,9 @@
   			
   			if ($newQuantity>0){
 
+  				$total = ($price*$quantity)*-1;
+  				$cash = $cash+$total-40;
+  				
   				require_once('scripts/userupdatedatabase.php'); //Update database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
@@ -127,6 +131,9 @@
 				echo "<script language=javascript>alert('Transaction successful!!')</script>";
   			
   			} elseif ($newQuantity=0){
+  				
+  				$total = ($price*$quantity)*-1;
+  				$cash = $cash+$total-40;
   				//delete
   				//Message
 				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
@@ -142,25 +149,16 @@
   				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
   			}
   				
-  		} else { //Shortsell
+  		} elseif ($oldQuantity=0) { //Shortsell
   			
   			require_once('scripts/userinsertdatabase.php'); //Insert into database
   			require_once('scripts/historyinsertdatabase.php'); //Insert into database
   			
+  		} else {
+  			require_once('scripts/userupdatedatabase.php'); //Update database
+  			require_once('scripts/historyinsertdatabase.php'); //Insert into database
   		}
-  		$total = ($price*$quantity)*-1;
-  		$cash = $cash+$total-40;
 
-  		//Message
-		$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
-		$message = $message . "\t\t" . 'You have sold ' . $quantity;
-		$message = $message . "\t\t" . $name . ' shares';
-		$message = $message . "\t\t" . 'at $' . $total . '<br />';
-		$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-		$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
-		
-		echo "<script language=javascript>alert('Transaction successful!!')</script>";
-		
   	}
 	
   } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
