@@ -226,7 +226,7 @@
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
 	  
-	  <div id="historyButton">History of Transaction</div>
+	  <div id="historyButton">History of Transactions</div>
 	  <div id="showHistory"><?php require 'scripts/history.php';?></div>
   
 	  <div id="recommendButton">Recommend this app to your friends!!</div>    
