@@ -18,7 +18,7 @@ body {
 #equityButton,#showEquity {
    padding: 12px;
    margin: 10px;
-   background: #ADFF2F;
+   background: #FFA500;
    color: #8B008B;
    font-size: 18px;
    font-weight: bolder;
@@ -37,13 +37,13 @@ body {
   text-align:left;	
   padding:50px;
   display:none;
-  width:85%;
+  width:95%;
 }
 
 #purchasingformButton, #showForm {
    padding: 12px;
    margin: 10px;
-   background: #ADFF2F;
+   background: #FFA500;
    color: #8B008B;
    font-size: 18px;
    font-weight: bolder;
@@ -62,13 +62,14 @@ body {
   text-align:left;
   padding:50px;
   display:none;
-  width:85%;
+  background: #FFFF00;
+  width:65%;
 }
 
 #portfolioButton, #showPortfolio {
    padding: 12px;
    margin: 10px;
-   background: #ADFF2F;
+   background: #FFA500;
    color: #8B008B;
    font-size: 18px;
    font-weight: bolder;
@@ -86,13 +87,14 @@ body {
 #showPortfolio {
   padding:50px;
   display:none;
-  width:85%;
+  background: #FFFF00;
+  width:65%;
 }
 
 #historyButton, #showHistory{
    padding: 12px;
    margin: 10px;
-   background: #ADFF2F;
+   background: #FFA500;
    color: #8B008B;
    font-size: 18px;
    font-weight: bolder;
@@ -110,13 +112,14 @@ body {
 #showHistory {
   padding:50px;
   display:none;
-  width:85%;
+  background: #FFFF00;
+  width:65%;
 }
 
 #recommendButton {
    padding: 12px;
    margin: 10px;
-   background: #ADFF2F;
+   background: #FFA500;
    color: #8B008B;
    font-size: 18px;
    font-weight: bolder;
