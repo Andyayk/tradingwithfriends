@@ -194,10 +194,10 @@
 	
 	foreach ($errors as $key=>$errorMessage) {
 	
-		if ($key == 'name') {
+		if ($key == 'sellName') {
 			$sellnameError = $errorMessage;
 		}
-		if ($key == 'quantity') {
+		if ($key == 'sellQuantity') {
 			$sellquantityError = $errorMessage;
 		}
 	}
