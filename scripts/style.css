@@ -41,12 +41,12 @@ body {
   font-size: 11px;
   font-weight: normal;
   background: #FFBD59;
-  width:81.5%;
+  width:83%;
 }
 
 
 #purchasingformButton, #showForm {
-   float:right; margin-left: 1px;
+   float:left; margin-left: 1px;
    padding: 12px;
    margin: 10px;
    background: #FFA500;
@@ -76,6 +76,7 @@ body {
 }
 
 #sellingformButton, #showsellForm {
+   float:right; margin-right: 1px;
    padding: 12px;
    margin: 10px;
    background: #FFA500;
@@ -89,8 +90,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   float:right;
-   display: inline-block;
 }
 
 body {
