@@ -27,7 +27,7 @@ body {
    border: 2px dashed #fff;
    box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
    font-weight: bolder;
-   width:80%;
+   width:90%;
    text-align: center;
 }
 
@@ -40,7 +40,7 @@ body {
   padding:50px;
   display:none;
   background: #FFBD59;
-  width:85%;
+  width:100%;
 }
 
 #purchasingformButton, #showForm {
