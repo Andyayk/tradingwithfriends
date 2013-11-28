@@ -140,7 +140,7 @@
   			
   			if ($oldQuantity>0){ //There is quantity in database
   			
-  				$newQuantity = $oldQuantity+$quantity;
+  				$newQuantity = $oldQuantity-$quantity;
   			
   				if ($newQuantity>0){ //Updated quantity is more than 0
 	
