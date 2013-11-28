@@ -419,6 +419,7 @@ who.ondblclick=function(){
 <body>
 <h1 id="CentralTimer">Central Time</h1>
 
+<iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
 
 </body>
 </html>    
