@@ -6,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("UPDATE `portfolio` SET `quantity` = ? WHERE `name` = ? AND `id` = ?"); //Update quantity
 
-	$stmt->bind_param("sss", $newQuantity, $name, $oldId);
+	$stmt->bind_param("ssi", $newQuantity, $name, $oldId);
 
 	$successfullyUpdated = $stmt->execute(); 
 

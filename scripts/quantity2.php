@@ -6,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("SELECT quantity, id FROM `portfolio` WHERE `username` = ? AND `name` = ? AND `id` = ?"); //Select quantity and id from portfolio
 
-	$stmt->bind_param("ss", $username, $name, $id);
+	$stmt->bind_param("ssi", $username, $name, $id);
 
 	$stmt->execute(); 
 
