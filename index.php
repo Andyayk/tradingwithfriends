@@ -11,6 +11,7 @@
   $sellQuantity = '';
   $sellnameError = '';
   $sellquantityError = '';
+  $idError = '';
   $message = '';
   $errors = array();
   $noErrors = true;
@@ -67,7 +68,8 @@
 	'$ Sky One, 5MM.SI' => '$ Sky One, 5MM.SI'	
   );
   
-  if (!empty($_POST['buySubmit'])){
+  if (!empty($_POST['buySubmit'])){ //User submit buy form
+  
   //Validations
   require_once('validations/equityformresult.php');
   
@@ -123,16 +125,11 @@
 	
 	echo "<script language=javascript>alert('Please try again!!')</script>";
 	
-  } elseif ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
-  
-  	$message = '';
-  	
-  	echo "<script language=javascript>alert('Welcome!!')</script>";
-  
   }
   }
   
-  if (!empty($_POST['sellSubmit'])){
+  if (!empty($_POST['sellSubmit'])){ //User submit sell form
+  
   //Validations
   require_once('validations/equityformresultsell.php');
   
@@ -201,18 +198,15 @@
 		if ($key == 'sellQuantity') {
 			$sellquantityError = $errorMessage;
 		}
+		if ($key == 'id') {
+			$idError = $errorMessage;
+		}
 	}
 	
 	$message = '';
 	
 	echo "<script language=javascript>alert('Please try again!!')</script>";
 	
-  } elseif ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
-  
-  	$message = '';
-  	
-  	echo "<script language=javascript>alert('Welcome!!')</script>";
-  
   }
   } 
 ?>
@@ -279,7 +273,7 @@
 		</select>
 		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
-		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
 	  </p>
 	  
 	  <p>
@@ -304,7 +298,7 @@
 		<font color="red"><?php echo $sellnameError; ?></font><br/>
 	 
 		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br/>
-		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font><br/>	
+		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font>	
 	  </p>
 	  
 	  <p>
