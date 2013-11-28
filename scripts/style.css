@@ -36,16 +36,17 @@ body {
 
 #showEquity {
   text-align:left;	
-  padding:35px;
+  padding:40px;
   display:none;
   font-size: 11px;
   font-weight: normal;
   background: #FFBD59;
-  width:81%;
+  width:81.5%;
 }
 
-float:right; margin-left: 1px;
+
 #purchasingformButton, #showForm {
+   float:right; margin-left: 1px;
    padding: 12px;
    margin: 10px;
    background: #FFA500;
@@ -59,7 +60,6 @@ float:right; margin-left: 1px;
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
 }
 
 body {
