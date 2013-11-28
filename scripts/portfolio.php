@@ -15,6 +15,7 @@
 	$portfolioEquities = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
 		$portfolioEquities[$id] = array(
+			'id' => $id,
 			'name' => $name,
 			'quantity' => $quantity,
 			'price' => $price,
@@ -31,12 +32,16 @@
   <?php foreach($portfolioEquities as $key => $portfolioEquity) : ?>
 
   <?php 
+  	$id = $portfolioEquity['id'];
 	$name = $portfolioEquity['name'];
     $quantity = $portfolioEquity['quantity'];
     $price = $portfolioEquity['price'];
   ?>
 
   <tr>
+  	<td>
+		<b>ID:</b> <?php echo $id; ?> </br>
+	</td>
 	<td>
 		<b>Equity:</b> <?php echo $name; ?> </br>
 	</td>

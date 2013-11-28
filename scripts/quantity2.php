@@ -4,36 +4,37 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT quantity, id, price FROM `portfolio` WHERE `username` = ? AND `name` = ? "); //Select quantity, price and id from portfolio
+	$stmt = $mysqli->prepare("SELECT quantity, id FROM `portfolio` WHERE `username` = ? AND `name` = ? AND `id` = ?"); //Select quantity and id from portfolio
 
-	$stmt->bind_param("ss", $username, $name);
+	$stmt->bind_param("ss", $username, $name, $id);
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($oldQuantity, $id, $oldPrice);
+	$stmt->bind_result($oldQuantity, $oldId);
 	
 	$checkPortfolio = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
 		$checkPortfolio[$id] = array(
 			'quantity' => $oldQuantity,
-			'price' => $oldPrice
+			'id' => $oldId
 		);
 	}
 
 	foreach($checkPortfolio as $key => $checkKey){ //Get lastest quantity and price
 		$oldQuantity = $checkKey['quantity'];
-		$oldPrice = $checkKey['price'];
+		$oldId = $checkKey['id'];
 	}
 
 	$isQuantityValid = !empty($oldQuantity); //Quantity is not empty
+	$isIDValid = !empty($oldId); //ID is not empty
 
 	$stmt->close();
 
 	$mysqli->close();
 
-	if ($isQuantityValid){ //Make sure quantity is valid
+	if ($isQuantityValid && $isIDValid){ //Make sure quantity & ID is valid
 		$oldQuantity = $oldQuantity;
-		$oldPrice = $oldPrice;
+		$oldId = $oldId;
 	} else { //Else original quantity the user posted
 		$quantity = $quantity;
 		$oldQuantity = 0;
