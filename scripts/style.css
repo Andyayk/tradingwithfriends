@@ -46,7 +46,7 @@ body {
 
 
 #purchasingformButton, #showForm {
-   float:left; margin-left: 1px;
+   float:left;
    padding: 12px;
    margin: 10px;
    background: #FFA500;
@@ -76,7 +76,7 @@ body {
 }
 
 #sellingformButton, #showsellForm {
-   float:right; margin-right: 1px;
+   float:right; margin-right: 10px;
    padding: 12px;
    margin: 10px;
    background: #FFA500;
