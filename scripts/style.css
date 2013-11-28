@@ -36,7 +36,7 @@ body {
 
 #showEquity {
   text-align:left;	
-  padding:50px;
+  padding:45px;
   display:none;
   font-size: 15px;
   font-weight: normal;
@@ -89,7 +89,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
+   float:right;
 }
 
 body {
@@ -103,7 +103,7 @@ body {
   line-height: 0.3em;
   background: #FFBD59;
   width:45%;
-  display: inline-block;
+  float:right;
 }
 
 #portfolioButton, #showPortfolio {
