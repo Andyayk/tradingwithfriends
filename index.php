@@ -256,9 +256,7 @@
 	  <input type="submit" value="Submit" /><br>
 	  </p>
 	  </div>
-	  <p>
-	  <input type="submit" value="Submit" /><br>
-	  </p>
+
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
