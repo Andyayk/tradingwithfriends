@@ -134,7 +134,7 @@
   		
   		$username = $user_profile['name'];
   		
-  		require_once('scripts/quantity2.php'); //Get quantity & id data from database
+  		require_once('scripts/quantityid.php'); //Get quantity & id data from database
   		
   		if ($id = $oldId){ //Correct ID
   			
@@ -147,7 +147,7 @@
   					$total = $price*$quantity;
   					$cash = $cash+$total-40;
   				
-  					require_once('scripts/userupdatedatabase2.php'); //Update database
+  					require_once('scripts/userupdatedatabasesell.php'); //Update database
   					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   					//Message
@@ -184,11 +184,11 @@
   			} else { //No quantity in database
   				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
   			}
-  		} else {
+  		} else { //Wrong ID
   			echo "<script language=javascript>alert('Wrong ID entered!! Please try again!!')</script>";
   		}
 	
-  	} elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
+  	} elseif ($haveErrors && $userArriveBySubmittingAForm) { //If have errors
 	
 		foreach ($errors as $key=>$errorMessage) {
 	
@@ -207,6 +207,8 @@
 		echo "<script language=javascript>alert('Please try again!!')</script>";
 	
   	}
+  } else { //Welcome user
+  	echo "<script language=javascript>alert('Welcome to Trading with Friends!!')</script>";
   } 
 ?>
 
