@@ -44,8 +44,39 @@ body {
   width:83%;
 }
 
-{float:right; margin-left: 10px;}
+
 #purchasingformButton, #showForm {
+   padding: 12px;
+   margin: 10px;
+   background: #FFA500;
+   color: #191970;
+   font-size: 18px;
+   font-weight: bolder;
+   line-height: 0.6em;
+   border-radius: 10px;
+   border: 2px dashed #fff;
+   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   font-weight: bolder;
+   width:40%;
+   text-align: center;
+   display: block;
+   float:left;
+}
+
+body {
+  padding: 15px;
+}
+
+#showForm {
+  text-align:left;
+  padding:40px;
+  display:none;
+  background: #FFBD59;
+  font-size: 16px;
+  width:40%;
+}
+
+#sellingformButton, #showsellForm {
    float:left;
    padding: 12px;
    margin: 10px;
@@ -60,37 +91,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-}
-
-body {
-  padding: 15px;
-}
-
-#showForm {
-  text-align:left;
-  padding:40px;
-  display:none;
-  background: #FFBD59;
-  font-size: 16px;
-  width:40%;
-  float:left;
-}
-
-#sellingformButton, #showsellForm {
-   float:right; margin-right: 10px;
-   padding: 12px;
-   margin: 10px;
-   background: #FFA500;
-   color: #191970;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:40%;
-   text-align: center;
+   display: block;
 }
 
 body {
@@ -105,7 +106,7 @@ body {
   width:40%;
   font-size:16px;
   float:right;
-  display: inline-block;
+  display: block;
 }
 
 #portfolioButton, #showPortfolio {
