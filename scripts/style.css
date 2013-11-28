@@ -98,9 +98,9 @@ body {
 
 #showsellForm {
   text-align:left;
-  padding:30px;
+  padding: 10px;
   display:none;
-  line-height: 0.4em;
+  line-height: 0.2em;
   background: #FFBD59;
   width:45%;
   float:right;
