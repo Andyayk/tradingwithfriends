@@ -245,6 +245,20 @@
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
+      <script>
+          var appId = '<?php echo $facebook->getAppID() ?>';
+
+          // Initialize the JS SDK
+          FB.init({
+            appId: appId,
+            frictionlessRequests: true,
+            cookie: true,
+          });
+
+          FB.getLoginStatus(function(response) {
+            uid = response.authResponse.userID ? response.authResponse.userID : null;
+          });
+      </script>
 
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
