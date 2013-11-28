@@ -3,12 +3,14 @@
   //Define variables
   $name = '';
   $quantity = '';
-  $sellName = '';
-  $sellQuantity = '';
   $price = '';
   $total = '';
   $nameError = '';
   $quantityError = '';
+  $sellName = '';
+  $sellQuantity = '';
+  $sellnameError = '';
+  $sellquantityError = '';
   $message = '';
   $errors = array();
   $noErrors = true;
@@ -147,7 +149,7 @@
   			
   			if ($newQuantity>0){ //Updated quantity is more than 0
 	
-  				$total = ($price*$quantity)*-1;
+  				$total = $price*$quantity;
   				$cash = $cash+$total-40;
   				
   				require_once('scripts/userupdatedatabase2.php'); //Update database
@@ -167,7 +169,7 @@
 				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
   			} else { //Updated quantity is equal to 0
 
-  				$total = ($price*$quantity)*-1;
+  				$total = $price*$quantity;
   				$cash = $cash+$total-40;
   				
   				require_once ('scripts/userdeletedatabase.php'); //Delete from database
@@ -193,10 +195,10 @@
 	foreach ($errors as $key=>$errorMessage) {
 	
 		if ($key == 'name') {
-			$nameError = $errorMessage;
+			$sellnameError = $errorMessage;
 		}
 		if ($key == 'quantity') {
-			$quantityError = $errorMessage;
+			$sellquantityError = $errorMessage;
 		}
 	}
 	
@@ -300,9 +302,9 @@
 			<?php endforeach; ?>
 		</select>
 		
-		<font color="red"><?php echo $nameError; ?></font><br/>
+		<font color="red"><?php echo $sellnameError; ?></font><br/>
 	 
-		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
+		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br/>	
 	  </p>
 	  
 	  <p>
