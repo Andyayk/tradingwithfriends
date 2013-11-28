@@ -70,10 +70,10 @@
   
   if (!empty($_POST['buySubmit'])){ //User submit buy form
   
-  //Validations
-  require_once('validations/equityformresult.php');
+  	//Validations
+  	require_once('validations/equityformresult.php');
   
-  if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
+  	if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
   		$total = $price*$quantity;
   		
@@ -87,6 +87,7 @@
   			if ($oldQuantity>0){ //There is quantity in database
   				
   				$newQuantity = $oldQuantity+$quantity;
+  				
   				require_once('scripts/userupdatedatabase.php'); //Update database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
@@ -109,31 +110,29 @@
   			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
   		}
 	
-  } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
+  	} elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
-	foreach ($errors as $key=>$errorMessage) {
-	
-		if ($key == 'name') {
-			$nameError = $errorMessage;
+		foreach ($errors as $key=>$errorMessage) {
+			if ($key == 'name') {
+				$nameError = $errorMessage;
+			}
+			if ($key == 'quantity') {
+				$quantityError = $errorMessage;
+			}
 		}
-		if ($key == 'quantity') {
-			$quantityError = $errorMessage;
-		}
-	}
 	
-	$message = '';
+		$message = '';
+		echo "<script language=javascript>alert('Please try again!!')</script>";
 	
-	echo "<script language=javascript>alert('Please try again!!')</script>";
-	
-  }
+  	}
   }
   
   if (!empty($_POST['sellSubmit'])){ //User submit sell form
   
-  //Validations
-  require_once('validations/equityformresultsell.php');
+  	//Validations
+  	require_once('validations/equityformresultsell.php');
   
-  if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
+  	if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   		
   		$username = $user_profile['name'];
   		
@@ -188,26 +187,25 @@
   			echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
   		}
 	
-  } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
+  	} elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
-	foreach ($errors as $key=>$errorMessage) {
+		foreach ($errors as $key=>$errorMessage) {
 	
-		if ($key == 'sellName') {
-			$sellnameError = $errorMessage;
+			if ($key == 'sellName') {
+				$sellnameError = $errorMessage;
+			}
+			if ($key == 'sellQuantity') {
+				$sellquantityError = $errorMessage;
+			}
+			if ($key == 'id') {
+				$idError = $errorMessage;
+			}
 		}
-		if ($key == 'sellQuantity') {
-			$sellquantityError = $errorMessage;
-		}
-		if ($key == 'id') {
-			$idError = $errorMessage;
-		}
-	}
 	
-	$message = '';
+		$message = '';
+		echo "<script language=javascript>alert('Please try again!!')</script>";
 	
-	echo "<script language=javascript>alert('Please try again!!')</script>";
-	
-  }
+  	}
   } 
 ?>
 
