@@ -335,14 +335,6 @@
       <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
       <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>  
       
-      <div class="container">
-
-	<aside class="sidebar"><p>This is the sidebar<p></aside>
-
-	<div class="main-section">
-		<p>The main content of the article goes here</p>
-	</div>
-
-</div>    
+          
   </body>
 </html>

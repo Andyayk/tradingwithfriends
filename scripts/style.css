@@ -103,7 +103,7 @@ body {
   width:40%;
   font-size:16px;
   float:right;
-  margin-left: 20px;
+  margin-left: -5px;
   display: block;
 }
 
@@ -182,52 +182,4 @@ body {
 
 body {
   padding: 15px;
-}
-.container{
-	width:900px;
-	margin: 0 auto;
-	overflow:hidden;
-}
-
-.main-section{
-	background-color:#CDEBC4;
-	color:#6D8B64;
-	width:520px;
-	float:left;
-	height:500px;
-}
-
-.sidebar{
-	background-color:#ccc;
-	width:350px;
-	float:right;
-	height:400px;
-}
-
-.container p{
-	padding-top:100px;
-	text-align:center;
-}
-
-.note{
-	text-align:center;
-	padding-top:60px;
-	font-style:italic;
-}
-
-/* This simple media query makes the column layout
-   linear on smaller screens */
-
-@media (max-width:900px){
-
-	.container{
-		width:100%;
-	}
-
-	.main-section, .sidebar{
-		width:auto;
-		margin-bottom:20px;
-		float:none;
-	}
-
 }
