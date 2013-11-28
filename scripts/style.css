@@ -159,6 +159,7 @@ body {
   display:none;
   background: #FFBD59;
   width:45%;
+  float:left;
 }
 
 #recommendButton {

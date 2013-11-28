@@ -212,6 +212,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<script type=”text/javascript”>
+	window.onload= loaded;
+	function loaded()
+	{
+	alert(‘Welcome to Trading with friends’);
+	}
+</script>
     <title>Trading with Friends</title>
     
    	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
