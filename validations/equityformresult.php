@@ -13,12 +13,15 @@ if ($userArriveBySubmittingAForm) {
 	
 	$noquantity = empty($_POST['quantity']); //Empty post
 	$quantityNotNumeric = !is_numeric($_POST['quantity']); //Post not numeric
+	$quantityNotInRange = ($_POST['quantity']<0); //Post not in range
 
 	//Error messages
 	if ($noquantity) {
 		$errors['quantity'] = "Please enter the quantity you wish to purchase";
 	} elseif ($quantityNotNumeric) {
 		$errors['quantity'] = "Quantity entered is not a number";
+	} elseif ($quantityNotInRange) {
+		$errors['quantity'] = "Quantity entered is not in range";
 	}
 	
 	$noErrors = (count($errors) == 0);
