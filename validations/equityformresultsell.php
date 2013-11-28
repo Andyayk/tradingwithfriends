@@ -14,7 +14,7 @@ if ($userArriveBySubmittingAForm) {
 	$quantityNotInRange = ($_POST['sellQuantity']<0); //Post not in range
 
 	if ($noquantity) {
-		$errors['sellQuantity'] = "Please enter the quantity you wish to purchase"; //If no quantity
+		$errors['sellQuantity'] = "Please enter the quantity you wish to sell"; //If no quantity
 	} elseif ($quantityNotNumeric) {
 		$errors['sellQuantity'] = "Quantity entered is not a number"; //If quantity is not a number
 	} elseif ($quantityNotInRange) {

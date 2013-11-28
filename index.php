@@ -212,11 +212,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<script type=”text/javascript”>
+  	<script type="text/javascript">
 	window.onload= loaded;
 	function loaded()
 	{
-	alert(‘Welcome to Trading with friends’);
+	alert("Welcome to Trading with friends");
 	}
 </script>
     <title>Trading with Friends</title>
