@@ -245,7 +245,8 @@
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
-
+      <iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
+      
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
       
@@ -418,8 +419,6 @@ who.ondblclick=function(){
 </head>
 <body>
 <h1 id="CentralTimer">Central Time</h1>
-
-<iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
 
 </body>
 </html>    
