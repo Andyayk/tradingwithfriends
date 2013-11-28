@@ -67,11 +67,11 @@ body {
 
 #showForm {
   text-align:left;
-  padding:50px;
+  padding:40px;
   display:none;
   background: #FFBD59;
   line-height: 0.3em;
-  width:45%;
+  width:40%;
 }
 
 #sellingformButton, #showsellForm {
@@ -97,11 +97,11 @@ body {
 
 #showsellForm {
   text-align:left;
-  padding: 50px;
+  padding: 40px;
   display:none;
   line-height: 0.3em;
   background: #FFBD59;
-  width:45%;
+  width:40%;
   float:right;
   display: inline-block;
 }
