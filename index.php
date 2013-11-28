@@ -62,6 +62,7 @@
 	'$ Sky One, 5MM.SI' => '$ Sky One, 5MM.SI'	
   );
   
+  if (!empty($_POST['buySubmit'])){
   //Validations
   require_once('validations/equityformresult.php');
   
@@ -183,7 +184,7 @@
   	echo "<script language=javascript>alert('Welcome!!')</script>";
   
   }
-  
+  } 
 ?>
 
 <!DOCTYPE html>
@@ -213,8 +214,6 @@
 
   </head>
   <body>
-      <form action="index.php" method="post">
-      
       <div id="fb-root"></div>
       <script src="//connect.facebook.net/en_US/all.js"></script>
       
@@ -237,26 +236,54 @@
 	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
+	  <form name="buyForm" method="post">
 	  <p>
 	  	<div><i>Tip: To sell an equity, type in negative number e.g -20</i></div></br></br>
 		<b>Equity:</b>
+		
 		<select id=name name="name" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
+		
 		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
-
 	  </p>
 	  
 	  <p>
-	  <input type="submit" value="Submit" /><br>
+	  <input type="submit" name="buySubmit" value="Submit" />
 	  </p>
 	  </div>
-
+	  </form>
+	  
+	  <div id="sellingformButton">Selling Form</div>
+	  <div id="showForm2">
+	  <form name="sellForm" method="post">
+	  <p>
+	  	<div><i>Tip: To sell an equity, type in negative number e.g -20</i></div></br></br>
+		<b>Equity:</b>
+		
+		<select id=name name="name" >
+			<option value="">Select Equity</option>
+			<?php foreach($names as $key=>$name) : ?>			
+				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
+			<?php endforeach; ?>
+		</select>
+		
+		<font color="red"><?php echo $nameError; ?></font><br/>
+	 
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
+	  </p>
+	  
+	  <p>
+	  <input type="submit" name="sellSubmit" value="Submit" />
+	  </p>
+	  </div>
+	  </form>
+	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
