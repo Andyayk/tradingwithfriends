@@ -337,14 +337,14 @@
       
       <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
       <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>  
-      <b>US timing is</b><iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
       
-      <!doctype html>
+      
+<!doctype html>
 <html lang="en">
 <meta charset= "utf-8">
 <title>US Time Zones</title>
 <style>
-p{max-width:700px;font-size:1.25em}
+p{max-width:500px;font-size:1.05em}
 </style>
 <script>
 
@@ -425,5 +425,5 @@ who.ondblclick=function(){
 
 </body>
 </html>    
-  </body>
+ </body>
 </html>
