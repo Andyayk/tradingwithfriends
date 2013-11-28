@@ -20,7 +20,7 @@
   $cash = '';
   $newQuantity = '';
   $oldQuantity = '';
-  $oldPrice = '';
+  $oldId = '';
   $id = '';
 
   require 'server/fb-php-sdk/facebook.php'; //Server
@@ -110,7 +110,7 @@
   			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
   		}
 	
-  	} elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
+  	} elseif ($haveErrors && $userArriveBySubmittingAForm) { //If have errors
 	
 		foreach ($errors as $key=>$errorMessage) {
 			if ($key == 'name') {
@@ -125,9 +125,7 @@
 		echo "<script language=javascript>alert('Please try again!!')</script>";
 	
   	}
-  }
-  
-  if (!empty($_POST['sellSubmit'])){ //User submit sell form
+  } elseif (!empty($_POST['sellSubmit'])){ //User submit sell form
   
   	//Validations
   	require_once('validations/equityformresultsell.php');
@@ -136,55 +134,58 @@
   		
   		$username = $user_profile['name'];
   		
-  		require_once('scripts/quantity2.php'); //Checking for quantity, prices may differ when selling
+  		require_once('scripts/quantity2.php'); //Get quantity & id data from database
+  		
+  		if ($id = $oldId){ //Correct ID
   			
-  		if ($oldQuantity>0){ //There is quantity in database
+  			if ($oldQuantity>0){ //There is quantity in database
   			
-  			require_once('scripts/quantity.php'); //Get quantity data from database
+  				$newQuantity = $oldQuantity+$quantity;
   			
-  			$newQuantity = $oldQuantity+$quantity;
-  			
-  			if ($newQuantity>0){ //Updated quantity is more than 0
+  				if ($newQuantity>0){ //Updated quantity is more than 0
 	
-  				$total = $price*$quantity;
-  				$cash = $cash+$total-40;
+  					$total = $price*$quantity;
+  					$cash = $cash+$total-40;
   				
-  				require_once('scripts/userupdatedatabase2.php'); //Update database
-  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  					require_once('scripts/userupdatedatabase2.php'); //Update database
+  					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
-  				//Message
-				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
-				$message = $message . "\t\t" . 'You have sold ' . $quantity;
-				$message = $message . "\t\t" . $name . ' shares';
-				$message = $message . "\t\t" . 'at $' . $total . '<br />';
-				$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+  					//Message
+					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+					$message = $message . "\t\t" . 'You have sold ' . $quantity;
+					$message = $message . "\t\t" . $name . ' shares';
+					$message = $message . "\t\t" . 'at $' . $total . '<br />';
+					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+					$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
-				echo "<script language=javascript>alert('Transaction successful!!')</script>";
+					echo "<script language=javascript>alert('Transaction successful!!')</script>";
   			
-  			} elseif ($newQuantity<0){ //Updated quantity is less than 0
-				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
-  			} else { //Updated quantity is equal to 0
+  				} elseif ($newQuantity<0){ //Updated quantity is less than 0
+					echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
+  				} else { //Updated quantity is equal to 0
 
-  				$total = $price*$quantity;
-  				$cash = $cash+$total-40;
+  					$total = $price*$quantity;
+  					$cash = $cash+$total-40;
   				
-  				require_once ('scripts/userdeletedatabase.php'); //Delete from database
-  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  					require_once ('scripts/userdeletedatabase.php'); //Delete from database
+  					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
-  				//Message
-				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
-				$message = $message . "\t\t" . 'You have sold ' . $quantity;
-				$message = $message . "\t\t" . $name . ' shares';
-				$message = $message . "\t\t" . 'at $' . $total . '<br />';
-				$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+  					//Message
+					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+					$message = $message . "\t\t" . 'You have sold ' . $quantity;
+					$message = $message . "\t\t" . $name . ' shares';
+					$message = $message . "\t\t" . 'at $' . $total . '<br />';
+					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+					$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
-				echo "<script language=javascript>alert('Transaction successful!!')</script>";
-  			}
+					echo "<script language=javascript>alert('Transaction successful!!')</script>";
+  				}
   				
-  		} else { //No quantity in database
-  			echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
+  			} else { //No quantity in database
+  				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
+  			}
+  		} else {
+  			echo "<script language=javascript>alert('Wrong ID entered!! Please try again!!')</script>";
   		}
 	
   	} elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
@@ -212,13 +213,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<script type="text/javascript">
-	window.onload= loaded;
-	function loaded()
-	{
-	alert("Welcome to Trading with friends");
-	}
-</script>
     <title>Trading with Friends</title>
     
    	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
