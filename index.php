@@ -245,10 +245,12 @@
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
-      <iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
       
+
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
+	  <iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
+	  
       
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
