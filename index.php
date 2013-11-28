@@ -337,6 +337,7 @@
       
       <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
       <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>  
+      <b>US timing is</b><iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
       
       <!doctype html>
 <html lang="en">
