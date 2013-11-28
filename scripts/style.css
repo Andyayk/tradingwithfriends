@@ -70,6 +70,7 @@ body {
   padding:50px;
   display:none;
   background: #FFBD59;
+  line-height: 0.3em;
   width:45%;
 }
 
@@ -101,6 +102,7 @@ body {
   line-height: 0.3em;
   background: #FFBD59;
   width:45%;
+  float:right;
   display: inline-block;
 }
 
