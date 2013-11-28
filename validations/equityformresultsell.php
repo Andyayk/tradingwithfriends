@@ -25,7 +25,7 @@ if ($userArriveBySubmittingAForm) {
 	$idNotNumeric = !is_numeric($_POST['id']); //Post not numeric
 	$idNotInRange = ($_POST['id']<0); //Post not in range
 	
-	if ($noquantity) {
+	if ($noid) {
 		$errors['id'] = "Please enter the ID of the equity you wish to sell"; //If no quantity
 	} elseif ($quantityNotNumeric) {
 		$errors['id'] = "ID entered is not a number"; //If id not is a number
