@@ -147,7 +147,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
 }
 
 body {
@@ -160,7 +159,6 @@ body {
   display:none;
   background: #FFBD59;
   width:45%;
-  float: right;
 }
 
 #recommendButton {
@@ -177,7 +175,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: incline-block;
 }
 
 body {
