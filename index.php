@@ -20,6 +20,7 @@
   $newQuantity = '';
   $oldQuantity = '';
   $oldPrice = '';
+  $id = '';
 
   require 'server/fb-php-sdk/facebook.php'; //Server
 
@@ -276,7 +277,6 @@
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
-		
 		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
@@ -301,10 +301,10 @@
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['sellName']) && $_POST['sellName']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
-		
 		<font color="red"><?php echo $sellnameError; ?></font><br/>
 	 
-		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br/>	
+		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br/>
+		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font><br/>	
 	  </p>
 	  
 	  <p>
