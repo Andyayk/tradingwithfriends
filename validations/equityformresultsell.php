@@ -27,9 +27,9 @@ if ($userArriveBySubmittingAForm) {
 	
 	if ($noid) {
 		$errors['id'] = "Please enter the ID of the equity you wish to sell"; //If no quantity
-	} elseif ($quantityNotNumeric) {
+	} elseif ($idNotNumeric) {
 		$errors['id'] = "ID entered is not a number"; //If id not is a number
-	} elseif ($quantityNotInRange) {
+	} elseif ($idNotInRange) {
 		$errors['id'] = "ID entered is not in range"; //If id not is in range
 	}
 	
