@@ -37,7 +37,7 @@ body {
 
 #showEquity {
   text-align:left;	
-  padding:50px;
+  padding:20px;
   display:none;
   font-size: 15px;
   font-weight: normal;
@@ -68,11 +68,11 @@ body {
 
 #showForm {
   text-align:left;
-  padding:50px;
+  padding:20px;
   display:none;
-  line-height: 0.8em;
+  line-height: 0.4em;
   background: #FFBD59;
-  width:45%;
+  width:40%;
   float:left;
 }
 
@@ -99,11 +99,11 @@ body {
 
 #showsellForm {
   text-align:left;
-  padding:50px;
+  padding:20px;
   display:none;
-  line-height: 0.8em;
+  line-height: 0.4em;
   background: #FFBD59;
-  width:45%;
+  width:40%;
   float:right;
 }
 
@@ -129,10 +129,10 @@ body {
 }
 
 #showPortfolio {
-  padding:50px;
+  padding:20px;
   display:none;
   background: #FFBD59;
-  width:45%;
+  width:40%;
   float:left;
 }
 
@@ -157,11 +157,11 @@ body {
 }
 
 #showHistory {
-  padding:50px;
+  padding:20px;
   text-align:left;
   display:none;
   background: #FFBD59;
-  width:45%;
+  width:40%;
   float:left;
 }
 
