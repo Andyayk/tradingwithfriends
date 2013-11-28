@@ -11,6 +11,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$("#sellingformButton").click(function(){
+		$("#showsellForm").slideToggle("slow");
+	});
+});
+
+$(document).ready(function(){
 	$("#portfolioButton").click(function(){
 		$("#showPortfolio").slideToggle("slow");
 	});

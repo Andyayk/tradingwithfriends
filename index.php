@@ -70,8 +70,6 @@
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
   	
-  	if ($quantity>0){ //Buy
-  	
   		$total = $price*$quantity;
   		
   		if (($cash-$total-40)>0){ //Enough cash to buy
@@ -105,63 +103,6 @@
   		} else { //Not enough cash to buy
   			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
   		}
-	
-  	} else { //Sell
-  		
-  		$username = $user_profile['name'];
-  		
-  		require_once('scripts/quantity2.php'); //Checking for quantity, prices may differ when selling
-  			
-  		if ($oldQuantity>0){ //There is quantity in database
-  			
-  			require_once('scripts/quantity.php'); //Get quantity data from database
-  			
-  			$newQuantity = $oldQuantity+$quantity;
-  			
-  			if ($newQuantity>0){ //Updated quantity is more than 0
-	
-  				$total = ($price*$quantity)*-1;
-  				$cash = $cash+$total-40;
-  				
-  				require_once('scripts/userupdatedatabase2.php'); //Update database
-  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
-  				
-  				//Message
-				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
-				$message = $message . "\t\t" . 'You have sold ' . $quantity;
-				$message = $message . "\t\t" . $name . ' shares';
-				$message = $message . "\t\t" . 'at $' . $total . '<br />';
-				$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
-		
-				echo "<script language=javascript>alert('Transaction successful!!')</script>";
-  			
-  			} elseif ($newQuantity<0){ //Updated quantity is less than 0
-				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
-  			} else { //Updated quantity is equal to 0
-
-  				$total = ($price*$quantity)*-1;
-  				$cash = $cash+$total-40;
-  				
-  				require_once ('scripts/userdeletedatabase.php'); //Delete from database
-  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
-  				
-  				//Message
-				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
-				$message = $message . "\t\t" . 'You have sold ' . $quantity;
-				$message = $message . "\t\t" . $name . ' shares';
-				$message = $message . "\t\t" . 'at $' . $total . '<br />';
-				$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
-		
-				echo "<script language=javascript>alert('Transaction successful!!')</script>";
-  			}
-  				
-  		} else { //No quantity in database
-  			echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
-  		}
-
-  	}
 	
   } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
@@ -193,44 +134,6 @@
   require_once('validations/equityformresultsell.php');
   
   if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
-  	
-  	if ($quantity>0){ //Buy
-  	
-  		$total = $price*$quantity;
-  		
-  		if (($cash-$total-40)>0){ //Enough cash to buy
-  			
-  			$cash = $cash-$total-40;
-  			$username = $user_profile['name'];
-    		
-  			require_once('scripts/quantity.php'); //Get quantity data from database
-  			
-  			if ($oldQuantity>0){ //There is quantity in database
-  				
-  				$newQuantity = $oldQuantity+$quantity;
-  				require_once('scripts/userupdatedatabase.php'); //Update database
-  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
-  				
-  			} else { //No quantity in database
-  				require_once('scripts/userinsertdatabase.php'); //Insert into database
-  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
-  			}
-
-  			//Message
-			$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
-			$message = $message . "\t\t" . 'You have bought ' . $quantity;
-			$message = $message . "\t\t" . $name . ' shares';
-			$message = $message . "\t\t" . 'at $' . $total . '<br />';
-			$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
-			$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
-
-			echo "<script language=javascript>alert('Transaction successful!!')</script>";
-			
-  		} else { //Not enough cash to buy
-  			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
-  		}
-	
-  	} else { //Sell
   		
   		$username = $user_profile['name'];
   		
@@ -284,8 +187,6 @@
   		} else { //No quantity in database
   			echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
   		}
-
-  	}
 	
   } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
 	
