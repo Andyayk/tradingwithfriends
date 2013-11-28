@@ -44,7 +44,7 @@ body {
   width:83%;
 }
 
-
+{float:right; margin-left: 10px;}
 #purchasingformButton, #showForm {
    float:left;
    padding: 12px;
@@ -73,6 +73,7 @@ body {
   background: #FFBD59;
   font-size: 16px;
   width:40%;
+  float:left;
 }
 
 #sellingformButton, #showsellForm {
