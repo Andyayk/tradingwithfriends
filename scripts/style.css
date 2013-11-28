@@ -11,7 +11,7 @@ img {
 body {
   margin: 0px; 
   background-color:green;
-  background-image: url("../images/lb.jpg");
+  background-image: url("../images/background.jpg");
   min-height: 1000px;
 }
 
