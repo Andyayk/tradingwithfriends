@@ -30,6 +30,6 @@
     
 	result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;    
 	document.getElementById(id).innerHTML = result;  
-	setTimeout('date_time("'+id+'");','1000');
+	setTimeout('date_time("'+id+'");','500');
     return true;
   }
