@@ -3,6 +3,8 @@
   //Define variables
   $name = '';
   $quantity = '';
+  $sellName = '';
+  $sellQuantity = '';
   $price = '';
   $total = '';
   $nameError = '';
@@ -184,6 +186,130 @@
   	echo "<script language=javascript>alert('Welcome!!')</script>";
   
   }
+  }
+  
+  if (!empty($_POST['sellSubmit'])){
+  //Validations
+  require_once('validations/equityformresultsell.php');
+  
+  if ($noErrors && $userArriveBySubmittingAForm) { //If no errors
+  	
+  	if ($quantity>0){ //Buy
+  	
+  		$total = $price*$quantity;
+  		
+  		if (($cash-$total-40)>0){ //Enough cash to buy
+  			
+  			$cash = $cash-$total-40;
+  			$username = $user_profile['name'];
+    		
+  			require_once('scripts/quantity.php'); //Get quantity data from database
+  			
+  			if ($oldQuantity>0){ //There is quantity in database
+  				
+  				$newQuantity = $oldQuantity+$quantity;
+  				require_once('scripts/userupdatedatabase.php'); //Update database
+  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  				
+  			} else { //No quantity in database
+  				require_once('scripts/userinsertdatabase.php'); //Insert into database
+  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			}
+
+  			//Message
+			$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+			$message = $message . "\t\t" . 'You have bought ' . $quantity;
+			$message = $message . "\t\t" . $name . ' shares';
+			$message = $message . "\t\t" . 'at $' . $total . '<br />';
+			$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+			$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+
+			echo "<script language=javascript>alert('Transaction successful!!')</script>";
+			
+  		} else { //Not enough cash to buy
+  			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
+  		}
+	
+  	} else { //Sell
+  		
+  		$username = $user_profile['name'];
+  		
+  		require_once('scripts/quantity2.php'); //Checking for quantity, prices may differ when selling
+  			
+  		if ($oldQuantity>0){ //There is quantity in database
+  			
+  			require_once('scripts/quantity.php'); //Get quantity data from database
+  			
+  			$newQuantity = $oldQuantity+$quantity;
+  			
+  			if ($newQuantity>0){ //Updated quantity is more than 0
+	
+  				$total = ($price*$quantity)*-1;
+  				$cash = $cash+$total-40;
+  				
+  				require_once('scripts/userupdatedatabase2.php'); //Update database
+  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  				
+  				//Message
+				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+				$message = $message . "\t\t" . 'You have sold ' . $quantity;
+				$message = $message . "\t\t" . $name . ' shares';
+				$message = $message . "\t\t" . 'at $' . $total . '<br />';
+				$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+		
+				echo "<script language=javascript>alert('Transaction successful!!')</script>";
+  			
+  			} elseif ($newQuantity<0){ //Updated quantity is less than 0
+				echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
+  			} else { //Updated quantity is equal to 0
+
+  				$total = ($price*$quantity)*-1;
+  				$cash = $cash+$total-40;
+  				
+  				require_once ('scripts/userdeletedatabase.php'); //Delete from database
+  				require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  				
+  				//Message
+				$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+				$message = $message . "\t\t" . 'You have sold ' . $quantity;
+				$message = $message . "\t\t" . $name . ' shares';
+				$message = $message . "\t\t" . 'at $' . $total . '<br />';
+				$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
+				$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+		
+				echo "<script language=javascript>alert('Transaction successful!!')</script>";
+  			}
+  				
+  		} else { //No quantity in database
+  			echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
+  		}
+
+  	}
+	
+  } elseif ($haveErrors && $userArriveBySubmittingAForm) {	//If have errors
+	
+	foreach ($errors as $key=>$errorMessage) {
+	
+		if ($key == 'name') {
+			$nameError = $errorMessage;
+		}
+		if ($key == 'quantity') {
+			$quantityError = $errorMessage;
+		}
+	}
+	
+	$message = '';
+	
+	echo "<script language=javascript>alert('Please try again!!')</script>";
+	
+  } elseif ($userArriveByClickingOrDirectlyTypeURL) { //If arrive by URL
+  
+  	$message = '';
+  	
+  	echo "<script language=javascript>alert('Welcome!!')</script>";
+  
+  }
   } 
 ?>
 
@@ -238,7 +364,7 @@
 	  <div id="showForm">
 	  <form name="buyForm" method="post">
 	  <p>
-	  	<div><i>Tip: To sell an equity, type in negative number e.g -20</i></div></br></br>
+	  	<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br></br>
 		<b>Equity:</b>
 		
 		<select id=name name="name" >
@@ -260,22 +386,22 @@
 	  </form>
 	  
 	  <div id="sellingformButton">Selling Form</div>
-	  <div id="showForm2">
+	  <div id="showsellForm">
 	  <form name="sellForm" method="post">
 	  <p>
-	  	<div><i>Tip: To sell an equity, type in negative number e.g -20</i></div></br></br>
+	  	<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br></br>
 		<b>Equity:</b>
 		
-		<select id=name name="name" >
+		<select id=sellName name="sellName" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
-				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
+				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['sellName']) && $_POST['sellName']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
 			<?php endforeach; ?>
 		</select>
 		
 		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
-		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
+		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 	  </p>
 	  
 	  <p>
