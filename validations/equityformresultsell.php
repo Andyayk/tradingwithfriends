@@ -6,7 +6,7 @@ $userArriveByClickingOrDirectlyTypeURL = !$userArriveBySubmittingAForm; //Arrive
 
 if ($userArriveBySubmittingAForm) {
 
-	$nameNotSelected = empty($_POST['name']); //Empty post
+	$nameNotSelected = empty($_POST['sellName']); //Empty post
 	if ($nameNotSelected) {
 		$errors['sellName'] = "Please select an equity"; //If no name selected
 	}
