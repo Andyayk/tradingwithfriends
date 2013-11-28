@@ -58,6 +58,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
+   display: inline-block;
 }
 
 body {
@@ -66,7 +67,7 @@ body {
 
 #showForm {
   text-align:left;
-  padding:12px;
+  padding:50px;
   display:none;
   background: #FFBD59;
   width:45%;
@@ -86,7 +87,7 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   float:right;
+   display: inline-block;
 }
 
 body {
@@ -95,12 +96,12 @@ body {
 
 #showsellForm {
   text-align:left;
-  padding: 12px;
+  padding: 50px;
   display:none;
   line-height: 0.3em;
   background: #FFBD59;
   width:45%;
-  float:right;
+  display: inline-block;
 }
 
 #portfolioButton, #showPortfolio {
