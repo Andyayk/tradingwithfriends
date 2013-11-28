@@ -67,10 +67,10 @@ body {
 
 #showForm {
   text-align:left;
-  padding:40px;
+  padding:45px;
   display:none;
   background: #FFBD59;
-  line-height: 0.3em;
+  line-height: 0.4em;
   width:40%;
 }
 
@@ -97,9 +97,9 @@ body {
 
 #showsellForm {
   text-align:left;
-  padding: 40px;
+  padding: 45px;
   display:none;
-  line-height: 0.3em;
+  line-height: 0.4em;
   background: #FFBD59;
   width:40%;
   float:right;
