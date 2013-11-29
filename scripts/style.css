@@ -90,6 +90,7 @@ body {
   font-weight: bolder;
   width:43%;
   text-align: center;
+  vertical-align: top;
 }
 
 #showsellForm {
@@ -152,6 +153,7 @@ body {
   font-weight: bolder;
   width:43%;
   text-align: center;
+  float:right;
 }
 
 #showHistory {
