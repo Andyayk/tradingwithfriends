@@ -22,6 +22,24 @@ if ($userArriveBySubmittingAForm) {
 		$errors['quantity'] = "Quantity entered is not in range";
 	}
 	
+	$orderNotSelected = empty($_POST['order']); //Empty post
+	if ($orderNotSelected) {
+		$errors['order'] = "Please select an order"; //If no order selected
+	}
+	
+	$noorderPrice = empty($_POST['orderPrice']); //Empty post
+	$orderpriceNotNumeric = !is_numeric($_POST['orderPrice']); //Post not numeric
+	$orderpriceNotInRange = ($_POST['orderPrice']<0); //Post not in range
+
+	//Error messages
+	if ($noorderPrice) {
+		$errors['orderPrice'] = "Please enter the price you wish to execute the trade";
+	} elseif ($orderpriceNotNumeric) {
+		$errors['orderPrice'] = "Price entered is not a number";
+	} elseif ($orderpriceNotInRange) {
+		$errors['orderPrice'] = "Price entered is not in range";
+	}
+	
 	$noErrors = (count($errors) == 0);
 	$haveErrors = !$noErrors;
 
@@ -32,6 +50,12 @@ if ($userArriveBySubmittingAForm) {
 		}
 		if (!empty($_POST['quantity'])) { //Get quantity
 			$quantity = $_POST['quantity'];
+		}
+		if (!empty($_POST['order'])) { //Get order
+			$order = $_POST['order'];
+		}
+		if (!empty($_POST['orderPrice'])) { //Get order price
+			$orderPrice = $_POST['orderPrice'];
 		}
 
 		//Get price

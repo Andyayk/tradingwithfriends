@@ -5,24 +5,31 @@
   $quantity = '';
   $price = '';
   $total = '';
-  $nameError = '';
-  $quantityError = '';
   $sellName = '';
   $sellQuantity = '';
-  $sellnameError = '';
-  $sellquantityError = '';
-  $idError = '';
-  $message = '';
-  $errors = array();
-  $noErrors = true;
-  $haveErrors = !($noErrors);
   $username = '';
   $cash = '';
   $newQuantity = '';
   $oldQuantity = '';
   $oldId = '';
   $id = '';
+  $order = '';
+  $orderPrice = '';
+  
+  $nameError = '';
+  $quantityError = '';
+  $sellnameError = '';
+  $sellquantityError = '';
+  $idError = '';
+  $orderError = '';
+  $orderpriceError = '';
 
+  $message = '';
+  
+  $errors = array();
+  $noErrors = true;
+  $haveErrors = !($noErrors);
+ 
   require 'server/fb-php-sdk/facebook.php'; //Server
 
   //Linking to Facebook Application
@@ -66,6 +73,11 @@
 	'LionGold, A78.SI' => 'LionGold, A78.SI',
 	'Singtel, Z74.SI' => 'Singtel, Z74.SI',
 	'$ Sky One, 5MM.SI' => '$ Sky One, 5MM.SI'	
+  );
+  
+  $orders = array(	
+	'Market Order' => 'Market Order',
+	'Stop Loss Order' => 'Stop Loss Order'
   );
   
   if (!empty($_POST['buySubmit'])){ //User submit buy form
@@ -278,6 +290,16 @@
 		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
+	 	
+	 	<select id=order name="order" >
+			<option value="">Select Order</option>
+			<?php foreach($orders as $key=>$order) : ?>			
+				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['order']) && $_POST['order']==$key) echo "selected"; ?> ><?php echo $order; ?></option>			
+			<?php endforeach; ?>
+		</select>
+		<font color="red"><?php echo $orderError; ?></font><br/>
+		
+		<b>at:</b> <input type="text" name="orderPrice" value="<?php if(!empty($_POST['orderPrice']))echo $_POST['orderPrice']; ?>" /> <font color="red"><?php echo $orderpriceError; ?></font>
 	  </p>
 	  
 	  <p>

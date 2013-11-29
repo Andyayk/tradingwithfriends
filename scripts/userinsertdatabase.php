@@ -4,9 +4,9 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("INSERT INTO `portfolio` (`username`, `name`, `quantity`, `price`, `total`, `cash`) VALUES (?, ?, ?, ?, ?, ?)"); //Insert into porfolio
+	$stmt = $mysqli->prepare("INSERT INTO `portfolio` (`username`, `name`, `quantity`, `price`, `total`, `cash`, `order`, `orderprice`) VALUES (?, ?, ?, ?, ?, ?, ? ,?)"); //Insert into porfolio
 
-	$stmt->bind_param("ssssss", $username, $name, $quantity, $price, $total, $cash); 
+	$stmt->bind_param("ssssss", $username, $name, $quantity, $price, $total, $cash, $order, $orderPrice); 
 
 	$successfullyInserted = $stmt->execute(); 
 
