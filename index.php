@@ -280,7 +280,6 @@
 	  <p>
 	  	<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br></br>
 		<b>Equity:</b>
-		
 		<select id=name name="name" >
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
@@ -291,6 +290,7 @@
 	 
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
 	 	
+	 	<b>Order:</b>
 	 	<select id=order name="order" >
 			<option value="">Select Order</option>
 			<?php foreach($orders as $key=>$order) : ?>			
