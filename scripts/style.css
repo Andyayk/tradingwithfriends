@@ -30,10 +30,6 @@ body {
    text-align: center;
 }
 
-body {
-  padding: 15px;
-}
-
 #showEquity {
   text-align:left;	
   padding:35px;
@@ -41,7 +37,7 @@ body {
   font-size: 10px;
   font-weight: normal;
   background: #FFBD59;
-  width:83%;
+  width:85%;
 }
 
 #purchasingformButton, #showForm {
@@ -58,11 +54,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
-}
-
-body {
-  padding: 15px;
 }
 
 #showForm {
@@ -88,11 +79,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
-}
-
-body {
-  padding: 15px;
 }
 
 #showsellForm {
@@ -104,7 +90,6 @@ body {
   font-size:16px;
   float:right;
   margin-left: -5px;
-  display: block;
 }
 
 #portfolioButton, #showPortfolio {
@@ -121,11 +106,6 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-   display: inline-block;
-}
-
-body {
-  padding: 15px;
 }
 
 #showPortfolio {
@@ -152,10 +132,6 @@ body {
    text-align: center;
 }
 
-body {
-  padding: 15px;
-}
-
 #showHistory {
   padding:50px;
   text-align:left;
@@ -178,8 +154,4 @@ body {
    font-weight: bolder;
    width:40%;
    text-align: center;
-}
-
-body {
-  padding: 15px;
 }
