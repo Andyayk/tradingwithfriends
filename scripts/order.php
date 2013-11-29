@@ -10,7 +10,7 @@
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($username, $name, $quantity, $oldId, $orderPrice);
+	$stmt->bind_result($name, $quantity, $oldId, $orderPrice);
 
 	$orderArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
