@@ -6,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("INSERT INTO `portfolio` (`username`, `name`, `quantity`, `price`, `total`, `cash`, `order`, `orderprice`) VALUES (?, ?, ?, ?, ?, ?, ? ,?)"); //Insert into porfolio
 
-	$stmt->bind_param("ssssss", $username, $name, $quantity, $price, $total, $cash, $order, $orderPrice); 
+	$stmt->bind_param("ssssssss", $username, $name, $quantity, $price, $total, $cash, $order, $orderPrice); 
 
 	$successfullyInserted = $stmt->execute(); 
 
