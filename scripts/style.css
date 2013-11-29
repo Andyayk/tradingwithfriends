@@ -15,19 +15,19 @@ body {
 }
 
 #equityButton {
-   padding: 15px;
-   margin: 10px;
-   background: #FFA500;
-   color: #000000;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:96%;
-   text-align: center;
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:96%;
+  text-align: center;
 }
 
 #showEquity {
@@ -47,19 +47,17 @@ body {
 }
 
 #purchasingformButton {
-   padding: 15px;
-   margin: 10px;
-   background: #FFA500;
-   color: #000000;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:48%;
-   text-align: center;
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;   font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;   border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:48%;
+  text-align: center;
 }
 
 #showForm {
@@ -79,20 +77,21 @@ body {
 }
 
 #sellingformButton {
-   padding: 15px;
-   margin: 10px;
-   background: #FFA500;
-   color: #000000;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:48%;
-   text-align: center;
-   display:inline;
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:48%;
+  text-align: center;
+  float:right;
+   
 }
 
 #showsellForm {
@@ -109,22 +108,23 @@ body {
   width:48%;
   text-align:left;
   display:none;
+  float:right;
 }
 
 #portfolioButton, #showPortfolio {
-   padding: 15px;
-   margin: 10px;
-   background: #FFA500;
-   color: #000000;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:48%;
-   text-align: center;
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:48%;
+  text-align: center;
 }
 
 #showPortfolio {
@@ -136,19 +136,19 @@ body {
 }
 
 #historyButton, #showHistory{
-   padding: 15px;
-   margin: 10px;
-   background: #FFA500;
-   color: #000000;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:48%;
-   text-align: center;
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:48%;
+  text-align: center;
 }
 
 #showHistory {
@@ -160,17 +160,17 @@ body {
 }
 
 #recommendButton {
-   padding: 15px;
-   margin: 10px;
-   background: #FFA500;
-   color: #000000;
-   font-size: 18px;
-   font-weight: bolder;
-   line-height: 0.6em;
-   border-radius: 10px;
-   border: 2px dashed #fff;
-   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   font-weight: bolder;
-   width:48%;
-   text-align: center;
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:48%;
+  text-align: center;
 }
