@@ -90,7 +90,6 @@ body {
   font-weight: bolder;
   width:43%;
   text-align: center;
-  float:right;
 }
 
 #showsellForm {
@@ -107,7 +106,6 @@ body {
   width:43%;
   text-align:left;
   display:none;
-  float:right;
 }
 
 #portfolioButton {
@@ -154,7 +152,6 @@ body {
   font-weight: bolder;
   width:43%;
   text-align: center;
-  float:right;
 }
 
 #showHistory {
@@ -171,7 +168,6 @@ body {
   width:43%;
   text-align:left;
   display:none;
-  float:right;
 }
 
 #recommendButton {
