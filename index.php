@@ -248,6 +248,15 @@
 	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#orderprocessing").load("scripts/order.php").fadeIn("slow");
+	    }, 30000); //refresh every 30000 milliseconds
+      });
+      </script>
 
   </head>
   <body>
@@ -274,6 +283,8 @@
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  
+	  <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
+	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
 	  <form name="buyForm" method="post">
@@ -288,7 +299,7 @@
 		</select>
 		<font color="red"><?php echo $nameError; ?></font><br/>
 	 
-		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font>	
+		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 	 	
 	 	<b>Order:</b>
 	 	<select id=order name="order" >
@@ -297,7 +308,7 @@
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['order']) && $_POST['order']==$key) echo "selected"; ?> ><?php echo $order; ?></option>			
 			<?php endforeach; ?>
 		</select>
-		<font color="red"><?php echo $orderError; ?></font><br/>
+		<font color="red"><?php echo $orderError; ?></font>
 		
 		<b>at:</b> <input type="text" name="orderPrice" value="<?php if(!empty($_POST['orderPrice']))echo $_POST['orderPrice']; ?>" /> <font color="red"><?php echo $orderpriceError; ?></font>
 	  </p>
