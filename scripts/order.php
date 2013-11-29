@@ -4,13 +4,13 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT name, quantity, id, orderprice FROM `portfolio` WHERE `username` = ? AND `order` = Stop Loss Order"); //Select username, name, quantity, id and orderprice from portfolio
+	$stmt = $mysqli->prepare("SELECT name, quantity, id, order, orderprice FROM `portfolio` WHERE `username` = ?"); //Select username, name, quantity, id, order and orderprice from portfolio
 
-	$stmt->bind_param("ss", $username, $order);
+	$stmt->bind_param("s", $username);
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($name, $quantity, $oldId, $orderPrice);
+	$stmt->bind_result($name, $quantity, $oldId, $order, $orderPrice);
 
 	$orderArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
@@ -18,6 +18,7 @@
 			'name' => $name,
 			'quantity' => $quantity,
 			'id' => $oldId,
+			'order' => $order,
 			'orderprice' => $orderPrice
 		);
 	}
@@ -27,8 +28,10 @@
 		$name = $orderKey['name'];
 		$quantity = $orderKey['quantity'];
 		$oldId = $orderKey['id'];
+		$order = $orderKey['order'];
 		$orderPrice = $orderKey['orderprice'];
-		
+
+		if ($order = "Stop Loss Order" ){
 		//Get price
 	    require 'scripts/equity_price.php';
 	  	if ($name=="Blumont, A33.SI"){
@@ -62,6 +65,7 @@
 	  		require_once ('scripts/userdeletedatabase.php'); //Delete from database
   			require_once('scripts/historyinsertdatabase.php'); //Insert into database
 	  	}
+		}
 	}
 
 	$stmt->close();
