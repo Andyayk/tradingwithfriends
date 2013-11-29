@@ -248,15 +248,6 @@
 	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
-      
-      <script> 
-      $(document).ready(function(){
-        var auto_refresh = setInterval(
-		  function (){
-		  $("#orderprocessing").load("scripts/order.php").fadeIn("slow");
-	    }, 30000); //refresh every 30000 milliseconds
-      });
-      </script>
 
   </head>
   <body>
@@ -282,8 +273,6 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
-	  
-	  <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
