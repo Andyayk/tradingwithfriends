@@ -1,6 +1,4 @@
 <?php 
-    
- 	$username = $user_profile['name'];
 	
  	require_once ('config/database.php'); //Login to database
 
@@ -66,6 +64,7 @@
   			$cash = $cash+$total-40;
 	  		require_once ('scripts/userdeletedatabase.php'); //Delete from database
   			require_once('scripts/historyinsertdatabase.php'); //Insert into database
+  			echo "<script language=javascript>alert('Stop Loss Order had been activated!!')</script>";
 	  	}
 		}
 	}

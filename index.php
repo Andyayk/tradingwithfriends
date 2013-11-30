@@ -248,6 +248,15 @@
 	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#orderprocessing").load("scripts/order.php");
+	    }, 30000); //refresh every 30000 milliseconds
+      });
+      </script>
 
   </head>
   <body>
@@ -258,12 +267,10 @@
       <img src="images/logo.jpg"/>
       </div>
       
-
       <span id="date_time"></span>
 	  <script type="text/javascript">window.onload = date_time('date_time');</script>
 	  <iframe src="http://free.timeanddate.com/clock/i3wweiim/n179" frameborder="0" width="82" height="18"></iframe>
 	  
-      
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
@@ -273,6 +280,7 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
+	  <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
