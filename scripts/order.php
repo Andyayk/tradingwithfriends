@@ -1,31 +1,5 @@
 <?php 
-	$app_id = '418284238273760';
-  $app_secret = '44926e66c8b6d95019865554ec58c9a2';
-  $app_namespace = 'tradingwithfriends';
-
-  $app_url = 'http://apps.facebook.com/' . $app_namespace . '/';
-  $scope = 'email,publish_actions';
-  
-  $facebook = new Facebook(array( //Init the Facebook SDK
-     'appId'  => $app_id,
-     'secret' => $app_secret,
-   ));
-
-  $user = $facebook->getUser(); //Get the current user
-
-  //If the user has not installed the app, redirect them to the Login Dialog
-  if (!$user) {
-    $loginUrl = $facebook->getLoginUrl(array(
-      'scope' => $scope,
-      'redirect_uri' => $app_url,
-    ));
-    print('<script> top.location.href=\'' . $loginUrl . '\'</script>');
-  } else { //Get their names
- 	 $user_profile = $facebook->api('/me','GET');
- 	 $username = $user_profile['name'];
-  }
-		
-
+	
 	$url = $_SERVER['HTTP_HOST'];
 
 	$thisIsLocalHostUrl = (strpos($url, 'localhost') !== false);
@@ -49,9 +23,9 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT name, quantity, id, order, orderprice FROM `portfolio` WHERE `username` = ?"); //Select username, name, quantity, id, order and orderprice from portfolio
+	$stmt = $mysqli->prepare("SELECT name, quantity, id, order, orderprice FROM `portfolio` "); //Select username, name, quantity, id, order and orderprice from portfolio
 
-	$stmt->bind_param("s", $username);
+	$stmt->bind_param();
 
 	$stmt->execute(); 
 
