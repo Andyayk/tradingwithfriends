@@ -4,13 +4,13 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT name, quantity, price, id FROM `portfolio` WHERE `username` = ?"); //Select name, quantity, price and id from portfolio
+	$stmt = $mysqli->prepare("SELECT name, quantity, price, id, order, orderprice FROM `portfolio` WHERE `username` = ?"); //Select name, quantity, price and id from portfolio
 
 	$stmt->bind_param("s", $username);
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($name, $quantity, $price, $id);
+	$stmt->bind_result($name, $quantity, $price, $id, $order, $orderPrice);
 
 	$portfolioEquities = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
@@ -19,6 +19,8 @@
 			'name' => $name,
 			'quantity' => $quantity,
 			'price' => $price,
+			'order' => $order,
+			'orderprice' => $orderPrice
 		);
 	}
 
@@ -36,6 +38,8 @@
 	$name = $portfolioEquity['name'];
     $quantity = $portfolioEquity['quantity'];
     $price = $portfolioEquity['price'];
+    $order = $portfolioEquity['order'];
+    $orderPrice = $portfolioEquity['orderprice'];
   ?>
 
   <tr>
@@ -50,6 +54,12 @@
 	</td>
 	<td>
 		<b>Price:</b> <?php echo $price; ?> </br>
+	</td>
+	<td>
+		<b>Order:</b> <?php echo $order; ?> </br>
+	</td>
+	<td>
+		<b>Order price:</b> <?php echo $orderPrice; ?> </br>
 	</td>
   </tr>
   <?php endforeach; ?>
