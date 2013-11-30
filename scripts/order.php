@@ -52,7 +52,7 @@
 
 		if ($order = "Stop Loss Order" ){
 		//Get price
-	    require 'scripts/equity_price.php';
+	    require 'scripts/equity_price2.php';
 	  	if ($name=="Blumont, A33.SI"){
 	  	$currentPrice = $blumont;
 	  	} elseif ($name=="PFood, P05.SI"){
