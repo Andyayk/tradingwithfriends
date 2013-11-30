@@ -47,8 +47,7 @@
 		$quantity = $orderKey['quantity'];
 		$oldId = $orderKey['id'];
 		$order = $orderKey['order'];
-		$orderPrice = $orderKey['orderprice'];
-
+		
 		if ($order = "Stop Loss Order" ){
 		echo "hello";
 
