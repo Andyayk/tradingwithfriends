@@ -36,3 +36,14 @@ $(document).ready(function(){
 		});
 	});
 });
+
+$(document).ready(function(){
+	$("#postButton").click(function(){
+		FB.ui({
+			method: 'feed',
+			caption: 'I have earned ' + $cash-10000 + '!! Can you beat me?',
+			name: 'Check out my awesome trading skills!!'
+		});
+	});
+});
+

@@ -346,7 +346,8 @@
 	  <div id="historyButton">History of Transactions</div>
 	  <div id="showHistory"><?php require 'scripts/history.php';?></div>
   
-	  <div id="recommendButton">Recommend this app to your friends!!</div>    
+	  <div id="recommendButton">Recommend this app to your friends!!</div>
+	  <div id="postButton">Post on Facebook!!</div>    
       
       <script>
       var appId = '<?php echo $facebook->getAppID() ?>';
