@@ -20,8 +20,6 @@
 		$database_password = 'p6A2wObwmahl';
 		$database_hostname = 'mysqlsdb.co8hm2var4k9.eu-west-1.rds.amazonaws.com';
 	}
-	
-	$username = $user_profile['name'];
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
