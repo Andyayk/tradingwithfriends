@@ -41,9 +41,17 @@ $(document).ready(function(){
 	$("#postButton").click(function(){
 		FB.ui({
 			method: 'feed',
-			caption: 'I have earned ' + $cash-10000 + '!! Can you beat me?',
-			name: 'Check out my awesome trading skills!!'
+			name: 'Check out my awesome trading skills!!',
+			link: 'https://developers.facebook.com/docs/dialogs/',
+			picture: 'http://fbrell.com/f8.jpg',
+			caption: 'I have earned ' + $cash + '!! Can you beat me?',
+			description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
+		}, function(response) {
+		    if (response && response.post_id) {
+		    	alert('Post was published.');
+		    } else {
+		    	alert('Post was not published.');
+		    }
 		});
 	});
 });
-
