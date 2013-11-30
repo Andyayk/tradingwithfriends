@@ -61,6 +61,8 @@
   
   require_once('scripts/cash.php'); //Get cash data from database
   
+  require ('scripts/order.php');
+  
   //Array storing equities names
   $names = array(	
 	'Blumont, A33.SI' => 'Blumont, A33.SI',
@@ -280,10 +282,6 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
-	  <div id="orderprocessing">
-	  <?php 
-	  require 'scripts/order.php';
-	  ?></div>
 	  
 	  <div id="purchasingformButton">Purchasing Form</div>
 	  <div id="showForm">
@@ -370,6 +368,8 @@
       
       <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!!</a>
       <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>  
+      
+      <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
       
       
 <!doctype html>
