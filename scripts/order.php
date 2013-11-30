@@ -46,7 +46,7 @@
 
 	$mysqli->close();
 	
-	foreach($orderArray as $key => $orderKey){ //Get lastest cash
+	foreach($orderArray as $key => $orderKey){ //Get each data in database
 
 		$name = $orderKey['name'];
 		$quantity = $orderKey['quantity'];
@@ -54,7 +54,8 @@
 		$order = $orderKey['order'];
 		$orderPrice = $orderKey['orderprice'];
 
-		if ($order = "Stop Loss" ){
+		if ($order = "Stop Loss" ){ //If it is stop loss
+			
 			//Get price
 	    	require 'scripts/equity_price2.php';
 	  		if ($name=="Blumont, A33.SI"){
@@ -81,10 +82,11 @@
 	  			$currentPrice = "";
 	  		}
 	  	
-	  		if ($currentPrice<=$orderPrice) {
+	  		if ($currentPrice<=$orderPrice) { //If current price is less than or equal to stop loss price
 	  		
 	  			$total = $orderPrice*$quantity;
   				$cash = $cash+$total-40;
+  				
 	  			require_once ('scripts/userdeletedatabase.php'); //Delete from database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				echo "<script language=javascript>alert('Stop Loss Order had been activated!!')</script>";
