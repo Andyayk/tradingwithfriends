@@ -42,7 +42,7 @@ $(document).ready(function(){
 		FB.ui({
 			method: 'feed',
 			link: 'https://developers.facebook.com/docs/dialogs/',
-			caption: 'I have earned $' $cash '!! Can you beat me?',
+			caption: 'I have earned $10000 !! Can you beat me?',
 		}, function(response){
 			if (response && response.post_id){
 				alert('Post was published');
