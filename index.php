@@ -76,7 +76,7 @@
   );
   
   $orders = array(	
-	'Stop Loss Order' => 'Stop Loss Order'
+	'Stop Loss' => 'Stop Loss'
   );
   
   if (!empty($_POST['buySubmit'])){ //User submit buy form

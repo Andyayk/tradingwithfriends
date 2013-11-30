@@ -54,7 +54,7 @@
 		$order = $orderKey['order'];
 		$orderPrice = $orderKey['orderprice'];
 
-		if ($order = "Stop Loss Order" ){
+		if ($order = "Stop Loss" ){
 			//Get price
 	    	require 'scripts/equity_price2.php';
 	  		if ($name=="Blumont, A33.SI"){
