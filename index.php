@@ -61,8 +61,6 @@
   
   require_once('scripts/cash.php'); //Get cash data from database
   
-  require ('scripts/order.php');
-  
   //Array storing equities names
   $names = array(	
 	'Blumont, A33.SI' => 'Blumont, A33.SI',
