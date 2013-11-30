@@ -1,6 +1,7 @@
 <?php 
 	
- 	$url = $_SERVER['HTTP_HOST'];
+ 	$username = "Andy Ang Yong Kiat";
+	$url = $_SERVER['HTTP_HOST'];
 
 	$thisIsLocalHostUrl = (strpos($url, 'localhost') !== false);
 	$thisIsCloudControlUrl = (strpos($url, 'cloudcontrolled') !== false);

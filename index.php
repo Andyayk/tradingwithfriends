@@ -282,7 +282,6 @@
 	  <div id="showEquity"><?php require 'scripts/equity.php';?></div>
 	  <div id="orderprocessing">
 	  <?php 
-	  $username = $user_profile['name'];
 	  require 'scripts/order.php';
 	  ?></div>
 	  
