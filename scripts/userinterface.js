@@ -41,8 +41,8 @@ $(document).ready(function(){
 	$("#postButton").click(function(){
 		FB.ui({
 			method: 'feed',
-			name: 'Check out my awesome trading skills!!'
-			picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logo.jpg'
+			name: 'Check out my awesome trading skills!!',
+			picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logo.jpg',
 			link: 'https://apps.facebook.com/tradingwithfriends',
 			caption: 'I have earned $10000 !! Can you beat me?',
 			description: 'Play Trading with Friends to try out real life trading!!',
