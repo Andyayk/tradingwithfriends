@@ -1,6 +1,7 @@
 <?php 
 	
- 	$username = "Andy Ang Yong Kiat";
+ 	$user_profile = $facebook->api('/me','GET');
+ 	$username = $user_profile['name'];
 	$url = $_SERVER['HTTP_HOST'];
 
 	$thisIsLocalHostUrl = (strpos($url, 'localhost') !== false);
