@@ -41,11 +41,14 @@ $(document).ready(function(){
 	$("#postButton").click(function(){
 		FB.ui({
 			method: 'feed',
-			link: 'https://developers.facebook.com/docs/dialogs/',
+			name: 'Check out my awesome trading skills!!'
+			picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logo.jpg'
+			link: 'https://apps.facebook.com/tradingwithfriends',
 			caption: 'I have earned $10000 !! Can you beat me?',
+			description: 'Play Trading with Friends to try out real life trading!!',
 		}, function(response){
 			if (response && response.post_id){
-				alert('Post was published');
+				alert('Post had been published');
 			} else {
 				alert('Post was not published');
 			}
