@@ -43,12 +43,6 @@ $(document).ready(function(){
 			method: 'feed',
 			link: 'https://developers.facebook.com/docs/dialogs/',
 			caption: 'I have earned $' + $cash + '!! Can you beat me?',
-		}, function(response){
-			if (response && response.post_id){
-				alert('Post was published');
-			} else {
-				alert('Post was not published');
-			}
-		});
+		}, function(response){});
 	});
 });
