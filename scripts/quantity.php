@@ -4,9 +4,9 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT quantity, id FROM `portfolio` WHERE `username` = ? AND `name` = ? AND `price` = ?"); //Select quantity and id from portfolio
+	$stmt = $mysqli->prepare("SELECT quantity, id FROM `portfolio` WHERE `username` = ? AND `name` = ? AND `price` = ? AND `order` = ? AND `orderprice` = ?"); //Select quantity and id from portfolio
 
-	$stmt->bind_param("sss", $username, $name, $price);
+	$stmt->bind_param("sssss", $username, $name, $price, $order, $orderPrice);
 
 	$stmt->execute(); 
 
