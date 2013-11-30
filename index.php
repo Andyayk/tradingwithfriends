@@ -76,7 +76,6 @@
   );
   
   $orders = array(	
-	'Market Order' => 'Market Order',
 	'Stop Loss Order' => 'Stop Loss Order'
   );
   
