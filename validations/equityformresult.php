@@ -61,27 +61,27 @@ if ($userArriveBySubmittingAForm) {
 		//Get price
 	    require 'scripts/equity_price.php';
 	  	if ($_POST['name']=="Blumont, A33.SI"){
-	  	$price = $blumont;
+	  		$price = $blumont;
 	  	} elseif ($_POST['name']=="PFood, P05.SI"){
-	  	$price = $pfood;
+	  		$price = $pfood;
 	  	} elseif ($_POST['name']=="GoldenAgr, E5H.SI"){
-	  	$price = $goldenagr;
+	  		$price = $goldenagr;
 	  	} elseif ($_POST['name']=="$ Viking, 557.SI"){
-	  	$price = $viking;
+	  		$price = $viking;
 	  	} elseif ($_POST['name']=="Noble Grp, N21.SI"){
-	  	$price = $noble;
+	  		$price = $noble;
 	  	} elseif ($_POST['name']=="$ Rex Intl, 5WH.SI"){
-	  	$price = $rex;
+	  		$price = $rex;
 	  	} elseif ($_POST['name']=="Dragon Gp, MT1.SI"){
-	  	$price = $dragon;
+	  		$price = $dragon;
 	  	} elseif ($_POST['name']=="LionGold, A78.SI"){
-	  	$price = $liongold;
+	  		$price = $liongold;
 	  	} elseif ($_POST['name']=="Singtel, Z74.SI"){
-	  	$price = $singtel;
+	  		$price = $singtel;
 	  	} elseif ($_POST['name']=="$ Sky One, 5MM.SI"){
-	  	$price = $skyone;
+	  		$price = $skyone;
 	  	} else{
-	  	$price = "";
+	  		$price = "";
 	  	}
 	}
 }

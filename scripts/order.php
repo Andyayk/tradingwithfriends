@@ -42,6 +42,10 @@
 		);
 	}
 	
+	$stmt->close();
+
+	$mysqli->close();
+	
 	foreach($orderArray as $key => $orderKey){ //Get lastest cash
 
 		$name = $orderKey['name'];
@@ -51,31 +55,31 @@
 		$orderPrice = $orderKey['orderprice'];
 
 		if ($order = "Stop Loss Order" ){
-		//Get price
-	    require 'scripts/equity_price2.php';
-	  	if ($name=="Blumont, A33.SI"){
-	  	$currentPrice = $blumont;
-	  	} elseif ($name=="PFood, P05.SI"){
-	  	$currentPrice = $pfood;
-	  	} elseif ($name=="GoldenAgr, E5H.SI"){
-	  	$currentPrice = $goldenagr;
-	  	} elseif ($name=="$ Viking, 557.SI"){
-	  	$currentPrice = $viking;
-	  	} elseif ($name=="Noble Grp, N21.SI"){
-	  	$currentPrice = $noble;
-	  	} elseif ($name=="$ Rex Intl, 5WH.SI"){
-	  	$currentPrice = $rex;
-	  	} elseif ($name=="Dragon Gp, MT1.SI"){
-	  	$currentPrice = $dragon;
-	  	} elseif ($name=="LionGold, A78.SI"){
-	  	$currentPrice = $liongold;
-	  	} elseif ($name=="Singtel, Z74.SI"){
-	  	$currentPrice = $singtel;
-	  	} elseif ($name=="$ Sky One, 5MM.SI"){
-	  	$currentPrice = $skyone;
-	  	} else{
-	  	$currentPrice = "";
-	  	}
+			//Get price
+	    	require 'scripts/equity_price2.php';
+	  		if ($name=="Blumont, A33.SI"){
+	  			$currentPrice = $blumont;
+	  		} elseif ($name=="PFood, P05.SI"){
+	  			$currentPrice = $pfood;
+	  		} elseif ($name=="GoldenAgr, E5H.SI"){
+	  			$currentPrice = $goldenagr;
+	  		} elseif ($name=="$ Viking, 557.SI"){
+	  			$currentPrice = $viking;
+	  		} elseif ($name=="Noble Grp, N21.SI"){
+	  			$currentPrice = $noble;
+	  		} elseif ($name=="$ Rex Intl, 5WH.SI"){
+	  			$currentPrice = $rex;
+	  		} elseif ($name=="Dragon Gp, MT1.SI"){
+	  			$currentPrice = $dragon;
+	  		} elseif ($name=="LionGold, A78.SI"){
+	  			$currentPrice = $liongold;
+	  		} elseif ($name=="Singtel, Z74.SI"){
+	  			$currentPrice = $singtel;
+	  		} elseif ($name=="$ Sky One, 5MM.SI"){
+	  			$currentPrice = $skyone;
+	  		} else{
+	  			$currentPrice = "";
+	  		}
 	  	
 	  	if ($currentPrice<=$orderPrice) {
 	  		
@@ -87,9 +91,5 @@
 	  	}
 		}
 	}
-
-	$stmt->close();
-
-	$mysqli->close();
 
 ?>
