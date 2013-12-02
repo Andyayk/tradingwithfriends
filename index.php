@@ -279,8 +279,8 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity">
-	  <div style="border:1px solid black;width:1000px;height:500px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  <p style="height:150%;"><?php require 'scripts/equity.php';?>
+	  <div style="border:1px solid black;width:1000px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  <p style="height:100%;"><?php require 'scripts/equity.php';?>
 	  </div>
 	  </p>
 	  </div>
