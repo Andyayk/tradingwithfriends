@@ -343,9 +343,10 @@
 	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
 	  
 	  <div id="historyButton">History of Transactions</div>
-	  <div id="showHistory"><?php require 'scripts/history.php';?>
-	  <div style="border:1px solid black;width:80px;height:100px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  <div id="showHistory">
+	  <div style="border:1px solid black;width:100px;height:100px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  <p style="height:150%;">
+	  <?php require 'scripts/history.php';?>
 	  </div>
 	  </p>
 	  </div>
