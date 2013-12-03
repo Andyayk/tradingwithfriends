@@ -5,7 +5,6 @@
   $quantity = '';
   $price = '';
   $total = '';
-  $sellName = '';
   $sellQuantity = '';
   $username = '';
   $cash = '';
@@ -18,7 +17,6 @@
   
   $nameError = '';
   $quantityError = '';
-  $sellnameError = '';
   $sellquantityError = '';
   $idError = '';
   $orderError = '';
@@ -145,7 +143,33 @@
   		
   		$username = $user_profile['name'];
   		
-  		require_once('scripts/quantityid.php'); //Get quantity & id data from database
+  		require_once('scripts/quantitynameid.php'); //Get quantity, name & id data from database
+  	
+  		//Get price
+	    require 'scripts/equity_price.php';
+	  	if ($name="Blumont, A33.SI"){
+	  		$price = $blumont;
+	  	} elseif ($name="PFood, P05.SI"){
+	  		$price = $pfood;
+	  	} elseif ($name="GoldenAgr, E5H.SI"){
+	  		$price = $goldenagr;
+	  	} elseif ($name="$ Viking, 557.SI"){
+	  		$price = $viking;
+	  	} elseif ($name="Noble Grp, N21.SI"){
+	  		$price = $noble;
+	  	} elseif ($name="$ Rex Intl, 5WH.SI"){
+	  		$price = $rex;
+	  	} elseif ($name="Dragon Gp, MT1.SI"){
+	  		$price = $dragon;
+	  	} elseif ($name="LionGold, A78.SI"){
+	  		$price = $liongold;
+	  	} elseif ($name="Singtel, Z74.SI"){
+	  		$price = $singtel;
+	  	} elseif ($name="$ Sky One, 5MM.SI"){
+	  		$price = $skyone;
+	  	} else{
+	  		$price = "ERROR!!";
+	  	}
   		
   		if ($id = $oldId){ //Correct ID
   			
@@ -203,9 +227,6 @@
 	
 		foreach ($errors as $key=>$errorMessage) {
 	
-			if ($key == 'sellName') {
-				$sellnameError = $errorMessage;
-			}
 			if ($key == 'sellQuantity') {
 				$sellquantityError = $errorMessage;
 			}
@@ -324,18 +345,8 @@
 	  <form name="sellForm" method="post">
 	  <p>
 	  	<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br></br>
-		<b>Equity:</b>
-		
-		<select id=sellName name="sellName" >
-			<option value="">Select Equity</option>
-			<?php foreach($names as $key=>$name) : ?>			
-				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['sellName']) && $_POST['sellName']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
-			<?php endforeach; ?>
-		</select>
-		<font color="red"><?php echo $sellnameError; ?></font><br/>
-	 
+		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font>
 		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br/>
-		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font>	
 	  </p>
 	  
 	  <p>
