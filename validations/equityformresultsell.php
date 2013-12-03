@@ -6,26 +6,28 @@ if ($userArriveBySubmittingAForm) {
 
 	$noid = empty($_POST['id']); //Empty post
 	$idNotNumeric = !is_numeric($_POST['id']); //Post not numeric
-	$idNotInRange = ($_POST['id']<0); //Post not in range
+	$idIsNegative = ($_POST['id']<0); //Post is negative
 	
+	//Error messages
 	if ($noid) {
-		$errors['id'] = "Please enter the ID of the equity you wish to sell"; //If no id
+		$errors['id'] = "Please enter the ID of the equity you wish to sell"; 
 	} elseif ($idNotNumeric) {
-		$errors['id'] = "ID entered is not a number"; //If id not is a number
-	} elseif ($idNotInRange) {
-		$errors['id'] = "ID entered is not in range"; //If id not is in range
+		$errors['id'] = "ID entered is not a number"; 
+	} elseif ($idIsNegative) {
+		$errors['id'] = "ID entered should not be negative";
 	}
 	
 	$noquantity = empty($_POST['sellQuantity']); //Empty post
 	$quantityNotNumeric = !is_numeric($_POST['sellQuantity']); //Post not numeric
-	$quantityNotInRange = ($_POST['sellQuantity']<0); //Post not in range
+	$quantityIsNegative = ($_POST['sellQuantity']<0); //Post is negative
 
+	//Error messages
 	if ($noquantity) {
-		$errors['sellQuantity'] = "Please enter the quantity you wish to sell"; //If no quantity
+		$errors['sellQuantity'] = "Please enter the quantity you wish to sell"; 
 	} elseif ($quantityNotNumeric) {
-		$errors['sellQuantity'] = "Quantity entered is not a number"; //If quantity is not a number
-	} elseif ($quantityNotInRange) {
-		$errors['sellQuantity'] = "Quantity entered is not in range"; //If quantity is not in range
+		$errors['sellQuantity'] = "Quantity entered is not a number";
+	} elseif ($quantityIsNegative) {
+		$errors['sellQuantity'] = "Quantity entered should not be negative"; 
 	}
 	
 	$noErrors = (count($errors) == 0);

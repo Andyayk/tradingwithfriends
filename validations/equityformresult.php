@@ -11,15 +11,15 @@ if ($userArriveBySubmittingAForm) {
 	
 	$noquantity = empty($_POST['quantity']); //Empty post
 	$quantityNotNumeric = !is_numeric($_POST['quantity']); //Post not numeric
-	$quantityNotInRange = ($_POST['quantity']<0); //Post not in range
+	$quantityIsNegative = ($_POST['quantity']<0); //Post is negative
 
 	//Error messages
 	if ($noquantity) {
 		$errors['quantity'] = "Please enter the quantity you wish to purchase";
 	} elseif ($quantityNotNumeric) {
 		$errors['quantity'] = "Quantity entered is not a number";
-	} elseif ($quantityNotInRange) {
-		$errors['quantity'] = "Quantity entered is not in range";
+	} elseif ($quantityIsNegative) {
+		$errors['quantity'] = "Quantity entered should not be negative";
 	}
 	
 	$orderNotSelected = empty($_POST['order']); //Empty post
@@ -55,18 +55,18 @@ if ($userArriveBySubmittingAForm) {
 	
 	$noorderPrice = empty($_POST['orderPrice']); //Empty post
 	$orderpriceNotNumeric = !is_numeric($_POST['orderPrice']); //Post not numeric
-	$orderpriceNotInRange = ($_POST['orderPrice']<0); //Post not in range
+	$orderpriceIsNegative = ($_POST['orderPrice']<0); //Post is negative
 	$orderpriceMoreThanCurrentPrice = ($_POST['orderPrice']>=$price); //Post more than or equal to current price 
 
 	//Error messages
 	if ($noorderPrice) {
-		$errors['orderPrice'] = "Please enter the price you wish to execute the trade";
+		$errors['orderPrice'] = "Please enter the price in which the order would be executed at";
 	} elseif ($orderpriceNotNumeric) {
 		$errors['orderPrice'] = "Price entered is not a number";
-	} elseif ($orderpriceNotInRange) {
-		$errors['orderPrice'] = "Price entered is not in range";
+	} elseif ($orderpriceIsNegative) {
+		$errors['orderPrice'] = "Price entered should not be negative";
 	} elseif ($orderpriceMoreThanCurrentPrice) {
-		$errors['orderPrice'] = "Price entered must be less than current price";
+		$errors['orderPrice'] = "Price entered must be less than the current price";
 	}
 	
 	$noErrors = (count($errors) == 0);
