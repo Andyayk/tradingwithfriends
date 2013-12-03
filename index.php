@@ -295,7 +295,7 @@
       </div>
       
       <span id="date_time"></span>
-	  <script type="text/javascript">window.onload = date_time('date_time');</script>
+	  <script type="text/javascript"><?php echo "Singapore Timing: window.onload = date_time('date_time')";?></script>
 	 
 	  <html lang="en">
   	  <meta charset= "utf-8">
@@ -377,7 +377,7 @@
 </script>
 </head>
 <body>
-<h4 id="CentralTimer">Central Time</h4>
+<h4 id="CentralTimer">US Timing</h4>
 
 </body>
 </html> 
