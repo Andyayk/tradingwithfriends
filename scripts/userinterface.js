@@ -44,7 +44,7 @@ $(document).ready(function(){
 			name: 'Check out my awesome trading skills!!',
 			picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logo.jpg',
 			link: 'https://apps.facebook.com/tradingwithfriends',
-			caption: 'I have earned my first pot of gold!! Can you beat me?',
+			caption: 'I have earned my pot of gold!! Can you beat me?',
 			description: 'Play Trading with Friends to try out real life trading!!',
 		}, function(response){
 			if (response && response.post_id){
