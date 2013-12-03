@@ -295,7 +295,7 @@
       </div>
       
       <span id="date_time"></span>
-	  <script type="text/javascript"><?php echo "Singapore Timing: window.onload = date_time('date_time')";?></script>
+	  <script type="text/javascript">window.onload = date_time('date_time');</script>
 	 
 	  <html lang="en">
   	  <meta charset= "utf-8">
@@ -367,7 +367,7 @@
       Date.ctclock= setInterval(function(){
       var v=who.firstChild.data,
       t=Date.toTZString('', 'C');
-      if(v!=t) who.firstChild.data=t;
+      if(v!=t) who.fihttps://tradingwithfriendss.cloudcontrolled.com/images/logo.jpgrstChild.data=t;
       },1000);
       who.ondblclick=function(){
       clearInterval(Date.ctclock);
