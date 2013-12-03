@@ -91,6 +91,7 @@ body {
   width:45%;
   text-align: center;
   display:inline;
+  float:left;
 }
 
 #showsellForm {
@@ -107,6 +108,7 @@ body {
   width:45%;
   text-align:left;
   display:inline;
+  float:right;
 }
 
 #portfolioButton {
