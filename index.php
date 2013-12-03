@@ -367,7 +367,7 @@
       Date.ctclock= setInterval(function(){
       var v=who.firstChild.data,
       t=Date.toTZString('', 'C');
-      if(v!=t) who.fihttps://tradingwithfriendss.cloudcontrolled.com/images/logo.jpgrstChild.data=t;
+      if(v!=t) who.firstChild.data=t;
       },1000);
       who.ondblclick=function(){
       clearInterval(Date.ctclock);
@@ -393,6 +393,23 @@
 	  <div id="showEquity">
 	  <div style="border:1.5px solid black;width:1000px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  <p style="height:100%;"><?php require 'scripts/equity.php';?>
+	  <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
+	    }, 30000); //refresh every 30000 milliseconds
+      });
+      </script>
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#orderprocessing").load("scripts/order.php");
+	    }, 30000); //refresh every 30000 milliseconds
+      });
+      </script>
 	  </div>
 	  </p>
 	  </div>
