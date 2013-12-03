@@ -144,34 +144,34 @@
   		$username = $user_profile['name'];
   		
   		require_once('scripts/quantitynameid.php'); //Get quantity, name & id data from database
-  	
-  		//Get price
-	    require 'scripts/equity_price.php';
-	  	if ($name="Blumont, A33.SI"){
-	  		$price = $blumont;
-	  	} elseif ($name="PFood, P05.SI"){
-	  		$price = $pfood;
-	  	} elseif ($name="GoldenAgr, E5H.SI"){
-	  		$price = $goldenagr;
-	  	} elseif ($name="$ Viking, 557.SI"){
-	  		$price = $viking;
-	  	} elseif ($name="Noble Grp, N21.SI"){
-	  		$price = $noble;
-	  	} elseif ($name="$ Rex Intl, 5WH.SI"){
-	  		$price = $rex;
-	  	} elseif ($name="Dragon Gp, MT1.SI"){
-	  		$price = $dragon;
-	  	} elseif ($name="LionGold, A78.SI"){
-	  		$price = $liongold;
-	  	} elseif ($name="Singtel, Z74.SI"){
-	  		$price = $singtel;
-	  	} elseif ($name="$ Sky One, 5MM.SI"){
-	  		$price = $skyone;
-	  	} else{
-	  		$price = "ERROR!!";
-	  	}
   		
   		if ($id = $oldId){ //Correct ID
+  		
+  			//Get price
+	    	require 'scripts/equity_price.php';
+	  		if ($name=="Blumont, A33.SI"){
+	  			$price = $blumont;
+	  		} elseif ($name=="PFood, P05.SI"){
+	  			$price = $pfood;
+	  		} elseif ($name=="GoldenAgr, E5H.SI"){
+	  			$price = $goldenagr;
+	  		} elseif ($name=="$ Viking, 557.SI"){
+	  			$price = $viking;
+	  		} elseif ($name=="Noble Grp, N21.SI"){
+	  			$price = $noble;
+	  		} elseif ($name=="$ Rex Intl, 5WH.SI"){
+	  			$price = $rex;
+	  		} elseif ($name=="Dragon Gp, MT1.SI"){
+	  			$price = $dragon;
+	  		} elseif ($name=="LionGold, A78.SI"){
+	  			$price = $liongold;
+	  		} elseif ($name=="Singtel, Z74.SI"){
+	  			$price = $singtel;
+	  		} elseif ($name=="$ Sky One, 5MM.SI"){
+	  			$price = $skyone;
+	  		} else{
+	  			$price = "ERROR!!";
+	  		}
   			
   			if ($oldQuantity>0){ //There is quantity in database
   			
