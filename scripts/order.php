@@ -54,7 +54,7 @@
 		$order = $orderKey['order'];
 		$orderPrice = $orderKey['orderprice'];
 
-		if ($order = "Stop Loss" ){ //If it is stop loss
+		if ($order=="Stop Loss" ){ //If it is stop loss
 			
 			//Get price
 	    	require 'scripts/equity_price2.php';
