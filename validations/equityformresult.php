@@ -53,10 +53,15 @@ if ($userArriveBySubmittingAForm) {
 	  	$price = "ERROR!!";
 	}
 	
+	if ($_POST['order']=="Stop Loss"){
+		$orderpriceMoreThanCurrentPrice = ($_POST['orderPrice']>=$price); //Post more than or equal to current price
+	} elseif ($_POST['order']=="Market"){
+		$orderpriceNotEqualCurrentPrice = ($_POST['orderPrice']!=$price); //Post not equal to current price
+	}
+	
 	$noorderPrice = empty($_POST['orderPrice']); //Empty post
 	$orderpriceNotNumeric = !is_numeric($_POST['orderPrice']); //Post not numeric
 	$orderpriceIsNegative = ($_POST['orderPrice']<0); //Post is negative
-	$orderpriceMoreThanCurrentPrice = ($_POST['orderPrice']>=$price); //Post more than or equal to current price 
 
 	//Error messages
 	if ($noorderPrice) {
@@ -67,6 +72,8 @@ if ($userArriveBySubmittingAForm) {
 		$errors['orderPrice'] = "Price entered should not be negative";
 	} elseif ($orderpriceMoreThanCurrentPrice) {
 		$errors['orderPrice'] = "Price entered must be less than the current price";
+	} elseif ($orderpriceNotEqualCurrentPrice) {
+		$errors['orderPrice'] = "Price entered must be equal to the current price";
 	}
 	
 	$noErrors = (count($errors) == 0);

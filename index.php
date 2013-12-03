@@ -74,7 +74,8 @@
   );
   
   $orders = array(	
-	'Stop Loss' => 'Stop Loss'
+	'Stop Loss' => 'Stop Loss',
+	'Market' => 'Market'
   );
   
   if (!empty($_POST['buySubmit'])){ //User submit buy form
@@ -351,8 +352,8 @@
 	  <form name="sellForm" method="post">
 	  <p>
 	  	<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br></br>
-		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font>
-		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br/>
+		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font><br/>
+		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font>
 	  </p>
 	  
 	  <p>
