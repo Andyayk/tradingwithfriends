@@ -131,7 +131,7 @@
 			if ($key == 'order') {
 				$orderError = $errorMessage;
 			}
-			if ($key == 'orderprice') {
+			if ($key == 'orderPrice') {
 				$orderpriceError = $errorMessage;
 			}
 		}
