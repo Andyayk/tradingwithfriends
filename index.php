@@ -307,7 +307,7 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity">
-	  <div style="border:1.5px solid black;width:1500px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  <div style="border:1.5px solid black;width:1000px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  <p style="height:100%;"><?php require 'scripts/equity.php';?>
 	  </div>
 	  </p>
@@ -363,7 +363,13 @@
 	  </form>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
-	  <div id="showPortfolio"><?php require 'scripts/portfolio.php';?></div>
+	  <div id="showPortfolio">
+	  <div style="border:1px solid black;width:500px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  <p style="height:150%;">
+	  <?php require 'scripts/portfolio.php';?>
+	  </div>
+	  </p>
+	  </div>
 	  
 	  <div id="historyButton">History of Transactions</div>
 	  <div id="showHistory">
