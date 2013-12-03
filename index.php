@@ -128,6 +128,12 @@
 			if ($key == 'quantity') {
 				$quantityError = $errorMessage;
 			}
+			if ($key == 'order') {
+				$orderError = $errorMessage;
+			}
+			if ($key == 'orderprice') {
+				$orderpriceError = $errorMessage;
+			}
 		}
 	
 		$message = '';
