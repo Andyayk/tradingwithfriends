@@ -266,24 +266,6 @@
     
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
-      
-      <script> 
-      $(document).ready(function(){
-        var auto_refresh = setInterval(
-		  function (){
-		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
-	    }, 30000); //refresh every 30000 milliseconds
-      });
-      </script>
-      
-      <script> 
-      $(document).ready(function(){
-        var auto_refresh = setInterval(
-		  function (){
-		  $("#orderprocessing").load("scripts/order.php");
-	    }, 30000); //refresh every 30000 milliseconds
-      });
-      </script>
 
   </head>
   <body>
@@ -391,7 +373,7 @@
       
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity">
-	  <div style="border:1.5px solid black;width:1000px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  <div style="border:1.5px solid black;width:800px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  <p style="height:100%;"><?php require 'scripts/equity.php';?>
 	  <script> 
       $(document).ready(function(){
