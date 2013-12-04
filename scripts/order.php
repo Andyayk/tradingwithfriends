@@ -85,7 +85,7 @@
 	  		if ($currentPrice<=$orderPrice) { //If current price is less than or equal to stop loss price
 	  		
 	  			$total = $orderPrice*$quantity;
-  				$cash = $cash+$total-40;
+  				$cash = $cash-40+$total;
   				
 	  			require_once ('scripts/userdeletedatabase.php'); //Delete from database
   				require_once('scripts/historyinsertdatabase.php'); //Insert into database
