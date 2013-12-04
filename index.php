@@ -370,16 +370,16 @@
     }
 	</script>
 	  
-    <p style="text-align: center;"><?php echo "Welcome " . $username . " to Trading with Friends!";?></p>
-    <p style="text-align: center;"><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></p>
+    <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
+    <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
     <script src="scripts/userinterface.js"></script>
       
-    <p style="text-align: center;"><?php echo $message; ?></p>
+    <p style="text-align: center;"><b><?php echo $message; ?></b></p>
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<div style="border:1.5px solid black;width:1300px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div style="border:1.5px solid black;width:1250px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
       			<?php require 'scripts/equity.php';?>
 	  		</p>
@@ -447,7 +447,7 @@
 	<div id="historyButton">History of Transactions</div>
 	<div id="showHistory">
 	  	<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  		<p style="height:150%;">
+	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
 	 		 </p>
 	  	</div>
