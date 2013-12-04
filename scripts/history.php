@@ -41,21 +41,11 @@
   	?>
 
   	<tr>
-		<td>
-			<b>Equity:</b> <?php echo $name; ?>
-		</td>
-		<td>
-			<b>Quantity:</b> <?php echo $quantity; ?>
-		</td>
-		<td>
-			<b>Price:</b> <?php echo $price; ?>
-		</td>
-		<td>
-			<b>Total:</b> $<?php echo $total; ?>
-		</td>
-		<td>
-			<b>Cash left:</b> $<?php echo $cash; ?>
-		</td>
+		<b>Equity:</b> <?php echo $name; ?>
+		<b>Quantity:</b> <?php echo $quantity; ?>
+		<b>Price:</b> <?php echo $price; ?>
+		<b>Total:</b> $<?php echo $total; ?>
+		<b>Cash left:</b> $<?php echo $cash; ?>
     </tr>
   	<?php endforeach; ?>
 </table>
