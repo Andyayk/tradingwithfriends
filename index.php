@@ -292,9 +292,11 @@
     <div id="topbar">
     <img src="images/logo.jpg"/>
     </div>
+    
     <span id="date_time"></span>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
-      
+    
+    <span id="CentralTimer">US Timing</span>
     <script>
  	Date.short_months= ['Jan', 'Feb', 'Mar', 'Apr', 'May',
     'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -367,19 +369,17 @@
     }
     }
 	</script>
-	
-	<h4 id="CentralTimer">US Timing</h4>
 	  
-    <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
-    <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
+    <p style="text-align: center;"><?php echo "Welcome " . $username . " to Trading with Friends!";?></p>
+    <p style="text-align: center;"><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></p>
       
     <script src="scripts/userinterface.js"></script>
       
-    <?php echo $message; ?>
+    <p style="text-align: center;"><?php echo $message; ?></p>
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<div style="border:1.5px solid black;width:900px;height:400px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div style="border:1.5px solid black;width:1300px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
       			<?php require 'scripts/equity.php';?>
 	  		</p>
@@ -437,8 +437,8 @@
 	  
 	<div id="portfolioButton">My Portfolio</div>
 	<div id="showPortfolio">
-		<div style="border:1px solid black;width:500px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  		<p style="height:150%;">
+		<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
 	  		</p>
 		</div>
@@ -446,7 +446,7 @@
 	  
 	<div id="historyButton">History of Transactions</div>
 	<div id="showHistory">
-	  	<div style="border:1px solid black;width:500px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  	<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:150%;">
 	  			<?php require 'scripts/history.php';?>
 	 		 </p>
