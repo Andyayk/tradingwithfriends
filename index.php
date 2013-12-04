@@ -271,7 +271,7 @@
     $(document).ready(function(){
     	var auto_refresh = setInterval(
 			function (){
-			$("#showEquity").load("scripts/equity.php").fadeIn("slow");
+			$("#showEquity2").load("scripts/equity.php").fadeIn("slow");
 		}, 30000); //refresh every 30000 milliseconds
     });
     </script>
@@ -379,7 +379,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<div style="border:1.5px solid black;width:1250px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div id="showEquity2" style="border:1.5px solid black;width:1270px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
       			<?php require 'scripts/equity.php';?>
 	  		</p>
