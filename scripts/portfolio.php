@@ -31,37 +31,36 @@
 ?>
 
 <table>
-  <?php foreach($portfolioEquities as $key => $portfolioEquity) : ?>
+	<?php foreach($portfolioEquities as $key => $portfolioEquity) : ?>
 
-  <?php 
-  	$id = $portfolioEquity['id'];
-	$name = $portfolioEquity['name'];
-    $quantity = $portfolioEquity['quantity'];
-    $price = $portfolioEquity['price'];
-    $order = $portfolioEquity['order'];
-    $orderPrice = $portfolioEquity['orderprice'];
-  ?>
+    <?php 
+  		$id = $portfolioEquity['id'];
+		$name = $portfolioEquity['name'];
+    	$quantity = $portfolioEquity['quantity'];
+    	$price = $portfolioEquity['price'];
+    	$order = $portfolioEquity['order'];
+    	$orderPrice = $portfolioEquity['orderprice'];
+    ?>
 
-  <tr>
-  	<td>
-		<b>ID:</b> <?php echo $id; ?> </br>
-	</td>
-	<td>
-		<b>Equity:</b> <?php echo $name; ?> </br>
-	</td>
-	<td>
-		<b>Quantity:</b> <?php echo $quantity; ?> </br>
-	</td>
-	<td>
-		<b>Price:</b> <?php echo $price; ?> </br>
-	</td>
-	<td>
-		<b>Order:</b> <?php echo $order; ?> </br>
-	</td>
-	<td>
-		<b>Order price:</b> <?php echo $orderPrice; ?> </br>
-	</td>
-  </tr>
-  <?php endforeach; ?>
-
+	<tr>
+		<td>
+			<b>ID:</b> <?php echo $id; ?>
+		</td>
+		<td>
+			<b>Equity:</b> <?php echo $name; ?>
+		</td>
+		<td>
+			<b>Quantity:</b> <?php echo $quantity; ?>
+		</td>
+		<td>
+			<b>Price:</b> <?php echo $price; ?>
+		</td>
+		<td>
+			<b>Order:</b> <?php echo $order; ?>
+		</td>
+		<td>
+			<b>Order price:</b> <?php echo $orderPrice; ?>
+		</td>
+  	</tr>
+  	<?php endforeach; ?>
 </table>
