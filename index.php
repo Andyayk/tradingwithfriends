@@ -454,7 +454,7 @@
 	</div>
   
 	<div id="recommendButton">Recommend this app to your friends!!</div>
-	<span id="postButton">Post on Facebook!!</span>    
+	<div id="postButton">Post on Facebook!!</div>    
       
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
