@@ -90,6 +90,8 @@ body {
   font-weight: bolder;
   width:45%;
   text-align: center;
+  float: left;
+  margin-right: 5px;
 }
 
 #showsellForm {
@@ -106,6 +108,8 @@ body {
   width:45%;
   text-align:left;
   display:none;
+  float: left;
+  margin-right: 5px;
 }
 
 #portfolioButton {
