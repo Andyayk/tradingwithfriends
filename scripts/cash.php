@@ -19,7 +19,7 @@
 		);
 	}
 
-	foreach($cashArray as $key => $cashKey){ //Get lastest cash
+	foreach($cashArray as $key => $cashKey){ //Get latest cash
 		$cash = $cashKey['cash'];
 	}
 
