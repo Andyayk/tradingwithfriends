@@ -271,7 +271,7 @@
     $(document).ready(function(){
     	var auto_refresh = setInterval(
 			function (){
-			$("#showEquity2").load("scripts/equity.php").fadeIn("slow");
+			$("#scrollEquity").load("scripts/equity.php").fadeIn("slow");
 		}, 30000); //refresh every 30000 milliseconds
     });
     </script>
@@ -379,7 +379,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<div id="showEquity2" style="border:1.5px solid black;width:1270px;height:350px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div id="scrollEquity" style="border:1.5px solid black;width:1265px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
       			<?php require 'scripts/equity.php';?>
 	  		</p>
@@ -454,7 +454,7 @@
 	</div>
   
 	<div id="recommendButton">Recommend this app to your friends!!</div>
-	<div id="postButton">Post on Facebook!!</div>    
+	<span id="postButton">Post on Facebook!!</span>    
       
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
