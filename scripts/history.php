@@ -42,11 +42,10 @@
 
   	<tr>
 		<td>
-			<b>Equity:</b> <?php echo $name; ?>
-			<b>Quantity:</b> <?php echo $quantity; ?>
-			<b>Price:</b> <?php echo $price; ?>
-			<b>Total:</b> $<?php echo $total; ?>
 			<b>Cash:</b> $<?php echo $cash; ?>
+			You transacted <?php echo $quantity; ?> <?php echo $name; ?>
+			equities at <?php echo $price; ?>
+			each for $<?php echo $total; ?>.
 		</td>
     </tr>
   	<?php endforeach; ?>

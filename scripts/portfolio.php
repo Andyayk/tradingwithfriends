@@ -45,9 +45,9 @@
 	<tr>
 		<td>
 			<b>ID:</b> <?php echo $id; ?>
-			<b>,</b> You owned <?php echo $quantity; ?> <?php echo $name; ?>
-			at <?php echo $price; ?>
-			<b>,</b> with a <?php echo $order; ?>
+			, You owned <?php echo $quantity; ?> <?php echo $name; ?>
+			equities at <?php echo $price; ?>
+			each, with a <?php echo $order; ?>
 			order at <?php echo $orderPrice; ?>.
 		</td>
   	</tr>
