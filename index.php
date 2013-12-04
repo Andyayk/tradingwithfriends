@@ -266,7 +266,24 @@
     
       <script type="text/javascript" src="scripts/date_time.js"></script>
       <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
-
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
+	    }, 30000); //refresh every 30000 milliseconds
+      });
+      </script>
+      
+      <script> 
+      $(document).ready(function(){
+        var auto_refresh = setInterval(
+		  function (){
+		  $("#orderprocessing").load("scripts/order.php");
+	    }, 30000); //refresh every 30000 milliseconds
+      });
+      </script>
   </head>
   <body>
       <div id="fb-root"></div>
@@ -278,12 +295,6 @@
       <span id="date_time"></span>
       <script type="text/javascript">window.onload = date_time('date_time');</script>
       
-	  <html lang="en">
-  	  <meta charset= "utf-8">
-	  <title>US Time Zones</title>
-  	  <style>
-      p{max-width:500px;font-size:1.05em}
-      </style>
       <script>
  	  Date.short_months= ['Jan', 'Feb', 'Mar', 'Apr', 'May',
       'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -355,13 +366,7 @@
       who.firstChild.data+=' (Clock Stopped)';
       }
       }
-</script>
-</head>
-<body>
-<h4 id="CentralTimer">US Timing</h4>
-
-</body>
-</html> 
+	  </script>
 	  
       <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
       <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
@@ -374,23 +379,6 @@
 	  <div id="showEquity">
 	  <div style="border:1.5px solid black;width:900px;height:400px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  <p style="height:100%;">
-	  <script> 
-      $(document).ready(function(){
-        var auto_refresh = setInterval(
-		  function (){
-		  $("#showEquity").load("scripts/equity.php").fadeIn("slow");
-	    }, 30000); //refresh every 30000 milliseconds
-      });
-      </script>
-      
-      <script> 
-      $(document).ready(function(){
-        var auto_refresh = setInterval(
-		  function (){
-		  $("#orderprocessing").load("scripts/order.php");
-	    }, 30000); //refresh every 30000 milliseconds
-      });
-      </script>
       <?php require 'scripts/equity.php';?>
 	  </div>
 	  </p>
@@ -440,18 +428,18 @@
 	  </p>
 	  
 	  <p>
-	  <input type="submit" name="sellSubmit" value="Submit" />
+	  	<input type="submit" name="sellSubmit" value="Submit" />
 	  </p>
 	  </div>
 	  </form>
 	  
 	  <div id="portfolioButton">My Portfolio</div>
 	  <div id="showPortfolio">
-	  <div style="border:1px solid black;width:500px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  <p style="height:150%;">
-	  <?php require 'scripts/portfolio.php';?>
-	  </div>
-	  </p>
+	  	<div style="border:1px solid black;width:500px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  		<p style="height:150%;">
+	  			<?php require 'scripts/portfolio.php';?>
+	  		</p>
+	  	</div>
 	  </div>
 	  
 	  <div id="historyButton">History of Transactions</div>
@@ -459,8 +447,8 @@
 	  <div style="border:1px solid black;width:500px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  <p style="height:150%;">
 	  <?php require 'scripts/history.php';?>
-	  </div>
 	  </p>
+	  </div>
 	  </div>
   
 	  <div id="recommendButton">Recommend this app to your friends!!</div>
@@ -469,7 +457,7 @@
       <script>
       var appId = '<?php echo $facebook->getAppID() ?>';
 
-      // Initialize the JS SDK
+      //Initialize the JS SDK
       FB.init({
         appId: appId,
         frictionlessRequests: true,
@@ -485,7 +473,5 @@
       <br /><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!!</a>  
       
       <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
-      
-     
 </body>
 </html>
