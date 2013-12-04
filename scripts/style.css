@@ -90,6 +90,9 @@ body {
   font-weight: bolder;
   width:45%;
   text-align: center;
+  position:relative;
+  top:100px
+  left:750px
 }
 
 #showsellForm {
