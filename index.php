@@ -275,6 +275,8 @@
       <div id="topbar">
       <img src="images/logo.jpg"/>
       </div>
+      <span id="date_time"></span>
+      <script type="text/javascript">window.onload = date_time('date_time');</script>
       
 	  <html lang="en">
   	  <meta charset= "utf-8">
@@ -357,8 +359,6 @@
 </head>
 <body>
 <h4 id="CentralTimer">US Timing</h4>
-<span id="date_time"></span>
-<script type="text/javascript">window.onload = date_time('date_time');</script>
 
 </body>
 </html> 
