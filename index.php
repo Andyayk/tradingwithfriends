@@ -276,9 +276,6 @@
       <img src="images/logo.jpg"/>
       </div>
       
-      <span id="date_time"></span>
-	  <script type="text/javascript">window.onload = date_time('date_time');</script>
-	 
 	  <html lang="en">
   	  <meta charset= "utf-8">
 	  <title>US Time Zones</title>
@@ -360,6 +357,8 @@
 </head>
 <body>
 <h4 id="CentralTimer">US Timing</h4>
+<span id="date_time"></span>
+<script type="text/javascript">window.onload = date_time('date_time');</script>
 
 </body>
 </html> 
@@ -374,7 +373,7 @@
       <div id="equityButton">Equities List</div>
 	  <div id="showEquity">
 	  <div style="border:1.5px solid black;width:900px;height:400px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  <p style="height:100%;"><?php require 'scripts/equity.php';?>
+	  <p style="height:100%;">
 	  <script> 
       $(document).ready(function(){
         var auto_refresh = setInterval(
@@ -392,6 +391,7 @@
 	    }, 30000); //refresh every 30000 milliseconds
       });
       </script>
+      <?php require 'scripts/equity.php';?>
 	  </div>
 	  </p>
 	  </div>
