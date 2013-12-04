@@ -45,11 +45,10 @@
 	<tr>
 		<td>
 			<b>ID:</b> <?php echo $id; ?>
-			<b>Equity:</b> <?php echo $name; ?>
-			<b>Quantity:</b> <?php echo $quantity; ?>
-			<b>Price:</b> <?php echo $price; ?>
-			<b>Order:</b> <?php echo $order; ?>
-			<b>at</b> <?php echo $orderPrice; ?>
+			<b>,</b> You owned <?php echo $quantity; ?> <?php echo $name; ?>
+			at <?php echo $price; ?>
+			<b>,</b> with a <?php echo $order; ?>
+			order at <?php echo $orderPrice; ?>.
 		</td>
   	</tr>
   	<?php endforeach; ?>
