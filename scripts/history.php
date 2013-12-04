@@ -42,19 +42,19 @@
 
   	<tr>
 		<td>
-			<b>Equity:</b> <?php echo $name; ?> </br>
+			<b>Equity:</b> <?php echo $name; ?>
 		</td>
 		<td>
-			<b>Quantity:</b> <?php echo $quantity; ?> </br>
+			<b>Quantity:</b> <?php echo $quantity; ?>
 		</td>
 		<td>
-			<b>Price:</b> <?php echo $price; ?> </br>
+			<b>Price:</b> <?php echo $price; ?>
 		</td>
 		<td>
-			<b>Total:</b> $<?php echo $total; ?> </br>
+			<b>Total:</b> $<?php echo $total; ?>
 		</td>
 		<td>
-			<b>Cash left:</b> $<?php echo $cash; ?> </br>
+			<b>Cash left:</b> $<?php echo $cash; ?>
 		</td>
     </tr>
   	<?php endforeach; ?>
