@@ -45,10 +45,11 @@
 	<tr>
 		<td>
 			<b>ID:</b> <?php echo $id; ?>
-			,<?php echo $quantity; ?> <?php echo $name; ?>
-			equities at <?php echo $price; ?>
-			each, <?php echo $order; ?>
-			order at <?php echo $orderPrice; ?>
+			<b>Equity:</b> <?php echo $name; ?>
+			<b>Quantity</b><?php echo $quantity; ?>
+			<b>Price</b><?php echo $price; ?>
+			(<?php echo $order; ?>
+			order at <?php echo $orderPrice; ?>)
 		</td>
   	</tr>
   	<?php endforeach; ?>
