@@ -2,7 +2,7 @@
 
     //Define variables
     $blumont = '';
-    $pfood = '';
+    $ezra = '';
     $goldenagr = '';
     $viking = '';
     $noble = '';
@@ -32,7 +32,7 @@
      
   		function generate_equity_array($equity) //Create array
   		{	
-  			global $blumont,$pfood,$goldenagr,$viking,$noble,$rex,$dragon,$liongold,$singtel,$skyone,$vallianz,$gentingsp,$capitaland,$siic,$gentinghk,$yangzijiang,$asiasons,$glp,$capmallsasia,$ezionhldg;
+  			global $blumont,$ezra,$goldenagr,$viking,$noble,$rex,$dragon,$liongold,$singtel,$skyone,$vallianz,$gentingsp,$capitaland,$siic,$gentinghk,$yangzijiang,$asiasons,$glp,$capmallsasia,$ezionhldg;
 
 			$row = 1;
 			if (($handle = fopen($equity, "r")) !== FALSE) 
@@ -44,8 +44,8 @@
         			{
         				if ($data[$c]=="A33.SI") { 
 							$blumont = $data[$c+1];
-						} elseif ($data[$c]=="P05.SI") {
-							$pfood = $data[$c+1];
+						} elseif ($data[$c]=="5DN.SI.SI") {
+							$ezra = $data[$c+1];
 						} elseif ($data[$c]=="E5H.SI") {
 							$goldenagr = $data[$c+1];
 						} elseif ($data[$c]=="557.SI") {
@@ -92,6 +92,6 @@
     
     $equities = new yahooEquities();
   
-    $equities->getEquities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+P05.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI+545.SI+G13.SI+C31.SI+5GB.SI+S21.SI+BS6.SI+5ET.SI+MC0.SI+JS8.SI+5ME.SI&f=sl1", "n"); //Get equities last trade
+    $equities->getEquities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+5DN.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI+545.SI+G13.SI+C31.SI+5GB.SI+S21.SI+BS6.SI+5ET.SI+MC0.SI+JS8.SI+5ME.SI&f=sl1", "n"); //Get equities last trade
 
 ?>  

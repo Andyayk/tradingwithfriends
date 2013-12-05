@@ -35,8 +35,8 @@
 		require 'scripts/equity_price.php';
 		if ($_POST['name']=="Blumont, A33.SI"){
 			$price = $blumont;
-		} elseif ($_POST['name']=="PFood, P05.SI"){
-			$price = $pfood;
+		} elseif ($_POST['name']=="Ezra, 5DN.SI"){
+			$price = $ezra;
 		} elseif ($_POST['name']=="GoldenAgr, E5H.SI"){
 			$price = $goldenagr;
 		} elseif ($_POST['name']=="$ Viking, 557.SI"){
