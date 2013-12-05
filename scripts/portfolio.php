@@ -45,7 +45,7 @@
 	<tr>
 		<td>
 			<b>ID:</b> <?php echo $id; ?>
-			<?php echo $quantity; ?> <?php echo $name; ?>
+			,<?php echo $quantity; ?> <?php echo $name; ?>
 			equities at <?php echo $price; ?>
 			each, <?php echo $order; ?>
 			order at <?php echo $orderPrice; ?>
