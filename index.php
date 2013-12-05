@@ -324,7 +324,15 @@
     <img src="images/logo.jpg"/>
     </div>
     
-    <div var imageURL = 'https://graph.facebook.com/' + uid + '/picture?width=256&height=256';</div>
+      <div
+   	  var imageURL = 'https://graph.facebook.com/' + uid + '/picture?width=256&height=256';
+      var profileImage = document.createElement('img');
+      profileImage.setAttribute('src', imageURL);
+      profileImage.id = 'welcome_img';
+      profileImage.setAttribute('height', '148px');
+      profileImage.setAttribute('width', '148px');
+      welcomeMsgContainer.appendChild(profileImage);
+      </div>
     
     <span id="date_time"></span>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
