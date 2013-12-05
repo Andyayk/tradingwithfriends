@@ -60,8 +60,8 @@
 	    	require 'scripts/equity_price2.php';
 	  		if ($name=="Blumont, A33.SI"){
 	  			$currentPrice = $blumont;
-	  		} elseif ($name=="PFood, P05.SI"){
-	  			$currentPrice = $pfood;
+	  		} elseif ($name=="Ezra, 5DN.SI"){
+	  			$currentPrice = $ezra;
 	  		} elseif ($name=="GoldenAgr, E5H.SI"){
 	  			$currentPrice = $goldenagr;
 	  		} elseif ($name=="$ Viking, 557.SI"){
@@ -78,6 +78,26 @@
 	  			$currentPrice = $singtel;
 	  		} elseif ($name=="$ Sky One, 5MM.SI"){
 	  			$currentPrice = $skyone;
+	  		} elseif ($name=="$ Vallianz, 545.SI"){
+	  			$currentPrice = $vallianz;
+	  		} elseif ($name=="Genting SP, G13.SI"){
+	  			$currentPrice = $gentingsp;
+	  		} elseif ($name=="Capitaland, C31.SI"){
+	  			$currentPrice = $capitaland;
+	  		} elseif ($name=="SIIC Env, 5GB.SI"){
+	  			$currentPrice = $siic;
+	  		} elseif ($name=="e Genting HK US$, S21.SI"){
+	  			$currentPrice = $gentinghk;
+	  		} elseif ($name=="Yangzijiang, BS6.SI"){
+	  			$currentPrice = $yangzijiang;
+	  		} elseif ($name=="Asiasons, 5ET.SI"){
+	  			$currentPrice = $asiasons;
+	  		} elseif ($name=="GLP, MC0.SI"){
+	  			$currentPrice = $glp;
+	  		} elseif ($name=="CapMallsAsia, JS8.SI"){
+	  			$currentPrice = $capmallsasia;
+	  		} elseif ($name=="EzionHldg, 5ME.SI"){
+	  			$currentPrice = $ezionhldg;
 	  		} else{
 	  			$currentPrice = "";
 	  		}
