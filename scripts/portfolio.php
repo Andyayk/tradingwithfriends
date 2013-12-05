@@ -48,7 +48,7 @@
 			<?php echo $quantity; ?> <?php echo $name; ?>
 			equities at <?php echo $price; ?>
 			each, <?php echo $order; ?>
-			order at <?php echo $orderPrice; ?>.
+			order at <?php echo $orderPrice; ?>
 		</td>
   	</tr>
   	<?php endforeach; ?>

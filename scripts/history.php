@@ -44,7 +44,7 @@
 		<td>
 			You had transacted <?php echo $quantity; ?> <?php echo $name; ?>
 			equities at <?php echo $price; ?>
-			each for $<?php echo $total; ?>.
+			each for $<?php echo $total; ?>
 			<b>Cash:</b> $<?php echo $cash; ?>
 		</td>
     </tr>

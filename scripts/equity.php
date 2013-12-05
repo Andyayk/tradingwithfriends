@@ -22,7 +22,7 @@
 			echo "}";
 			echo "</style>";
 			echo "<table border=1 cellspacing=1 cellpadding=2>";
-			echo "<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Low</th><th>Day's High</th><th>52wk Low</th><th>52wk High</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>";
+			echo "<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Low</th><th>Day's High</th><th>52wk Low</th><th>52wk High</th><th>52wk Range</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>";
 			
 			$row = 1;
 			if (($handle = fopen($equity, "r")) !== FALSE) 
@@ -81,6 +81,6 @@
   
   $equities = new yahoo_equities();
   
-  $equities->get_equities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+5DN.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI+545.SI+G13.SI+C31.SI+5GB.SI+S21.SI+BS6.SI+5ET.SI+MC0.SI+JS8.SI+5ME.SI&f=nsl1opc6b2b3vghjkd1t1", "n"); //Get equities
+  $equities->get_equities("http://download.finance.yahoo.com/d/quotes.csv?s=A33.SI+5DN.SI+E5H.SI+557.SI+N21.SI+5WH.SI+MT1.SI+A78.SI+Z74.SI+5MM.SI+545.SI+G13.SI+C31.SI+5GB.SI+S21.SI+BS6.SI+5ET.SI+MC0.SI+JS8.SI+5ME.SI&f=nsl1opc6b2b3vghjkwd1t1", "n"); //Get equities
 
 ?>  
