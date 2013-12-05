@@ -306,9 +306,8 @@
     <span id="date_time"></span>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
     <script type="text/javascript" src="scripts/ustime.js"></script>
-    <p>$date = new DateTime('now', new DateTimeZone('America/New_York'));
-       echo $date->format('d-m-Y H:i:s');
-	</p>
+    <?php $date = new DateTime('now', new DateTimeZone('America/New_York'));
+       echo $date->format('d-m-Y H:i:s');?>
 		  
     <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
     <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
