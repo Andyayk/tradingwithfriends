@@ -90,8 +90,6 @@ body {
   font-weight: bolder;
   width:45%;
   text-align: center;
-  display :inline-block;
-  float:right;
 }
 
 #showsellForm {
@@ -107,8 +105,7 @@ body {
   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);  
   width:45%;
   text-align:left;
-  display :inline-block;
-  float:right;
+  display:none;
 }
 
 #portfolioButton {
@@ -123,8 +120,6 @@ body {
   font-weight: bolder;
   width:45%;
   text-align: center;
-  display: inline-block;
-  float:left;
 }
 
 #showPortfolio {
@@ -140,8 +135,7 @@ body {
   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);  
   width:45%;
   text-align:left;
-  display:inline-block;
-  float:left;
+  display:none;
 }
 
 #historyButton {
@@ -158,8 +152,6 @@ body {
   font-weight: bolder;
   width:45%;
   text-align: center;
-  display: inline-block;
-  float:right;
 }
 
 #showHistory {
@@ -175,8 +167,7 @@ body {
   box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);  
   width:45%;
   text-align:left;
-  display:inline-block;
-  float:right;
+  display:none;
 }
 
 #recommendButton {
