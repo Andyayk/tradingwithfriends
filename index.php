@@ -168,8 +168,8 @@
 	    	require 'scripts/equity_price.php';
 	  		if ($name=="Blumont, A33.SI"){
 	  			$price = $blumont;
-	  		} elseif ($name=="PFood, P05.SI"){
-	  			$price = $pfood;
+	  		} elseif ($name=="Ezra, 5DN.SI"){
+	  			$price = $ezra;
 	  		} elseif ($name=="GoldenAgr, E5H.SI"){
 	  			$price = $goldenagr;
 	  		} elseif ($name=="$ Viking, 557.SI"){
@@ -186,9 +186,30 @@
 	  			$price = $singtel;
 	  		} elseif ($name=="$ Sky One, 5MM.SI"){
 	  			$price = $skyone;
+	  		} elseif ($name=="$ Vallianz, 545.SI"){
+	  			$price = $vallianz;
+	  		} elseif ($name=="Genting SP, G13.SI"){
+	  			$price = $gentingsp;
+	  		} elseif ($name=="Capitaland, C31.SI"){
+	  			$price = $capitaland;
+	  		} elseif ($name=="SIIC Env, 5GB.SI"){
+	  			$price = $siic;
+	  		} elseif ($name=="e Genting HK US$, S21.SI"){
+	  			$price = $gentinghk;
+	  		} elseif ($name=="Yangzijiang, BS6.SI"){
+	  			$price = $yangzijiang;
+	  		} elseif ($name=="Asiasons, 5ET.SI"){
+	  			$price = $asiasons;
+	  		} elseif ($name=="GLP, MC0.SI"){
+	  			$price = $glp;
+	  		} elseif ($name=="CapMallsAsia, JS8.SI"){
+	  			$price = $capmallsasia;
+	  		} elseif ($name=="EzionHldg, 5ME.SI"){
+	  			$price = $ezionhldg;
 	  		} else{
 	  			$price = "ERROR!!";
-	  		}
+	  		} 
+	  		
   			
   			if ($oldQuantity>0){ //There is quantity in database
   			
