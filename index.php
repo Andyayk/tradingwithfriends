@@ -379,7 +379,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<div id="scrollEquity" style="border:1.5px solid black;width:1200px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div id="scrollEquity" style="border:1.5px solid black;width:1150px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
       			<?php require 'scripts/equity.php';?>
 	  		</p>
@@ -472,7 +472,7 @@
     </script>
       
     <b><h3>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!</a></h3>
-    <br/><b><h3>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!</a></h3>
+    <br/><b>Interested to Find Out More About Equities?? </b><a href="http://astartalk.forumotion.com/">Visit our Website now!</a>
       
     <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
   </body>
