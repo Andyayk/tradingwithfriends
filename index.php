@@ -305,7 +305,6 @@
     
     <span id="date_time"></span>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
-    <script type="text/javascript" src="scripts/ustime.js"></script><br/>
     <?php $date = new DateTime('now', new DateTimeZone('America/New_York'));
      echo $date->format('d-m-Y H:i:s');?>
 		  
