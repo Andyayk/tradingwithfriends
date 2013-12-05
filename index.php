@@ -431,7 +431,7 @@
     </script>
       
     <b><h3>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!</a></h3>
-    <b>Interested to Find Out More About Equities?? </b><a href="http://astarweb.cloudcontrolled.com/">Visit our Website now!</a>
+    <b>Interested to Find Out More About Equities?? </b><a href="http://astarweb.cloudcontrolled.com/" target="_blank">Visit our Website now!</a>
       
     <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
   </body>
