@@ -53,6 +53,26 @@
 	 	 	$price = $singtel;
 		} elseif ($_POST['name']=="$ Sky One, 5MM.SI"){
 		  	$price = $skyone;
+		} elseif ($_POST['name']=="$ Vallianz, 545.SI"){
+			$price = $vallianz;
+		} elseif ($_POST['name']=="Genting SP, G13.SI"){
+			$price = $gentingsp;
+		} elseif ($_POST['name']=="Capitaland, C31.SI"){
+			$price = $capitaland;
+		} elseif ($_POST['name']=="SIIC Env, 5GB.SI"){
+		  	$price = $siic;
+		} elseif ($_POST['name']=="e Genting HK US$, S21.SI"){
+		  	$price = $gentinghk;
+		} elseif ($_POST['name']=="Yangzijiang, BS6.SI"){
+		  	$price = $yangzijiang;
+		} elseif ($_POST['name']=="Asiasons, 5ET.SI"){
+		  	$price = $asiasons;
+		} elseif ($_POST['name']=="GLP, MC0.SI"){
+	 	 	$price = $glp;
+		} elseif ($_POST['name']=="CapMallsAsia, JS8.SI"){
+		  	$price = $capmallsasia;
+		} elseif ($_POST['name']=="EzionHldg, 5ME.SI"){
+		  	$price = $ezionhldg;
 		} else{
 		  	$price = "ERROR!!";
 		}
