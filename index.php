@@ -62,7 +62,7 @@
   //Array storing equities names
   $names = array(	
 	'Blumont, A33.SI' => 'Blumont, A33.SI',
-	'PFood, P05.SI' => 'PFood, P05.SI',
+	'Ezra, 5DN.SI' => 'Ezra, 5DN.SI',
 	'GoldenAgr, E5H.SI' => 'GoldenAgr, E5H.SI',
 	'$ Viking, 557.SI' => '$ Viking, 557.SI',
 	'Noble Grp, N21.SI' => 'Noble Grp, N21.SI',
