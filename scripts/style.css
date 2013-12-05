@@ -91,6 +91,7 @@ body {
   width:45%;
   text-align: center;
   display :inline;
+  float:right;
 }
 
 #showsellForm {
@@ -107,6 +108,7 @@ body {
   width:45%;
   text-align:left;
   display :inline;
+  float:right;
 }
 
 #portfolioButton {
@@ -122,6 +124,7 @@ body {
   width:45%;
   text-align: center;
   display: inline;
+  float:left;
 }
 
 #showPortfolio {
@@ -138,6 +141,7 @@ body {
   width:45%;
   text-align:left;
   display:inline;
+  float:left;
 }
 
 #historyButton {
@@ -155,6 +159,7 @@ body {
   width:45%;
   text-align: center;
   display: inline;
+  float:right;
 }
 
 #showHistory {
@@ -171,6 +176,7 @@ body {
   width:45%;
   text-align:left;
   display:inline;
+  float:right;
 }
 
 #recommendButton {
