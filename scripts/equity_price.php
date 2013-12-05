@@ -44,7 +44,7 @@
         			{
         				if ($data[$c]=="A33.SI") { 
 							$blumont = $data[$c+1];
-						} elseif ($data[$c]=="5DN.SI.SI") {
+						} elseif ($data[$c]=="5DN.SI") {
 							$ezra = $data[$c+1];
 						} elseif ($data[$c]=="E5H.SI") {
 							$goldenagr = $data[$c+1];
