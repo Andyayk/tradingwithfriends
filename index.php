@@ -324,6 +324,8 @@
     <img src="images/logo.jpg"/>
     </div>
     
+    <div var imageURL = 'https://graph.facebook.com/' + uid + '/picture?width=256&height=256';</div>
+    
     <span id="date_time"></span>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     <?php $date = new DateTime('now', new DateTimeZone('America/New_York'));
