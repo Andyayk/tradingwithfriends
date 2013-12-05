@@ -1,21 +1,3 @@
-if (g_useFacebook) {
-}
-FB.api('/me?fields=first_name', function(response) {
-    var welcomeMsg = document.createElement('div');
-    var welcomeMsgStr = 'Welcome, ' + response.first_name + '!';
-    welcomeMsg.innerHTML = welcomeMsgStr;
-    welcomeMsg.id = 'welcome_msg';
-    welcomeMsgContainer.appendChild(welcomeMsg);
-
-    var imageURL = 'https://graph.facebook.com/' + uid + '/picture?width=256&height=256';
-    var profileImage = document.createElement('img');
-    profileImage.setAttribute('src', imageURL);
-    profileImage.id = 'welcome_img';
-    profileImage.setAttribute('height', '148px');
-    profileImage.setAttribute('width', '148px');
-    welcomeMsgContainer.appendChild(profileImage);
-});
-
 $(document).ready(function(){
 	$("#equityButton").click(function(){
 		$("#showEquity").slideToggle("slow");
