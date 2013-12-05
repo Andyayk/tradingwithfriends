@@ -32,7 +32,7 @@
      
   		function generate_equity_array($equity) //Create array
   		{	
-  			global $blumont,$pfood,$goldenagr,$viking,$noble,$rex, $dragon,$liongold,$singtel,$skyone;
+  			global $blumont,$pfood,$goldenagr,$viking,$noble,$rex,$dragon,$liongold,$singtel,$skyone,$vallianz,$gentingsp,$capitaland,$siic,$gentinghk,$yangzijiang,$asiasons,$glp,$capmallsasia,$ezionhldg;
 
 			$row = 1;
 			if (($handle = fopen($equity, "r")) !== FALSE) 
