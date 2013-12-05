@@ -46,10 +46,10 @@
 		<td>
 			<b>ID:</b> <?php echo $id; ?>
 			<b>Equity:</b> <?php echo $name; ?>
-			<b>Quantity</b><?php echo $quantity; ?>
-			<b>Price</b><?php echo $price; ?>
-			(<?php echo $order; ?>
-			order at <?php echo $orderPrice; ?>)
+			<b>Quantity:</b> <?php echo $quantity; ?>
+			<b>Price:</b> <?php echo $price; ?>
+			[<?php echo $order; ?>
+			order at <?php echo $orderPrice; ?>]
 		</td>
   	</tr>
   	<?php endforeach; ?>
