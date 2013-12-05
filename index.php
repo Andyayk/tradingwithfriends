@@ -70,7 +70,17 @@
 	'Dragon Gp, MT1.SI' => 'Dragon Gp, MT1.SI',
 	'LionGold, A78.SI' => 'LionGold, A78.SI',
 	'Singtel, Z74.SI' => 'Singtel, Z74.SI',
-	'$ Sky One, 5MM.SI' => '$ Sky One, 5MM.SI'	
+	'$ Sky One, 5MM.SI' => '$ Sky One, 5MM.SI',
+  	'$ Vallianz, 545.SI' => '$ Vallianz, 545.SI',
+    'Genting SP, G13.SI' => 'Genting SP, G13.SI',
+    'Capitaland, C31.SI' => 'Capitaland, C31.SI',
+    'SIIC Env, 5GB.SI' => 'SIIC Env, 5GB.SI',
+    'e Genting HK US$, S21.SI' => 'e Genting HK US$, S21.SI',
+    'Yangzijiang, BS6.SI' => 'Yangzijiang, BS6.SI',
+    'Asiasons, 5ET.SI' => 'Asiasons, 5ET.SI',
+    'GLP, MC0.SI' => 'GLP, MC0.SI',
+    'CapMallsAsia, JS8.SI' => 'CapMallsAsia, JS8.SI',
+    'EzionHldg, 5ME.SI' => 'EzionHldg, 5ME.SI'
   );
   
   $orders = array(	
