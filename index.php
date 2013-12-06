@@ -319,15 +319,15 @@
   <body>
 	<div id="fb-root"></div>
     <script src="//connect.facebook.net/en_US/all.js"></script>
-      
+    
     <div id="topbar">
     <img src="images/logo.jpg"/>
     </div>
     
-    <span id="date_time"></span>
-    Singapore Time Now:<script type="text/javascript">window.onload = date_time('date_time');</script></br>
-    <?php $date = new DateTime('now', new DateTimeZone('America/New_York'));
-     echo "US Time Now : " .$date->format('d-m-Y H:i:s');?>
+    <b>Singapore Time Now:<span id="date_time"></span></b>
+    <script type="text/javascript">window.onload = date_time('date_time');</script></br>
+    
+    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time Now : " .$date->format('d-m-Y H:i:s');?></b>
     
     <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends! Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
@@ -343,7 +343,9 @@
 	  		</p>
  		</div>
 	</div>
-	  
+	
+	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
+	
 	<div id="purchasingformButton">Purchasing Form</div>
 	<div id="showForm">
 	<form name="buyForm" method="post">
@@ -431,7 +433,6 @@
       
     <b><h3>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!</a></h3>
     <b>Interested to Find Out More About Equities?? </b><a href="http://astarweb.cloudcontrolled.com/" target="_blank">Visit our Website now!</a>
-      
-    <div id="orderprocessing"><?php require 'scripts/order.php';?></div>
+     
   </body>
 </html>
