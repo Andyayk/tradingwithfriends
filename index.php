@@ -45,7 +45,7 @@
 
   $user = $facebook->getUser(); //Get the current user
   
-  $profile_pic =  "https://graph.facebook.com/[UID]/picture?width=140&height=140";
+  $profile_pic =  "http://graph.facebook.com/".$uid."/picture";
 
   //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
