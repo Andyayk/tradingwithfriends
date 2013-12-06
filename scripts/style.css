@@ -14,6 +14,22 @@ body {
   min-height: 1000px;
 }
 
+#welcome {
+  padding: 15px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 0.6em;
+  border-radius: 10px;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 0 4px #000000, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  font-weight: bolder;
+  width:96%;
+  text-align: center;
+}
+
 #equityButton {
   padding: 15px;
   margin: 10px;
