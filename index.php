@@ -44,6 +44,8 @@
    ));
 
   $user = $facebook->getUser(); //Get the current user
+  
+  $profile_pic =  "http://graph.facebook.com/".$uid."/picture";
 
   //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
@@ -325,10 +327,11 @@
     </div>
     
     <div id="welcome">
-    <b>Local Time: <span id="date_time"></span></b>
+    <?php echo "<img src=\"" . $profile_pic . "\" />";?>
+    <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br></br>
     
-    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y g:i:s a');?></b>
+    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y g:i:s a');?></b></p>
     
     <p style="text-align: center;"><b><?php echo "Hello " . $username . "!! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
     
