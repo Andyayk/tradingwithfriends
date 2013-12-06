@@ -388,7 +388,7 @@
 	</form>
 	</div>
 	 
-	<div id="showsellForm" style="display:inline-block;">
+	<div id="showsellForm" style="display:inline-block; float:right;">
 	<form name="sellForm" method="post">
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -415,7 +415,7 @@
 		</div>
 	</div>
 	 
-	<div id="showHistory" style="display:inline-block; display:none;">
+	<div id="showHistory" style="display:inline-block; float:right; display:none;">
 	  	<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
