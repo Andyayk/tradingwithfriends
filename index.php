@@ -45,7 +45,7 @@
 
   $user = $facebook->getUser(); //Get the current user
   
-  $profile_pic =  "https://graph.facebook.com/user/picture?type=small;
+  $profile_pic =  "http://graph.facebook.com/".$user."/picture";
 
   //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
@@ -327,7 +327,7 @@
     </div>
     
     <div id="welcome">
-    <?php echo "<img src=\"" . $profile_pic . "\" />";?>
+    <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
     <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br></br>
     
