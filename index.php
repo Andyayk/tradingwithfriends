@@ -326,7 +326,7 @@
     
     <div id="welcome">
     <b>Local Time: <span id="date_time"></span></b>
-    <script type="text/javascript">window.onload = date_time('date_time');</script></br>
+    <script type="text/javascript">window.onload = date_time('date_time');</script></br></br>
     
     <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y g:i:s a');?></b>
     
