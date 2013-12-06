@@ -17,7 +17,7 @@ body {
 #welcome {
   padding: 15px;
   margin: 10px;
-  background: #DCDCDC;
+  background: #FFA500;
   color: #000000;
   font-size: 18px;
   font-weight: bolder;
@@ -172,7 +172,7 @@ body {
 
 #showHistory {
   padding: 15px;
-  margin-left: 500px;  
+  margin-left: 800px;  
   background: #FFBD59;
   color: #000000;
   font-size: 10px;
