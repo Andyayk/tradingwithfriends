@@ -333,8 +333,8 @@
     <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y G:i:s');?></b></p>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
-    <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p></br>
-    
+    <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
+
     <p style="text-align: center;"><b><?php echo $message; ?></b></p>
     </div>
       
