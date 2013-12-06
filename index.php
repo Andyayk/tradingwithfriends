@@ -348,7 +348,9 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
-	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> <div id="sellingformButton" style="display:inline-block;">Selling Form</div>
+	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> 
+	<div id="sellingformButton" style="display:inline-block;">Selling Form</div>
+	
 	<div id="showForm" style="display:inline-block;">
 	<form name="buyForm" method="post">
 	<p>
@@ -396,17 +398,18 @@
 	</form>
 	</div>
 	  
-	<div id="portfolioButton">My Portfolio</div>
-	<div id="showPortfolio">
+	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
+	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
+	
+	<div id="showPortfolio" style="display:inline-block;">
 		<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
 	  		</p>
 		</div>
 	</div>
-	  
-	<div id="historyButton">History of Transactions</div>
-	<div id="showHistory">
+	 
+	<div id="showHistory" style="float:right;">
 	  	<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
@@ -414,8 +417,8 @@
 	  	</div>
 	</div>
   
-	<div id="recommendButton">Recommend this app to your friends!!</div>
-	<div id="postButton">Post on Facebook!!</div>    
+	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
+	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>    
       
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
