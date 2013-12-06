@@ -324,12 +324,14 @@
     <img src="images/logo.jpg"/>
     </div>
     
-    <b>Singapore Time Now:<span id="date_time"></span></b>
+    <b>Local Time: <span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     
-    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time Now : " .$date->format('d-m-Y H:i:s');?></b>
+    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('D-M-Y H:i:s');?></b>
     
-    <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends! Currently, you have $" . $cash . " to spend on trading.";?></b></p>
+    <div id="welcome">
+    <p style="text-align: center;"><b><?php echo "Hello " . $username . "!! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
+    </div>
       
     <script src="scripts/userinterface.js"></script>
       
