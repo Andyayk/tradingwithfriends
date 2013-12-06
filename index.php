@@ -382,7 +382,7 @@
 	</form>
 	</div>
 	  
-	<div id="showsellForm" style="display:inline-block;" style="float:right;">
+	<div id="showsellForm" style="float:right;">
 	<form name="sellForm" method="post">
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
