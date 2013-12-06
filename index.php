@@ -303,7 +303,7 @@
     	var auto_refresh = setInterval(
 			function (){
 			$("#scrollEquity").load("scripts/equity.php").fadeIn("slow");
-		}, 30000); //refresh every 30000 milliseconds
+		}, 1000); //refresh every 1000 milliseconds
     });
     </script>
       
@@ -312,7 +312,7 @@
     	var auto_refresh = setInterval(
 			function (){
 			$("#orderprocessing").load("scripts/order.php");
-		}, 30000); //refresh every 30000 milliseconds
+		}, 1000); //refresh every 1000 milliseconds
 	});
 	</script>
   </head>
@@ -324,31 +324,12 @@
     <img src="images/logo.jpg"/>
     </div>
     
-      <div
-   	  FB.api('/me?fields=first_name', function(response) {
-      var welcomeMsg = document.createElement('div');
-      var welcomeMsgStr = 'Welcome, ' + response.first_name + '!';
-      welcomeMsg.innerHTML = welcomeMsgStr;
-      welcomeMsg.id = 'welcome_msg';
-      welcomeMsgContainer.appendChild(welcomeMsg);
-
-      var imageURL = 'https://graph.facebook.com/' + uid + '/picture?width=256&height=256';
-      var profileImage = document.createElement('img');
-      profileImage.setAttribute('src', imageURL);
-      profileImage.id = 'welcome_img';
-      profileImage.setAttribute('height', '148px');
-      profileImage.setAttribute('width', '148px');
-      welcomeMsgContainer.appendChild(profileImage);
-      });
-      </div>
-    
     <span id="date_time"></span>
-    <script type="text/javascript">window.onload = date_time('date_time');</script></br>
+    Singapore Time Now:<script type="text/javascript">window.onload = date_time('date_time');</script></br>
     <?php $date = new DateTime('now', new DateTimeZone('America/New_York'));
-     echo "US timing : " .$date->format('d-m-Y H:i:s');?>
+     echo "US Time Now : " .$date->format('d-m-Y H:i:s');?>
     
-    <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends!";?></b></p>
-    <p style="text-align: center;"><b><?php echo "Currently, you have $" . $cash . " to spend on trading.";?></b></p>
+    <p style="text-align: center;"><b><?php echo "Welcome " . $username . " to Trading with Friends! Currently, you have $" . $cash . " to spend on trading.";?></b></p>
       
     <script src="scripts/userinterface.js"></script>
       
