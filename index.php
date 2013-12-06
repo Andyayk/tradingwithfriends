@@ -348,7 +348,7 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
-	<div id="purchasingformButton">Purchasing Form</div>
+	<div id="purchasingformButton">Purchasing Form</div> <div id="sellingformButton">Selling Form</div>
 	<div id="showForm">
 	<form name="buyForm" method="post">
 	<p>
@@ -382,7 +382,6 @@
 	</form>
 	</div>
 	  
-	<div id="sellingformButton">Selling Form</div>
 	<div id="showsellForm">
 	<form name="sellForm" method="post">
 	<p>
