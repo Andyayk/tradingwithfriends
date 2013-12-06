@@ -352,7 +352,7 @@
 	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> 
 	<div id="sellingformButton" style="display:inline-block;">Selling Form</div>
 	
-	<div id="showForm" style="display:inline-block;" style="display:none;">
+	<div id="showForm" style="display:inline-block; display:none;">
 	<form name="buyForm" method="post">
 	<p>
 		<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -404,7 +404,7 @@
 	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
-	<div id="showPortfolio" style="display:inline-block;" style="display:none;">
+	<div id="showPortfolio" style="display:inline-block; display:none;">
 		<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
