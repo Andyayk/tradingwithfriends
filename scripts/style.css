@@ -31,7 +31,7 @@ body {
 }
 
 #equityButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;
@@ -63,7 +63,7 @@ body {
 }
 
 #purchasingformButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;   
@@ -94,7 +94,7 @@ body {
 }
 
 #sellingformButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;
@@ -126,7 +126,7 @@ body {
 }
 
 #portfolioButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;   
@@ -157,7 +157,7 @@ body {
 }
 
 #historyButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;
@@ -189,7 +189,7 @@ body {
 }
 
 #recommendButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;   
@@ -204,7 +204,7 @@ body {
 }
 
 #postButton {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   background: #FFA500;
   color: #000000;   
