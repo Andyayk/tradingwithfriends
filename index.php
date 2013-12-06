@@ -348,7 +348,7 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
-	<div id="purchasingformButton" style="display:inline;">Purchasing Form</div> <div id="sellingformButton" style="display:inline;">Selling Form</div>
+	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> <div id="sellingformButton" style="display:inline-block;">Selling Form</div>
 	<div id="showForm">
 	<form name="buyForm" method="post">
 	<p>
