@@ -352,7 +352,7 @@
 	<span id="showForm">
 	<form name="buyForm" method="post">
 	<p>
-		<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br>
+		<i>Tip: Check everything before submitting to prevent mistakes</i></br>
 		<b>Equity:</b>
 		<select id=name name="name" >
 			<option value="">Select Equity</option>
@@ -382,10 +382,10 @@
 	</form>
 	</span>
 	  
-	<div id="showsellForm" style="float:left;">
+	<div id="showsellForm" style="float:right;">
 	<form name="sellForm" method="post">
 	<p>
-	  	<div><i>Tip: Check everything before submitting to prevent mistakes</i></div></br></br>
+	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
 		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font><br/>
 		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font>
 	</p>
