@@ -385,7 +385,7 @@
 	</form>
 	</div>
 	 
-	<div id="showsellForm" style="display:inline-block; display:none; float:right;">
+	<div id="showsellForm" style="display:inline-block; display:none;">
 	<form name="sellForm" method="post">
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
