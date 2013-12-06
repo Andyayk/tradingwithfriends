@@ -305,7 +305,7 @@
     	var auto_refresh = setInterval(
 			function (){
 			$("#scrollEquity").load("scripts/equity.php").fadeIn("slow");
-		}, 1000); //refresh every 1000 milliseconds
+		}, 30000); //refresh every 30000 milliseconds
     });
     </script>
       
@@ -314,7 +314,7 @@
     	var auto_refresh = setInterval(
 			function (){
 			$("#orderprocessing").load("scripts/order.php");
-		}, 1000); //refresh every 1000 milliseconds
+		}, 30000); //refresh every 30000 milliseconds
 	});
 	</script>
   </head>
