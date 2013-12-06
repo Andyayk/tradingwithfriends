@@ -45,7 +45,7 @@
 
   $user = $facebook->getUser(); //Get the current user
   
-  $profile_pic =  "http://graph.facebook.com/".$user."/picture?type=normal";
+  $profile_pic =  "http://graph.facebook.com/".$user."/picture?type=small";
 
   //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
@@ -388,7 +388,7 @@
 	</form>
 	</div>
 	 
-	<div id="showsellForm" style="display:inline-block; float:right;">
+	<div id="showsellForm" style="display:inline-block;">
 	<form name="sellForm" method="post">
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
