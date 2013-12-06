@@ -348,6 +348,7 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
+	<div>
 	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> 
 	<div id="sellingformButton" style="display:inline-block;">Selling Form</div>
 	
@@ -383,7 +384,7 @@
 	</p>
 	</form>
 	</div>
-	  
+	 
 	<div id="showsellForm" style="float:right;">
 	<form name="sellForm" method="post">
 	<p>
@@ -397,7 +398,9 @@
 	</p>
 	</form>
 	</div>
-	  
+	</div>
+	
+	<div>
 	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
@@ -416,10 +419,13 @@
 	 		 </p>
 	  	</div>
 	</div>
+    </div>
   
+    <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
-	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>    
-      
+	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
+    </div>
+     
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
 
