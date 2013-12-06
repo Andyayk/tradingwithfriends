@@ -45,7 +45,7 @@
 
   $user = $facebook->getUser(); //Get the current user
   
-  $profile_pic =  "http://graph.facebook.com/".$user."/picture?type=small";
+  $profile_pic =  "http://graph.facebook.com/".$user."/picture?type=square";
 
   //If the user has not installed the app, redirect them to the Login Dialog
   if (!$user) {
@@ -229,7 +229,7 @@
 					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br /><br />' . "\n";
 					$message = $message . "\t\t" . 'You have sold ' . $quantity;
 					$message = $message . "\t\t" . $name . ' shares';
-					$message = $message . "\t\t" . 'at $' . $total . '<br /<br />';
+					$message = $message . "\t\t" . 'at $' . $total . '<br /><br />';
 					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br /><br />';
 					$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
@@ -330,7 +330,7 @@
     <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br></br>
     
-    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y H:i:s');?></b></p>
+    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y G:i:s');?></b></p>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
     <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p></br>
