@@ -348,7 +348,7 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
-	<span id="purchasingformButton">Purchasing Form</span> <span id="sellingformButton">Selling Form</span>
+	<div id="purchasingformButton">Purchasing Form</div> <div id="sellingformButton" style="float:right;">Selling Form</div>
 	<span id="showForm">
 	<form name="buyForm" method="post">
 	<p>
