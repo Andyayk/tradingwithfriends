@@ -246,11 +246,11 @@
   					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   					//Message
-					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";</br></br>
-					$message = $message . "\t\t" . 'You have sold ' . $quantity;</br>
+					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+					$message = $message . "\t\t" . 'You have sold ' . $quantity;
 					$message = $message . "\t\t" . $name . ' shares';
-					$message = $message . "\t\t" . 'at $' . $total . '<br />';</br>
-					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';</br>
+					$message = $message . "\t\t" . 'at $' . $total . '<br />';
+					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 					$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 		
 					echo "<script language=javascript>alert('Transaction successful!!')</script>";
