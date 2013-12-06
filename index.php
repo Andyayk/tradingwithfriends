@@ -404,7 +404,7 @@
 	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
-	<div id="showPortfolio" style="display:inline-block; display:none;">
+	<div id="showPortfolio" style="float:left; display:none;">
 		<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
@@ -412,7 +412,7 @@
 		</div>
 	</div>
 	 
-	<div id="showHistory" style="display:inline-block; display:none;">
+	<div id="showHistory" style="float:right; display:none;">
 	  	<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
