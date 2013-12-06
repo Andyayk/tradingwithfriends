@@ -348,8 +348,8 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
-	<div id="purchasingformButton">Purchasing Form</div> <div id="sellingformButton" style="float:right;">Selling Form</div>
-	<span id="showForm">
+	<div id="purchasingformButton" style="display:inline;">Purchasing Form</div> <div id="sellingformButton" style="display:inline;">Selling Form</div>
+	<div id="showForm">
 	<form name="buyForm" method="post">
 	<p>
 		<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -380,7 +380,7 @@
 		<input type="submit" name="buySubmit" value="Submit" />
 	</p>
 	</form>
-	</span>
+	</div>
 	  
 	<div id="showsellForm" style="float:right;">
 	<form name="sellForm" method="post">
