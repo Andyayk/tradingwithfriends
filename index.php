@@ -323,7 +323,7 @@
     <script src="//connect.facebook.net/en_US/all.js"></script>
     
     <div id="topbar" style="text-align: center;">
-    <p><img src="images/logo.png"/></p>
+    <br /><img src="images/logo.png"/>
     </div>
     
     <div id="welcome">
@@ -397,7 +397,7 @@
 	</p>
 	  
 	<p>
-	  	<input type="submit" name="sellSubmit" value="Submit" id="submit"/>
+	  	<br /><input type="submit" name="sellSubmit" value="Submit" id="submit"/>
 	</p>
 	</form>
 	</div>
