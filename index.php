@@ -401,7 +401,8 @@
 	</form>
 	</div>
 
-	<br>
+	<hr>
+	<br><br>
 
 	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
@@ -422,7 +423,7 @@
 	  	</div>
 	</div>
   
-  	<br>
+  	<br><br>
   
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
