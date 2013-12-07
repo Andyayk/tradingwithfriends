@@ -322,7 +322,7 @@
 	<div id="fb-root"></div>
     <script src="//connect.facebook.net/en_US/all.js"></script>
     
-    <div id="topbar">
+    <div id="topbar" style="text-align: center;">
     <img src="images/logo.png"/>
     </div>
     
@@ -383,7 +383,7 @@
 	</p>
 	  
 	<p>
-		<input type="submit" name="buySubmit" value="Submit" />
+		<input type="submit" name="buySubmit" value="Submit" id="submit"/>
 	</p>
 	</form>
 	</div>
@@ -397,7 +397,7 @@
 	</p>
 	  
 	<p>
-	  	<input type="submit" name="sellSubmit" value="Submit" />
+	  	<input type="submit" name="sellSubmit" value="Submit" id="submit"/>
 	</p>
 	</form>
 	</div>
