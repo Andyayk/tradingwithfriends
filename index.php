@@ -401,11 +401,8 @@
 	</form>
 	</div>
 
-	<hr>
-	<br><br>
-
-	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
-	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
+	<div id="portfolioButton" style="float:left;">My Portfolio </div> 
+	<div id="historyButton" style="float:right;">History of Transactions</div>
 	
 	<div id="showPortfolio" style="float:left; display:none;">
 		<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
@@ -422,8 +419,6 @@
 	 		 </p>
 	  	</div>
 	</div>
-  
-  	<br><br>
   
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
