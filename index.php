@@ -395,9 +395,9 @@
 		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font><br/>
 		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br /><br />
 	</p>
-	  
+	
 	<p>
-	  	<br /><input type="submit" name="sellSubmit" value="Submit" id="submit"/>
+	  	<input type="submit" name="sellSubmit" value="Submit" id="submit"/>
 	</p>
 	</form>
 	</div>
