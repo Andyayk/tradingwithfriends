@@ -351,11 +351,10 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
-	<div>
 	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> 
 	<div id="sellingformButton" style="display:inline-block;">Selling Form</div>
 	
-	<div id="showForm" style="display:inline-block;">
+	<div id="showForm" style="float:left; display:none;">
 	<form name="buyForm" method="post">
 	<p>
 		<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -388,7 +387,7 @@
 	</form>
 	</div>
 	 
-	<div id="showsellForm" style="display:inline-block;">
+	<div id="showsellForm" style="float:right; display:none;">
 	<form name="sellForm" method="post">
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -401,9 +400,7 @@
 	</p>
 	</form>
 	</div>
-	</div>
-	
-	<div>
+
 	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
@@ -422,9 +419,7 @@
 	 		 </p>
 	  	</div>
 	</div>
-    </div>
   
-    <div style="display:block;"></div>
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
      
