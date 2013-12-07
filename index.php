@@ -323,7 +323,7 @@
     <script src="//connect.facebook.net/en_US/all.js"></script>
     
     <div id="topbar" style="text-align: center;">
-    <img src="images/logo.png"/>
+    <p><img src="images/logo.png"/></p>
     </div>
     
     <div id="welcome">
@@ -393,7 +393,7 @@
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
 		<b>ID:</b> <input type="text" name="id" value="<?php if(!empty($_POST['id']))echo $_POST['id']; ?>" /> <font color="red"><?php echo $idError; ?></font><br/>
-		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font>
+		<b>Quantity:</b> <input type="text" name="sellQuantity" value="<?php if(!empty($_POST['sellQuantity']))echo $_POST['sellQuantity']; ?>" /> <font color="red"><?php echo $sellquantityError; ?></font><br /><br />
 	</p>
 	  
 	<p>
