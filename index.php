@@ -323,7 +323,7 @@
     <script src="//connect.facebook.net/en_US/all.js"></script>
     
     <div id="topbar">
-    <img src="images/logo.jpg"/>
+    <img src="images/logo.png"/>
     </div>
     
     <div id="welcome">
@@ -351,10 +351,11 @@
 	
 	<div id="orderprocessing"><?php require 'scripts/order.php';?></div>
 	
+	<div>
 	<div id="purchasingformButton" style="display:inline-block;">Purchasing Form</div> 
 	<div id="sellingformButton" style="display:inline-block;">Selling Form</div>
 	
-	<div id="showForm" style="float:left; display:none;">
+	<div id="showForm" style="display:inline-block;">
 	<form name="buyForm" method="post">
 	<p>
 		<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -387,7 +388,7 @@
 	</form>
 	</div>
 	 
-	<div id="showsellForm" style="float:right; display:none;">
+	<div id="showsellForm" style="display:inline-block;">
 	<form name="sellForm" method="post">
 	<p>
 	  	<i>Tip: Check everything before submitting to prevent mistakes</i></br>
@@ -400,11 +401,13 @@
 	</p>
 	</form>
 	</div>
-
-	<div id="portfolioButton" style="float:left;">My Portfolio </div> 
-	<div id="historyButton" style="float:right;">History of Transactions</div>
+	</div>
 	
-	<div id="showPortfolio" style="float:left; display:none;">
+	<div>
+	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
+	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
+	
+	<div id="showPortfolio" style="display:inline-block;">
 		<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
@@ -412,16 +415,19 @@
 		</div>
 	</div>
 	 
-	<div id="showHistory" style="float:right; display:none;">
+	<div id="showHistory" style="display:inline-block;">
 	  	<div style="border:1px solid black;width:600px;height:200px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
 	 		 </p>
 	  	</div>
 	</div>
+    </div>
   
+    <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
+    </div>
      
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
