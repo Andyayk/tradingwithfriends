@@ -403,7 +403,6 @@
 	</div>
 	</div>
 	
-	<div>
 	<div id="portfolioButton" style="display:inline-block;">My Portfolio </div> 
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
@@ -422,7 +421,6 @@
 	 		 </p>
 	  	</div>
 	</div>
-    </div>
   
     <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
