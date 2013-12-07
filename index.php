@@ -424,10 +424,9 @@
 	</div>
     </div>
   
-    <div style="display:inline-block;">
+    <div style="display:block;"></div>
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
-    </div>
      
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
