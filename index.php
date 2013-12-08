@@ -301,6 +301,9 @@
 	
   	}
   } else { //Welcome user
+  	$message = '';
+	
+	$message = $message . "\t\t" . '<font size="4" color="orange">Welcome to Trading with Friends!!</font><br />' . "\n";
   	echo "<script language=javascript>alert('Welcome to Trading with Friends!!')</script>";
   } 
 ?>
