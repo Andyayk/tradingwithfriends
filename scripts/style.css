@@ -249,18 +249,18 @@ body {
   font-style: italic;
   line-height: 1.3em;
   border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
   text-align: center;
+  vertical-align: top;
 
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+
+
   -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
   -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
   box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-  margin: 100px auto;
-  width: 46%;
-  text-align: center;	
+
   -webkit-transition: all .1s ease;
   -moz-transition: all .1s ease;
   -ms-transition: all .1s ease;
