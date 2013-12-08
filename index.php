@@ -119,7 +119,7 @@
   			}
 
   			//Message
-			$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+			$message = "\t\t" . '<font size="16" color="green">Transaction successful!!</font><br />' . "\n";
 			$message = $message . "\t\t" . 'You have bought ' . $quantity;
 			$message = $message . "\t\t" . $name . ' shares';
 			$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -134,7 +134,18 @@
 	
   	} elseif ($haveErrors && $userArriveBySubmittingAForm) { //If have errors
 	
+  		//Message
+  		$message = '';
+	
+		$message = $message . "\t\t" . '<font size="16" color="red">Transaction fail!!</font><br />' . "\n";
+		$message = $message . "\t\t" . 'Please correct the following error(s) : <br />' . "\n";
+	
+		$message = $message . "\t\t" . '<ol>' . "\n";
+		
 		foreach ($errors as $key=>$errorMessage) {
+		
+			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			
 			if ($key == 'name') {
 				$nameError = $errorMessage;
 			}
@@ -149,7 +160,7 @@
 			}
 		}
 	
-		$message = '';
+		$message = $message . "\t\t" . '</ol>' . "\n";
 		echo "<script language=javascript>alert('Please try again!!')</script>";
 	
   	}
@@ -226,7 +237,7 @@
   					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   					//Message
-					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+					$message = "\t\t" . '<font size="16" color="green">Transaction successful!!</font><br />' . "\n";
 					$message = $message . "\t\t" . 'You have sold ' . $quantity;
 					$message = $message . "\t\t" . $name . ' shares';
 					$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -246,7 +257,7 @@
   					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   					//Message
-					$message = "\t\t" . '<font color="green">Transaction successful!!</font><br />' . "\n";
+					$message = "\t\t" . '<font size="16" color="green">Transaction successful!!</font><br />' . "\n";
 					$message = $message . "\t\t" . 'You have sold ' . $quantity;
 					$message = $message . "\t\t" . $name . ' shares';
 					$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -265,8 +276,18 @@
 	
   	} elseif ($haveErrors && $userArriveBySubmittingAForm) { //If have errors
 	
-		foreach ($errors as $key=>$errorMessage) {
+  		//Message
+  		$message = '';
 	
+		$message = $message . "\t\t" . '<font size="16" color="red">Transaction fail!!</font><br />' . "\n";
+		$message = $message . "\t\t" . 'Please correct the following error(s) : <br />' . "\n";
+	
+		$message = $message . "\t\t" . '<ol>' . "\n";
+		
+		foreach ($errors as $key=>$errorMessage) {
+			
+			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			
 			if ($key == 'sellQuantity') {
 				$sellquantityError = $errorMessage;
 			}
@@ -274,8 +295,8 @@
 				$idError = $errorMessage;
 			}
 		}
-	
-		$message = '';
+		
+		$message = $message . "\t\t" . '</ol>' . "\n";
 		echo "<script language=javascript>alert('Please try again!!')</script>";
 	
   	}
