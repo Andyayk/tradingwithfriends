@@ -425,13 +425,13 @@
     </div>
   
     <div>
-	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
-	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
+	<div id="recommendButton" style="display:inline-block;">Recommend to Friends</div>
+	<div id="postButton" style="display:inline-block;">Post on Facebook</div>     
     </div>
     
     <div>
-	<div id="websiteButton" style="display:inline-block;">Visit our Website!!</div>
-	<div id="forumButton" style="display:inline-block;">Discuss on our Forum!!</div>     
+	<div id="websiteButton" style="display:inline-block;">Visit Astarweb Website</div>
+	<div id="forumButton" style="display:inline-block;">Visit Astartalk Forum</div>     
     </div>
      
     <script>
@@ -448,9 +448,5 @@
       uid = response.authResponse.userID ? response.authResponse.userID : null;
     });
     </script>
-      
-    <b>Any Questions to Ask?? </b><a href="http://astartalk.forumotion.com/" target="_blank">Discuss it on our Forum!</a>
-    <b>Interested to Find Out More About Equities?? </b><a href="http://astarweb.cloudcontrolled.com/" target="_blank">Visit our Website now!</a>
-     
   </body>
 </html>
