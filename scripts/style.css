@@ -1,7 +1,6 @@
 img {
   padding:1px;
-  border:1px solid #021a40;
-  background-color:#ff0;
+  border:1px solid #021a40;;
 }
 
 body {
@@ -30,7 +29,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -64,7 +63,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -97,7 +96,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -130,7 +129,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -163,7 +162,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -196,7 +195,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -213,7 +212,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -230,7 +229,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -247,7 +246,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
