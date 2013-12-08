@@ -144,7 +144,7 @@
 		
 		foreach ($errors as $key=>$errorMessage) {
 		
-			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			$message = $message . "\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
 			
 			if ($key == 'name') {
 				$nameError = $errorMessage;
@@ -286,7 +286,7 @@
 		
 		foreach ($errors as $key=>$errorMessage) {
 			
-			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			$message = $message . "\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
 			
 			if ($key == 'sellQuantity') {
 				$sellquantityError = $errorMessage;
