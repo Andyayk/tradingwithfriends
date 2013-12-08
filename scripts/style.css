@@ -12,7 +12,7 @@ body {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3em;
-  border: 5px dotted solid #fff;
+  border: 2px dashed #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #989898, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 96%;
@@ -80,7 +80,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -111,7 +111,7 @@ body {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
@@ -129,7 +129,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -160,7 +160,7 @@ body {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
@@ -178,7 +178,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -209,7 +209,7 @@ body {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
@@ -227,7 +227,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -258,7 +258,7 @@ body {
   font-size: 12px;
   font-weight: normal;
   line-height: 1.3em;
-  border: 2px dashed #fff;
+  border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
@@ -276,7 +276,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 5px dotted #fff;
+  border: 2px dotted #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -309,7 +309,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 5px dotted #fff;
+  border: 2px dotted #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -342,7 +342,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 5px dotted #fff;
+  border: 2px dotted #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
@@ -375,7 +375,7 @@ body {
   font-weight: bolder;
   font-style: italic;
   line-height: 1.3em;
-  border: 5px dotted #fff;
+  border: 2px dotted #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
   -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
