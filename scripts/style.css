@@ -256,9 +256,9 @@ body {
 }
 
 #forumButton:active {
-  box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   position: relative;
-  top: 10px;
+  top: 6px;
 }
 
 #submit {
