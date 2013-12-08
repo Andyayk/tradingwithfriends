@@ -21,6 +21,7 @@ body {
 }
 
 #equityButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -71,6 +72,7 @@ body {
 }
 
 #purchasingformButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -120,6 +122,7 @@ body {
 }
 
 #sellingformButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -169,6 +172,7 @@ body {
 }
 
 #portfolioButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -218,6 +222,7 @@ body {
 }
 
 #historyButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -267,6 +272,7 @@ body {
 }
 
 #recommendButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -300,6 +306,7 @@ body {
 }
 
 #postButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -333,6 +340,7 @@ body {
 }
 
 #websiteButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
@@ -366,6 +374,7 @@ body {
 }
 
 #forumButton {
+  cursor:pointer;
   position: relative;
   padding: 10px;
   margin: 10px;
