@@ -413,7 +413,7 @@ body {
   font-size:1.1em;
 }
 
-#submit:active, #submit:focus{
+#submit:active {
   background-color :#399630; 
   -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
   -moz-box-shadow: 0 0 1px rgba(0,0,0, .75); 
