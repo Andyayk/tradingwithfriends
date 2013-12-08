@@ -119,7 +119,7 @@
   			}
 
   			//Message
-			$message = "\t\t" . '<font size="10" color="green">Transaction successful!!</font><br />' . "\n";
+			$message = "\t\t" . '<font size="7" color="green">Transaction successful!!</font><br />' . "\n";
 			$message = $message . "\t\t" . 'You have bought ' . $quantity;
 			$message = $message . "\t\t" . $name . ' shares';
 			$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -137,7 +137,7 @@
   		//Message
   		$message = '';
 	
-		$message = $message . "\t\t" . '<font size="10" color="red">Transaction fail!!</font><br />' . "\n";
+		$message = $message . "\t\t" . '<font size="7" color="red">Transaction fail!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'Please correct the following error(s) : <br />' . "\n";
 	
 		$message = $message . "\t\t" . '<ol>' . "\n";
@@ -237,7 +237,7 @@
   					require_once('scripts/historyinsertdatabase.php'); //Insert into database
   				
   					//Message
-					$message = "\t\t" . '<font size="10" color="green">Transaction successful!!</font><br />' . "\n";
+					$message = "\t\t" . '<font size="7" color="green">Transaction successful!!</font><br />' . "\n";
 					$message = $message . "\t\t" . 'You have sold ' . $quantity;
 					$message = $message . "\t\t" . $name . ' shares';
 					$message = $message . "\t\t" . 'at $' . $total . '<br />';
@@ -279,7 +279,7 @@
   		//Message
   		$message = '';
 	
-		$message = $message . "\t\t" . '<font size="10" color="red">Transaction fail!!</font><br />' . "\n";
+		$message = $message . "\t\t" . '<font size="7" color="red">Transaction fail!!</font><br />' . "\n";
 		$message = $message . "\t\t" . 'Make corrections to the following error(s) : <br />' . "\n";
 	
 		$message = $message . "\t\t" . '<ol>' . "\n";
@@ -356,7 +356,7 @@
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
     <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
 
-    <p style="text-align: center;"><b><?php echo $message; ?></b></p>
+    <p align"center"><b><?php echo $message; ?></b></p>
     </div>
       
     <script src="scripts/userinterface.js"></script>
