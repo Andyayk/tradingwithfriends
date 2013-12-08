@@ -327,10 +327,10 @@
     </div>
     
     <div id="welcome">
-    <span style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
+    <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     
-    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y G:i:s');?></b></span>
+    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y G:i:s');?></b></p>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
     <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
