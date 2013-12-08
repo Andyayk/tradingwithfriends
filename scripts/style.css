@@ -239,7 +239,6 @@ body {
 
 #forumButton {
   position: relative;
-
   padding: 10px;
   margin: 10px;
   background: #FFA500;
@@ -254,15 +253,12 @@ body {
   width: 46%;
   text-align: center;
   vertical-align: top;
-
 }
 
 #forumButton:active {
-  -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-  -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-  box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+  box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   position: relative;
-  top: 6px;
+  top: 10px;
 }
 
 #submit {
