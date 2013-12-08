@@ -1,3 +1,9 @@
+img {
+  padding:1px;
+  border:1px solid #021a40;
+  background-color:#ff0;
+}
+
 body {
   margin: 0px; 
   background-image: url("../images/background.jpg");
@@ -24,7 +30,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -58,7 +64,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -91,7 +97,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -124,7 +130,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -157,7 +163,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -190,7 +196,7 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;
@@ -207,7 +213,41 @@ body {
   padding: 10px;
   margin: 10px;
   background: #FFA500;
-  color: #000000;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bolder;
+  font-style: italic;
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  width: 46%;
+  text-align: center;
+  vertical-align: top;
+}
+
+#websiteButton {
+  padding: 10px;
+  margin: 10px;
+  background: #FFA500;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bolder;
+  font-style: italic;
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  width: 46%;
+  text-align: center;
+  vertical-align: top;
+}
+
+#forumButton {
+  padding: 10px;
+  margin: 10px;
+  background: #FFA500;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bolder;
   font-style: italic;

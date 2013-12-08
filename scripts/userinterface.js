@@ -37,6 +37,7 @@ $(document).ready(function(){
 	});
 });
 
+
 $(document).ready(function(){
 	$("#postButton").click(function(){
 		FB.ui({
@@ -55,3 +56,17 @@ $(document).ready(function(){
 		});
 	});
 });
+
+$(document).ready(function(){
+	$("#websiteButton").click(function(){
+		var win=window.open('http://astarweb.cloudcontrolled.com/','_blank');
+		win.focus();
+	});
+})
+
+$(document).ready(function(){
+	$("#forumButton").click(function(){
+		var win=window.open('http://astartalk.forumotion.com/','_blank');
+		win.focus();
+	});
+})

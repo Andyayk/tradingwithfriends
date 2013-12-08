@@ -327,10 +327,10 @@
     </div>
     
     <div id="welcome">
-    <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
+    <span style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     
-    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y G:i:s');?></b></p>
+    <b><?php $date = new DateTime('now', new DateTimeZone('America/New_York')); echo "US Time: " .$date->format('l, F j Y G:i:s');?></b></span>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
     <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
@@ -427,6 +427,11 @@
     <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend this app to your friends!!</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook!!</div>     
+    </div>
+    
+    <div>
+	<div id="websiteButton" style="display:inline-block;">Visit our Website!!</div>
+	<div id="forumButton" style="display:inline-block;">Discuss on our Forum!!</div>     
     </div>
      
     <script>
