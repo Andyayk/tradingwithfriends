@@ -347,7 +347,7 @@
     <script src="//connect.facebook.net/en_US/all.js"></script>
     
     <div id="topbar" style="text-align: center;">
-    <br /><img src="images/logo.png"/>
+    <br /><img src="images/logo.jpg"/>
     </div>
     
     <div id="welcome">
