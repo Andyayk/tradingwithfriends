@@ -43,7 +43,7 @@ $(document).ready(function(){
 		FB.ui({
 			method: 'feed',
 			name: 'Check out my awesome trading skills!!',
-			picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logoimage.png',
+			picture: 'https://github.com/Astarcorp/tradingwithfriends/tree/master/images/logoimage.jpg',
 			link: 'https://apps.facebook.com/tradingwithfriends',
 			caption: 'I have earned my pot of gold!! Can you beat me?',
 			description: 'Play Trading with Friends to try out real life trading!!',
