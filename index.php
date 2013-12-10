@@ -365,7 +365,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<div id="scrollEquity" style="border:1px solid black;width:1265px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div id="scrollEquity" style="border:1px solid black;width:1150px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
       			<?php require 'scripts/equity.php';?>
 	  		</p>
@@ -431,7 +431,7 @@
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
 	<div id="showPortfolio" style="display:inline-block;">
-		<div style="border:1px solid black;width:600px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
 	  		</p>
@@ -439,7 +439,7 @@
 	</div>
 	 
 	<div id="showHistory" style="display:inline-block;">
-	  	<div style="border:1px solid black;width:600px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	  	<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
 	 		 </p>
