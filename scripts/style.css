@@ -65,7 +65,7 @@ body {
   border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-  width: 96%;
+  width: 80%;
   text-align: center;
   display: none;
   vertical-align: top;
@@ -116,7 +116,7 @@ body {
   border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-  width: 46%;
+  width: 42%;
   text-align: left;
   vertical-align: top;
 }
@@ -166,7 +166,7 @@ body {
   border: 2px groove #fff;
   border-radius: 10px;
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-  width: 46%;
+  width: 42%;
   text-align: left;
   vertical-align: top;
 }
