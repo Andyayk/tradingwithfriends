@@ -453,8 +453,8 @@
     </div>
     
     <div>
-	<div id="websiteButton" style="display:inline-block;">Visit Astarweb Website</div>
-	<div id="forumButton" style="display:inline-block;">Visit Astartalk Forum</div>     
+	<div id="websiteButton" style="display:inline-block;">Visit Tradingwithfriends Website</div>
+	<div id="forumButton" style="display:inline-block;">Visit Tradingwithfriends Forum</div>     
     </div>
      
     <script>
