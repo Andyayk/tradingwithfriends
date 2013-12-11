@@ -428,21 +428,15 @@
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
 	<div id="showPortfolio" style="display:inline-block;">
-	<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  <p style="height:100%;">
-	  	<?php require 'scripts/portfolio.php';?>
-	  			</p>
-	  			</div> 
+	<div style="width:550px;height:150px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;scrollbar-base-color:#DEBB07;">
+	  			<?php require 'scripts/portfolio.php';?>  
+	</div> 
 	</div>
 	 
 	<div id="showHistory" style="display:inline-block;">
-	 <div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  <p style="height:100%;">
-		<?php require 'scripts/history.php';?>	
-	 		 </p>
-	 		 </div>
+					<?php require 'scripts/history.php';?>	 
 	</div>
-    </div>
+	</div>
   
     <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend to Friends</div>
