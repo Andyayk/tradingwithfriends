@@ -14,7 +14,7 @@
 		$noquantity = empty($_POST['quantity']); //Empty post
 		$quantityNotNumeric = !is_numeric($_POST['quantity']); //Post not numeric
 		$quantityIsNegative = ($_POST['quantity']<0); //Post is negative
-		$quantityIsDecimal = (($_POST['quantity']%1)!=0); //Post is decimal
+		$quantityIsDecimal = (is_float($_POST['quantity'])==true); //Post is decimal
 
 		//Error messages
 		if ($noquantity) {
