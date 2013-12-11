@@ -366,8 +366,8 @@
 		<table border=1 cellspacing=1 cellpadding=2>
 	 		<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
       	</table>
-		<div id="scrollEquity" style="border:1px solid black;width:1200px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	 		<p style="height:100%;">
+			<div id="scrollEquity" style="border:1px solid black;width:1200px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+	 			<p style="height:100%;">
 				<?php require 'scripts/equity.php';?>
 	  		</p>
  		</div>
@@ -432,7 +432,7 @@
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
 	<div id="showPortfolio" style="display:inline-block;">
-	<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
 	  		</p>
@@ -440,7 +440,7 @@
 	</div>
 	 
 	<div id="showHistory" style="display:inline-block;">
-	<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
+		<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
 	 		 </p>
