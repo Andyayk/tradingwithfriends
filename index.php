@@ -365,6 +365,7 @@
 	<div id="showEquity">
 		<div id="scrollEquity" style="border:1px solid black;width:1200px;height:250px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
 	 		<p style="height:100%;">
+	 		<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
       			<?php require 'scripts/equity.php';?>
 	  		</p>
  		</div>
