@@ -80,6 +80,24 @@ tr.head {
   font-size:80%;
 }
 
+td.even {
+  background-color: #d3d3d3;
+  color: black;
+  font-family:verdana;  
+  margin-top:0px;
+  margin-bottom:4px;
+  font-size:80%;
+}
+
+td.odd {
+  background-color: #d3d3d3;  
+  color: black; 
+  font-family:verdana;
+  margin-top:0px;
+  margin-bottom:4px;
+  font-size:80%;";
+}
+
 #purchasingformButton {
   cursor:pointer;
   position: relative;
