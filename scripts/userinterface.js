@@ -65,7 +65,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#forumButton").click(function(){
-		var win=window.open('http://astartalk.forumotion.com/','_blank');
+		var win=window.open('http://tradingwithfriends.forumotion.com/','_blank');
 		win.focus();
 	});
 })
