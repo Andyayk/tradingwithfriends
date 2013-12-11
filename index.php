@@ -59,6 +59,21 @@
  	 $username = $user_profile['name'];
   }
   
+  {
+  	"data": [
+  	foreach($statuses['data'] as $status){
+  	foreach($status['likes']['data'] as $likesData){
+  		$frid = $likesData['id'];
+  		$friendArray[$frid] = $friendArray[$frid] + 1;
+  	}
+  	foreach($status['comments']['data'] as $comArray){
+  		$frid = $comArray['from']['id'];
+  		$friendArray[$frid] = $friendArray[$frid] + 1;
+  	}
+  }
+  	
+  	
+  	
   require_once('scripts/cash.php'); //Get cash data from database
   
   //Array storing equities names
