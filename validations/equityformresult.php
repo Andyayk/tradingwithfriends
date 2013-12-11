@@ -14,7 +14,6 @@
 		$noquantity = empty($_POST['quantity']); //Empty post
 		$quantityNotNumeric = !is_numeric($_POST['quantity']); //Post not numeric
 		$quantityIsNegative = ($_POST['quantity']<0); //Post is negative
-		$quantityIsDecimal = is_float($_POST['quantity']); //Post is decimal
 
 		//Error messages
 		if ($noquantity) {
@@ -23,8 +22,6 @@
 			$errors['quantity'] = "Quantity entered is not a number";
 		} elseif ($quantityIsNegative) {
 			$errors['quantity'] = "Quantity entered should not be negative";
-		} elseif ($quantityIsDecimal==true) {
-			$errors['quantity'] = "Quantity entered should not be a decimal";
 		}
 	
 		$orderNotSelected = empty($_POST['order']); //Empty post
