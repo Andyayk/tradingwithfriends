@@ -126,6 +126,8 @@
 			$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 			$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
 			
+			echo "<script language=javascript>alert('Transaction successful!!')</script>";
+			
   		} else { //Not enough cash to buy
   			echo "<script language=javascript>alert('You do not have enough cash!! Please try again!!')</script>";
   		}
@@ -240,6 +242,8 @@
 					$message = $message . "\t\t" . 'at $' . $total . '<br />';
 					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 					$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+					
+					echo "<script language=javascript>alert('Transaction successful!!')</script>";
   			
   				} elseif ($newQuantity<0){ //Updated quantity is less than 0
 					echo "<script language=javascript>alert('You do not have enough equities to sell!! Please try again!!')</script>";
@@ -258,6 +262,8 @@
 					$message = $message . "\t\t" . 'at $' . $total . '<br />';
 					$message = $message . "\t\t" . 'A $40 commission fee has also been deducted from your account.<br />';
 					$message = $message . "\t\t" . 'All prices are quoted in SGD dollars. Terms & Conditions may apply.';
+					
+					echo "<script language=javascript>alert('Transaction successful!!')</script>";
 		
   				}
   				
