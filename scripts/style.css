@@ -71,6 +71,15 @@ body {
   vertical-align: top;
 }
 
+tr.head {
+  color:#000000;
+  background-color: #7fffd4;
+  font-family:verdana;
+  margin-top:0px;
+  margin-bottom:8px;
+  font-size:80%;
+}
+
 #purchasingformButton {
   cursor:pointer;
   position: relative;
