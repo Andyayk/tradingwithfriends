@@ -17,9 +17,6 @@
 			echo "td.odd {";
 			echo "	background-color: #d3d3d3; color: black; font-family:verdana;margin-top:0px;margin-bottom:4px;font-size:80%;";
 			echo "}";
-			echo "tr.head {";
-			echo "color:#000000;background-color: #7fffd4;font-family:verdana;margin-top:0px;margin-bottom:8px;font-size:80%;";
-			echo "}";
 			echo "</style>";
 			echo "<table border=1 cellspacing=1 cellpadding=2>";
 			echo "<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>";
