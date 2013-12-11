@@ -428,12 +428,13 @@
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
 	<div id="showPortfolio" style="display:inline-block;">
-	<div style="width:550px;height:150px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;scrollbar-base-color:#DEBB07;">
+	<div style="width:580px;height:150px;line-height:1em;overflow:auto;padding:2px;">
 	  			<?php require 'scripts/portfolio.php';?>  
 	</div> 
 	</div>
 	 
 	<div id="showHistory" style="display:inline-block;">
+	<div style="width:580px;height:150px;line-height:1em;overflow:auto;padding:2px;">
 					<?php require 'scripts/history.php';?>	 
 	</div>
 	</div>
