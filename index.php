@@ -438,6 +438,7 @@
 					<?php require 'scripts/history.php';?>	 
 	</div>
 	</div>
+	</div>
   
     <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend to Friends</div>
