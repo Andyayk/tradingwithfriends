@@ -432,19 +432,13 @@
 	<div id="historyButton" style="display:inline-block;">History of Transactions</div>
 	
 	<div id="showPortfolio" style="display:inline-block;">
-		<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  		<p style="height:100%;">
 	  			<?php require 'scripts/portfolio.php';?>
 	  		</p>
-		</div>
 	</div>
 	 
 	<div id="showHistory" style="display:inline-block;">
-	  	<div style="border:1px solid black;width:580px;height:150px;overflow:scroll;overflow-y:scroll;overflow-x:hidden;">
-	  		<p style="height:100%;">
 	  			<?php require 'scripts/history.php';?>
 	 		 </p>
-	  	</div>
 	</div>
     </div>
   
