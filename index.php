@@ -63,6 +63,8 @@
 
     //Get friends username here
     $friends = $facebook->api('me/friends');
+    
+    $friends_pic =  "http://graph.facebook.com/".$friends."/picture?type=square";
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name'];     
@@ -483,7 +485,6 @@
     <?php
 	$friends = $facebook->api('me/friends');
 	
-	$friends_pic =  "http://graph.facebook.com/".$friends."/picture?type=square";
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name'];     
@@ -493,8 +494,9 @@
 		$scores = '';
 	}
     
+	<?php echo "<img src=\"" . $friends_pic . "\" />";?></br>
+	
     ?>
-    
-    <?php echo "<img src=\"" . $friends_pic . "\" />";?></br>
+       
 </body>
 </html>
