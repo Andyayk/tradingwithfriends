@@ -481,14 +481,18 @@
     </script>
     
     <?php
-    $friends = $facebook->api('me/friends');
-
-    //print_r($friends['data']);
-    print_r("Number of Friends: ". count($friends['data']));
+	$friends = $facebook->api('me/friends');
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
-        echo "<br/>".$key." ".$listOfFriends['name']."<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='50' height='50' title='".$listOfFriends['name']."' />";     
-    }
+    	$friendsusername = $listOfFriends['name'];     
+		require 'scripts/friendscore.php'; //Get score data from database
+		echo $friendsusername;
+		echo $scores;
+		$scores = '';
+		
+		<img src='https://graph.facebook.com/".$friendsusername['id']."/picture' width='50' height='50' title='".$friendsusername['name']."' />";
+	}
+    
     ?>
 </body>
 </html>
