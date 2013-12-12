@@ -66,7 +66,7 @@
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name'];     
-		require_once('scripts/friendscore.php'); //Get score data from database
+		require 'scripts/friendscore.php'; //Get score data from database
 		echo $score;
 	}
 

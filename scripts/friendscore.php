@@ -31,6 +31,8 @@
 
 	if ($isScoreValid){ //Make sure score is valid
 		$score = $score;
+	} else { 
+		$score = 'l';
 	}
 
 ?>
