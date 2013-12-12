@@ -58,27 +58,16 @@
  	 $user_profile = $facebook->api('/me','GET');
  	 $username = $user_profile['name'];
   }  
-/*
 
- * 
-    *Get friends username here* 
-    
-    *Put in ARRAY*
-  	$friendArray = array(); //Fetch and store in array
-	while ($stmt->fetch()) {
-		$friendArray[$id] = array(
-			'username' => $username
-		);
-	}
-  	
-  	*Get score from database*
-    foreach($friendArray as $key => $friendKey){ 
-		$friendusername = $friendKey['username'];
+    //Get friends username here
+    $friends = $facebook->api('me/friends');
+
+    foreach ($friends['data'] as $key=>$listOfFriends) {
+    	$friendusername = $listOfFriends['name'];     
 		require_once('scripts/friendscore.php'); //Get score data from database
 		echo $score;
 	}
-*/
- 
+
   require_once('scripts/cash.php'); //Get cash data from database
   
   //Array storing equities names
@@ -494,10 +483,8 @@
     print_r("Number of Friends: ". count($friends['data']));
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
-        echo "<br/>".$key." ".$listOfFriends['name']."<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='50' height='50' title='".$listOfFriends['name']."' />".$listOfFriends['scores'];     
+        echo "<br/>".$key." ".$listOfFriends['name']."<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='50' height='50' title='".$listOfFriends['name']."' />";     
     }
     ?>
-    
-    
 </body>
 </html>
