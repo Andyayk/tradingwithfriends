@@ -69,6 +69,7 @@
 		require 'scripts/friendscore.php'; //Get score data from database
 		echo $friendsusername;
 		echo $scores;
+		$scores = '';
 	}
 
   require_once('scripts/cash.php'); //Get cash data from database
