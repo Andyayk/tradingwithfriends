@@ -479,19 +479,6 @@
       uid = response.authResponse.userID ? response.authResponse.userID : null;
     });
     </script>
-    
-    <?php
-	$friends = $facebook->api('me/friends');
-	
-
-    foreach ($friends['data'] as $key=>$listOfFriends) {
-    	$friendsusername = $listOfFriends['name'];     
-		require 'scripts/friendscore.php'; //Get score data from database
-		echo $friendsusername . <br />;
-		echo $scores;
-		$scores = '';
-	}
-    ?>
        
 </body>
 </html>
