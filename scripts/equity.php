@@ -11,8 +11,7 @@
   		function generate_equity_array($equity) //Create array
   		{
 			echo "<table border=1 cellspacing=1 cellpadding=2>";
-			echo "<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>";
-			
+						
 			$row = 1;
 			if (($handle = fopen($equity, "r")) !== FALSE) 
 			{
