@@ -479,7 +479,7 @@
     foreach ($friends['data'] as $key=>$listOfFriends) {
   	$friendsusername = $listOfFriends['name'];
   	require 'scripts/friendscore.php'; //Get score data from database
-  	echo $friendsusername .'<br/';
+  	echo $friendsusername .'<br/'>;
   	echo $scores;
   	$scores = '';
     }
