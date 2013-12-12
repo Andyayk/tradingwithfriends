@@ -15,25 +15,25 @@
 	$scoreArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
 		$scoreArray[$id] = array(
-			'scores' => $scores
+			'score' => $scores
 		);
 	}
 
 	foreach($scoreArray as $key => $scoreKey){ //Get latest score
-		$score = $scoreKey['scores'];
+		$scores = $scoreKey['score'];
 	}
 
-	$isScoreValid = !empty($score); //Score is not empty
+	$isScoreValid = !empty($scores); //Score is not empty
 
 	$stmt->close();
 
 	$mysqli->close();
 
 	if ($isScoreValid){ //Make sure score is valid
-		$score = $score;
+		$scores = $scores;
 		$friendsusername = $friendsusername;
 	} else {
-		$score = '';
+		$scores = '';
 		$friendsusername = '';
 	}
 
