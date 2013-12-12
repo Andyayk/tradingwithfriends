@@ -368,7 +368,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<table border=1 cellspacing=3 cellpadding=2>
+		<table border=1 cellspacing=2 cellpadding=2>
 	 		<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
 	 	</table>
       	<div id="scrollEquity" style="width:1190px;height:250px;line-height:1.5em;overflow:auto;padding:2px;">
@@ -476,7 +476,7 @@
     foreach ($friends['data'] as $key=>$listOfFriends) {
   	$friendsusername = $listOfFriends['name'];
   	require 'scripts/friendscore.php'; //Get score data from database
-  	echo $friendsusername;</br></br>
+  	echo $friendsusername;</br>
   	echo $scores;
   	$scores = '';
     }
