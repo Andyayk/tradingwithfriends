@@ -59,12 +59,6 @@
  	 $username = $user_profile['name'];
   }
   
-  $friends = $facebook->api('/me/friends?access_token='.$accessToken.'&fields=id');
-  
-  $friends_ids = implode(',', $friends);
-  
-  $friends_info = $facebook->api('/?access_token='.$accessToken.'&fields=id,name,hometown,location&ids='.$friends_ids);
-  
 /*
     *Get friends username here* 
     
@@ -501,7 +495,6 @@
     foreach ($friends['data'] as $key=>$listOfFriends) {
         echo "<br/>".$key." ".$listOfFriends['name']."<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='50' height='50' title='".$listOfFriends['name']."' />";     
     }
-
-?>
-  </body>
+    ?>
+</body>
 </html>
