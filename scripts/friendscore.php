@@ -4,17 +4,17 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT cash, id FROM `history` WHERE `username` = ?");  //Select cash/score and id from history
+	$stmt = $mysqli->prepare("SELECT cash FROM `history` WHERE `username` = ?");  //Select cash/score from history
 
 	$stmt->bind_param("s", $friendsusername);
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($scores, $id);
+	$stmt->bind_result($scores);
 
 	$scoreArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
-		$scoreArray[$id] = array(
+		$scoreArray[] = array(
 			'score' => $scores
 		);
 	}
