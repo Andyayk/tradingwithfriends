@@ -14,7 +14,7 @@
   $id = '';
   $order = '';
   $orderPrice = '';
-  $friendusername = '';
+  $friendsusername = '';
   $score = '';
   
   $nameError = '';
@@ -65,7 +65,7 @@
     $friends = $facebook->api('me/friends');
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
-    	$friendusername = $listOfFriends['name'];     
+    	$friendsusername = $listOfFriends['name'];     
 		require_once('scripts/friendscore.php'); //Get score data from database
 		echo $score;
 	}
