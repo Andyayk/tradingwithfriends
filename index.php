@@ -493,25 +493,9 @@
     <?php
     $friends = $facebook->api('me/friends');
 
-    //print_r($friends['data']);
-    print_r("Number of Friends: ". count($friends['data']));
-
-    foreach ($friends['data'] as $key=>$listOfFriends) {
-        echo "<br/>".$key." ".$listOfFriends['name']."<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='50' height='50' title='".$listOfFriends['name']."' />";     
-    }
+    echo $friends
     ?>
     
-    $friendArray = array();
-    while ($stmt->fetch()) {
-  	$friendArray[$id] = array(
-  			'username' => $friends
-  			);
-  }
-  
-  foreach($friendArray as $key => $friendKey){
-  	$friends = $friendKey['username'];
-  	require_once('scripts/friendscore.php');
-  	echo $score;
-  }
+    
 </body>
 </html>
