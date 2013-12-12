@@ -68,6 +68,7 @@
     	$friendsusername = $listOfFriends['name'];     
 		require 'scripts/friendscore.php'; //Get score data from database
 		echo $score;
+		$friendsusername = '';
 	}
 
   require_once('scripts/cash.php'); //Get cash data from database
