@@ -15,6 +15,7 @@
   $order = '';
   $orderPrice = '';
   $friendusername = '';
+  $score = '';
   
   $nameError = '';
   $quantityError = '';

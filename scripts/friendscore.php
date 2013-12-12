@@ -32,7 +32,7 @@
 	if ($isScoreValid){ //Make sure score is valid
 		$score = $score;
 	} else { //Else score = 10000
-		$score = 10000;
+		$score = '';
 	}
 
 ?>
