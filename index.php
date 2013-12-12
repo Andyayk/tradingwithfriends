@@ -61,17 +61,6 @@
  	 $username = $user_profile['name'];
   }  
 
-    //Get friends username here
-    $friends = $facebook->api('me/friends');
-    
-    foreach ($friends['data'] as $key=>$listOfFriends) {
-    	$friendsusername = $listOfFriends['name'];     
-		require 'scripts/friendscore.php'; //Get score data from database
-		echo $friendsusername;
-		echo $scores;
-		$scores = '';
-	}
-
   require_once('scripts/cash.php'); //Get cash data from database
   
   //Array storing equities names
@@ -486,7 +475,7 @@
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name'];     
 		require 'scripts/friendscore.php'; //Get score data from database
-		echo $friendsusername;
+		echo $friendsusername. </ br>;
 		echo $scores;
 		$scores = '';
 	?>
