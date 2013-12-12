@@ -474,13 +474,11 @@
     
     <div>
     <div id="portfolioButton" style="display:inline-block;">Friends List </div>
-    <div id="showPortfolio" style="display:inline-block;">
-	<div style="width:150px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
     <?php 
     foreach ($friends['data'] as $key=>$listOfFriends) {
   	$friendsusername = $listOfFriends['name'];
   	require 'scripts/friendscore.php'; //Get score data from database
-  	echo $friendsusername;
+  	echo $friendsusername .'<br/';
   	echo $scores;
   	$scores = '';
     }
