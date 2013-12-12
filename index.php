@@ -479,6 +479,15 @@
       uid = response.authResponse.userID ? response.authResponse.userID : null;
     });
     </script>
+    
+    <?php 
+    foreach ($friends['data'] as $key=>$listOfFriends) {
+    	$friendsusername = $listOfFriends['name'];     
+		require 'scripts/friendscore.php'; //Get score data from database
+		echo $friendsusername;
+		echo $scores;
+		$scores = '';
+	?>
        
 </body>
 </html>
