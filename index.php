@@ -482,16 +482,19 @@
     
     <?php
 	$friends = $facebook->api('me/friends');
+	
+	$friends_pic =  "http://graph.facebook.com/".$friends."/picture?type=square";
 
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name'];     
 		require 'scripts/friendscore.php'; //Get score data from database
-		echo <img src='https://graph.facebook.com/".$friendsusername['id']."/picture' width='50' height='50' title='".$friendsusername['name']."' />";
 		echo $friendsusername . <br />;
 		echo $scores;
 		$scores = '';
 	}
     
     ?>
+    
+    <?php echo "<img src=\"" . $friends_pic . "\" />";?></br>
 </body>
 </html>
