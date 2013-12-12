@@ -15,7 +15,7 @@
   $order = '';
   $orderPrice = '';
   $friendsusername = '';
-  $score = '';
+  $scores = '';
   
   $nameError = '';
   $quantityError = '';
@@ -68,7 +68,7 @@
     	$friendsusername = $listOfFriends['name'];     
 		require 'scripts/friendscore.php'; //Get score data from database
 		echo $friendsusername;
-		echo $score;
+		echo $scores;
 	}
 
   require_once('scripts/cash.php'); //Get cash data from database
