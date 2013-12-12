@@ -481,6 +481,8 @@
     </script>
     
     <?php 
+    $friends = $facebook->api('me/friends');
+    
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name'];     
 		require 'scripts/friendscore.php'; //Get score data from database
