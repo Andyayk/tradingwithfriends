@@ -59,7 +59,24 @@
  	 $username = $user_profile['name'];
   }
   
+  $friends = $facebook->api('me/friends');
+  
+  $friendArray = array();
+  while ($stmt->fetch()) {
+  	$friendArray[$friends] = array(
+  			'username' => $username
+  			);
+  }
+  
+  foreach($friendArray as $key => $friendKey){
+  	$friends = $friendKey['username'];
+  	require_once('scripts/friendscore.php');
+  	echo $score;
+  }
+  
 /*
+
+ * 
     *Get friends username here* 
     
     *Put in ARRAY*
