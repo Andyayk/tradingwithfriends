@@ -4,35 +4,35 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT cash, id FROM `history` WHERE `username` = ?");  //Select cash and id from history
+	$stmt = $mysqli->prepare("SELECT cash, id FROM `history` WHERE `username` = ?");  //Select cash/score and id from history
 
-	$stmt->bind_param("s", $username);
+	$stmt->bind_param("s", $friendsusername);
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($cash, $id);
+	$stmt->bind_result($score, $id);
 
-	$cashArray = array(); //Fetch and store in array
+	$scoreArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
-		$cashArray[$id] = array(
-			'cash' => $cash
+		$scoreArray[$id] = array(
+			'score' => $score
 		);
 	}
 
-	foreach($cashArray as $key => $cashKey){ //Get latest cash
-		$cash = $cashKey['cash'];
+	foreach($scoreArray as $key => $scoreKey){ //Get latest score
+		$score = $scoreKey['score'];
 	}
 
-	$isCashValid = !empty($cash); //Cash is not empty
+	$isScoreValid = !empty($cash); //Score is not empty
 
 	$stmt->close();
 
 	$mysqli->close();
 
-	if ($isCashValid){ //Make sure cash is valid
-		$cash = $cash;
+	if ($isScoreValid){ //Make sure score is valid
+		$score = $score;
 	} else { //Else cash = 10000
-		$cash = 10000;
+		$score = 10000;
 	}
 
 ?>
