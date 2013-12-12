@@ -489,8 +489,6 @@
 		echo $friendsusername;
 		echo $scores;
 		$scores = '';
-		
-		<img src='https://graph.facebook.com/".$friendsusername['id']."/picture' width='50' height='50' title='".$friendsusername['name']."' />";
 	}
     
     ?>
