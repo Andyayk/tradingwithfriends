@@ -10,17 +10,17 @@
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($score, $id);
+	$stmt->bind_result($scores, $id);
 
 	$scoreArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
 		$scoreArray[$id] = array(
-			'score' => $score
+			'scores' => $scores
 		);
 	}
 
 	foreach($scoreArray as $key => $scoreKey){ //Get latest score
-		$score = $scoreKey['score'];
+		$score = $scoreKey['scores'];
 	}
 
 	$isScoreValid = !empty($score); //Score is not empty
