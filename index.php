@@ -57,10 +57,7 @@
   } else { //Get their names
  	 $user_profile = $facebook->api('/me','GET');
  	 $username = $user_profile['name'];
-  }
-  
-  $friends = $facebook->api('me/friends');
-  
+  }  
 /*
 
  * 
@@ -496,7 +493,6 @@
     //print_r($friends['data']);
     print_r("Number of Friends: ". count($friends['data']));
 
-    <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
     foreach ($friends['data'] as $key=>$listOfFriends) {
         echo "<br/>".$key." ".$listOfFriends['name']."<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='50' height='50' title='".$listOfFriends['name']."' />";     
     }
