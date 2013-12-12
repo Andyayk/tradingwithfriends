@@ -481,8 +481,6 @@
   	$scores = '';
     }
     ?>
-    
-    <img src="http://graph.facebook.com/friends/picture?type=small"></img>
    
 </body>
 </html>
