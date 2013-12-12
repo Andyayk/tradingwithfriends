@@ -473,7 +473,8 @@
     </script>
     
     <div>
-    <div id="portfolioButton" style="display:inline-block;">Friends List </div>
+    <div id="portfolioButton" style="display:inline-block;"> Top Friends List </div>
+    <div id="showPortfolio" style="display:inline-block;">
     <?php 
     foreach ($friends['data'] as $key=>$listOfFriends) {
   	$friendsusername = $listOfFriends['name'];
