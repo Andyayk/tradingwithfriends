@@ -58,6 +58,25 @@
  	 $user_profile = $facebook->api('/me','GET');
  	 $username = $user_profile['name'];
   }
+  
+/*
+    *Get friends username here* 
+    
+    *Put in ARRAY*
+  	$friendArray = array(); //Fetch and store in array
+	while ($stmt->fetch()) {
+		$friendArray[$id] = array(
+			'username' => $username
+		);
+	}
+  	
+  	*Get score from database*
+    foreach($friendArray as $key => $friendKey){ 
+		$friendusername = $friendKey['username'];
+		require_once('scripts/friendscore.php'); //Get score data from database
+		echo $score;
+	}
+*/
  
   require_once('scripts/cash.php'); //Get cash data from database
   

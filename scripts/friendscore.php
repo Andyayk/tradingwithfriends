@@ -23,7 +23,7 @@
 		$score = $scoreKey['score'];
 	}
 
-	$isScoreValid = !empty($cash); //Score is not empty
+	$isScoreValid = !empty($score); //Score is not empty
 
 	$stmt->close();
 
@@ -31,7 +31,7 @@
 
 	if ($isScoreValid){ //Make sure score is valid
 		$score = $score;
-	} else { //Else cash = 10000
+	} else { //Else score = 10000
 		$score = 10000;
 	}
 
