@@ -452,17 +452,19 @@
     <div id="scoreButton" style="display:inline-block;">There may be something here</div>
     
     <div id="showScore" style="display:inline-block;">
-    <?php 
-    foreach ($friends['data'] as $key=>$listOfFriends) {
-    	$friendsusername = $listOfFriends['name']; //Get friend name from array
-    	$friendsid = $listOfFriends['id']; //Get friend ID from array
-  		require 'scripts/friendscore.php'; //Get score data from database
-  		if ($friendsusername!='' && $friendsid!='' && $scores!='') {
-  			echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;
-  			$scores = '';
-  		}
-    }
-    ?>
+    <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
+		<?php 
+    	foreach ($friends['data'] as $key=>$listOfFriends) {
+    		$friendsusername = $listOfFriends['name']; //Get friend name from array
+    		$friendsid = $listOfFriends['id']; //Get friend ID from array
+  			require 'scripts/friendscore.php'; //Get score data from database
+  			if ($friendsusername!='' && $friendsid!='' && $scores!='') {
+  				echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;
+  				$scores = '';
+  			}
+    	}
+   		?>
+    </div>
     </div>
     </div>
     
