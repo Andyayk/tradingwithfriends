@@ -435,13 +435,13 @@
 	
 	<div id="showPortfolio" style="display:inline-block;">
 	<div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
-	  			<?php require 'scripts/portfolio.php';?>  
+		<?php require 'scripts/portfolio.php';?>  
 	</div> 
 	</div>
 	 
 	<div id="showHistory" style="display:inline-block;">
 	<div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
-					<?php require 'scripts/history.php';?>	 
+		<?php require 'scripts/history.php';?>	 
 	</div>
 	</div>
 	</div>
@@ -452,8 +452,8 @@
     </div>
     
     <div>
-	<div id="websiteButton" style="display:inline-block;">Visit our Website</div>
-	<div id="forumButton" style="display:inline-block;">Visit our Forum</div>     
+	<div id="websiteButton" style="display:inline-block;">Trading with Friends Website</div>
+	<div id="forumButton" style="display:inline-block;">Trading with Friends Forum</div>     
     </div>
      
     <script>
