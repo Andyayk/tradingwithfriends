@@ -467,8 +467,10 @@
     	$friendsusername = $listOfFriends['name']; //Get friend name from array
     	$friendsid = $listOfFriends['id']; //Get friend ID from array
   		require 'scripts/friendscore.php'; //Get score data from database
-  		echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;
-  		$scores = '';
+  		if ($friendsusername!='' && $friendsid!='' && $scores!='') {
+  			echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;
+  			$scores = '';
+  		}
     }
     ?>
     </div>
