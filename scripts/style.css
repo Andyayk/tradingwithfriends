@@ -145,6 +145,7 @@ td.odd {
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
   text-align: left;
+  display: none;
   vertical-align: top;
 }
 
@@ -295,6 +296,7 @@ td.odd {
   box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   width: 46%;
   text-align: left;
+  display: none;
   vertical-align: top;
 }
 
