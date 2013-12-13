@@ -472,7 +472,7 @@
     </script>
     
     <div>
-    <div id="scoreButton" style="display:inline-block;"> Top Friends List </div>
+    <div id="scoreButton" style="display:inline-block;">Top Friends List</div>
     <div id="showScore" style="display:inline-block;">
     <?php 
     foreach ($friends['data'] as $key=>$listOfFriends) {
