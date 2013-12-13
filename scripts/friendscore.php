@@ -32,9 +32,11 @@
 	if ($isScoreValid){ //Make sure score is valid
 		$scores = $scores;
 		$friendsusername = $friendsusername;
-	} else {
+		$friendsid = $friendsid;
+	} else { //Don't show anything
 		$scores = '';
 		$friendsusername = '';
+		$friendsid = '';
 	}
 
 ?>

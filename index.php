@@ -15,6 +15,7 @@
   $order = '';
   $orderPrice = '';
   $friendsusername = '';
+  $friendsid = '';
   $scores = '';
   
   $nameError = '';
@@ -463,9 +464,10 @@
     <div id="showScore" style="display:inline-block;">
     <?php 
     foreach ($friends['data'] as $key=>$listOfFriends) {
-    	$friendsusername = $listOfFriends['name']; //Get name from array
+    	$friendsusername = $listOfFriends['name']; //Get friend name from array
+    	$friendsid = $listOfFriends['id']; //Get friend ID from array
   		require 'scripts/friendscore.php'; //Get score data from database
-  		echo "<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='25' height='25' title='".$listOfFriends['name']."' />".$friendsusername." ".$scores;
+  		echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;
   		$scores = '';
     }
     ?>
