@@ -450,9 +450,7 @@
     <div>
 	<div id="recommendButton" style="display:inline-block;">Recommend to Friends</div>
 	<div id="postButton" style="display:inline-block;">Post on Facebook</div>     
-    </div>
     
-    <div>
 	<div id="websiteButton" style="display:inline-block;">Trading with Friends Website</div>
 	<div id="forumButton" style="display:inline-block;">Trading with Friends Forum</div>     
     </div>
