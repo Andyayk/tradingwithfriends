@@ -69,3 +69,9 @@ $(document).ready(function(){
 		win.focus();
 	});
 })
+
+$(document).ready(function(){
+	$("#scoreButton").click(function(){
+		$("#showScore").slideToggle("slow");
+	});
+});

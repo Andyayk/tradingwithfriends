@@ -61,8 +61,7 @@
  	 $username = $user_profile['name'];
   }  
   
-  //Get friends username here
-  $friends = $facebook->api('me/friends');
+  $friends = $facebook->api('me/friends'); //Get friends username
 
   require_once('scripts/cash.php'); //Get cash data from database
   
@@ -473,15 +472,15 @@
     </script>
     
     <div>
-    <div id="portfolioButton" style="display:inline-block;"> Top Friends List </div>
-    <div id="showPortfolio" style="display:inline-block;">
+    <div id="scoreButton" style="display:inline-block;"> Top Friends List </div>
+    <div id="showScore" style="display:inline-block;">
     <?php 
     foreach ($friends['data'] as $key=>$listOfFriends) {
-  	$friendsusername = $listOfFriends['name'];
-  	require 'scripts/friendscore.php'; //Get score data from database
-  	echo $friendsusername;
-  	echo $scores;
-  	$scores = '';
+    	$friendsusername = $listOfFriends['name']; //Get name from array
+  		require 'scripts/friendscore.php'; //Get score data from database
+  		echo $friendsusername;
+  		echo $scores;
+  		$scores = '';
     }
     ?>
    </div>

@@ -434,6 +434,56 @@ td.odd {
   top: 6px;
 }
 
+#scoreButton {
+  cursor:pointer;
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  background: #FFA500;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  line-height: 1.3em;
+  border: 2px groove #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);;
+  -moz-box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px #FFA500, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  width: 46%;
+  text-align: center;
+  vertical-align: top;
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+#scoreButton:active {
+  -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+  -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+  box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+  position: relative;
+  top: 6px;
+}
+
+#showScore {
+  padding: 10px;
+  margin: 10px;	
+  background: #FFBD59;
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3em;
+  border: 2px groove #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px #FFBD59, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  width: 46%;
+  text-align: left;
+  vertical-align: top;
+}
+
 #submit {
   cursor:pointer;
   padding:5px 25px; 
