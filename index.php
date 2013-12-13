@@ -483,6 +483,7 @@
   		$scores = '';
     }
     ?>
-   </div>
+    </div>
+    </div>
 </body>
 </html>
