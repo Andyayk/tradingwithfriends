@@ -456,21 +456,6 @@
 	<div id="forumButton" style="display:inline-block;">Trading with Friends Forum</div>     
     </div>
      
-    <script>
-    var appId = '<?php echo $facebook->getAppID() ?>';
-
-    //Initialize the JS SDK
-    FB.init({
-      appId: appId,
-      frictionlessRequests: true,
-      cookie: true,
-    });
-
-    FB.getLoginStatus(function(response) {
-      uid = response.authResponse.userID ? response.authResponse.userID : null;
-    });
-    </script>
-    
     <div>
     <div id="scoreButton" style="display:inline-block;">Top Friends List</div>
     <div id="showScore" style="display:inline-block;">
@@ -485,5 +470,20 @@
     ?>
     </div>
     </div>
+    
+    <script>
+    var appId = '<?php echo $facebook->getAppID() ?>';
+
+    //Initialize the JS SDK
+    FB.init({
+      appId: appId,
+      frictionlessRequests: true,
+      cookie: true,
+    });
+
+    FB.getLoginStatus(function(response) {
+      uid = response.authResponse.userID ? response.authResponse.userID : null;
+    });
+    </script>
 </body>
 </html>
