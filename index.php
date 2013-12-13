@@ -458,13 +458,14 @@
      
     <div>
     <div id="scoreButton" style="display:inline-block;">Top Friends List</div>
+    <div id="scoreButton" style="display:inline-block;">There may be something here</div>
+    
     <div id="showScore" style="display:inline-block;">
     <?php 
     foreach ($friends['data'] as $key=>$listOfFriends) {
     	$friendsusername = $listOfFriends['name']; //Get name from array
   		require 'scripts/friendscore.php'; //Get score data from database
-  		echo $friendsusername;
-  		echo $scores;
+  		echo "<img src='https://graph.facebook.com/".$listOfFriends['id']."/picture' width='25' height='25' title='".$listOfFriends['name']."' />".$friendsusername." ".$scores;
   		$scores = '';
     }
     ?>
