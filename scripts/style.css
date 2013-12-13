@@ -434,7 +434,7 @@ td.odd {
   top: 6px;
 }
 
-#scoreButton {
+#scoreButton{
   cursor:pointer;
   position: relative;
   padding: 10px;
