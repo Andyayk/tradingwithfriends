@@ -12,7 +12,7 @@
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($friendsusername, $scores, $friendsid);
+	$stmt->bind_result($username, $friendsusername, $scores, $friendsid);
 
 	$getScoreArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
