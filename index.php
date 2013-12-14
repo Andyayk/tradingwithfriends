@@ -82,7 +82,7 @@
   		$username = $user_profile['name'];
 		require 'scripts/checkscores.php';
 		
-		if ($Valid==1) {
+		if ($Valid!=2) {
 			echo "hello 1";
 		} else {
 			require 'scripts/friendscoresinsert.php'; //Insert into database
