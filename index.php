@@ -490,7 +490,7 @@
 	</div>
      
     <div>
-    <div id="scoreButton" style="display:inline-block;">Top Friends List</div>
+    <div id="scoreButton" style="display:inline-block;">Hall of Fame</div>
     <div id="scoreButton" style="display:inline-block;">There may be something here</div>
     
     <div id="showScore" style="display:inline-block;">
