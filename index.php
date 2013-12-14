@@ -83,7 +83,7 @@
 		require 'scripts/checkscores.php';
 		
 		if ($Valid!=2) {
-			echo "hello 1";
+			require 'scripts/friendscoresupdate.php';
 		} else {
 			require 'scripts/friendscoresinsert.php'; //Insert into database
 		}
