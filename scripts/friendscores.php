@@ -4,7 +4,7 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT * FROM `friendscores` WHERE `username` = ? ORDER BY DESC");  //Select all from friendscores in descending order
+	$stmt = $mysqli->prepare("SELECT * FROM `friendscores` WHERE `username` = ?");  //Select all from friendscores in descending order
 
 	$stmt->bind_param("s", $username);
 

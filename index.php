@@ -66,7 +66,6 @@
   
   foreach ($friends['data'] as $key=>$listOfFriends) {
   	
-  	$username = $user_profile['name'];
   	$friendsusername = $listOfFriends['name']; //Get friend name from array
     $friendsid = $listOfFriends['id']; //Get friend ID from array
   	
@@ -74,6 +73,7 @@
   	
   	if ($friendsusername!='' && $friendsid!='' && $scores!='') {
   		
+  		$username = $user_profile['name'];
   		require 'scripts/friendscoresinsert.php'; //Insert into database
   		
   		$scores = '';
