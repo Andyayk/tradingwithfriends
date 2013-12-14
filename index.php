@@ -462,7 +462,7 @@
     
     <div id="showScore" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
-		<?php require 'friendscores.php'; ?>
+		<?php require 'scripts/friendscores.php'; ?>
     </div>
     </div>
     </div>
