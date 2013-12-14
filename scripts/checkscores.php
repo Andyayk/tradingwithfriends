@@ -4,7 +4,7 @@
 
 	$mysqli = new mysqli($database_hostname, $database_username, $database_password, $database_name) or exit("Error connecting to database"); //Connect
 
-	$stmt = $mysqli->prepare("SELECT * FROM `friendsusername` WHERE `username` = ? AND `friendsusername` = ? AND `cash` = ? AND `friendsid` = ?"); //Select all from friendscores
+	$stmt = $mysqli->prepare("SELECT * FROM `friendscores` WHERE `username` = ? AND `friendsusername` = ? AND `cash` = ? AND `friendsid` = ?"); //Select all from friendscores
 
 	$stmt->bind_param("ssis", $username, $friendsusername, $scores, $friendsid);
 
