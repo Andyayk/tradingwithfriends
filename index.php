@@ -63,12 +63,19 @@
   }  
   
   $friends = $facebook->api('me/friends'); //Get friends username
+  
   foreach ($friends['data'] as $key=>$listOfFriends) {
+  	
+  	$username = $user_profile['name'];
   	$friendsusername = $listOfFriends['name']; //Get friend name from array
     $friendsid = $listOfFriends['id']; //Get friend ID from array
-  	require 'scripts/friendscore.php'; //Get score data from database
+  	
+    require 'scripts/friendscore.php'; //Get score data from database
+  	
   	if ($friendsusername!='' && $friendsid!='' && $scores!='') {
+  		
   		require 'scripts/friendscoresinsert.php'; //Insert into database
+  		
   		$scores = '';
   	}
   }
