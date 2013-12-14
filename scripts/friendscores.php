@@ -14,7 +14,7 @@
 
 	$getScoreArray = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
-		$getScoreArray[] = array(
+		$getScoreArray[$friendsid] = array(
 			'friendusername' => $friendsusername,
 			'score' => $scores,
 			'friendid' => $friendsid
@@ -34,7 +34,7 @@
   		$friendsusername = $getScoreKey['friendusername'];
 		$scores = $getScoreKey['score'];
     	$friendsid = $getScoreKey['friendid'];
-    	$counter = 1;
+    	$counter = $counter+1;
     ?>
 
 	<tr>
@@ -42,6 +42,5 @@
 			<b><?php echo $counter; ?></b> <?php echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;?>
 		</td>
   	</tr>
-  	<?php $counter = $counter+1; ?>
   	<?php endforeach; ?>
 </table>
