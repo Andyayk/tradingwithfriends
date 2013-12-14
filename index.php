@@ -63,6 +63,15 @@
   }  
   
   $friends = $facebook->api('me/friends'); //Get friends username
+  foreach ($friends['data'] as $key=>$listOfFriends) {
+  	$friendsusername = $listOfFriends['name']; //Get friend name from array
+    $friendsid = $listOfFriends['id']; //Get friend ID from array
+  	require 'scripts/friendscore.php'; //Get score data from database
+  	if ($friendsusername!='' && $friendsid!='' && $scores!='') {
+  		require 'scripts/friendscoresinsert.php'; //Insert into database
+  		$scores = '';
+  	}
+  }
 
   require_once('scripts/cash.php'); //Get cash data from database
   
@@ -454,15 +463,7 @@
     <div id="showScore" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
 		<?php 
-    	foreach ($friends['data'] as $key=>$listOfFriends) {
-    		$friendsusername = $listOfFriends['name']; //Get friend name from array
-    		$friendsid = $listOfFriends['id']; //Get friend ID from array
-  			require 'scripts/friendscore.php'; //Get score data from database
-  			if ($friendsusername!='' && $friendsid!='' && $scores!='') {
-  				echo "<img src='https://graph.facebook.com/".$friendsid."/picture' width='25' height='25' title='".$friendsusername."' />".$friendsusername." ".$scores;
-  				$scores = '';
-  			}
-    	}
+    	
    		?>
     </div>
     </div>
