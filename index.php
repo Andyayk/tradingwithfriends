@@ -82,6 +82,7 @@
   		$username = $user_profile['name'];
 
   		require 'scripts/friendscoresinsert.php'; //Insert into database
+  		$scores = '';
 
   	}
   }
