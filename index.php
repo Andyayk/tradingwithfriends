@@ -81,12 +81,9 @@
   		
   		$username = $user_profile['name'];
   		require 'scripts/checkscores.php'; //Check database
-  		
-  		if ($Valid==0) {
-  			require 'scripts/friendscoresinsert.php'; //Insert into database
-  		} else {
-  			require 'scripts/friendscoresupdate.php'; //Update into database
-  		}
+
+  		require 'scripts/friendscoresinsert.php'; //Insert into database
+
   	}
   }
 
