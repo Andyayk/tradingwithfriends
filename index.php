@@ -96,14 +96,9 @@
   $friendsusername = $user_profile['name']; //Input user name into database
   $friendsid = $user_profile['id']; //Input user ID into database
   $scores = $cash; //Get user score
-  
-  require 'scripts/checkscores.php'; //Check database
-  		
-  if ($Valid==0) {
-  	require 'scripts/friendscoresinsert.php'; //Insert into database
-  } else {
-  	require 'scripts/friendscoresupdate.php'; //Update into database
-  }
+
+  require 'scripts/friendscoresinsert.php'; //Insert into database
+
   
   //Array storing equities names
   $names = array(	
