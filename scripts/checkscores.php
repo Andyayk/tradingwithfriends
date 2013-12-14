@@ -10,45 +10,46 @@
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($oldUsername, $oldFriends, $oldScores, $oldFriendsId);
+	$stmt->bind_result($username, $friendsusername, $scores, $friendsid);
 	
 	$checkFriendscores = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
 		$checkFriendscores[$oldFriendsId] = array(
-			'username' => $oldUsername,
-			'friends' => $oldFriends,
-			'score' => $oldScores,
-			'friendsid' => $oldFriendsId
+			'username' => $username,
+			'friendsusername' => $friendsusername,
+			'scores' => $scores,
+			'friendsid' => $friendsid
 		);
 	}
 
 	foreach($checkFriendscores as $key => $checkFriendKeys){ //Get latest information
-		$oldUsername = $checkFriendKeys['username'];
-		$oldFriends = $checkFriendKeys['friends'];
-		$oldScores = $checkFriendKeys['score'];
-		$oldFriendsId = $checkFriendKeys['friendsid'];
+		$username = $checkFriendKeys['username'];
+		$friendsusername = $checkFriendKeys['friendsusername'];
+		$scores = $checkFriendKeys['scores'];
+		$friendsid = $checkFriendKeys['friendsid'];
 	}
 
-	$isUsernameValid = !empty($oldUsername); //Username is not empty
-	$isFriendValid = !empty($oldFriends); //Friend is not empty
-	$isScoreValid = !empty($oldScores); //Score is not empty
-	$isIDValid = !empty($oldFriendsId); //ID is not empty
+	$isUsernameValid = !empty($username); //Username is not empty
+	$isFriendValid = !empty($friendsusername); //Friend is not empty
+	$isScoreValid = !empty($scores); //Score is not empty
+	$isIdValid = !empty($friendsid); //ID is not empty
 
 	$stmt->close();
 
 	$mysqli->close();
 
-	if ($isUsernameValid && $isFriendValid && $isScoreValid && $isIDValid){ //There is data in database
-		$username = $oldUsername;
-		$friendsusername = $oldFriends;
-		$scores = $oldScores;
-		$friendsid = $oldFriendsId;
+	if ($isUsernameValid && $isFriendValid && $isScoreValid && $isIdValid){ //There is data in database
+		$username = $username;
+		$friendsusername = $friendsusername;
+		$scores = $scores;
+		$friendsid = $friendsid;
+		$Valid = 1;
 	} else { //No data in database
-		$username = $oldUsername;
-		$friendsusername = $oldFriends;
-		$scores = $oldScores;
-		$friendsid = $oldFriendsId;
-		$Valid = 0;
+		$username = $username;
+		$friendsusername = $friendsusername;
+		$scores = $scores;
+		$friendsid = $friendsid;
+		$Valid = 2;
 	}
 
 ?>
