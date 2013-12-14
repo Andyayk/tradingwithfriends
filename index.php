@@ -80,11 +80,15 @@
   	if ($friendsusername!='' && $friendsid!='' && $scores!='') {
   		
   		$username = $user_profile['name'];
-		require 'scripts/checkscores.php'; //Insert into database
-		echo "$Valid";
-  		require 'scripts/friendscoresinsert.php'; //Insert into database
+		require 'scripts/checkscores.php';
+		
+		if ($Valid==2) {
+			echo "1";
+		} else {
+			require 'scripts/friendscoresinsert.php'; //Insert into database
+		}
+		
   		$scores = '';
-
   	}
   }
 
