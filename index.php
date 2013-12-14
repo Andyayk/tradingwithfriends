@@ -82,6 +82,13 @@
 
   require_once('scripts/cash.php'); //Get cash data from database
   
+  $friendsusername = $user_profile['name']; //Input user name into database
+  $friendsid = $user_profile['id']; //Input user ID into database
+  $username = $user_profile['name'];
+  $scores = $cash; //Get user score
+  
+  require 'scripts/friendscoresinsert.php'; //Insert into database
+  
   //Array storing equities names
   $names = array(	
 	'Blumont, A33.SI' => 'Blumont, A33.SI',
