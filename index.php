@@ -84,10 +84,8 @@
   		
   		if ($Valid==0) {
   			require 'scripts/friendscoresinsert.php'; //Insert into database
-  			$scores = '';
   		} else {
   			require 'scripts/friendscoresupdate.php'; //Update into database
-  			$scores = '';
   		}
   	}
   }
