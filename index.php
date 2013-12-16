@@ -107,41 +107,6 @@
 	require 'scripts/friendscoresinsert.php'; //Insert into database
   }
   
-  // The Achievement URL
-  $achievement = 'https://tradingwithfriendss.cloudcontrolled.com/achievements/achievement_50.html';
-  $achievement_display_order = 1;
-  
-  // Get the User ID
-  $uid = $user_profile['id'];
-
-  // Get an App Access Token
-  $token_url = 'https://graph.facebook.com/oauth/access_token?'
-    . 'client_id=' . $app_id
-    . '&client_secret=' . $app_secret
-    . '&grant_type=client_credentials';
-
-  $token_response = file_get_contents($token_url);
-  $params = null;
-  parse_str($token_response, $params);
-  $app_access_token = $params['access_token'];
-
-  // Register an Achievement for the app
-  print('Register Achievement:<br/>');
-  $achievement_registration_URL = 'https://graph.facebook.com/' . $app_id . '/achievements';
-  $achievement_registration_result=https_post($achievement_registration_URL, 'achievement=' . $achievement
-      . '&display_order=' . $achievement_display_order
-      . '&access_token=' . $app_access_token
-  );
-  print('<br/><br/>');
-
-  // POST a user achievement
-  print('Publish a User Achievement<br/>');
-  $achievement_URL = 'https://graph.facebook.com/' . $uid . '/achievements';
-  $achievement_result = https_post($achievement_URL,
-    'achievement=' . $achievement
-    . '&access_token=' . $app_access_token
-  );
-  
   //Array storing equities names
   $names = array(	
 	'Blumont, A33.SI' => 'Blumont, A33.SI',
