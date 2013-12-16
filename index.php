@@ -112,8 +112,7 @@
   $achievement_display_order = 1;
   
   // Get the User ID
-  $signed_request = parse_signed_request($_POST['signed_request'], $app_secret);
-  $uid = $signed_request['user_id'];
+  $uid = $user_profile['id'];
 
   // Get an App Access Token
   $token_url = 'https://graph.facebook.com/oauth/access_token?'
