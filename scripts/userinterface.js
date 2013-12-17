@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#websiteButton").click(function(){
-		var win=window.open('http://astarweb.cloudcontrolled.com/','_blank');
+		var win=window.open('http://twf.cloudcontrolled.com/','_blank');
 		win.focus();
 	});
 })
