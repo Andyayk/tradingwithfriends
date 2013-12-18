@@ -411,21 +411,23 @@
     </div>
     
     <div id="welcome">
-	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="text-align: right; display:inline-block;"></div>
-    
-    <div style="text-align: left; display: inline-block; vertical-align: top;">
+    <p>
     <b><span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
-    </div>
+    </p>
+    
+	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="display:inline-block;"></div>
         
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
-    <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
+    <div style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></div>
 
-    <p style="text-align: center;"><b><?php echo $message; ?></b></p>
+    <div style="text-align: center;"><b><?php echo $message; ?></b></div>
     </div>
     
+    <div>
     <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
-      
+    </div>
+    
     <script src="scripts/userinterface.js"></script>
       
     <div id="equityButton">Equities List</div>
