@@ -394,15 +394,6 @@
     <br /><img src="images/logo.png"/>
     </div>
     
-    <div id="welcome">
-    <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
-    <script type="text/javascript">window.onload = date_time('date_time');</script></br>
-    </p>
-    
-    <p style="text-align: left;"><a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	</p>
-    
     <div id="fb-root"></div>
     <p style="text-align: left;">
 	<script>(function(d, s, id) {
@@ -414,6 +405,15 @@
 	}(document, 'script', 'facebook-jssdk'));</script></p>
 	
 	<p style="text-align: left;"><div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    </p>
+    
+    <p style="text-align: left;"><a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</p>
+    
+    <div id="welcome">
+    <p style="text-align: left;"><b>Local Time: <span id="date_time"></span></b>
+    <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     </p>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
