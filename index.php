@@ -399,11 +399,8 @@
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     </p>
     
-    <p style="text-align: left;"><a href="https://twitter.com/tradewithfriend" class="twitter-follow-button" data-show-count="false">Follow @tradewithfriend</a>
-    $(document).ready(function(){
-	$("#websiteButton").click(function(){
-		var win=window.open('https://twitter.com/tradingwfriends','_blank');
-		win.focus();
+    <p style="text-align: left;"><a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</p>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
