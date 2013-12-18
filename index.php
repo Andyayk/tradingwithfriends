@@ -404,6 +404,7 @@
 	</p>
     
     <div id="fb-root"></div>
+    <p style="text-align: right;">
 	<script>(function(d, s, id) {
   	var js, fjs = d.getElementsByTagName(s)[0];
   	if (d.getElementById(id)) return;
@@ -412,7 +413,7 @@
   	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	
-	<p style="text-align: right;"><div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </p>
     
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
