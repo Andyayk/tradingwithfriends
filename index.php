@@ -416,8 +416,8 @@
     <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     </p>
     
-    <p style="text-align: center;"<?php echo "<img src=\"" . $profile_pic . "\" />";?></br></p>
-    <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
+    <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
+    <p style="text-align: center;"><b><?php echo "Hello " . $username . "!img src=\"" . $profile_pic . You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
 
     <p style="text-align: center;"><b><?php echo $message; ?></b></p>
     </div>
