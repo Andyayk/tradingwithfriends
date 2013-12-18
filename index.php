@@ -411,18 +411,20 @@
     </div>
     
     <div id="welcome">
-    <div style="text-align: left; display: inline-block;"><b>Local Time: <span id="date_time"></span></b>
+	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="text-align: right; display:inline-block;"></div>
+    
+    <div style="text-align: left; display: inline-block; vertical-align: top;">
+    <b><span id="date_time"></span></b>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
     </div>
-    
-	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="text-align: right; display:inline-block;"></div>
-    <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
-    
+        
     <?php echo "<img src=\"" . $profile_pic . "\" />";?></br>
     <p style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></p>
 
     <p style="text-align: center;"><b><?php echo $message; ?></b></p>
     </div>
+    
+    <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
       
     <script src="scripts/userinterface.js"></script>
       
