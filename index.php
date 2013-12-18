@@ -404,7 +404,7 @@
 	</p>
     
     <div id="fb-root"></div>
-    <p style="text-align: right;">
+    <p style="text-align: left;">
 	<script>(function(d, s, id) {
   	var js, fjs = d.getElementsByTagName(s)[0];
   	if (d.getElementById(id)) return;
