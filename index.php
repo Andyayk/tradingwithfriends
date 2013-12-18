@@ -418,11 +418,11 @@
     
 	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="display:inline-block;"></div>
     
-    <div style="display:inline-block; text-align: center;">    
+    <div style="display:inline-block; text-align: center; position: relative; left: 40;">    
     <?php echo "<img src=\"" . $profile_pic . "\" />";?>
     </div>
     
-    <div style="display:inline-block;">
+    <div style="display:inline-block; position: relative; left: 140;">
     <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
     </div>
     
