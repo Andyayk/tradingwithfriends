@@ -45,10 +45,7 @@
 		$friendsid = $oldFriendsId;
 		$Valid = 1;
 	} else { //No data in database
-		$username = $oldUsername;
-		$friendsusername = $oldFriends;
-		$scores = $oldScores;
-		$friendsid = $oldFriendsId;
+		$Valid = 0;
 	}
 
 ?>
