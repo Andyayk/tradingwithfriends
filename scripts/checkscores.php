@@ -14,7 +14,7 @@
 	
 	$checkFriendscores = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
-		$checkFriendscores[$oldFriendsId] = array(
+		$checkFriendscores[$friendsid] = array(
 			'username' => $username,
 			'friendsusername' => $friendsusername,
 			'scores' => $scores,

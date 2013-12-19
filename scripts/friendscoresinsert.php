@@ -6,7 +6,7 @@
 
 	$stmt = $mysqli->prepare("INSERT INTO `friendscores` (`username`, `friendsusername`, `cash`, `friendsid`) VALUES (?, ?, ?, ?)"); //Insert into friendscores
 
-	$stmt->bind_param("ssss", $username, $friendsusername, $scores, $friendsid); 
+	$stmt->bind_param("ssis", $username, $friendsusername, $scores, $friendsid); 
 
 	$successfullyInserted = $stmt->execute(); 
 
