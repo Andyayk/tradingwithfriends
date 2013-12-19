@@ -101,7 +101,7 @@
 
   require 'scripts/checkscores.php'; //Check database
 		
-  if ($Valid!=2) {
+  if ($Valid=='a') {
   	require 'scripts/friendscoresupdate.php'; //Update database
   } else {
 	require 'scripts/friendscoresinsert.php'; //Insert into database
