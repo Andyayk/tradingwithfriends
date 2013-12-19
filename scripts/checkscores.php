@@ -10,45 +10,45 @@
 
 	$stmt->execute(); 
 
-	$stmt->bind_result($username2, $friendsusername2, $scores2, $friendsid2);
+	$stmt->bind_result($oldUsername, $oldFriends, $oldScores, $oldFriendsId);
 	
 	$checkFriendscores = array(); //Fetch and store in array
 	while ($stmt->fetch()) {
-		$checkFriendscores[$friendsid] = array(
-			'username' => $username2,
-			'friendsusername' => $friendsusername2,
-			'scores' => $scores2,
-			'friendsid' => $friendsid2
+		$checkFriendscores[$oldFriendsId] = array(
+			'username' => $oldUsername,
+			'friendsusername' => $oldFriends,
+			'scores' => $oldScores,
+			'friendsid' => $oldFriendsId
 		);
 	}
 
 	foreach($checkFriendscores as $key => $checkFriendKeys){ //Get latest information
-		$username3 = $checkFriendKeys['username'];
-		$friendsusername3 = $checkFriendKeys['friendsusername'];
-		$scores3 = $checkFriendKeys['scores'];
-		$friendsid3 = $checkFriendKeys['friendsid'];
+		$oldUsername = $checkFriendKeys['username'];
+		$oldFriends = $checkFriendKeys['friendsusername'];
+		$oldScores = $checkFriendKeys['scores'];
+		$oldFriendsId = $checkFriendKeys['friendsid'];
 	}
 
-	$isUsernameValid = !empty($username3); //Username is not empty
-	$isFriendValid = !empty($friendsusername3); //Friend is not empty
-	$isScoreValid = !empty($scores3); //Score is not empty
-	$isIdValid = !empty($friendsid3); //ID is not empty
+	$isUsernameValid = !empty($oldUsername); //Username is not empty
+	$isFriendValid = !empty($oldFriends); //Friend is not empty
+	$isScoreValid = !empty($oldScores); //Score is not empty
+	$isIdValid = !empty($oldFriendsId); //ID is not empty
 
 	$stmt->close();
 
 	$mysqli->close();
 
 	if ($isUsernameValid && $isFriendValid && $isScoreValid && $isIdValid){ //There is data in database
-		$username = $username3;
-		$friendsusername = $friendsusername3;
-		$scores = $scores3;
-		$friendsid = $friendsid3;
+		$username = $oldUsername;
+		$friendsusername = $oldFriends;
+		$scores = $oldScores;
+		$friendsid = $oldFriendsId;
 		$Valid = 1;
 	} else { //No data in database
-		$username = $username3;
-		$friendsusername = $friendsusername3;
-		$scores = $scores3;
-		$friendsid = $friendsid3;
+		$username = $oldUsername;
+		$friendsusername = $oldFriends;
+		$scores = $oldScores;
+		$friendsid = $oldFriendsId;
 	}
 
 ?>
