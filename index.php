@@ -425,7 +425,6 @@
     </div>
     
     <div style="float:right;">
-    <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a></br>
     <a href="https://twitter.com/intent/tweet?screen_name=tradingwfriends" class="twitter-mention-button" data-related="tradingwfriends">Tweet to @tradingwfriends</a></br>
 	</div>
     
@@ -438,7 +437,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<table border=1 cellspacing=1.5 cellpadding=1.5>
+		<table border=1 cellspacing=2.5 cellpadding=2>
 	 		<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
 	 	</table>
       	<div id="scrollEquity" style="width:1190px;height:250px;line-height:1.5em;overflow:auto;padding:2px;">
