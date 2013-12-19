@@ -43,7 +43,7 @@
 		$friendsusername = $friendsusername;
 		$scores = $scores;
 		$friendsid = $friendsid;
-		$Valid = 'a';
+		$Valid = 1;
 	} else { //No data in database
 		$username = $username;
 		$friendsusername = $friendsusername;

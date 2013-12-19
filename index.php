@@ -22,7 +22,7 @@
   $oldFriends = '';
   $oldScores = ''; 
   $oldFriendsId = '';
-  $Valid = 'b';
+  $Valid = '';
   
   $nameError = '';
   $quantityError = '';
@@ -82,8 +82,12 @@
   		$username = $user_profile['name'];
 		require 'scripts/checkscores.php'; //Check database
 		
-
+		if ($Valid==1) {
+			require 'scripts/friendscoresupdate.php'; //Update database
+			$Valid = '';
+		} else {
 			require 'scripts/friendscoresinsert.php'; //Insert into database
+		}
 		
   		$scores = '';
   	}
@@ -98,8 +102,9 @@
 
   require 'scripts/checkscores.php'; //Check database
 		
-  if ($Valid=='a') {
+  if ($Valid==1) {
   	require 'scripts/friendscoresupdate.php'; //Update database
+  	$Valid = '';
   } else {
 	require 'scripts/friendscoresinsert.php'; //Insert into database
   }
