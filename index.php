@@ -397,6 +397,12 @@
   		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
+	
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+		fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	</script>
 </head>
   <body>
 	<div id="fb-root"></div>
@@ -420,11 +426,6 @@
     
     <div style="float:right;">
     <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a>
-    <script>
-		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-		if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-		fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-	</script>
     </div>
     
     <div style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></div>
