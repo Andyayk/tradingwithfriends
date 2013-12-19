@@ -415,18 +415,18 @@
     <div id="welcome">
     <p>
     <b><span id="date_time"></span></b>
-    <script type="text/javascript">window.onload = date_time('date_time');</script></br></br>
+    <script type="text/javascript">window.onload = date_time('date_time');</script></br>
     </p>
     
 	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="display:inline-block;"></div></br></br>
     
-    <div style="display:inline-block;">    
+    <div style="display:centre;">    
     <?php echo "<img src=\"" . $profile_pic . "\" />";?>
     </div>
     
     <div style="float:right;">
     <a href="https://twitter.com/tradingwfriends",'_blank' class="twitter-follow-button" data-show-count="false">Follow @tradingwfriends</a></br>
-    <a href="https://twitter.com/intent/tweet?screen_name=tradingwfriends" class="twitter-mention-button" data-related="tradingwfriends">Tweet to @tradingwfriends</a>
+    <a href="https://twitter.com/intent/tweet?screen_name=tradingwfriends" class="twitter-mention-button" data-related="tradingwfriends">Tweet to @tradingwfriends</a></br>
 	</div>
     
     <div style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></div>
