@@ -438,7 +438,7 @@
       
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
-		<table border=1 cellspacing=3.5 cellpadding=2>
+		<table border=1 cellspacing=4 cellpadding=2>
 	 		<tr class=head><th>Company Names</th><th>Symbol</th><th>Last Trade</th><th>  Open  </th><th>Close</th><th>Change</th><th>Bid bid</th><th>Ask ask</th><th>Volume Volume</th><th>today Day's Range</th><th>52 week Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
 	 	</table>
       	<div id="scrollEquity" style="width:1190px;height:250px;line-height:1.5em;overflow:auto;padding:2px;">
