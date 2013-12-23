@@ -424,7 +424,7 @@
     
 	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="display:inline-block;"></div></br></br>
     
-    <div style="display:inline-block;">    
+    <div style="text-align: center;">    
     <?php echo "<img src=\"" . $profile_pic . "\" />";?>
     </div>
     
@@ -438,7 +438,7 @@
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
 		<table border=1 cellspacing=2.5 cellpadding=1.5>
-	 		<tr class=head><th>Name</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
+	 		<tr class=head><th>Nameaaaaaaaa</th><th>Symbol</th><th>Last Trade</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Day's Range</th><th>52wk Range</th><th>Earnings per Share</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
 	 	</table>
       	<div id="scrollEquity" style="width:1190px;height:250px;line-height:1.5em;overflow:auto;padding:2px;">
 				<?php require 'scripts/equity.php';?>
