@@ -425,7 +425,7 @@
     
 	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="display:inline-block;"></div></br></br>
 
-    <div style="text-align: center; display:inline-block;">    
+    <div style="display:inline-block; vertical-align:middle;">    
     <?php echo "<img src=\"" . $profile_pic . "\" />";?>
     </div>
     
