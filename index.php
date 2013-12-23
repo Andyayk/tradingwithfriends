@@ -425,11 +425,9 @@
     
 	<div class="fb-like" data-href="https://www.facebook.com/tradingwithfriends",'_blank" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="display:inline-block;"></div></br></br>
 
-	<span style="display:inline-block; vertical-align:middle;"></span>
-    <div style="display:inline-block; vertical-align:middle;">    
+    <div style="display:inline-block; margin: auto;">    
     <?php echo "<img src=\"" . $profile_pic . "\" />";?>
     </div>
-    <span style="display:inline-block; vertical-align:middle;"></span>
     
     <div style="text-align: center;"><b><?php echo "Hello " . $username . "! You have $" . $cash . " on hand now, let's start trading!!";?></b></div>
 
