@@ -10,7 +10,7 @@
      
   		function generate_equity_array($equity) //Create array
   		{
-			echo "<table border=1 cellspacing=3 cellpadding=2.5 >";
+			echo "<table border=1 cellspacing=1 cellpadding=1.5 >";
 						
 			$row = 1;
 			if (($handle = fopen($equity, "r")) !== FALSE) 
