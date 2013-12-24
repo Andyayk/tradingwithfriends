@@ -409,7 +409,7 @@
     <script src="//connect.facebook.net/en_US/all.js"></script>
                
     <div id="topbar" style="text-align: center;">
-    	<img src="images/logo.png"/>
+    	<br/><img src="images/logo.png"/>
     </div>
     
     <div id="welcome">
