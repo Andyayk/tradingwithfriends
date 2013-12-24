@@ -581,39 +581,37 @@ input:focus {
   padding: 10px;
 }
 
-#connect a#twitter {
+a#twitter {
   background: url(../images/icons.png) no-repeat;
   color: #000000;
-  display: block;
   float: left;
   font-size: 12px;
   height: 21px;
   letter-spacing: .05em;
   line-height: 24px;
-  margin: 0 28px 0 0;
-  padding: 0 0 0 35px;
+  margin: 10px;
+  padding: 10px;
   text-decoration: none;
 }
 
-#connect a#twitter:hover {
+#twitter:hover {
   background: url(../images/icons.png) no-repeat 0 -22px;
 }
 
-#connect a#facebook {
+#facebook {
   background: url(../images/icons.png) no-repeat 0 -44px;
   color: #000000;
-  display: block;
   float: left;
   font-size: 12px;
   height: 21px;
   letter-spacing: .05em;
   line-height: 24px;
-  padding: 0 0 0 17px;
+  padding: 10px;
   text-decoration: none;
-  margin: 0 28px 0 0;
+  margin: 10px;
 }
 
-connect a#facebook:hover {
+#facebook:hover {
   background: url(../images/icons.png) no-repeat 0 -66px;
 }
 
@@ -623,5 +621,5 @@ connect a#facebook:hover {
   font-size: 12px;
   letter-spacing: .05em;
   line-height: 20px;
-  margin: 36px 0 0;
+  margin: 10px;
 }
