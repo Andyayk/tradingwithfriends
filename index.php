@@ -192,7 +192,7 @@
 		
 		foreach ($errors as $key=>$errorMessage) {
 		
-			$message = $message . "\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			$message = $message . "\t\t" . '<li>' . '<font color="red">' . $errorMessage . '</font>' . '</li>' . "\n";
 			
 			if ($key == 'name') {
 				$nameError = $errorMessage;
@@ -334,7 +334,7 @@
 		
 		foreach ($errors as $key=>$errorMessage) {
 			
-			$message = $message . "\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			$message = $message . "\t\t" . '<li>' . '<font color="red">' . $errorMessage . '</font>' . '</li>' . "\n";
 			
 			if ($key == 'sellQuantity') {
 				$sellquantityError = $errorMessage;
@@ -439,7 +439,7 @@
     <div id="equityButton">Equities List</div>
 	<div id="showEquity">
 		<table border=1 cellspacing=4 cellpadding=2>
-	 		<tr class=head><th>Company Names</th><th>Symbol</th><th>Last Trade</th><th>  Open  </th><th>Close</th><th>Change</th><th>Bid bid</th><th>Ask ask</th><th>Volume Volume</th><th>today Day's Range</th><th>52 week Range</th><th>EPS</th><th>P/B Ratio</th><th>P/E Ratio</th><th>Last Trade Date</th><th>Last Trade Time</th><th>Chart</th></tr>
+	 		<tr class=head><th>Names of Equities</th><th>Symbol</th><th>Last</th><th>Open</th><th>Close</th><th>Change</th><th>Bid</th><th>Ask</th><th>Volume</th><th>Current Day's Range</th><th>52 Weeks Range</th><th>EPS</th><th>P/B</th><th>P/E</th><th>Last Trade Date</th><th>Time</th><th>Charts</th></tr>
 	 	</table>
       	<div id="scrollEquity" style="width:1190px;height:250px;line-height:1.5em;overflow:auto;padding:2px;">
 				<?php require 'scripts/equity.php';?>
