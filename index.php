@@ -457,7 +457,7 @@
 	<p>
 		<i>Tip: Check everything before submitting to prevent mistakes</i></br>
 		<b>Equity:</b>
-		<select id=name name="name" >
+		<select id=name name="name">
 			<option value="">Select Equity</option>
 			<?php foreach($names as $key=>$name) : ?>			
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['name']) && $_POST['name']==$key) echo "selected"; ?> ><?php echo $name; ?></option>			
@@ -468,7 +468,7 @@
 		<b>Quantity:</b> <input type="text" name="quantity" value="<?php if(!empty($_POST['quantity']))echo $_POST['quantity']; ?>" /> <font color="red"><?php echo $quantityError; ?></font><br/>	
 	 	
 	 	<b>Order:</b>
-	 	<select id=order name="order" >
+	 	<select id=order name="order">
 			<option value="">Select Order</option>
 			<?php foreach($orders as $key=>$order) : ?>			
 				<option value="<?php echo $key; ?>"  <?php if(!empty($_POST['order']) && $_POST['order']==$key) echo "selected"; ?> ><?php echo $order; ?></option>			
@@ -530,16 +530,16 @@
     <div id="showTips" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
 		<li> 
-			Tip #1: Always do your homework before investing. </br>
+			Tip #1: Always do your homework before investing. <br/>
 			It is important to know what exactly you are investing into, learn about the company, know their financial statements, invest only when the time is right.
 		</li>
 		<li> 
-			It is always better to place a Stop Loss Order when you are purchasing Equities.
-			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+			Tip #2: Don't buy everything at once. <br/>
+			Never buy in large quantity at once, split it into smaller batches & try to get the best price over time. (E.g Split 50,000 equities into 10 batches of 5,000 equities)
 		</li>
 		<li> 
-			It is always better to place a Stop Loss Order when you are purchasing Equities.
-			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+			Tip #3: It is always better to place a Stop Loss Order. <br/>
+			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 if the current price is $100)
 		</li>
 		<li> 
 			It is always better to place a Stop Loss Order when you are purchasing Equities.
