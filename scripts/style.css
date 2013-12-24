@@ -589,8 +589,8 @@ a#twitter {
   height: 21px;
   letter-spacing: .05em;
   line-height: 24px;
-  margin: 10px;
-  padding: 10px;
+  margin: 0 28px 00;
+  padding: 0 0 0 35px;
   text-decoration: none;
 }
 
@@ -601,6 +601,7 @@ a#twitter {
 #facebook {
   background: url(../images/icons.png) no-repeat 0 -44px;
   color: #000000;
+  display: block;
   float: left;
   font-size: 12px;
   height: 21px;
