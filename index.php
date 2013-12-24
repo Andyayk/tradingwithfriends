@@ -409,7 +409,7 @@
     <script src="//connect.facebook.net/en_US/all.js"></script>
                
     <div id="topbar" style="text-align: center;">
-    <br /><img src="images/logo.png"/>
+    	<img src="images/logo.png"/>
     </div>
     
     <div id="welcome">
@@ -529,7 +529,10 @@
     
     <div id="showTips" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
-		hi
+		<li>
+			It is always better to place a Stop Loss Order when you are purchasing Equities.
+			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+		</li>
     </div>
     </div>
     </div>
