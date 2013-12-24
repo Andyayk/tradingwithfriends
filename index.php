@@ -519,11 +519,17 @@
      
     <div>
     <div id="scoreButton" style="display:inline-block;">Hall of Fame</div>
-    <div id="scoreButton" style="display:inline-block;">There may be something here</div>
+    <div id="tipsButton" style="display:inline-block;">Tips on Investing</div>
     
     <div id="showScore" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
 		<?php require 'scripts/friendscores.php'; ?>
+    </div>
+    </div>
+    
+    <div id="showTips" style="display:inline-block;">
+    <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
+		hi
     </div>
     </div>
     </div>

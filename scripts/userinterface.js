@@ -75,3 +75,9 @@ $(document).ready(function(){
 		$("#showScore").slideToggle("slow");
 	});
 });
+
+$(document).ready(function(){
+	$("#tipsButton").click(function(){
+		$("#showTips").slideToggle("slow");
+	});
+});
