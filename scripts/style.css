@@ -576,9 +576,8 @@ input:focus {
 #connect {
   clear: both;
   float: left;
-  margin: 10px;
+  margin: 8px;
   overflow: hidden;
-  padding: 10px;
 }
 
 a#twitter {
@@ -622,4 +621,5 @@ a#twitter {
   letter-spacing: .05em;
   line-height: 20px;
   margin: 10px;
+  vertical-align: bottom;
 }
