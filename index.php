@@ -529,7 +529,23 @@
     
     <div id="showTips" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
-		<li>
+		<li> 
+			Tip #1: Always do your homework before investing. </br>
+			It is important to know what exactly you are investing into, learn about the company, know their financial statements, invest only when the time is right.
+		</li>
+		<li> 
+			It is always better to place a Stop Loss Order when you are purchasing Equities.
+			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+		</li>
+		<li> 
+			It is always better to place a Stop Loss Order when you are purchasing Equities.
+			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+		</li>
+		<li> 
+			It is always better to place a Stop Loss Order when you are purchasing Equities.
+			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+		</li>
+		<li> 
 			It is always better to place a Stop Loss Order when you are purchasing Equities.
 			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
 		</li>
