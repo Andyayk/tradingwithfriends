@@ -544,7 +544,7 @@
 		<b><font size="4" color="blue">Tip #5: Defend some but not all</font></b><br/>
 		When circumstances become tougher, defend equities that you like instead of everything as you will simply run out of capital even before the market recovers.<br/>
 		
-		<b>You can always visit our website or forum to find out more!!</b>
+		<b>Last but not least, you can always visit our website or forum to find out more!!</b>
     </div>
     </div>
     </div>
