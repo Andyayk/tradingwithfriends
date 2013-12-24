@@ -529,24 +529,20 @@
     
     <div id="showTips" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
-		<li> 
-			<b><font size="4" color="blue">Tip #1: Always do your homework before investing.</font></b><br/>
-			It is important to know what exactly you are investing into, learn about the company, know their financial statements, invest only when the time is right.
-		</li>
-		<li> 
-			<b><font size="4" color="blue">Tip #2: Don't buy everything at once.</font></b><br/>
+		<b><font size="4" color="blue">Tip #1: Always do your homework before investing</font></b><br/>
+		It is important to know what exactly you are investing into, learn about the company, know their financial statements, invest only when the time is right.
+		<b><font size="4" color="blue">Tip #2: Don't buy everything at once</font></b><br/>
 			Never buy in large quantity at once, split it into smaller batches & try to get the best price over time. (E.g Split 50,000 equities into 10 batches of 5,000 equities)
-		</li>
 		<li> 
-			<b><font size="4" color="blue">Tip #3: It is always better to place a Stop Loss Order.</font></b><br/>
+			<b><font size="4" color="blue">Tip #3: It is always better to place a Stop Loss Order</font></b><br/>
 			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 if the current price is $100)
 		</li>
 		<li> 
-			<b><font size="4" color="blue">Tip #4: Don't own too many equities.</font></b><br/>
+			<b><font size="4" color="blue">Tip #4: Don't own too many equities</font></b><br/>
 			Too many equities can increase the chances of bad position which can cause huge losses.<br/>
 		</li>
 		<li> 
-			<b><font size="4" color="blue">Tip #5: Defend some but not all.</font></b><br/>
+			<b><font size="4" color="blue">Tip #5: Defend some but not all</font></b><br/>
 			When circumstances become tougher, defend equities that you like instead of everything as you will simply run out of capital even before the market recovers.
 		</li>
 		<b>You can always visit our website or forum to find out more!!</b>
