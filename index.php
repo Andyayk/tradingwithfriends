@@ -530,25 +530,26 @@
     <div id="showTips" style="display:inline-block;">
     <div style="width:570px;height:150px;line-height:1.5em;overflow:auto;padding:3px;">
 		<li> 
-			Tip #1: Always do your homework before investing. <br/>
+			Tip #1: Always do your homework before investing.<br/>
 			It is important to know what exactly you are investing into, learn about the company, know their financial statements, invest only when the time is right.
 		</li>
 		<li> 
-			Tip #2: Don't buy everything at once. <br/>
+			Tip #2: Don't buy everything at once.<br/>
 			Never buy in large quantity at once, split it into smaller batches & try to get the best price over time. (E.g Split 50,000 equities into 10 batches of 5,000 equities)
 		</li>
 		<li> 
-			Tip #3: It is always better to place a Stop Loss Order. <br/>
+			Tip #3: It is always better to place a Stop Loss Order.<br/>
 			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 if the current price is $100)
 		</li>
 		<li> 
-			It is always better to place a Stop Loss Order when you are purchasing Equities.
-			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+			Tip #4: Don't own too many equities.<br/>
+			Too many equities can increase the chances of bad position which can cause huge losses.
 		</li>
 		<li> 
-			It is always better to place a Stop Loss Order when you are purchasing Equities.
-			Stop Loss Order should be placed at 7% below the price that you are buying for easy recovery. (E.g Stop Loss at $93 for $100)
+			Tip #5: Defend some but not all.<br/>
+			When circumstances become tougher, defend equities that you like instead of everything as you will simply run out of capital even before the market recovers.
 		</li>
+		<b>You can always visit our website or forum to find out more!!</b>
     </div>
     </div>
     </div>
