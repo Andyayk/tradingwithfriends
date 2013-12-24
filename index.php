@@ -541,6 +541,14 @@
 	<div id="forumButton" style="display:inline-block;">Trading with Friends Forum</div>     
     </div>
     
+    <div class="connect">
+		<a href="https://twitter.com/tradingwfriends/" target="_blank" id="twitter">twitter</a> <a href="https://www.facebook.com/tradingwithfriends/" target="_blank" id="facebook">facebook</a>
+	</div>
+			
+	<p class="footnote">
+		&#169; Copyright 2013. All rights reserved
+	</p>
+	
     <script>
     var appId = '<?php echo $facebook->getAppID() ?>';
 
