@@ -80,15 +80,8 @@
   	if ($friendsusername!='' && $friendsid!='' && $scores!='') {
   		
   		$username = $user_profile['name'];
-		require 'scripts/checkscores.php'; //Check database
-		
-		if ($Valid==1) {
-			require 'scripts/friendscoresupdate.php'; //Update database
-			$Valid = '';
-		} else {
-			require 'scripts/friendscoresinsert.php'; //Insert into database
-		}
-		
+
+		require 'scripts/friendscoresinsert.php'; //Insert into database
   		$scores = '';
   	}
   }
@@ -100,14 +93,7 @@
   $friendsid = $user_profile['id']; //Input user ID into database
   $scores = $cash; //Get user score
 
-  require 'scripts/checkscores.php'; //Check database
-		
-  if ($Valid==1) {
-  	require 'scripts/friendscoresupdate.php'; //Update database
-  	$Valid = '';
-  } else {
-	require 'scripts/friendscoresinsert.php'; //Insert into database
-  }
+  require 'scripts/friendscoresinsert.php'; //Insert into database
   
   //Array storing equities names
   $names = array(	
